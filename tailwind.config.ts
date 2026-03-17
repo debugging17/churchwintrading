@@ -8,6 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        shimmer: {
+          "100%": { transform: "translateX(150%) skewX(-20deg)" },
+        },
+      },
+      animation: {
+        shimmer: "shimmer 1.5s infinite",
+      },
       colors: {
         brand: {
           navy: "var(--brand-navy)",
