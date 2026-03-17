@@ -30,10 +30,18 @@ import { Slide13CompetitiveReality } from "./slides/Slide13CompetitiveReality";
 import { Slide14WhoOwnsSpace } from "./slides/Slide14WhoOwnsSpace";
 import { Slide15DigitalVisibility } from "./slides/Slide15DigitalVisibility";
 import { Slide16B2BPipeline } from "./slides/Slide16B2BPipeline";
+import { Slide17Roadmap } from "./slides/Slide17Roadmap";
+import { Slide18Phase1 } from "./slides/Slide18Phase1";
+import { Slide19Phase2 } from "./slides/Slide19Phase2";
+import { Slide20Phase3 } from "./slides/Slide20Phase3";
+import { Slide21Impact } from "./slides/Slide21Impact";
+import { Slide22ImpactTransformed } from "./slides/Slide22ImpactTransformed";
+import { Slide23TheAsk } from "./slides/Slide23TheAsk";
+import { Slide24CTA } from "./slides/Slide24CTA";
 
 export default function DeckLayout() {
   const [mounted, setMounted] = useState(false);
-  const totalSlides = 16; // Updating slide count to include Section 3
+  const totalSlides = 24; // Full deck completed
 
   useEffect(() => {
     setMounted(true);
@@ -122,6 +130,38 @@ export default function DeckLayout() {
 
         <SwiperSlide>
           <Slide16B2BPipeline />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide17Roadmap />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide18Phase1 />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide19Phase2 />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide20Phase3 />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide21Impact />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide22ImpactTransformed />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide23TheAsk />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide24CTA />
         </SwiperSlide>
       </Swiper>
     </main>
