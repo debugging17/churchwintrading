@@ -20,10 +20,20 @@ import { Slide03MacroMoment } from "./slides/Slide03MacroMoment";
 import { Slide04MissingMiddle } from "./slides/Slide04MissingMiddle";
 import { Slide05WhereWePlay } from "./slides/Slide05WhereWePlay";
 import { Slide06Segmentation } from "./slides/Slide06Segmentation";
+import { Slide07VPCSegments } from "./slides/Slide07VPCSegments";
+import { Slide08HowWeWin } from "./slides/Slide08HowWeWin";
+import { Slide09ValuePropDesirability } from "./slides/Slide09ValuePropDesirability";
+import { Slide10ValuePropViability } from "./slides/Slide10ValuePropViability";
+import { Slide11Capabilities } from "./slides/Slide11Capabilities";
+import { Slide12SupplyChainAdvantage } from "./slides/Slide12SupplyChainAdvantage";
+import { Slide13CompetitiveReality } from "./slides/Slide13CompetitiveReality";
+import { Slide14WhoOwnsSpace } from "./slides/Slide14WhoOwnsSpace";
+import { Slide15DigitalVisibility } from "./slides/Slide15DigitalVisibility";
+import { Slide16B2BPipeline } from "./slides/Slide16B2BPipeline";
 
 export default function DeckLayout() {
   const [mounted, setMounted] = useState(false);
-  const totalSlides = 6; // Updating slide count for Section 1
+  const totalSlides = 16; // Updating slide count to include Section 3
 
   useEffect(() => {
     setMounted(true);
@@ -72,6 +82,46 @@ export default function DeckLayout() {
 
         <SwiperSlide>
           <Slide06Segmentation />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide07VPCSegments />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide08HowWeWin />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide09ValuePropDesirability />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide10ValuePropViability />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide11Capabilities />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide12SupplyChainAdvantage />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide13CompetitiveReality />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide14WhoOwnsSpace />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide15DigitalVisibility />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide16B2BPipeline />
         </SwiperSlide>
       </Swiper>
     </main>
