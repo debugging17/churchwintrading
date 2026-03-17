@@ -15,7 +15,7 @@ export function Slide24CTA() {
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col items-center z-10 text-center">
         
         <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-6xl font-bold text-brand-white leading-tight mb-16">
-          Three asks. <br className="md:hidden" /><span className="text-brand-orange font-light">One platform business.</span>
+          The Stanford Seed ROI. <br className="md:hidden" /><span className="text-brand-orange font-light">Three strategic mandates.</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16 text-left">
@@ -25,9 +25,9 @@ export function Slide24CTA() {
             <div className="w-12 h-12 bg-brand-orange/10 rounded-full flex items-center justify-center mb-6">
               <Banknote className="text-brand-orange w-6 h-6" />
             </div>
-            <h3 className="font-display text-xl font-bold text-brand-white mb-4">Capital</h3>
+            <h3 className="font-display text-xl font-bold text-brand-white mb-4">Resource Allocation</h3>
             <p className="font-primary text-brand-white/70 text-sm leading-relaxed">
-              Funding for digital B2B infrastructure (Instantly.ai, Apollo, CRM, Custom Portal) + international buffer warehouse establishment.
+              Budget reallocation for digital B2B infrastructure (Instantly.ai, Apollo, CRM, Custom Portal) + international buffer warehouse establishment.
             </p>
           </motion.div>
 
@@ -36,9 +36,9 @@ export function Slide24CTA() {
             <div className="w-12 h-12 bg-brand-orange/10 rounded-full flex items-center justify-center mb-6">
               <Users className="text-brand-orange w-6 h-6" />
             </div>
-            <h3 className="font-display text-xl font-bold text-brand-white mb-4">Network</h3>
+            <h3 className="font-display text-xl font-bold text-brand-white mb-4">Executive Alignment</h3>
             <p className="font-primary text-brand-white/70 text-sm leading-relaxed">
-              Introductions to Tier-1 US/EU cosmetics procurement contacts. The 42% of 1,544 Seed companies doing business together are the warm door.
+              Leveraging the Board's existing Tier-1 US/EU cosmetics procurement contacts. The 42% of 1,544 Seed companies doing business together are our warm door.
             </p>
           </motion.div>
 
@@ -47,9 +47,9 @@ export function Slide24CTA() {
             <div className="w-12 h-12 bg-brand-orange/10 rounded-full flex items-center justify-center mb-6">
               <Lightbulb className="text-brand-orange w-6 h-6" />
             </div>
-            <h3 className="font-display text-xl font-bold text-brand-white mb-4">Mentorship</h3>
+            <h3 className="font-display text-xl font-bold text-brand-white mb-4">Governance</h3>
             <p className="font-primary text-brand-white/70 text-sm leading-relaxed">
-              Strategic guidance on the COSMOS/NATRUE certification pathway and EU market entry structuring.
+              Establishment of a formal Board-level steering committee to oversee the COSMOS/NATRUE certification pathway and EU market entry structuring.
             </p>
           </motion.div>
 
@@ -63,7 +63,7 @@ export function Slide24CTA() {
 
         <motion.div variants={fadeUp} className="flex flex-col items-center gap-6">
           <CTAButton href="mailto:contact@churchwintrading.com">
-            Schedule a Working Session
+            Approve B2B Transformation Budget
           </CTAButton>
           <a href="mailto:contact@churchwintrading.com" className="font-primary text-brand-white/60 hover:text-brand-orange transition-colors">
             contact@churchwintrading.com
