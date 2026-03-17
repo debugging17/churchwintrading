@@ -56,7 +56,7 @@ export default function DeckLayout() {
       <Swiper
         direction="horizontal"
         modules={[Mousewheel, Keyboard, EffectFade]}
-        mousewheel={{ invert: false, thresholdDelta: 50, forceToAxis: true }}
+        mousewheel={{ invert: false, thresholdDelta: 50, forceToAxis: false }}
         keyboard={{ enabled: true, onlyInViewport: true }}
         speed={800}
         simulateTouch={false}
