@@ -54,9 +54,9 @@ export default function DeckLayout() {
   return (
     <main className="h-screen w-full overflow-hidden bg-brand-navy">
       <Swiper
-        direction="vertical"
+        direction="horizontal"
         modules={[Mousewheel, Keyboard, EffectFade]}
-        mousewheel={{ invert: false, thresholdDelta: 50 }}
+        mousewheel={{ invert: false, thresholdDelta: 50, forceToAxis: true }}
         keyboard={{ enabled: true, onlyInViewport: true }}
         speed={800}
         simulateTouch={false}

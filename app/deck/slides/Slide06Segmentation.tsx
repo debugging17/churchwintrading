@@ -24,11 +24,11 @@ export function Slide06Segmentation() {
   // 4. proposal-strategist: Verbatim table text from "Judith Brigue Addendum".
 
   return (
-    <div className="w-full h-full flex flex-col justify-center px-10 md:px-24 bg-brand-navy">
+    <div className="w-full h-full flex flex-col justify-center px-10 md:px-24 bg-brand-white">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto">
         
         <motion.div variants={fadeUp} className="mb-12 text-center">
-          <h2 className="font-display text-4xl md:text-6xl font-bold text-brand-white mb-4">
+          <h2 className="font-display text-4xl md:text-6xl font-bold text-brand-navy mb-4">
             Six target sectors. <span className="text-brand-orange font-light">One core infrastructure.</span>
           </h2>
           <div className="w-16 h-1 bg-brand-orange/50 mx-auto mt-6" />
@@ -39,27 +39,27 @@ export function Slide06Segmentation() {
             <motion.div 
               key={idx}
               variants={fadeUp}
-              className="bg-brand-white/5 border border-brand-white/10 p-8 rounded-xl backdrop-blur-sm group hover:bg-brand-white/10 transition-colors duration-300 relative overflow-hidden"
+              className="bg-brand-navy/5 border border-brand-navy/10 p-8 rounded-xl group hover:bg-brand-navy/10 transition-colors duration-300 relative overflow-hidden shadow-sm"
             >
               {/* Hover effect glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/0 to-brand-orange/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/0 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-12 h-12 bg-brand-navy-dark rounded-full flex items-center justify-center mb-6 border border-brand-white/10 group-hover:border-brand-orange/50 transition-colors">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 border border-brand-navy/10 group-hover:border-brand-orange/50 transition-colors shadow-sm">
                   <sector.icon className="w-5 h-5 text-brand-orange" />
                 </div>
                 
-                <h3 className="font-display text-xl font-semibold text-brand-white mb-3">
+                <h3 className="font-display text-xl font-semibold text-brand-navy mb-3">
                   {sector.title}
                 </h3>
                 
-                <p className="font-primary text-sm text-brand-white/60 mb-6 flex-grow">
+                <p className="font-primary text-sm text-brand-navy/70 mb-6 flex-grow">
                   {sector.desc}
                 </p>
                 
-                <div className="mt-auto pt-4 border-t border-brand-white/10">
+                <div className="mt-auto pt-4 border-t border-brand-navy/10">
                   <span className="text-[10px] font-display uppercase tracking-widest text-brand-orange font-bold">🎯 Target: </span>
-                  <span className="text-xs font-primary text-brand-white/80">{sector.target}</span>
+                  <span className="text-xs font-primary text-brand-navy/80 font-medium">{sector.target}</span>
                 </div>
               </div>
             </motion.div>

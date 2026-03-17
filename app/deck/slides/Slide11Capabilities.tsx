@@ -16,25 +16,25 @@ export function Slide11Capabilities() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col md:flex-row bg-brand-navy overflow-hidden">
+    <div className="w-full h-full flex flex-col md:flex-row bg-brand-white overflow-hidden">
        {/* Visual Left */}
-       <div className="hidden md:flex w-[45%] h-full relative items-center justify-center p-12 border-r border-brand-white/5 bg-brand-white/5">
-        <div className="w-full aspect-[3/4] rounded-2xl border border-brand-white/10 flex items-center justify-center relative overflow-hidden">
-          <div className="text-brand-white/40 font-display tracking-widest text-sm uppercase px-8 text-center leading-relaxed">
+       <div className="hidden md:flex w-[45%] h-full relative items-center justify-center p-12 border-r border-brand-navy/5 bg-brand-navy/5">
+        <div className="w-full aspect-[3/4] rounded-2xl border border-brand-navy/10 flex items-center justify-center relative overflow-hidden bg-brand-white/50">
+          <div className="text-brand-navy/40 font-display tracking-widest text-sm uppercase px-8 text-center leading-relaxed font-semibold">
             [Abstract Architecture / Infrastructure Visual]
           </div>
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-navy-dark to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-white to-transparent opacity-80" />
         </div>
       </div>
 
       {/* Content Right */}
       <div className="w-full md:w-[55%] h-full flex flex-col justify-center px-10 md:px-20 z-10">
         <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="max-w-xl">
-          <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl font-bold text-brand-white leading-tight mb-4">
+          <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl font-bold text-brand-navy leading-tight mb-4">
             Between global demand and rural supply — <span className="text-brand-orange font-light">Churchwin Trading is the bridge.</span>
           </motion.h2>
 
-          <motion.p variants={fadeUp} className="text-xl text-brand-white/60 font-primary mb-12">
+          <motion.p variants={fadeUp} className="text-xl text-brand-navy/60 font-primary mb-12">
             Not just trading. Institutionalizing the supply chain.
           </motion.p>
 
@@ -43,13 +43,13 @@ export function Slide11Capabilities() {
               <motion.div 
                 key={idx} 
                 variants={fadeUp} 
-                whileHover={{ x: 10, backgroundColor: "rgba(255,255,255,0.1)" }}
-                className="flex items-center gap-6 bg-brand-white/5 border border-brand-white/10 p-5 rounded-md transition-all duration-300 group"
+                whileHover={{ x: 10, backgroundColor: "rgba(1,39,135,0.05)" }}
+                className="flex items-center gap-6 bg-brand-navy/5 border border-brand-navy/10 p-5 rounded-md transition-all duration-300 group shadow-sm"
               >
-                <div className="w-12 h-12 shrink-0 bg-brand-navy-dark border border-brand-white/10 rounded-full flex items-center justify-center group-hover:border-brand-orange/50 transition-colors">
+                <div className="w-12 h-12 shrink-0 bg-white border border-brand-navy/10 rounded-full flex items-center justify-center group-hover:border-brand-orange/50 transition-colors shadow-sm">
                   <cap.icon className="w-5 h-5 text-brand-orange" />
                 </div>
-                <div className="font-primary text-brand-white leading-relaxed font-semibold">
+                <div className="font-primary text-brand-navy leading-relaxed font-semibold">
                   {cap.label}
                 </div>
               </motion.div>

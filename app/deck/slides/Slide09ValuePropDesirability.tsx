@@ -8,12 +8,12 @@ export function Slide09ValuePropDesirability() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col md:flex-row bg-brand-navy overflow-hidden">
+    <div className="w-full h-full flex flex-col md:flex-row bg-brand-cream overflow-hidden">
       {/* Visual Left */}
-      <div className="hidden md:flex w-[40%] h-full bg-brand-navy-dark relative items-center justify-center p-12 border-r border-brand-white/5">
-         <div className="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent z-10" />
-         <div className="relative z-20 w-full aspect-[4/5] rounded-xl overflow-hidden border border-brand-white/10 flex items-center justify-center text-center p-8">
-            <div className="text-brand-white/20 font-display tracking-widest text-sm uppercase">
+      <div className="hidden md:flex w-[40%] h-full bg-brand-white relative items-center justify-center p-12 border-r border-brand-navy/5">
+         <div className="absolute inset-0 bg-gradient-to-t from-brand-white/50 to-transparent z-10" />
+         <div className="relative z-20 w-full aspect-[4/5] rounded-xl overflow-hidden border border-brand-navy/10 flex items-center justify-center text-center p-8 bg-brand-navy/5 shadow-inner">
+            <div className="text-brand-navy/40 font-display tracking-widest text-sm uppercase font-semibold">
               [Image: Premium Facility Operations]
             </div>
          </div>
@@ -22,15 +22,15 @@ export function Slide09ValuePropDesirability() {
       {/* Content Right */}
       <div className="w-full md:w-[60%] h-full flex flex-col justify-center px-10 md:px-20 z-10">
         <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="max-w-2xl">
-          <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl font-bold text-brand-white leading-tight mb-8">
+          <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl font-bold text-brand-navy leading-tight mb-8">
             We eliminate the exact problems your buyers named.
           </motion.h2>
 
-          <motion.p variants={fadeUp} className="text-lg text-brand-white/80 font-primary leading-relaxed mb-12">
+          <motion.p variants={fadeUp} className="text-lg text-brand-navy/80 font-primary leading-relaxed mb-12">
             Today, we solve wholesale buyers&apos; problem of product delays, supply uncertainty, and fluctuating costs by providing reliable bulk product supply with consistent quality, on-time delivery and flexible payment terms.
           </motion.p>
 
-          <div className="space-y-8 pl-4 border-l-2 border-brand-orange/20">
+          <div className="space-y-8 pl-4 border-l-2 border-brand-orange/30">
             {[
               { label: "For The Retailer", val: "Flexible order quantities + consistent quality", res: "no more multi-supplier chaos" },
               { label: "For The Wholesaler", val: "Guaranteed mass production + buffer stocking", res: "no more seasonal contract losses" },
@@ -41,7 +41,7 @@ export function Slide09ValuePropDesirability() {
                 <h4 className="font-display text-brand-orange uppercase tracking-wider text-sm font-bold mb-1">
                   {item.label}
                 </h4>
-                <p className="font-primary text-brand-white text-base">
+                <p className="font-primary text-brand-navy text-base">
                   <span className="font-light">{item.val} = </span>
                   <span className="font-semibold">{item.res}.</span>
                 </p>

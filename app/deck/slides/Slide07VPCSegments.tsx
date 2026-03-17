@@ -14,31 +14,31 @@ export function Slide07VPCSegments() {
   // 3. proposal-strategist: Exact VPC segment definitions.
 
   return (
-    <div className="w-full h-full flex flex-col justify-center px-10 md:px-24 bg-brand-navy border-t border-brand-white/5">
+    <div className="w-full h-full flex flex-col justify-center px-10 md:px-24 bg-brand-white">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto">
-        <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-6xl font-bold text-brand-white mb-16 text-center">
+        <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-6xl font-bold text-brand-navy mb-16 text-center">
           Engineered for the exact pains of our buyers.
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
           
           {/* Segment A - Retailer */}
-          <GlassCard delay={0.2} className="relative overflow-hidden group">
+          <GlassCard theme="light" delay={0.2} className="relative overflow-hidden group">
             <div className="absolute top-0 left-0 w-2 h-full bg-brand-orange" />
-            <h3 className="font-display text-2xl font-bold text-brand-white mb-6 pl-4">Segment A — The Retailer</h3>
+            <h3 className="font-display text-2xl font-bold text-brand-navy mb-6 pl-4">Segment A — The Retailer</h3>
             
             <div className="mb-8 pl-4">
               <span className="text-4xl text-brand-orange opacity-20 absolute -left-2 top-16 font-serif">&quot;</span>
-              <p className="font-primary text-brand-white/80 italic leading-relaxed relative z-10 text-lg">
+              <p className="font-primary text-brand-navy/80 italic leading-relaxed relative z-10 text-lg">
                 A small-to-medium retailer who struggles to keep stock with authentic, quality products while managing tight cash flow and multiple suppliers.
               </p>
             </div>
             
-            <div className="pl-4 border-t border-brand-white/10 pt-6">
+            <div className="pl-4 border-t border-brand-navy/10 pt-6">
               <h4 className="text-sm font-display uppercase tracking-widest text-[#ff8022] mb-3 font-semibold">The Pain Points</h4>
               <ul className="space-y-3">
                 {["Stock-outs during high demand periods.", "Fear of inferior goods.", "Delivery delays and ineffective communication."].map((pain, i) => (
-                  <li key={i} className="flex items-start gap-3 text-brand-white/70 font-primary text-sm">
+                  <li key={i} className="flex items-start gap-3 text-brand-navy/70 font-primary text-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#ff8022] mt-1.5 shrink-0" />
                     {pain}
                   </li>
@@ -48,23 +48,23 @@ export function Slide07VPCSegments() {
           </GlassCard>
 
           {/* Segment B - Wholesaler */}
-          <GlassCard delay={0.4} className="relative overflow-hidden group">
-            <div className="absolute top-0 left-0 w-2 h-full bg-brand-white/40" />
-            <h3 className="font-display text-2xl font-bold text-brand-white mb-6 pl-4">Segment B — The Wholesale Buyer</h3>
+          <GlassCard theme="light" delay={0.4} className="relative overflow-hidden group">
+            <div className="absolute top-0 left-0 w-2 h-full bg-brand-navy/30" />
+            <h3 className="font-display text-2xl font-bold text-brand-navy mb-6 pl-4">Segment B — The Wholesale Buyer</h3>
             
             <div className="mb-8 pl-4">
-              <span className="text-4xl text-brand-white/20 opacity-20 absolute -left-2 top-16 font-serif">&quot;</span>
-              <p className="font-primary text-brand-white/80 italic leading-relaxed relative z-10 text-lg">
+              <span className="text-4xl text-brand-navy/20 opacity-20 absolute -left-2 top-16 font-serif">&quot;</span>
+              <p className="font-primary text-brand-navy/80 italic leading-relaxed relative z-10 text-lg">
                 A wholesale buyer who struggles to get products on time and with consistent quality.
               </p>
             </div>
             
-            <div className="pl-4 border-t border-brand-white/10 pt-6">
-              <h4 className="text-sm font-display uppercase tracking-widest text-brand-white/60 mb-3 font-semibold">The Pain Points</h4>
+            <div className="pl-4 border-t border-brand-navy/10 pt-6">
+              <h4 className="text-sm font-display uppercase tracking-widest text-brand-navy/60 mb-3 font-semibold">The Pain Points</h4>
               <ul className="space-y-3">
                 {["Price volatility and seasonal shortages.", "Non-compliant / uncertified products.", "Supplier disappearance post-payment."].map((pain, i) => (
-                  <li key={i} className="flex items-start gap-3 text-brand-white/70 font-primary text-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-white/40 mt-1.5 shrink-0" />
+                  <li key={i} className="flex items-start gap-3 text-brand-navy/70 font-primary text-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-navy/40 mt-1.5 shrink-0" />
                     {pain}
                   </li>
                 ))}
