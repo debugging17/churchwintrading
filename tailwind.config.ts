@@ -21,6 +21,7 @@ const config: Config = {
           navy: "var(--brand-navy)",
           orange: "var(--brand-orange)",
           cream: "var(--brand-cream)",
+          white: "var(--brand-white)",
           "navy-light": "var(--brand-navy-light)",
           "navy-dark": "var(--brand-navy-dark)",
           "glass-bg": "var(--brand-glass-bg)",

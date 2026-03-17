@@ -22,11 +22,11 @@ export function Slide16B2BPipeline() {
         
         {/* Left Side: Pitch */}
         <div className="w-full lg:w-[45%] flex flex-col justify-center">
-          <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl font-bold text-brand-navy leading-tight mb-6">
+          <motion.h2 variants={slideFromLeft} className="font-display text-3xl md:text-5xl font-bold text-brand-navy leading-tight mb-4">
             From reactive selling to a <span className="text-brand-orange font-light">systematic client acquisition engine.</span>
           </motion.h2>
           
-          <motion.p variants={fadeUp} className="text-xl text-brand-navy/70 font-primary border-l-2 border-brand-navy/20 pl-6 mb-12">
+          <motion.p variants={fadeUp} className="text-lg md:text-xl text-brand-navy/70 font-primary border-l-2 border-brand-navy/20 pl-6 mb-8">
             Replacing founder-dependent networking with a 4-channel B2B measurable pipeline.
           </motion.p>
 

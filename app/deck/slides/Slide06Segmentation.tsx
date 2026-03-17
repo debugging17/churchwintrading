@@ -27,33 +27,33 @@ export function Slide06Segmentation() {
     <div className="w-full h-full flex flex-col justify-center px-10 md:px-24 bg-brand-white">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto">
         
-        <motion.div variants={fadeUp} className="mb-12 text-center">
-          <h2 className="font-display text-4xl md:text-6xl font-bold text-brand-navy mb-4">
+        <motion.div variants={fadeUp} className="mb-8 text-center">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-3">
             Six target sectors. <span className="text-brand-orange font-light">One core infrastructure.</span>
           </h2>
           <div className="w-16 h-1 bg-brand-orange/50 mx-auto mt-6" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {sectors.map((sector, idx) => (
             <motion.div 
               key={idx}
               variants={fadeUp}
-              className="bg-brand-navy/5 border border-brand-navy/10 p-8 rounded-xl group hover:bg-brand-navy/10 transition-colors duration-300 relative overflow-hidden shadow-sm"
+              className="bg-brand-navy/5 border border-brand-navy/10 p-6 rounded-xl group hover:bg-brand-navy/10 transition-colors duration-300 relative overflow-hidden shadow-sm"
             >
               {/* Hover effect glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/0 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10 flex flex-col h-full">
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 border border-brand-navy/10 group-hover:border-brand-orange/50 transition-colors shadow-sm">
-                  <sector.icon className="w-5 h-5 text-brand-orange" />
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 border border-brand-navy/10 group-hover:border-brand-orange/50 transition-colors shadow-sm">
+                  <sector.icon className="w-4 h-4 text-brand-orange" />
                 </div>
                 
-                <h3 className="font-display text-xl font-semibold text-brand-navy mb-3">
+                <h3 className="font-display text-lg font-semibold text-brand-navy mb-2">
                   {sector.title}
                 </h3>
                 
-                <p className="font-primary text-sm text-brand-navy/70 mb-6 flex-grow">
+                <p className="font-primary text-xs text-brand-navy/70 mb-4 flex-grow">
                   {sector.desc}
                 </p>
                 

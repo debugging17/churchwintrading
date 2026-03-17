@@ -26,8 +26,8 @@ export function Slide14WhoOwnsSpace() {
   return (
     <div className="w-full h-full flex flex-col justify-center px-10 md:px-16 bg-brand-white">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-7xl mx-auto">
-        <motion.div variants={fadeUp} className="mb-12">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4">
+        <motion.div variants={fadeUp} className="mb-6">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-2">
             Four players own this market. <span className="text-brand-orange font-light">None are Ghanaian at scale.</span>
           </h2>
           <p className="font-primary text-brand-navy/70 max-w-4xl text-lg font-medium">
@@ -36,7 +36,7 @@ export function Slide14WhoOwnsSpace() {
         </motion.div>
 
         {/* Comparison Table */}
-        <motion.div variants={fadeUp} className="w-full overflow-x-auto bg-brand-white border border-brand-navy/10 rounded-xl shadow-lg mb-8">
+        <motion.div variants={fadeUp} className="w-full overflow-x-auto bg-brand-white border border-brand-navy/10 rounded-xl shadow-lg mb-4">
           <table className="w-full text-left font-primary text-sm whitespace-nowrap text-brand-navy">
             <thead>
               <tr className="border-b border-brand-navy/10 uppercase font-display text-xs tracking-widest text-[#ff8022]">
@@ -55,16 +55,16 @@ export function Slide14WhoOwnsSpace() {
                 const isChurchwin = comp.name === "Churchwin Trading";
                 return (
                   <tr key={idx} className={`border-b border-brand-navy/5 transition-colors ${isChurchwin ? "bg-brand-orange/5 border-brand-orange/20 shadow-[inset_4px_0_0_#ff6a00]" : "hover:bg-brand-navy/5"}`}>
-                    <td className={`px-6 py-5 font-bold ${isChurchwin ? "text-brand-orange text-base" : "text-brand-navy"}`}>{comp.name}</td>
-                    <td className="px-6 py-5 text-center text-lg">{comp.hq}</td>
-                    <td className="px-6 py-5 text-brand-navy/80">{comp.model}</td>
-                    <td className="px-6 py-5 text-center">{renderIcon(comp.hub)}</td>
-                    <td className="px-6 py-5 text-center">{renderIcon(comp.fair)}</td>
-                    <td className="px-6 py-5 text-center">{renderIcon(comp.cosmos)}</td>
-                    <td className={`px-6 py-5 text-center ${isChurchwin ? "bg-brand-orange/10 border-x border-brand-orange/20" : "bg-brand-orange/5 border-x border-brand-navy/5"}`}>
+                    <td className={`px-4 py-3 font-bold ${isChurchwin ? "text-brand-orange text-base" : "text-brand-navy"}`}>{comp.name}</td>
+                    <td className="px-4 py-3 text-center text-lg">{comp.hq}</td>
+                    <td className="px-4 py-3 text-brand-navy/80">{comp.model}</td>
+                    <td className="px-4 py-3 text-center">{renderIcon(comp.hub)}</td>
+                    <td className="px-4 py-3 text-center">{renderIcon(comp.fair)}</td>
+                    <td className="px-4 py-3 text-center">{renderIcon(comp.cosmos)}</td>
+                    <td className={`px-4 py-3 text-center ${isChurchwin ? "bg-brand-orange/10 border-x border-brand-orange/20" : "bg-brand-orange/5 border-x border-brand-navy/5"}`}>
                       {isChurchwin ? <span className="text-brand-orange font-bold font-display uppercase tracking-widest text-xs flex items-center justify-center gap-2"><CheckCircle2 className="w-4 h-4"/> YES</span> : renderIcon(comp.privateLabel)}
                     </td>
-                    <td className={`px-6 py-5 font-medium ${isChurchwin ? "text-brand-orange/80 italic" : "text-brand-navy/50"}`}>{comp.lacks}</td>
+                    <td className={`px-4 py-3 font-medium ${isChurchwin ? "text-brand-orange/80 italic" : "text-brand-navy/50"}`}>{comp.lacks}</td>
                   </tr>
                 );
               })}
