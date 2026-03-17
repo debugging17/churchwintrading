@@ -1,0 +1,19 @@
+# .vercelignore — Ensures only production app files are uploaded to Vercel build environment
+
+# Internal strategy & instructions
+SKILL.md
+references/
+scripts/
+
+# Docs
+README.md
+docs/
+
+# Testing & QA
+coverage/
+qa/
+tests/
+
+# Git
+.git/
+.github/
