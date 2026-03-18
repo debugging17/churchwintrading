@@ -42,9 +42,10 @@ export function Slide12SupplyChainAdvantage() {
                Mass stocking + supplier relationships with 11 cooperatives = <span className="text-brand-orange">supply continuity our competitors couldn&apos;t match.</span>
              </h3>
              
-             <p className="font-primary text-xl text-brand-navy/70 italic border-l-4 border-brand-navy/20 pl-6 py-2 mt-4 font-medium">
-               &quot;This is what operational maturity looks like.&quot;
-             </p>
+             <div className="bg-brand-orange/10 border border-brand-orange/30 rounded-lg p-4 mt-4">
+               <div className="font-display text-3xl font-bold text-brand-orange">Zero contracts lost.</div>
+               <p className="font-primary text-sm text-brand-navy/70 mt-1">While the industry shed 40% of revenue, Churchwin retained every active buyer through buffer inventory and cooperative loyalty.</p>
+             </div>
           </motion.div>
 
         </div>

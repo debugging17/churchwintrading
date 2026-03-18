@@ -23,11 +23,11 @@ export function Slide22ImpactTransformed() {
         <div className="w-full md:w-[45%] flex flex-col justify-center">
           <motion.div variants={fadeUp} className="w-20 h-1 bg-brand-orange mb-8" />
           <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-6xl font-bold text-brand-navy leading-tight mb-6">
-            Every dollar scaled is a <span className="text-brand-orange font-light italic">household changed.</span>
+            ESG compliance is now a <span className="text-brand-orange font-light italic">market entry requirement.</span>
           </motion.h2>
           
           <motion.p variants={fadeUp} className="text-xl text-brand-navy/70 font-primary border-l-2 border-brand-navy/20 pl-6 mb-8 font-medium">
-            ESG sourcing is now an EU procurement requirement. <span className="text-brand-navy font-bold">Our documented impact is your competitive advantage.</span>
+            EU buyers can&apos;t purchase from uncertified supply chains. <span className="text-brand-navy font-bold">Our documented, village-level traceability is the competitive moat — not the marketing story.</span>
           </motion.p>
         </div>
 

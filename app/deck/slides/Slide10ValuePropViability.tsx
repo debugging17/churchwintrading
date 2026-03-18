@@ -12,11 +12,11 @@ export function Slide10ValuePropViability() {
     <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-white">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto">
         <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4 text-center">
-          Two revenue streams. <span className="text-brand-orange font-light">Maximum margin architecture.</span>
+          Bulk pays the bills. <span className="text-brand-orange font-light">Private Label multiplies margins 3-5x.</span>
         </motion.h2>
 
         <motion.p variants={fadeUp} className="text-xl text-brand-navy/80 font-primary mb-16 text-center">
-          The shift: From cost-driven commercial negotiation to value-driven brand partnership.
+          Every KG we shift from commodity export to branded manufacturing multiplies our margin — and our defensibility.
         </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative">

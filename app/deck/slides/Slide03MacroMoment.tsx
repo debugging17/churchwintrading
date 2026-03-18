@@ -36,7 +36,7 @@ export function Slide03MacroMoment() {
           Africa had the lead in 1960. Then the divergence began.
         </motion.h2>
         <motion.p variants={fadeUp} className="text-xl text-brand-orange font-medium mb-12">
-          The companies that scale are the agents of change. Not the governments.
+          South Korea scaled through institutional enterprise. Churchwin is building that institutional capability for West Africa — starting with the industries we control.
         </motion.p>
 
         {/* Chart Container */}
@@ -103,7 +103,7 @@ export function Slide03MacroMoment() {
             Data Source: World Bank GDP per capita
           </div>
           <div className="absolute bottom-10 right-10 text-brand-navy text-sm max-w-[280px] text-right font-primary leading-relaxed bg-white/80 backdrop-blur-sm p-5 border border-brand-navy/5 rounded-xl shadow-xl">
-            <span className="text-brand-orange font-bold">The Divergence:</span> South Korea leveraged institutional scale by 1980. West Africa remains at South Korea&apos;s 1980 level today.
+            <span className="text-brand-orange font-bold">The Divergence:</span> South Korea leveraged institutional scale by 1980. West Africa&apos;s GDP remains at South Korea&apos;s 1980 level today — that gap is Churchwin&apos;s mandate.
           </div>
         </motion.div>
       </motion.div>
