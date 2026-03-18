@@ -28,7 +28,7 @@ export function Slide12ABulkGallery() {
           <div className="col-span-1 row-span-2 rounded-xl overflow-hidden relative border border-brand-white/10 group shadow-2xl">
              <div className="absolute inset-0 bg-brand-navy/20 mix-blend-multiply z-10 pointer-events-none group-hover:bg-transparent transition-colors duration-500" />
              <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-               <source src="/assets/vid-4.mp4" type="video/mp4" />
+               <source src="/assets/videos/vid-4.mp4" type="video/mp4" />
              </video>
              <div className="absolute bottom-4 left-4 z-20 bg-brand-navy/80 tracking-widest backdrop-blur-sm px-3 py-1 rounded-sm text-[10px] text-brand-white uppercase font-bold border border-brand-white/20">
                Industrial Extraction

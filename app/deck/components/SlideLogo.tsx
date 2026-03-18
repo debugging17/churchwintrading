@@ -6,7 +6,7 @@ export function SlideLogo() {
     <div className="absolute bottom-8 right-10 z-[100] flex items-center gap-3 pointer-events-none mix-blend-difference">
       <div className="relative w-8 h-8 opacity-90">
         <Image 
-          src="/assets/churchwin_logo_new.png" 
+          src="/assets/images/churchwin_logo_new.png" 
           alt="Churchwin Trading Logo" 
           fill
           className="object-contain"

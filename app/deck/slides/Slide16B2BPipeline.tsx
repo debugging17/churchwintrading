@@ -10,10 +10,10 @@ export function Slide16B2BPipeline() {
   const animState = useSlideEnter(100);
 
   const pipeline = [
-    { image: "/assets/Sales Engine/apollo.png", name: "APOLLO.IO", desc: "Database generation → 500+ ICP-matched prospects" },
-    { image: "/assets/Sales Engine/linkedin.png", name: "LINKEDIN SALES NAV", desc: "Warm-up touch with R&D and Procurement" },
-    { image: "/assets/Sales Engine/instantly.png", name: "INSTANTLY.AI", desc: "4-touch personalized sequence (Days 1/4/7/14)" },
-    { image: "/assets/Sales Engine/mailchimp.png", name: "MAILCHIMP", desc: "Monthly \"Churchwin Origins\" nurture newsletter" },
+    { image: "/assets/images/sales-engine/apollo.png", name: "APOLLO.IO", desc: "Database generation → 500+ ICP-matched prospects" },
+    { image: "/assets/images/sales-engine/linkedin.png", name: "LINKEDIN SALES NAV", desc: "Warm-up touch with R&D and Procurement" },
+    { image: "/assets/images/sales-engine/instantly.png", name: "INSTANTLY.AI", desc: "4-touch personalized sequence (Days 1/4/7/14)" },
+    { image: "/assets/images/sales-engine/mailchimp.png", name: "MAILCHIMP", desc: "Monthly \"Churchwin Origins\" nurture newsletter" },
     { icon: Target, name: "CRM → CONTRACT", desc: "Sample kit dispatch → Supply Agreement", highlight: true }
   ];
 

@@ -89,7 +89,7 @@ export function Slide01Cover() {
             playsInline
             className="w-full h-full object-cover filter contrast-110 saturate-110"
           >
-            <source src="/assets/vid-6.mp4" type="video/mp4" />
+            <source src="/assets/videos/vid-6.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
