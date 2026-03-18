@@ -27,45 +27,45 @@ export function Slide14WhoOwnsSpace() {
           </p>
         </motion.div>
 
-        {/* The Comparison Grid */}
-        <div className="flex flex-col lg:flex-row gap-8 flex-grow">
+        {/* The Comparison Grid - Asymmetric Layout */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 flex-grow relative mt-4">
           
           {/* LEFT: The Status Quo */}
-          <motion.div variants={slideFromLeft} className="w-full lg:w-1/2 flex flex-col">
+          <motion.div variants={slideFromLeft} className="w-full lg:w-[60%] flex flex-col pr-0 lg:pr-16 relative z-10">
             <h3 className="font-display font-bold text-xl text-brand-navy mb-4 flex items-center gap-2">
               <AlertTriangle className="w-5 h-5 text-brand-navy/50" />
               The Market Status Quo
             </h3>
             
             <div className="flex flex-col gap-4">
-              <GlassCard theme="light" delay={0.2} className="border-l-4 border-l-brand-navy/20 hover:bg-white/50 transition-colors">
+              <GlassCard theme="light" delay={0.2} className="border-l-4 border-l-brand-navy/20 hover:bg-white/50 transition-colors shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-brand-navy/5 flex flex-shrink-0 items-center justify-center">
                     <Globe className="w-6 h-6 text-brand-navy/60" />
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-lg text-brand-navy mb-1">Foreign Intermediaries</h4>
-                    <p className="font-primary text-sm font-semibold text-brand-navy/50 mb-2 uppercase tracking-wider">
+                    <p className="font-primary text-sm font-semibold text-brand-navy/40 mb-2 uppercase tracking-wider">
                       Jedwards Int. 🇺🇸 • All Organic Treasures 🇩🇪
                     </p>
-                    <p className="font-primary text-brand-navy/70">
+                    <p className="font-primary text-brand-navy/70 leading-relaxed">
                       They buy aggregated ingredients from local middlemen. They lack direct traceability, capture lower authentic margins, and offer no genuine &quot;Africa-sourced&quot; narrative.
                     </p>
                   </div>
                 </div>
               </GlassCard>
 
-              <GlassCard theme="light" delay={0.3} className="border-l-4 border-l-brand-navy/20 hover:bg-white/50 transition-colors">
+              <GlassCard theme="light" delay={0.3} className="border-l-4 border-l-brand-navy/20 hover:bg-white/50 transition-colors shadow-sm">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-brand-navy/5 flex flex-shrink-0 items-center justify-center">
                     <PackageOpen className="w-6 h-6 text-brand-navy/60" />
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-lg text-brand-navy mb-1">Raw Ingredient Suppliers</h4>
-                    <p className="font-primary text-sm font-semibold text-brand-navy/50 mb-2 uppercase tracking-wider">
+                    <p className="font-primary text-sm font-semibold text-brand-navy/40 mb-2 uppercase tracking-wider">
                       Baraka Shea 🇨🇦🇬🇭 • Savannah Fruits 🇬🇭
                     </p>
-                    <p className="font-primary text-brand-navy/70">
+                    <p className="font-primary text-brand-navy/70 leading-relaxed">
                       While they source locally, they operate purely as raw ingredient producers. They lack the B2B scale to offer high-volume, turnkey Private Label manufacturing.
                     </p>
                   </div>
@@ -74,25 +74,25 @@ export function Slide14WhoOwnsSpace() {
             </div>
           </motion.div>
 
-          {/* RIGHT: Churchwin Advantage */}
-          <motion.div variants={slideFromRight} className="w-full lg:w-1/2 flex flex-col">
+          {/* RIGHT: Churchwin Advantage - Overlapping layer */}
+          <motion.div variants={slideFromRight} className="w-full lg:w-[48%] flex flex-col lg:-ml-[8%] relative z-20 lg:mt-16">
             <h3 className="font-display font-bold text-xl text-brand-orange mb-4 flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5" />
               The Churchwin Advantage
             </h3>
             
-            <GlassCard theme="light" delay={0.4} className="h-full border-2 border-brand-orange/20 bg-gradient-to-br from-brand-orange/5 to-transparent relative overflow-hidden flex flex-col justify-center">
+            <GlassCard theme="light" delay={0.4} className="h-full border border-brand-orange/20 bg-brand-light/95 backdrop-blur-xl shadow-2xl relative overflow-hidden flex flex-col justify-center">
               {/* Giant watermark */}
               <Building2 className="absolute -bottom-10 -right-10 w-64 h-64 text-brand-orange/5" />
               
-              <div className="relative z-10 space-y-6">
+              <div className="relative z-10 space-y-7">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex flex-shrink-0 items-center justify-center border border-brand-orange/20">
                     <span className="text-xl">🇬🇭</span>
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-lg text-brand-navy">100% Ghanaian Owned</h4>
-                    <p className="font-primary text-brand-navy/70">Authentic narrative with direct, unmediated economic impact on local cooperatives.</p>
+                    <p className="font-primary text-brand-navy/70 leading-relaxed mt-1">Authentic narrative with direct, unmediated economic impact on local cooperatives.</p>
                   </div>
                 </div>
 
@@ -102,7 +102,7 @@ export function Slide14WhoOwnsSpace() {
                   </div>
                   <div>
                     <h4 className="font-display font-bold text-lg text-brand-navy">Direct Primary Manufacturer</h4>
-                    <p className="font-primary text-brand-navy/70">No brokers. Unbroken traceability. We capture the maximum possible margin.</p>
+                    <p className="font-primary text-brand-navy/70 leading-relaxed mt-1">No brokers. Unbroken traceability. We capture the maximum possible margin.</p>
                   </div>
                 </div>
 
@@ -111,16 +111,16 @@ export function Slide14WhoOwnsSpace() {
                     <Tag className="w-5 h-5 text-brand-orange" />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-lg text-brand-orange">Turnkey Private Label Capacity</h4>
-                    <p className="font-primary text-brand-navy/80 font-medium">The missing B2B link. We aren&apos;t just selling bulk butter; we are the white-label engine for global brands.</p>
+                    <h4 className="font-display font-bold text-lg text-brand-orange mb-1">Turnkey Private Label Capacity</h4>
+                    <p className="font-primary text-brand-navy/80 font-medium leading-relaxed">The missing B2B link. We aren&apos;t just selling bulk butter; we are the white-label engine for global brands.</p>
                   </div>
                 </div>
               </div>
 
               {/* Paradox Callout Inside the Orange Box */}
-              <div className="mt-8 pt-6 border-t border-brand-orange/20 relative z-10">
-                <p className="font-primary font-semibold text-brand-navy bg-white/60 p-4 rounded-lg border border-brand-orange/10 shadow-sm leading-relaxed">
-                  Despite being the only player with this structural advantage, we capture negligible fractional market share. <span className="text-brand-orange font-bold uppercase tracking-wider text-xs ml-2 border border-brand-orange/30 px-2 py-1 rounded bg-brand-orange/10">This is an execution gap</span>
+              <div className="mt-8 pt-6 border-t border-brand-orange/10 relative z-10">
+                <p className="font-primary italic text-brand-navy/80 bg-brand-orange/5 p-5 rounded border border-brand-orange/10 leading-relaxed">
+                  Despite being the only player with this structural advantage, we capture negligible fractional market share. <span className="text-brand-orange font-bold uppercase tracking-widest text-[10px] ml-2 border border-brand-orange/20 px-2 py-1 rounded-sm bg-brand-orange/10 not-italic inline-block align-middle transform -translate-y-[1px]">This is an execution gap</span>
                 </p>
               </div>
             </GlassCard>

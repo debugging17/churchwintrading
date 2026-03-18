@@ -51,7 +51,7 @@ export function Slide15DigitalVisibility() {
       <div className="absolute top-0 right-0 w-[40vw] h-[40vw] rounded-full bg-brand-orange/5 blur-[120px] mix-blend-multiply" />
       
       {/* Content Left */}
-      <div className="w-full md:w-[55%] h-full flex flex-col justify-center px-10 md:px-24 z-10 relative">
+      <div className="w-full md:w-[60%] h-full flex flex-col justify-center px-10 md:pl-20 md:pr-10 z-20 relative">
         
         <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="max-w-xl relative z-10">
           <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl font-bold text-brand-navy leading-tight mb-8">
@@ -59,9 +59,11 @@ export function Slide15DigitalVisibility() {
             <span className="text-brand-orange font-light">Churchwin captures zero of it.</span>
           </motion.h2>
 
-          <GlassCard theme="light" delay={0.2} className="mb-8 border-l-4 border-l-brand-orange">
-            <h4 className="text-xs font-display tracking-widest text-[#ff8022] uppercase mb-4 font-semibold">Total Addressable Market</h4>
-            <ul className="space-y-4 font-primary text-brand-navy/80">
+          <GlassCard theme="light" delay={0.2} className="mb-8 border-l-4 border-l-brand-orange bg-brand-white/95 backdrop-blur-xl shadow-lg relative overflow-hidden">
+            {/* Subtle texture inside the card */}
+            <div className="absolute inset-0 bg-[url('/assets/noise.svg')] opacity-[0.02] mix-blend-multiply pointer-events-none" />
+            <h4 className="text-xs font-display tracking-widest text-[#ff8022] uppercase mb-4 font-semibold relative z-10">Total Addressable Market</h4>
+            <ul className="space-y-4 font-primary text-brand-navy/80 relative z-10">
               <li className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-brand-navy/20" />
                 <span className="font-bold text-brand-navy">$40.8B</span> Global organic cosmetics market
@@ -77,15 +79,18 @@ export function Slide15DigitalVisibility() {
             </ul>
           </GlassCard>
 
-          <motion.div variants={fadeUp} className="text-lg font-primary leading-relaxed text-brand-navy/70 italic border-l-2 border-brand-navy/20 pl-6 font-medium">
-            We have the superior supply infrastructure. What we lack is the client acquisition engine. <span className="text-brand-orange font-bold not-italic">This is an execution item.</span>
+          <motion.div variants={fadeUp} className="text-lg font-primary leading-relaxed text-brand-navy/70 italic border-l-2 border-brand-navy/20 pl-6 font-medium relative bg-gradient-to-r from-brand-white to-transparent pr-4 py-2">
+            We have the superior supply infrastructure. What we lack is the client acquisition engine. <span className="text-brand-orange font-bold not-italic inline-block border-b border-brand-orange/30">This is an execution item.</span>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Visual Right - Traffic Comparison */}
-      <div className="w-full md:w-[45%] h-full flex flex-col items-center justify-center p-8 md:p-12 relative border-l border-brand-navy/5">
-        <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-lg h-[500px] flex flex-col">
+      {/* Visual Right - Traffic Comparison - Overlapping Layer */}
+      <div className="w-full md:w-[50%] h-full flex flex-col items-center justify-center p-8 md:p-12 relative md:-ml-[10%] z-10 bg-brand-cream/50">
+        {/* Soft edge blending */}
+        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-brand-white pointer-events-none" />
+
+        <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-lg h-[500px] flex flex-col relative z-20">
            <h4 className="font-display text-sm tracking-widest text-brand-navy/40 uppercase mb-8 text-center font-bold">Monthly Web Traffic (Ahrefs Estimate)</h4>
 
            <div className="flex-grow w-full relative">

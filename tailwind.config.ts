@@ -20,6 +20,10 @@ const config: Config = {
         brand: {
           navy: "#012787",
           orange: "#ff6a00",
+          dark: "#141413",
+          light: "#faf9f5",
+          gray: "#e8e6dc",
+          accent: "#d97757",
           cream: "#fdf6ec",
           white: "#ffffff",
           "navy-light": "#1a3fa8",
