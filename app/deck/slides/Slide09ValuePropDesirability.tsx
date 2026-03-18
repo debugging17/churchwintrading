@@ -9,10 +9,10 @@ export function Slide09ValuePropDesirability() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col md:flex-row bg-brand-cream overflow-hidden">
+    <div className="w-full h-full flex flex-col md:flex-row bg-gradient-to-r from-brand-white via-brand-white/80 to-brand-cream overflow-hidden">
       {/* Visual Left */}
-      <div className="hidden md:flex w-[40%] h-full bg-brand-white relative items-center justify-center p-12 border-r border-brand-navy/5">
-         <div className="absolute inset-0 bg-gradient-to-t from-brand-white/50 to-transparent z-10" />
+      <div className="hidden md:flex w-[40%] h-full relative items-center justify-center p-12">
+         <div className="absolute inset-0 bg-gradient-to-t from-brand-white/50 to-transparent z-10 pointer-events-none" />
          <div className="relative z-20 w-full aspect-[4/5] rounded-xl overflow-hidden border border-brand-navy/10 flex items-center justify-center p-0 shadow-lg">
             <Image 
               src="/assets/b2b_industrial_processing_1773793847510.png" 

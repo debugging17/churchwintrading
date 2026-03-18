@@ -47,11 +47,11 @@ export function Slide15DigitalVisibility() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col md:flex-row bg-brand-cream overflow-hidden">
+    <div className="w-full h-full flex flex-col md:flex-row bg-gradient-to-r from-brand-white via-brand-white/80 to-brand-cream overflow-hidden relative">
+      <div className="absolute top-0 right-0 w-[40vw] h-[40vw] rounded-full bg-brand-orange/5 blur-[120px] mix-blend-multiply" />
       
       {/* Content Left */}
-      <div className="w-full md:w-[55%] h-full flex flex-col justify-center px-10 md:px-24 z-10 bg-brand-white relative border-r border-brand-navy/5 shadow-inner">
-        <div className="absolute top-0 right-0 w-[40vw] h-[40vw] rounded-full bg-brand-orange/5 blur-[120px] mix-blend-multiply" />
+      <div className="w-full md:w-[55%] h-full flex flex-col justify-center px-10 md:px-24 z-10 relative">
         
         <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="max-w-xl relative z-10">
           <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl font-bold text-brand-navy leading-tight mb-8">
