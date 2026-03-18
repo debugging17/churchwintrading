@@ -4,13 +4,20 @@ import { motion } from "framer-motion";
 import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { HeartHandshake, BookOpenCheck, ShieldCheck } from "lucide-react";
+import { ResponsiveContainer, BarChart, Bar, Cell, XAxis, YAxis } from "recharts";
+
+const impactData = [
+  { label: "Standard", value: 100, fill: "rgba(1, 39, 135, 0.2)" },
+  { label: "Certified", value: 400, fill: "#ff6a00" }
+];
 
 export function Slide22ImpactTransformed() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-white">
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-16 my-auto">
+    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 premium-bg-cream relative">
+      <div className="absolute top-0 left-1/4 w-[50vh] h-[50vh] bg-brand-orange/5 mix-blend-multiply rounded-full blur-[100px]" />
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-16 my-auto z-10">
         
         {/* Visual / Ethos Left */}
         <div className="w-full md:w-[45%] flex flex-col justify-center">
@@ -47,13 +54,29 @@ export function Slide22ImpactTransformed() {
             </div>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="bg-gradient-to-r from-brand-orange/5 to-transparent border border-brand-orange/30 rounded-xl p-8 flex items-start gap-6 shadow-[0_4px_20px_rgba(255,106,0,0.05)] bg-white">
-            <div className="w-14 h-14 bg-brand-orange rounded-full flex items-center justify-center shrink-0 shadow-lg">
+          <motion.div variants={fadeUp} className="bg-white/60 backdrop-blur-md border border-brand-orange/30 rounded-xl p-8 flex items-start gap-8 shadow-2xl relative overflow-hidden group">
+            <div className="absolute inset-x-0 bottom-0 h-1 bg-brand-orange shadow-[0_0_20px_rgba(255,106,0,0.4)]" />
+            <div className="w-14 h-14 bg-brand-orange rounded-full flex items-center justify-center shrink-0 shadow-lg relative z-10">
               <ShieldCheck className="text-brand-white w-6 h-6" />
             </div>
-            <div>
-              <div className="text-sm font-display tracking-widest text-[#ff8022] uppercase font-bold mb-2">Proven Model Validation</div>
-              <p className="font-primary text-brand-navy/90 text-lg">Sustainability certification drives <span className="font-bold text-brand-orange">+300% export increases</span> for luxury retail brands.</p>
+            <div className="flex-1 relative z-10">
+              <div className="text-sm font-display tracking-widest text-brand-orange uppercase font-bold mb-3">Proven Model Validation</div>
+              <div className="flex items-end gap-6">
+                <div className="flex-1">
+                   <p className="font-primary text-brand-navy/90 text-lg leading-relaxed">Sustainability certification drives <span className="font-bold text-brand-orange italic">+300% export increases</span> for luxury retail brands.</p>
+                </div>
+                <div className="w-24 h-20 shrink-0">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={impactData}>
+                      <Bar dataKey="value" radius={[4, 4, 0, 0]}>
+                        {impactData.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={entry.fill} />
+                        ))}
+                      </Bar>
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
             </div>
           </motion.div>
 

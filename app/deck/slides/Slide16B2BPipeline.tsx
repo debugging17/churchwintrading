@@ -18,8 +18,11 @@ export function Slide16B2BPipeline() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-white">
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 my-auto">
+    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 premium-bg-cream relative overflow-hidden">
+      {/* Cinematic architectural overlay */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#012787 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 my-auto z-10">
         
         {/* Left Side: Pitch */}
         <div className="w-full lg:w-[45%] flex flex-col justify-center">

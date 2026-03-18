@@ -3,19 +3,71 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeUp, slideFromLeft } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
+import { ResponsiveContainer, Treemap, Tooltip as RechartsTooltip } from "recharts";
+
+const msmeData = [
+  {
+    name: "Micro Enterprises",
+    size: 80,
+    fill: "rgba(1, 39, 135, 0.05)",
+    textColor: "rgba(1, 39, 135, 0.4)"
+  },
+  {
+    name: "Large Corporations",
+    size: 10,
+    fill: "rgba(1, 39, 135, 0.1)",
+    textColor: "rgba(1, 39, 135, 0.6)"
+  },
+  {
+    name: "The Missing Middle (SMEs)",
+    size: 10,
+    fill: "#ff6a00",
+    textColor: "#fff",
+    highlight: true
+  }
+];
+
+const CustomContent = (props: any) => {
+  const { x, y, width, height, index, name, highlight } = props;
+
+  return (
+    <g>
+      <rect
+        x={x}
+        y={y}
+        width={width}
+        height={height}
+        style={{
+          fill: props.fill,
+          stroke: highlight ? '#fff' : 'rgba(1,39,135,0.1)',
+          strokeWidth: 2,
+          transition: 'all 0.3s ease'
+        }}
+      />
+      {width > 50 && height > 30 && (
+        <text
+          x={x + width / 2}
+          y={y + height / 2}
+          textAnchor="middle"
+          dominantBaseline="middle"
+          fill={props.textColor}
+          fontSize={highlight ? 16 : 12}
+          fontWeight={highlight ? 800 : 500}
+          className="font-display uppercase tracking-widest"
+        >
+          {name}
+        </text>
+      )}
+    </g>
+  );
+};
 
 export function Slide04MissingMiddle() {
   const animState = useSlideEnter(100);
 
-  // ROLES APPLIED:
-  // 1. ux-architect: Split layout with infographic block.
-  // 2. proposal-strategist: "Building the Missing Middle from the inside" verbatim copy.
-  // 3. brand-guardian: Orange emphasis for the 'Missing Middle' zone.
-
   return (
-    <div className="w-full h-full flex flex-col md:flex-row bg-brand-cream overflow-hidden relative">
-      {/* Decorative gradient */}
-      <div className="absolute top-0 right-1/4 w-[60vh] h-[60vh] bg-brand-orange/10 mix-blend-multiply rounded-full blur-[100px]" />
+    <div className="w-full h-full flex flex-col md:flex-row premium-bg-cream overflow-hidden relative">
+      <div className="absolute top-0 right-1/4 w-[60vh] h-[60vh] bg-brand-orange/5 mix-blend-multiply rounded-full blur-[120px]" />
 
       <div className="w-full md:w-[45%] h-full flex flex-col justify-center px-10 md:px-24 z-10">
         <motion.div initial="hidden" animate={animState} variants={{
@@ -42,41 +94,46 @@ export function Slide04MissingMiddle() {
       </div>
 
       <div className="w-full md:w-[55%] h-full flex items-center justify-center relative p-12">
-        {/* Infographic Visual - CSS representation of the Missing Middle pyramid */}
         <motion.div 
           initial="hidden" animate={animState} variants={fadeUp}
-          className="w-full max-w-lg aspect-square bg-brand-white border border-brand-navy/10 rounded-2xl p-8 flex flex-col justify-end relative shadow-xl my-auto"
+          className="w-full max-w-xl aspect-[4/3] bg-white/40 backdrop-blur-md border border-brand-navy/10 rounded-2xl p-10 flex flex-col relative shadow-2xl my-auto"
         >
-          <div className="absolute top-6 left-6 text-brand-navy/40 font-primary text-xs uppercase tracking-wider">
-            Distribution of MSME Employment
+          <div className="mb-8">
+            <h3 className="text-brand-navy/40 font-display text-[10px] tracking-[0.2em] uppercase font-bold mb-1">
+              Market Distribution Infrastructure
+            </h3>
+            <p className="text-brand-navy font-display font-bold text-xl">The Missing Middle Gap</p>
           </div>
 
-          <div className="flex flex-col items-center w-full gap-4 mt-12 pb-4">
-            {/* Top: Large Enterprises */}
-            <div className="w-1/4 h-16 bg-brand-navy/5 rounded-sm flex items-center justify-center text-xs text-brand-navy/60 font-medium">
-              LARGE<br/><span className="text-[10px] font-light">10%</span>
-            </div>
-            
-            {/* The Missing Middle Highlight */}
-            <motion.div 
-               animate={{ boxShadow: ["0px 0px 0px rgba(255,106,0,0)", "0px 0px 30px rgba(255,106,0,0.3)", "0px 0px 0px rgba(255,106,0,0)"] }}
-               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-               className="w-2/4 h-24 bg-brand-orange/10 border border-brand-orange/30 rounded-sm flex flex-col items-center justify-center text-brand-orange relative group"
-            >
-               <span className="font-display font-bold md:text-xl tracking-wider uppercase mb-1">
-                The Missing Middle
-              </span>
-              <span className="text-xs font-semibold text-brand-navy">(Churchwin Trading)</span>
-              <div className="absolute -right-32 top-1/2 -translate-y-1/2 text-[10px] text-brand-navy/60 border-b border-brand-navy/20 pb-1">
-                SME scale zone
-              </div>
-            </motion.div>
+          <div className="flex-1 w-full min-h-[300px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <Treemap
+                data={msmeData}
+                dataKey="size"
+                aspectRatio={4 / 3}
+                stroke="#fff"
+                content={<CustomContent />}
+              >
+                <RechartsTooltip 
+                  contentStyle={{ 
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)', 
+                    border: 'none', 
+                    borderRadius: '8px', 
+                    boxShadow: '0 10px 25px -5px rgba(1,39,135,0.1)' 
+                  }}
+                />
+              </Treemap>
+            </ResponsiveContainer>
+          </div>
 
-            {/* Bottom: Micro Enterprises */}
-            <div className="w-full h-32 bg-brand-navy/5 rounded-sm flex items-center justify-center text-brand-navy/40 uppercase tracking-widest text-sm font-medium relative border-t-2 border-dashed border-brand-navy/10 mt-2">
-              <span className="absolute -top-3 bg-brand-cream px-2 text-xs">Death Valley</span>
-              MICRO ENTERPRISES (80%)
+          <div className="mt-8 flex items-center justify-between border-t border-brand-navy/10 pt-6">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-brand-orange rounded-full" />
+              <span className="text-[10px] font-display font-bold text-brand-navy/60 uppercase tracking-widest">Churchwin Target Zone</span>
             </div>
+            <p className="text-[10px] font-primary font-medium text-brand-navy/40 italic">
+              Source: IFC MSME Country Indicators
+            </p>
           </div>
         </motion.div>
       </div>

@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeUp, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceDot } from "recharts";
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceDot } from "recharts";
 
 const gdpData = [
   { year: "1960", westAfrica: 181, southKorea: 158 },
@@ -25,14 +25,14 @@ export function Slide03MacroMoment() {
   // 4. proposal-strategist: "The companies that scale are the agents of change." verbatim.
 
   return (
-    <div className="w-full h-full flex flex-col pt-24 px-10 md:px-24 bg-brand-white text-brand-navy">
+    <div className="w-full h-full flex flex-col pt-24 px-10 md:px-24 premium-bg-cream text-brand-navy relative">
       <motion.div
         variants={sectionTitleStagger}
         initial="hidden"
         animate={animState}
-        className="max-w-4xl"
+        className="max-w-4xl z-10"
       >
-        <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl font-bold leading-tight mb-4">
+        <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl font-bold leading-tight mb-4 text-brand-navy">
           Africa had the lead in 1960. Then the divergence began.
         </motion.h2>
         <motion.p variants={fadeUp} className="text-xl text-brand-orange font-medium mb-12">
@@ -40,29 +40,70 @@ export function Slide03MacroMoment() {
         </motion.p>
 
         {/* Chart Container */}
-        <motion.div variants={fadeUp} className="w-full h-[50vh] bg-brand-navy/5 rounded-xl border border-brand-navy/10 p-6 relative">
+        <motion.div variants={fadeUp} className="w-full h-[50vh] bg-white/40 backdrop-blur-md rounded-2xl border border-brand-navy/10 p-8 relative shadow-2xl overflow-hidden">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={gdpData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(1,39,135,0.1)" vertical={false} />
-              <XAxis dataKey="year" stroke="rgba(1,39,135,0.4)" tick={{ fill: 'rgba(1,39,135,0.6)', fontFamily: 'Inter' }} />
-              <YAxis stroke="rgba(1,39,135,0.4)" tick={{ fill: 'rgba(1,39,135,0.6)' }} tickFormatter={(val) => `$${val/1000}k`} />
-              <Tooltip 
-                contentStyle={{ backgroundColor: '#ffffff', border: '1px solid rgba(1,39,135,0.1)', borderRadius: '8px', color: '#012787', boxShadow: '0 10px 25px -5px rgba(1,39,135,0.1)' }}
-                itemStyle={{ fontFamily: 'Inter' }}
+            <AreaChart data={gdpData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+              <defs>
+                <linearGradient id="colorKorea" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#ff6a00" stopOpacity={0.3}/>
+                  <stop offset="95%" stopColor="#ff6a00" stopOpacity={0}/>
+                </linearGradient>
+                <linearGradient id="colorAfrica" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#012787" stopOpacity={0.1}/>
+                  <stop offset="95%" stopColor="#012787" stopOpacity={0}/>
+                </linearGradient>
+              </defs>
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(1,39,135,0.05)" vertical={false} />
+              <XAxis 
+                dataKey="year" 
+                axisLine={false} 
+                tickLine={false}
+                tick={{ fill: 'rgba(1,39,135,0.4)', fontSize: 12, fontWeight: 500 }}
               />
-              <Line type="monotone" dataKey="southKorea" name="South Korea" stroke="#ff6a00" strokeWidth={3} dot={false} activeDot={{ r: 6 }} animationDuration={2000} />
-              <Line type="monotone" dataKey="westAfrica" name="West Africa (Proxy Ghana)" stroke="#012787" strokeWidth={3} dot={false} activeDot={{ r: 6 }} animationDuration={2000} />
+              <YAxis 
+                axisLine={false} 
+                tickLine={false}
+                tick={{ fill: 'rgba(1,39,135,0.4)', fontSize: 12, fontWeight: 500 }}
+                tickFormatter={(val) => `$${(val/1000).toFixed(0)}k`} 
+              />
+              <Tooltip 
+                contentStyle={{ 
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)', 
+                  border: 'none', 
+                  borderRadius: '12px', 
+                  boxShadow: '0 20px 40px -10px rgba(1,39,135,0.2)',
+                  backdropFilter: 'blur(8px)'
+                }}
+                itemStyle={{ fontWeight: 600, fontSize: '14px' }}
+              />
+              <Area 
+                type="monotone" 
+                dataKey="southKorea" 
+                stroke="#ff6a00" 
+                strokeWidth={4} 
+                fillOpacity={1} 
+                fill="url(#colorKorea)" 
+                animationDuration={2500} 
+              />
+              <Area 
+                type="monotone" 
+                dataKey="westAfrica" 
+                stroke="#012787" 
+                strokeWidth={3} 
+                fillOpacity={1} 
+                fill="url(#colorAfrica)" 
+                animationDuration={2000} 
+              />
               
-              {/* Highlight the 1980 crossover point */}
-              <ReferenceDot x="1980" y={1714} r={6} fill="#ff6a00" stroke="none" />
-            </LineChart>
+              <ReferenceDot x="1980" y={1714} r={8} fill="#ff6a00" stroke="#fff" strokeWidth={3} className="animate-pulse" />
+            </AreaChart>
           </ResponsiveContainer>
           
-          <div className="absolute top-6 left-10 text-brand-navy/50 text-xs font-primary font-medium">
-            GDP per capita (current US$) — West Africa vs. South Korea 1960–2020
+          <div className="absolute top-8 left-10 text-brand-navy/30 text-[10px] tracking-[0.2em] uppercase font-display font-bold">
+            Data Source: World Bank GDP per capita
           </div>
-          <div className="absolute bottom-10 right-10 text-brand-navy text-sm max-w-sm text-right font-primary leading-relaxed bg-brand-white/90 p-4 border border-brand-navy/10 rounded-lg shadow-lg">
-            South Korea overtook West Africa by 1980. By 2020, West Africa was at South Korea&apos;s 1980 level.
+          <div className="absolute bottom-10 right-10 text-brand-navy text-sm max-w-[280px] text-right font-primary leading-relaxed bg-white/80 backdrop-blur-sm p-5 border border-brand-navy/5 rounded-xl shadow-xl">
+            <span className="text-brand-orange font-bold">The Divergence:</span> South Korea leveraged institutional scale by 1980. West Africa remains at South Korea&apos;s 1980 level today.
           </div>
         </motion.div>
       </motion.div>
