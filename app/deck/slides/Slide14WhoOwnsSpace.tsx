@@ -24,8 +24,8 @@ export function Slide14WhoOwnsSpace() {
   };
 
   return (
-    <div className="w-full h-full flex flex-col justify-center px-10 md:px-16 bg-brand-white">
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-7xl mx-auto">
+    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-16 bg-brand-white">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-7xl mx-auto my-auto">
         <motion.div variants={fadeUp} className="mb-6">
           <h2 className="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-2">
             Four players own this market. <span className="text-brand-orange font-light">None are Ghanaian at scale.</span>

@@ -48,7 +48,7 @@ export function Slide15DigitalVisibility() {
 
       {/* Visual Right - Traffic Comparison */}
       <div className="w-full md:w-[45%] h-full flex items-center justify-center p-12 relative border-l border-brand-navy/5">
-        <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-sm">
+        <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-sm my-auto">
            <h4 className="font-display text-sm tracking-widest text-brand-navy/40 uppercase mb-8 text-center font-bold">Monthly Web Traffic (Ahrefs Estimate)</h4>
            
            <div className="space-y-8 relative">

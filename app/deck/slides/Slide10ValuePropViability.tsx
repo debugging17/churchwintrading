@@ -9,8 +9,8 @@ export function Slide10ValuePropViability() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col justify-center px-10 md:px-24 bg-brand-white">
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto">
+    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-white">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto">
         <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl font-bold text-brand-navy mb-4 text-center">
           Two revenue streams. <span className="text-brand-orange font-light">Maximum margin architecture.</span>
         </motion.h2>

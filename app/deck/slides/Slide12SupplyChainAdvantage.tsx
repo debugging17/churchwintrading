@@ -10,9 +10,9 @@ export function Slide12SupplyChainAdvantage() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col justify-center px-10 md:px-24 bg-brand-cream bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-orange/10 via-brand-cream to-brand-cream relative overflow-hidden">
+    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-cream bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-orange/10 via-brand-cream to-brand-cream relative overflow-hidden">
       
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto z-10">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto z-10 my-auto">
         
         <motion.div variants={fadeUp} className="mb-16">
           <h2 className="font-display text-4xl md:text-6xl font-bold text-brand-navy leading-tight mb-4 max-w-4xl">

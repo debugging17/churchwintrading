@@ -9,8 +9,8 @@ export function Slide18Phase1() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col justify-center px-10 md:px-24 bg-brand-cream">
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-cream">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-12 my-auto">
         
         {/* Phase Header */}
         <div className="w-full md:w-1/3 border-l-[6px] border-brand-orange pl-6 py-2 h-max">

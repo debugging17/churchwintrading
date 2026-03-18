@@ -18,14 +18,14 @@ const config: Config = {
       },
       colors: {
         brand: {
-          navy: "var(--brand-navy)",
-          orange: "var(--brand-orange)",
-          cream: "var(--brand-cream)",
-          white: "var(--brand-white)",
-          "navy-light": "var(--brand-navy-light)",
-          "navy-dark": "var(--brand-navy-dark)",
-          "glass-bg": "var(--brand-glass-bg)",
-          "glass-border": "var(--brand-glass-border)",
+          navy: "#012787",
+          orange: "#ff6a00",
+          cream: "#fdf6ec",
+          white: "#ffffff",
+          "navy-light": "#1a3fa8",
+          "navy-dark": "#011a5e",
+          "glass-bg": "rgba(255, 255, 255, 0.08)",
+          "glass-border": "rgba(255, 255, 255, 0.15)",
         },
       },
       fontFamily: {

@@ -45,7 +45,7 @@ export function Slide04MissingMiddle() {
         {/* Infographic Visual - CSS representation of the Missing Middle pyramid */}
         <motion.div 
           initial="hidden" animate={animState} variants={fadeUp}
-          className="w-full max-w-lg aspect-square bg-brand-white border border-brand-navy/10 rounded-2xl p-8 flex flex-col justify-end relative shadow-xl"
+          className="w-full max-w-lg aspect-square bg-brand-white border border-brand-navy/10 rounded-2xl p-8 flex flex-col justify-end relative shadow-xl my-auto"
         >
           <div className="absolute top-6 left-6 text-brand-navy/40 font-primary text-xs uppercase tracking-wider">
             Distribution of MSME Employment

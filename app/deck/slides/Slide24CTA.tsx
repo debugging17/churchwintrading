@@ -10,9 +10,9 @@ export function Slide24CTA() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col justify-center px-10 md:px-24 bg-brand-navy-dark bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-brand-orange/10 via-brand-navy-dark to-brand-navy-dark relative overflow-hidden">
+    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-navy-dark bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-brand-orange/10 via-brand-navy-dark to-brand-navy-dark relative overflow-hidden">
       
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col items-center z-10 text-center">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col items-center z-10 text-center my-auto">
         
         <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-6xl font-bold text-brand-white leading-tight mb-16">
           The Stanford Seed ROI. <br className="md:hidden" /><span className="text-brand-orange font-light">Three strategic mandates.</span>
@@ -38,7 +38,7 @@ export function Slide24CTA() {
             </div>
             <h3 className="font-display text-xl font-bold text-brand-white mb-4">Executive Alignment</h3>
             <p className="font-primary text-brand-white/70 text-sm leading-relaxed">
-              Leveraging the Board's existing Tier-1 US/EU cosmetics procurement contacts. The 42% of 1,544 Seed companies doing business together are our warm door.
+              Leveraging the Board&apos;s existing Tier-1 US/EU cosmetics procurement contacts. The 42% of 1,544 Seed companies doing business together are our warm door.
             </p>
           </motion.div>
 

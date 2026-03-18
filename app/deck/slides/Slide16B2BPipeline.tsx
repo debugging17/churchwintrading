@@ -17,8 +17,8 @@ export function Slide16B2BPipeline() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col justify-center px-10 md:px-24 bg-brand-white">
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
+    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-white">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 my-auto">
         
         {/* Left Side: Pitch */}
         <div className="w-full lg:w-[45%] flex flex-col justify-center">
