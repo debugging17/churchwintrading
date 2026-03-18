@@ -22,9 +22,9 @@ export function Slide11Capabilities() {
        <div className="hidden md:flex w-[45%] h-full relative items-center justify-center p-12">
         <div className="w-full aspect-[3/4] rounded-2xl border border-brand-navy/10 flex items-center justify-center relative overflow-hidden shadow-xl">
           <Image 
-            src="/assets/b2b_qa_laboratory_1773793831592.png" 
-            alt="International Compliance Vault & QA Lab" 
-            fill 
+            src="/assets/ghana_qa_lab.png" 
+            alt="International Compliance Vault & QA Lab - Churchwin Trading Ghana" 
+            fill  
             className="object-cover"
           />
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-white to-transparent opacity-80" />
