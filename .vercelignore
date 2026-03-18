@@ -17,3 +17,9 @@ tests/
 # Git
 .git/
 .github/
+
+# Agent artifacts
+.agents/
+.agent/
+_agents/
+_agent/

@@ -1,0 +1,4 @@
+# Churchwin Pitch Deck — Confidential
+# Block all crawlers from indexing any content
+User-agent: *
+Disallow: /

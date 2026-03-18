@@ -66,14 +66,16 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
   );
 
   // Content Security Policy — prevents XSS and injection of untrusted scripts
+  // Note: 'unsafe-inline' is required by Next.js 14 App Router for RSC hydration.
+  // 'unsafe-eval' has been removed — it is only needed in dev mode (Next.js handles this).
   response.headers.set(
     "Content-Security-Policy",
     [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'", // unsafe-inline needed by Next.js RSC hydration
+      "script-src 'self' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com data:",
-      "img-src 'self' data: blob: https:",
+      "img-src 'self' data: blob:",
       "media-src 'self'",
       "connect-src 'self'",
       "frame-ancestors 'none'",
@@ -102,14 +104,21 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
   // Cross-Origin Opener Policy — prevents cross-origin window attacks
   response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
 
-  // Cross-Origin Embedder Policy — required to use SharedArrayBuffer safely
-  response.headers.set("Cross-Origin-Embedder-Policy", "require-corp");
+  // Cross-Origin Embedder Policy — 'credentialless' allows cross-origin loads
+  // (e.g. Google Fonts) without CORS while still enabling isolation
+  response.headers.set("Cross-Origin-Embedder-Policy", "credentialless");
 
   // Cross-Origin Resource Policy — prevents other origins from loading our resources
   response.headers.set("Cross-Origin-Resource-Policy", "same-origin");
 
   // Prevent Flash/PDF cross-domain policy files
   response.headers.set("X-Permitted-Cross-Domain-Policies", "none");
+
+  // Prevent DNS prefetching leaking internal hostnames
+  response.headers.set("X-DNS-Prefetch-Control", "off");
+
+  // Prevent IE from executing downloads in site's context
+  response.headers.set("X-Download-Options", "noopen");
 
   // Remove server fingerprinting
   response.headers.delete("X-Powered-By");

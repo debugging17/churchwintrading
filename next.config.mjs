@@ -13,21 +13,25 @@ const securityHeaders = [
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" },
   // Cross-origin window isolation
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
-  // SharedArrayBuffer + isolate browsing context
-  { key: "Cross-Origin-Embedder-Policy", value: "require-corp" },
+  // Cross-origin embedder — credentialless allows Google Fonts without CORS
+  { key: "Cross-Origin-Embedder-Policy", value: "credentialless" },
   // Prevent cross-origin resource embedding
   { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
   // Block Flash/PDF cross-domain policy files
   { key: "X-Permitted-Cross-Domain-Policies", value: "none" },
+  // Prevent DNS prefetching leaking internal hostnames
+  { key: "X-DNS-Prefetch-Control", value: "off" },
+  // Prevent IE from executing downloads in site's context
+  { key: "X-Download-Options", value: "noopen" },
   // Content Security Policy — defence against XSS and supply-chain script injection
   {
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+      "script-src 'self' 'unsafe-inline'",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com data:",
-      "img-src 'self' data: blob: https:",
+      "img-src 'self' data: blob:",
       "media-src 'self'",
       "connect-src 'self'",
       "frame-ancestors 'none'",
@@ -40,6 +44,12 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  // Disable X-Powered-By header — prevents framework fingerprinting
+  poweredByHeader: false,
+
+  // Never expose source maps in production
+  productionBrowserSourceMaps: false,
+
   async headers() {
     return [
       {
