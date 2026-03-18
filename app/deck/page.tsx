@@ -9,9 +9,8 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 // Global UI Layout Overlays
-import { SlideCounter } from "./components/SlideCounter";
-import { ProgressBar } from "./components/ProgressBar";
-import { SlideLogo } from "./components/SlideLogo";
+import { FooterStack } from "./components/FooterStack";
+import { SlideLogo } from "./components/SlideLogo"; // Keep if needed elsewhere, but removing from main render below
 
 // Slides
 import { Slide01Cover } from "./slides/Slide01Cover";
@@ -64,9 +63,7 @@ export default function DeckLayout() {
         className="h-full w-full"
       >
         {/* Global UI */}
-        <SlideCounter total={totalSlides} />
-        <ProgressBar total={totalSlides} />
-        <SlideLogo />
+        <FooterStack total={totalSlides} />
 
         {/* Slides */}
         <SwiperSlide>

@@ -47,6 +47,9 @@ const nextConfig = {
   // Disable X-Powered-By header — prevents framework fingerprinting
   poweredByHeader: false,
 
+  // Disable font optimization to avoid build-time fetch timeouts in restricted environments
+  optimizeFonts: false,
+
   // Never expose source maps in production
   productionBrowserSourceMaps: false,
 

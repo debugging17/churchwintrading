@@ -61,7 +61,8 @@ export function Slide15DigitalVisibility() {
 
           <GlassCard theme="light" delay={0.2} className="mb-8 border-l-4 border-l-brand-orange bg-brand-white/95 backdrop-blur-xl shadow-lg relative overflow-hidden">
             {/* Subtle texture inside the card */}
-            <div className="absolute inset-0 bg-[url('/assets/noise.svg')] opacity-[0.02] mix-blend-multiply pointer-events-none" />
+            {/* Removed missing noise.svg to avoid 404 errors and resolve 'whisper' concerns */}
+            <div className="absolute inset-0 bg-brand-navy/5 opacity-[0.05] pointer-events-none" />
             <h4 className="text-xs font-display tracking-widest text-[#ff8022] uppercase mb-4 font-semibold relative z-10">Total Addressable Market</h4>
             <ul className="space-y-4 font-primary text-brand-navy/80 relative z-10">
               <li className="flex items-center gap-3">

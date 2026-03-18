@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 :root {
+  --font-display: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-primary: 'Lora', 'Georgia', serif;
+  
   /* Churchwin Core */
   --brand-navy:        #012787;
   --brand-orange:      #ff6a00;
