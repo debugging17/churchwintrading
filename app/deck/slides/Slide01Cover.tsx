@@ -23,10 +23,9 @@ export function Slide01Cover() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        style={{ filter: "contrast(1.1) saturate(1.05)" }}
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-80"
       >
-        <source src="/assets/videos/cinematic-cover.mp4" type="video/mp4" />
+        <source src="/assets/videos/vid-6.mp4" type="video/mp4" />
       </video>
 
       {/* === LAYER 1: Gradient overlays for text legibility === */}
