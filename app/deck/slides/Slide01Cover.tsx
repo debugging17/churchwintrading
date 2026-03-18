@@ -25,7 +25,7 @@ export function Slide01Cover() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-80"
       >
-        <source src="/assets/videos/vid-6.mp4" type="video/mp4" />
+        <source src="/assets/videos/apply_cinematic,_8k_202603181845.mp4" type="video/mp4" />
       </video>
 
       {/* === LAYER 1: Gradient overlays for text legibility === */}
