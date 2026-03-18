@@ -1,18 +1,19 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { Database, Linkedin, Mail, Target, ArrowDown } from "lucide-react";
+import { Target } from "lucide-react";
 
 export function Slide16B2BPipeline() {
   const animState = useSlideEnter(100);
 
   const pipeline = [
-    { icon: Database, name: "APOLLO.IO", desc: "Database generation → 500+ ICP-matched prospects" },
-    { icon: Linkedin, name: "LINKEDIN SALES NAV", desc: "Warm-up touch with R&D and Procurement" },
-    { icon: Mail, name: "INSTANTLY.AI", desc: "4-touch personalized sequence (Days 1/4/7/14)" },
-    { icon: Mail, name: "MAILCHIMP", desc: "Monthly \"Churchwin Origins\" nurture newsletter" },
+    { image: "/assets/Sales Engine/apollo.png", name: "APOLLO.IO", desc: "Database generation → 500+ ICP-matched prospects" },
+    { image: "/assets/Sales Engine/linkedin.png", name: "LINKEDIN SALES NAV", desc: "Warm-up touch with R&D and Procurement" },
+    { image: "/assets/Sales Engine/instantly.png", name: "INSTANTLY.AI", desc: "4-touch personalized sequence (Days 1/4/7/14)" },
+    { image: "/assets/Sales Engine/mailchimp.png", name: "MAILCHIMP", desc: "Monthly \"Churchwin Origins\" nurture newsletter" },
     { icon: Target, name: "CRM → CONTRACT", desc: "Sample kit dispatch → Supply Agreement", highlight: true }
   ];
 
@@ -62,8 +63,12 @@ export function Slide16B2BPipeline() {
                 variants={fadeUp}
                 className={`flex items-center gap-6 p-4 rounded-lg border ${step.highlight ? 'bg-brand-orange/10 border-brand-orange/50 shadow-[0_0_20px_rgba(255,106,0,0.1)] mt-8' : 'bg-white border-brand-navy/10 shadow-sm'} relative`}
               >
-                <div className={`w-12 h-12 rounded-full flex shrink-0 items-center justify-center relative z-10 ${step.highlight ? 'bg-brand-orange text-brand-white shadow-md' : 'bg-brand-white border border-brand-navy/20 text-brand-navy/60 shadow-sm'}`}>
-                  <step.icon className="w-5 h-5" />
+                <div className={`w-12 h-12 rounded-full flex shrink-0 items-center justify-center relative z-10 overflow-hidden ${step.highlight ? 'bg-brand-orange text-brand-white shadow-md' : 'bg-brand-white border border-brand-navy/20 shadow-sm p-2 bg-white'}`}>
+                  {step.image ? (
+                    <Image src={step.image} alt={step.name} fill className="object-contain p-2" />
+                  ) : step.icon ? (
+                    <step.icon className="w-5 h-5 text-brand-white" />
+                  ) : null}
                 </div>
                 <div>
                   <h5 className={`font-display text-xs tracking-widest uppercase font-bold mb-1 ${step.highlight ? 'text-brand-orange' : 'text-brand-navy/50'}`}>

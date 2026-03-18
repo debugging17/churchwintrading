@@ -77,18 +77,20 @@ export function Slide01Cover() {
         </motion.div>
       </div>
 
-      {/* Visual Half - Abstract representation as photo placeholder */}
-      <div className="hidden md:flex w-[45%] h-full relative items-center justify-center">
-        {/* Placeholder for Product Flat-lay Image */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy to-transparent z-10 pointer-events-none" />
-        <div className="w-[80%] h-[80%] rounded-2xl bg-brand-white/5 border border-brand-white/10 flex flex-col items-center justify-center relative overflow-hidden group">
-          <div className="absolute inset-0 bg-brand-orange/5 mix-blend-overlay" />
-          <span className="text-brand-white/20 font-display tracking-widest text-sm uppercase">
-            [Product Flat-Lay Hero Image]
-          </span>
-          <span className="text-brand-white/20 font-primary text-xs mt-2 text-center px-8">
-            Shea, Black Soap, Baobab, Moringa, Neem
-          </span>
+      {/* Visual Half - Authentic Churchwin Video */}
+      <div className="hidden md:flex w-[45%] h-full relative items-center justify-center p-6">
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/50 to-transparent z-10 pointer-events-none" />
+        <div className="w-full h-full rounded-l-[3rem] overflow-hidden relative shadow-2xl">
+          <div className="absolute inset-0 bg-brand-navy/20 mix-blend-multiply z-10 pointer-events-none" />
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover filter contrast-110 saturate-110"
+          >
+            <source src="/assets/vid-6.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
@@ -19,10 +20,13 @@ export function Slide11Capabilities() {
     <div className="w-full h-full flex flex-col md:flex-row bg-brand-white overflow-hidden">
        {/* Visual Left */}
        <div className="hidden md:flex w-[45%] h-full relative items-center justify-center p-12 border-r border-brand-navy/5 bg-brand-navy/5">
-        <div className="w-full aspect-[3/4] rounded-2xl border border-brand-navy/10 flex items-center justify-center relative overflow-hidden bg-brand-white/50">
-          <div className="text-brand-navy/40 font-display tracking-widest text-sm uppercase px-8 text-center leading-relaxed font-semibold">
-            [Abstract Architecture / Infrastructure Visual]
-          </div>
+        <div className="w-full aspect-[3/4] rounded-2xl border border-brand-navy/10 flex items-center justify-center relative overflow-hidden shadow-xl">
+          <Image 
+            src="/assets/b2b_qa_laboratory_1773793831592.png" 
+            alt="International Compliance Vault & QA Lab" 
+            fill 
+            className="object-cover"
+          />
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-white to-transparent opacity-80" />
         </div>
       </div>

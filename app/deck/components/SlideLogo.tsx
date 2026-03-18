@@ -1,15 +1,18 @@
 import React from 'react';
+import Image from 'next/image';
 
 export function SlideLogo() {
   return (
-    <div className="absolute bottom-8 right-10 z-[100] flex items-center gap-2 pointer-events-none mix-blend-difference">
-      {/* Abstract mark: simple orange indicator bridging missing middle */}
-      <div className="relative w-5 h-5">
-        <div className="absolute inset-y-0 left-0 w-1.5 bg-brand-white rounded-sm opacity-60" />
-        <div className="absolute inset-y-0 right-0 w-1.5 bg-brand-white rounded-sm opacity-60" />
-        <div className="absolute inset-y-1 left-2 w-1 bg-brand-orange rounded-sm" />
+    <div className="absolute bottom-8 right-10 z-[100] flex items-center gap-3 pointer-events-none mix-blend-difference">
+      <div className="relative w-8 h-8 opacity-90">
+        <Image 
+          src="/assets/churchwin_logo_new.png" 
+          alt="Churchwin Trading Logo" 
+          fill
+          className="object-contain"
+        />
       </div>
-      <span className="font-display font-bold tracking-widest text-brand-white text-xs uppercase opacity-90 ml-1">
+      <span className="font-display font-bold tracking-widest text-brand-white text-xs uppercase opacity-90">
         CHURCHWIN TRADING
       </span>
     </div>

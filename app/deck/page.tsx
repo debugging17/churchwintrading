@@ -26,6 +26,7 @@ import { Slide09ValuePropDesirability } from "./slides/Slide09ValuePropDesirabil
 import { Slide10ValuePropViability } from "./slides/Slide10ValuePropViability";
 import { Slide11Capabilities } from "./slides/Slide11Capabilities";
 import { Slide12SupplyChainAdvantage } from "./slides/Slide12SupplyChainAdvantage";
+import { Slide12ABulkGallery } from "./slides/Slide12ABulkGallery";
 import { Slide13CompetitiveReality } from "./slides/Slide13CompetitiveReality";
 import { Slide14WhoOwnsSpace } from "./slides/Slide14WhoOwnsSpace";
 import { Slide15DigitalVisibility } from "./slides/Slide15DigitalVisibility";
@@ -41,7 +42,7 @@ import { Slide24CTA } from "./slides/Slide24CTA";
 
 export default function DeckLayout() {
   const [mounted, setMounted] = useState(false);
-  const totalSlides = 24; // Full deck completed
+  const totalSlides = 25; // Added Slide12A Bulk Gallery
 
   useEffect(() => {
     setMounted(true);
@@ -114,6 +115,10 @@ export default function DeckLayout() {
 
         <SwiperSlide>
           <Slide12SupplyChainAdvantage />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide12ABulkGallery />
         </SwiperSlide>
 
         <SwiperSlide>

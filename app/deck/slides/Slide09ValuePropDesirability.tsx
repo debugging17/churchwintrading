@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
@@ -12,10 +13,14 @@ export function Slide09ValuePropDesirability() {
       {/* Visual Left */}
       <div className="hidden md:flex w-[40%] h-full bg-brand-white relative items-center justify-center p-12 border-r border-brand-navy/5">
          <div className="absolute inset-0 bg-gradient-to-t from-brand-white/50 to-transparent z-10" />
-         <div className="relative z-20 w-full aspect-[4/5] rounded-xl overflow-hidden border border-brand-navy/10 flex items-center justify-center text-center p-8 bg-brand-navy/5 shadow-inner">
-            <div className="text-brand-navy/40 font-display tracking-widest text-sm uppercase font-semibold">
-              [Image: Premium Facility Operations]
-            </div>
+         <div className="relative z-20 w-full aspect-[4/5] rounded-xl overflow-hidden border border-brand-navy/10 flex items-center justify-center p-0 shadow-lg">
+            <Image 
+              src="/assets/b2b_industrial_processing_1773793847510.png" 
+              alt="Industrial Scale Processing Facility" 
+              fill 
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-brand-navy/5 mix-blend-multiply pointer-events-none" />
          </div>
       </div>
 
