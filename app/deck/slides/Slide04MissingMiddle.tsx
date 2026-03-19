@@ -27,13 +27,13 @@ export function Slide04MissingMiddle() {
       {/* === LAYER 0: Background Context === */}
       <div className="absolute inset-0 z-0 opacity-20">
         <Image 
-          src="/images/backgrounds/missing_middle_context.png" 
-          alt="Industrial Scale" 
+          src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
+          alt="Industrial Transformation" 
           fill 
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-brand-navy/40 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-brand-navy/60 mix-blend-multiply" />
       </div>
 
       <motion.div 
@@ -51,16 +51,16 @@ export function Slide04MissingMiddle() {
           </motion.div>
 
           <motion.h2 variants={slideFromLeft} className="text-[clamp(2.5rem,6vw,5rem)] font-black text-brand-white leading-[0.95] mb-[2rem] tracking-tighter">
-            80% of jobs.<br />
-            <span className="text-brand-orange drop-shadow-lg italic">The trap is real.</span>
+            Bridging the Gap.<br />
+            <span className="text-brand-orange drop-shadow-lg italic">The Scale Transformation.</span>
           </motion.h2>
 
           <motion.div variants={fadeUp} className="bg-brand-white/5 border-l-[0.3rem] border-brand-orange p-[2rem] md:p-[2.5rem] backdrop-blur-3xl rounded-r-[1rem] shadow-3xl">
             <p className="text-[1.2rem] text-brand-white/90 font-primary leading-relaxed font-light italic mb-[1.5rem]">
-              &ldquo;Africa&apos;s economy is currently hamstrung by fragmented SMEs that find it impossible to institutionalize.&rdquo;
+              &ldquo;Growth isn&apos;t just about size; it&apos;s about structure. Just as South Korea transformed via institutional scale, Churchwin is building the infrastructure to reclaim the delta.&rdquo;
             </p>
             <div className="bg-brand-navy border border-brand-white/10 p-[1.5rem] rounded-[1rem]">
-               <h3 className="font-display font-black text-[1.5rem] text-brand-orange mb-[0.5rem]">Churchwin solves the middle.</h3>
+               <h3 className="font-display font-black text-[1.5rem] text-brand-orange mb-[0.5rem]">Solving the Middle.</h3>
                <p className="font-primary text-brand-white/60 text-[0.875rem] leading-relaxed">
                   We bridge the gap from micro-fragmentation to industrial-scale B2B excellence.
                </p>

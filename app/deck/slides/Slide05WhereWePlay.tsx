@@ -15,7 +15,7 @@ export function Slide05WhereWePlay() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col pt-16 md:pt-24 px-10 md:px-24 bg-brand-white relative overflow-hidden pb-[var(--footer-height)]">
+    <div className="w-full h-full flex flex-col items-center justify-center bg-brand-white relative overflow-hidden pb-[var(--footer-height)]">
       
       {/* === LAYER 0: Cinematic Video background === */}
       <video
@@ -23,21 +23,21 @@ export function Slide05WhereWePlay() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 grayscale opacity-80"
+        className="absolute inset-0 w-full h-full object-cover z-0 grayscale-[0.5] opacity-60"
       >
         <source src="/assets/videos/cinematic-cover.mp4" type="video/mp4" />
       </video>
 
       {/* === LAYER 1: Deep Navy Overlays === */}
-      <div className="absolute inset-0 bg-brand-navy/60 z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-brand-navy z-[2]" />
+      <div className="absolute inset-0 bg-brand-navy/30 backdrop-blur-[2px] z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/60 via-transparent to-brand-navy/80 z-[2]" />
 
       {/* === LAYER 10: Centered Content === */}
       <motion.div 
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="relative z-10 flex flex-col items-center text-center max-w-4xl px-8"
+        className="relative z-10 flex flex-col items-center text-center max-w-5xl px-8"
       >
         {/* Section Number */}
         <motion.div 
@@ -51,17 +51,17 @@ export function Slide05WhereWePlay() {
         <div className="overflow-hidden mb-8">
           <motion.h2 
             variants={slideFromLeft}
-            className="font-display text-7xl md:text-9xl font-black text-brand-white tracking-tighter leading-none"
+            className="font-display text-6xl md:text-8xl font-black text-brand-white tracking-tighter leading-[0.9] text-center"
           >
             WHERE WE <br />
-            <span className="text-brand-orange drop-shadow-2xl">PLAY.</span>
+            <span className="text-brand-orange drop-shadow-[0_10px_30px_rgba(255,119,0,0.5)]">PLAY.</span>
           </motion.h2>
         </div>
         
         {/* Subtitle / Positioning Statement */}
         <motion.p
           variants={fadeUp}
-          className="font-primary text-2xl md:text-3xl text-brand-white/80 font-light italic leading-relaxed max-w-3xl border-t border-brand-white/10 pt-12"
+          className="font-primary text-xl md:text-2xl text-brand-white/90 font-light italic leading-relaxed max-w-3xl border-t border-brand-white/20 pt-10 mt-4"
         >
           Six industries. <span className="text-brand-orange font-bold">One supply chain advantage.</span>
         </motion.p>

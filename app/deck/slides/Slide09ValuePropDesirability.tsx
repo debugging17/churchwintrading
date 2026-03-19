@@ -10,17 +10,17 @@ export function Slide09ValuePropDesirability() {
 
   return (
     <div className="w-full h-full flex flex-col md:flex-row bg-brand-white overflow-hidden">
-      {/* Visual Left - Seamlessly Blended (No Glow) */}
+      {/* Visual Left - Optimized Visibility & Blending */}
       <div className="hidden md:flex w-[50%] h-full relative overflow-hidden group">
          <div className="absolute inset-0 z-0 bg-brand-white">
             <Image 
               src="/assets/trucking.jpeg" 
               alt="Industrial Logistic Support" 
               fill 
-              className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[4s] ease-out"
+              className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[4s] ease-out brightness-95 contrast-[1.05]"
               style={{ 
-                maskImage: 'linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 95%)', 
-                WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 95%)' 
+                maskImage: 'linear-gradient(to right, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%)', 
+                WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%)' 
               }}
               priority
             />
