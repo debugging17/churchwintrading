@@ -18,7 +18,7 @@ export function Slide16B2BPipeline() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col py-10 md:py-16 px-10 md:px-24 bg-brand-cream relative overflow-hidden">
+    <div className="w-full h-full flex flex-col py-8 md:py-12 px-10 md:px-24 bg-brand-cream relative overflow-hidden pb-[var(--footer-height)]">
       {/* Cinematic architectural overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#012787 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
       

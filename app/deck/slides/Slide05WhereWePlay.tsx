@@ -15,7 +15,7 @@ export function Slide05WhereWePlay() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden bg-brand-navy">
+    <div className="w-full h-full flex flex-col pt-16 md:pt-24 px-10 md:px-24 bg-brand-white relative overflow-hidden pb-[var(--footer-height)]">
       
       {/* === LAYER 0: Cinematic Video background === */}
       <video

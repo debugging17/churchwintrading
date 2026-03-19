@@ -19,7 +19,7 @@ export function Slide11Capabilities() {
   ];
 
   return (
-    <div className="relative w-full h-full flex flex-col md:flex-row bg-[#FDFDFD] overflow-hidden">
+    <div className="relative w-full h-full flex flex-col md:flex-row bg-[#FDFDFD] overflow-hidden pb-[var(--footer-height)]">
       <NoiseOverlay />
       
       {/* Dynamic Background Element */}

@@ -10,7 +10,7 @@ export function Slide14WhoOwnsSpace() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col py-10 md:py-16 px-10 md:px-20 bg-brand-white relative overflow-hidden">
+    <div className="w-full h-full flex flex-col py-8 md:py-10 px-10 md:px-20 bg-brand-white relative overflow-hidden pb-[var(--footer-height)]">
       
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-[40vw] h-[40vw] rounded-full bg-brand-orange/5 blur-[120px] mix-blend-multiply" />

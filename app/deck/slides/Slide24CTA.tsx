@@ -10,7 +10,7 @@ export function Slide24CTA() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-navy-dark bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-brand-orange/10 via-brand-navy-dark to-brand-navy-dark relative overflow-hidden">
+    <div className="w-full h-full flex flex-col items-center justify-center px-10 md:px-24 bg-brand-navy relative overflow-hidden text-center pb-[var(--footer-height)]">
       
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col items-center z-10 text-center my-auto">
         

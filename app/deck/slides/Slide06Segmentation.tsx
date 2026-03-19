@@ -24,7 +24,7 @@ export function Slide06Segmentation() {
   // 4. proposal-strategist: Verbatim table text from "Judith Brigue Addendum".
 
   return (
-    <div className="w-full h-full flex flex-col py-10 md:py-16 px-10 md:px-24 bg-brand-white">
+    <div className="w-full h-full flex flex-col py-10 md:py-12 px-10 md:px-24 bg-brand-white pb-[var(--footer-height)]">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto">
         
         <motion.div variants={fadeUp} className="mb-8 text-center">

@@ -31,7 +31,7 @@ export function Slide15DigitalVisibility() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="relative w-full h-full flex flex-col md:flex-row bg-[#FDFDFD] overflow-hidden">
+    <div className="relative w-full h-full flex flex-col md:flex-row bg-[#FDFDFD] overflow-hidden pb-[var(--footer-height)]">
       <NoiseOverlay />
       
       {/* Dynamic Background Elements */}

@@ -16,7 +16,7 @@ export function Slide01Cover() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col relative overflow-hidden bg-brand-navy">
+    <div className="w-full h-full flex flex-col relative overflow-hidden bg-brand-navy pb-[var(--footer-height)]">
       {/* === LAYER 0: Full-bleed cinematic video background === */}
       <video
         autoPlay

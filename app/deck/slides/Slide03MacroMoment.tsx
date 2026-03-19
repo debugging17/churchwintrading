@@ -27,7 +27,7 @@ export function Slide03MacroMoment() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center p-[2rem] md:p-[3rem] pb-[8rem] relative overflow-hidden bg-brand-navy">
+    <div className="w-full h-full flex flex-col items-center justify-center p-[2rem] md:p-[3rem] pb-[var(--footer-height)] relative overflow-hidden bg-brand-navy">
       
       {/* === LAYER 0: Background Cinematic === */}
       <div className="absolute inset-0 z-0">

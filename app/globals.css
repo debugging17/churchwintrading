@@ -4,11 +4,13 @@
 
 :root {
   /* Native REM Scaling: 1rem = approx 1% of viewport width */
-  /* Increased base size and max for better readability */
-  font-size: clamp(14px, 1.1vw, 24px);
+  /* Reduced max size to 22px to prevent oversized headings on mid-sized screens */
+  font-size: clamp(14px, 1vw, 21px);
   
   --font-display: var(--font-outfit), 'Poppins', system-ui, sans-serif;
   --font-primary: var(--font-inter), 'Inter', system-ui, sans-serif;
+  
+  --footer-height: 5rem; /* Match FooterStack h-20 */
   
   /* Churchwin Core - Refined for premium look */
   --brand-navy:        #00134d; /* Deeper, more institutional navy */
