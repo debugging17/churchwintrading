@@ -26,7 +26,7 @@ export function SectionTitle({ number, title, subtitle }: SectionTitleProps) {
         <div className="overflow-hidden">
           <motion.h2 
             variants={slideFromLeft}
-            className="font-display text-5xl md:text-7xl font-bold text-brand-white tracking-tight"
+            className="font-display text-5xl md:text-8xl font-extrabold text-brand-white tracking-tighter"
           >
             {title}
           </motion.h2>

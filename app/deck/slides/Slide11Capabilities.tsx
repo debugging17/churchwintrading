@@ -59,7 +59,7 @@ export function Slide11Capabilities() {
             <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">The Churchwin Bridge</span>
           </motion.div>
 
-          <motion.h2 variants={slideFromLeft} className="font-display text-5xl md:text-6xl font-bold text-brand-navy leading-[1.1] mb-8 tracking-tight">
+          <motion.h2 variants={slideFromLeft} className="font-display text-5xl md:text-6xl font-extrabold text-brand-navy leading-[1.1] mb-8 tracking-tight">
             Institutionalizing <br />
             <span className="text-brand-orange italic font-light">the Supply Chain.</span>
           </motion.h2>

@@ -14,7 +14,7 @@ export function Slide07VPCSegments() {
   // 3. proposal-strategist: Exact VPC segment definitions.
 
   return (
-    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-white">
+    <div className="w-full h-full flex flex-col py-10 md:py-16 px-10 md:px-24 bg-brand-white">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto">
         <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-10 text-center">
           Engineered for the exact pains of our buyers.

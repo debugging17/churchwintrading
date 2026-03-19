@@ -70,9 +70,9 @@ export function Slide24CTA() {
           </a>
         </motion.div>
 
-        {/* Footer Mission */}
-        <motion.div variants={fadeUp} className="absolute bottom-8 left-0 right-0 text-center">
-          <p className="font-display text-xs tracking-widest uppercase text-brand-white/30">
+        {/* Footer Mission - Moved to relative flow to avoid absolute overlap */}
+        <motion.div variants={fadeUp} className="mt-16 border-t border-brand-white/10 pt-8">
+          <p className="font-display text-xs tracking-[0.2em] uppercase text-brand-white/30">
             Providing global access to African products while caring for consumer well-being.
           </p>
         </motion.div>

@@ -4,25 +4,26 @@
 
 :root {
   /* Native REM Scaling: 1rem = approx 1% of viewport width */
-  font-size: clamp(12px, 1.05vw, 22px);
+  /* Increased base size and max for better readability */
+  font-size: clamp(14px, 1.1vw, 24px);
   
-  --font-display: 'Poppins', system-ui, sans-serif;
-  --font-primary: 'Lora', system-ui, serif;
+  --font-display: var(--font-outfit), 'Poppins', system-ui, sans-serif;
+  --font-primary: var(--font-inter), 'Inter', system-ui, sans-serif;
   
-  /* Churchwin Core */
-  --brand-navy:        #012787;
-  --brand-orange:      #ff6a00;
+  /* Churchwin Core - Refined for premium look */
+  --brand-navy:        #00134d; /* Deeper, more institutional navy */
+  --brand-orange:      #ff7700; /* More vibrant, high-end orange */
   
   /* Anthropic Brand Merger (Editorial Industrial) */
-  --brand-dark:        #141413;
-  --brand-light:       #faf9f5;
-  --brand-gray:        #e8e6dc;
-  --brand-accent:      #d97757;
+  --brand-dark:        #0a0a0a;
+  --brand-light:       #fcfcf9;
+  --brand-gray:        #e0dfd5;
+  --brand-accent:      #e65100;
   
   --brand-white:       #ffffff;
-  --brand-cream:       #fdf6ec;
-  --brand-navy-light:  #1a3fa8;
-  --brand-navy-dark:   #011a5e;
+  --brand-cream:       #fffaf2;
+  --brand-navy-light:  #001f80;
+  --brand-navy-dark:   #000a29;
   
   /* Blending & Glassmorphism */
   --brand-glass-bg:     rgba(255, 255, 255, 0.08);
