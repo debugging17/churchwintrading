@@ -39,7 +39,7 @@ export function FooterStack({ total }: FooterStackProps) {
       <div className="flex items-end justify-between w-full mb-6">
         
         {/* Left: Slide Counter */}
-        <div className="flex flex-col items-start gap-1">
+        <div className="flex flex-col items-start gap-1 w-1/3">
           <span className="text-[10px] font-display tracking-[0.2em] text-brand-white/40 uppercase">
             Navigation
           </span>
@@ -51,36 +51,19 @@ export function FooterStack({ total }: FooterStackProps) {
         </div>
 
         {/* Center: Attribution */}
-        <div className="flex flex-col items-center justify-center group transition-all duration-300">
-           <span className="text-[10px] font-display tracking-[0.3em] text-brand-white/40 uppercase mb-1">
+        <div className="flex flex-col items-center justify-center group transition-all duration-300 w-1/3">
+           <span className="text-xs font-display tracking-[0.35em] text-brand-white/50 uppercase mb-1 font-semibold">
              Presented By
            </span>
            <div className="flex items-center gap-2">
-             <span className="text-xs font-display font-black tracking-[0.2em] text-brand-white uppercase drop-shadow-sm">
+             <span className="text-sm md:text-base font-display font-black tracking-[0.3em] text-brand-white uppercase drop-shadow-md">
                CEPHAS KUDALOR
              </span>
            </div>
         </div>
 
-        {/* Right: Brand Lockup */}
-        <div className="flex items-center gap-4">
-          <div className="flex flex-col items-end gap-1">
-            <span className="text-[10px] font-display tracking-[0.2em] text-brand-white/40 uppercase">
-              Corporate
-            </span>
-            <span className="text-xs font-display font-bold tracking-[0.2em] text-brand-white uppercase">
-              CHURCHWIN TRADING
-            </span>
-          </div>
-          <div className="relative w-8 h-8 opacity-80 mix-blend-screen">
-             <Image 
-                src="/assets/images/churchwin_logo_new.png" 
-                alt="Logo" 
-                fill 
-                className="object-contain"
-             />
-          </div>
-        </div>
+        {/* Right: Empty balance to keep flex-between centered */}
+        <div className="w-1/3" />
 
       </div>
 
