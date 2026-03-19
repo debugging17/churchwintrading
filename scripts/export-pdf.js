@@ -43,7 +43,7 @@ async function exportToPDF() {
   await page.setViewport(CONFIG.viewport)
 
   // Navigate to print mode (disables Swiper, enables full-page static layout)
-  await page.goto(CONFIG.url, { waitUntil: 'networkidle0', timeout: 30000 })
+  await page.goto(CONFIG.url, { waitUntil: 'networkidle0', timeout: 60000 })
   await new Promise(r => setTimeout(r, 2000)) // Wait for fonts + images
 
   const screenshots = []

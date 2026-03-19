@@ -1,9 +1,12 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeUp, sectionTitleStagger } from "../motion/variants";
+import { fadeUp, fadeIn, sectionTitleStagger, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceDot } from "recharts";
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceDot, ReferenceLine, Label } from "recharts";
+import { GlassCard } from "../components/GlassCard";
+import { ArrowUpRight, TrendingUp, History } from "lucide-react";
 
 const gdpData = [
   { year: "1960", westAfrica: 181, southKorea: 158 },
@@ -18,95 +21,181 @@ const gdpData = [
 export function Slide03MacroMoment() {
   const animState = useSlideEnter(100);
 
-  // ROLES APPLIED:
-  // 1. ux-architect: Data-story layout (chart takes 60% of vertical space, text takes 40%).
-  // 2. visual-storyteller: Recharts LineChart for animated data drawing.
-  // 3. market-analysis: Hardcoded 1960-2020 GDP data proxy.
-  // 4. proposal-strategist: "The companies that scale are the agents of change." verbatim.
-
   return (
-    <div className="w-full h-full flex flex-col pt-24 px-10 md:px-24 premium-bg-cream text-brand-navy relative">
-      <motion.div
-        variants={sectionTitleStagger}
+    <div className="w-full h-full flex flex-col relative overflow-hidden bg-brand-navy">
+      {/* Cinematic Background */}
+      <motion.div 
+        variants={fadeIn}
         initial="hidden"
         animate={animState}
-        className="max-w-4xl z-10"
+        className="absolute inset-0 z-0"
       >
-        <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl font-bold leading-tight mb-4 text-brand-navy">
-          Africa had the lead in 1960. Then the divergence began.
-        </motion.h2>
-        <motion.p variants={fadeUp} className="text-xl text-brand-orange font-medium mb-12">
-          South Korea scaled through institutional enterprise. Churchwin is building that institutional capability for West Africa — starting with the industries we control.
-        </motion.p>
-
-        {/* Chart Container */}
-        <motion.div variants={fadeUp} className="w-full h-[50vh] bg-white/40 backdrop-blur-md rounded-2xl border border-brand-navy/10 p-8 relative shadow-2xl overflow-hidden">
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={gdpData} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
-              <defs>
-                <linearGradient id="colorKorea" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#ff6a00" stopOpacity={0.3}/>
-                  <stop offset="95%" stopColor="#ff6a00" stopOpacity={0}/>
-                </linearGradient>
-                <linearGradient id="colorAfrica" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#012787" stopOpacity={0.1}/>
-                  <stop offset="95%" stopColor="#012787" stopOpacity={0}/>
-                </linearGradient>
-              </defs>
-              <CartesianGrid strokeDasharray="3 3" stroke="rgba(1,39,135,0.05)" vertical={false} />
-              <XAxis 
-                dataKey="year" 
-                axisLine={false} 
-                tickLine={false}
-                tick={{ fill: 'rgba(1,39,135,0.4)', fontSize: 12, fontWeight: 500 }}
-              />
-              <YAxis 
-                axisLine={false} 
-                tickLine={false}
-                tick={{ fill: 'rgba(1,39,135,0.4)', fontSize: 12, fontWeight: 500 }}
-                tickFormatter={(val) => `$${(val/1000).toFixed(0)}k`} 
-              />
-              <Tooltip 
-                contentStyle={{ 
-                  backgroundColor: 'rgba(255, 255, 255, 0.95)', 
-                  border: 'none', 
-                  borderRadius: '12px', 
-                  boxShadow: '0 20px 40px -10px rgba(1,39,135,0.2)',
-                  backdropFilter: 'blur(8px)'
-                }}
-                itemStyle={{ fontWeight: 600, fontSize: '14px' }}
-              />
-              <Area 
-                type="monotone" 
-                dataKey="southKorea" 
-                stroke="#ff6a00" 
-                strokeWidth={4} 
-                fillOpacity={1} 
-                fill="url(#colorKorea)" 
-                animationDuration={2500} 
-              />
-              <Area 
-                type="monotone" 
-                dataKey="westAfrica" 
-                stroke="#012787" 
-                strokeWidth={3} 
-                fillOpacity={1} 
-                fill="url(#colorAfrica)" 
-                animationDuration={2000} 
-              />
-              
-              <ReferenceDot x="1980" y={1714} r={8} fill="#ff6a00" stroke="#fff" strokeWidth={3} className="animate-pulse" />
-            </AreaChart>
-          </ResponsiveContainer>
-          
-          <div className="absolute top-8 left-10 text-brand-navy/30 text-[10px] tracking-[0.2em] uppercase font-display font-bold">
-            Data Source: World Bank GDP per capita
-          </div>
-          <div className="absolute bottom-10 right-10 text-brand-navy text-sm max-w-[280px] text-right font-primary leading-relaxed bg-white/80 backdrop-blur-sm p-5 border border-brand-navy/5 rounded-xl shadow-xl">
-            <span className="text-brand-orange font-bold">The Divergence:</span> South Korea leveraged institutional scale by 1980. West Africa&apos;s GDP remains at South Korea&apos;s 1980 level today — that gap is Churchwin&apos;s mandate.
-          </div>
-        </motion.div>
+        <Image
+          src="/images/backgrounds/industrial_ghana_cinematic.png"
+          alt="Modern Industrial Ghana"
+          fill
+          className="object-cover opacity-40 mix-blend-luminosity"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent" />
       </motion.div>
+
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        animate={animState}
+        className="relative z-10 w-full h-full flex flex-col justify-center px-10 md:px-24 pt-12"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Column: Narrative */}
+          <div className="lg:col-span-5 flex flex-col space-y-8">
+            <div className="space-y-4">
+              <motion.div variants={fadeUp} className="flex items-center space-x-3 text-brand-orange">
+                <History size={20} />
+                <span className="uppercase tracking-[0.3em] text-xs font-bold font-display">Historical Context</span>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-6xl font-bold leading-[1.1] text-white">
+                Africa had the lead in 1960. <br/>
+                <span className="text-brand-orange">Then the divergence began.</span>
+              </motion.h2>
+            </div>
+
+            <motion.p variants={fadeUp} className="text-lg md:text-xl text-brand-light/80 font-primary leading-relaxed max-w-xl">
+              South Korea scaled through <span className="text-white font-bold italic underline decoration-brand-orange/40 underline-offset-4">institutional enterprise</span>. 
+              Churchwin is building that institutional capability for West Africa — starting with the industries we control.
+            </motion.p>
+
+            <motion.div variants={fadeUp} className="flex flex-col space-y-4">
+               <GlassCard className="p-6 border-l-4 border-l-brand-orange">
+                 <div className="flex items-start space-x-4">
+                   <div className="p-3 bg-brand-orange/20 rounded-lg text-brand-orange">
+                     <TrendingUp size={24} />
+                   </div>
+                   <div>
+                     <h4 className="font-display text-white font-bold text-lg mb-1">The 1980 Pivot</h4>
+                     <p className="text-sm text-brand-light/60 font-primary">
+                       South Korea leveraged institutional scale. Today, West Africa&apos;s GDP remains at South Korea&apos;s 1980 level.
+                     </p>
+                   </div>
+                 </div>
+               </GlassCard>
+            </motion.div>
+          </div>
+
+          {/* Right Column: Data Visualization */}
+          <motion.div variants={fadeUp} className="lg:col-span-7 w-full">
+            <GlassCard className="p-8 md:p-10 !bg-brand-navy/40 backdrop-blur-xl border-brand-white/10 shadow-2xl relative overflow-hidden group">
+              {/* Chart Source Label */}
+              <div className="absolute top-6 left-10 text-brand-white/20 text-[10px] tracking-[0.2em] uppercase font-display font-bold z-20">
+                GDP per capita (Current US$)
+              </div>
+
+              <div className="h-[45vh] w-full mt-4">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={gdpData} margin={{ top: 40, right: 30, left: 0, bottom: 0 }}>
+                    <defs>
+                      <linearGradient id="colorKorea" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#ff6a00" stopOpacity={0.4}/>
+                        <stop offset="95%" stopColor="#ff6a00" stopOpacity={0}/>
+                      </linearGradient>
+                      <linearGradient id="colorAfrica" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor="#012787" stopOpacity={0.6}/>
+                        <stop offset="95%" stopColor="#012787" stopOpacity={0}/>
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.03)" vertical={false} />
+                    <XAxis 
+                      dataKey="year" 
+                      axisLine={false} 
+                      tickLine={false}
+                      tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 11, fontWeight: 600 }}
+                      dy={10}
+                    />
+                    <YAxis 
+                      axisLine={false} 
+                      tickLine={false}
+                      tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 11, fontWeight: 600 }}
+                      tickFormatter={(val) => `$${(val/1000).toFixed(0)}k`} 
+                      dx={-10}
+                    />
+                    <Tooltip 
+                      contentStyle={{ 
+                        backgroundColor: 'rgba(1, 10, 40, 0.9)', 
+                        border: '1px solid rgba(255,255,255,0.1)', 
+                        borderRadius: '12px', 
+                        boxShadow: '0 20px 40px -10px rgba(0,0,0,0.5)',
+                        backdropFilter: 'blur(12px)'
+                      }}
+                      itemStyle={{ fontWeight: 600, fontSize: '13px', color: '#fff' }}
+                    />
+                    
+                    <ReferenceLine 
+                      x="1980" 
+                      stroke="rgba(255,106,0,0.3)" 
+                      strokeDasharray="5 5"
+                      label={{ 
+                        position: 'top', 
+                        value: 'INSTITUTIONAL SCALE', 
+                        fill: '#ff6a00', 
+                        fontSize: 10, 
+                        fontWeight: 800,
+                        letterSpacing: '0.1em'
+                      }} 
+                    />
+
+                    <Area 
+                      type="monotone" 
+                      dataKey="southKorea" 
+                      name="South Korea"
+                      stroke="#ff6a00" 
+                      strokeWidth={4} 
+                      fillOpacity={1} 
+                      fill="url(#colorKorea)" 
+                      animationDuration={3000} 
+                      animationBegin={500}
+                    />
+                    <Area 
+                      type="monotone" 
+                      dataKey="westAfrica" 
+                      name="West Africa"
+                      stroke="#1a3fa8" 
+                      strokeWidth={3} 
+                      fillOpacity={1} 
+                      fill="url(#colorAfrica)" 
+                      animationDuration={2000} 
+                    />
+                    
+                    <ReferenceDot 
+                      x="1980" 
+                      y={1714} 
+                      r={6} 
+                      fill="#ff6a00" 
+                      stroke="#fff" 
+                      strokeWidth={2} 
+                      className="animate-pulse" 
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </div>
+
+              {/* The Gap Annotation */}
+              <div className="absolute bottom-12 right-12 flex items-center space-x-3 bg-brand-orange/10 backdrop-blur-md px-4 py-3 rounded-lg border border-brand-orange/20">
+                <div className="flex flex-col items-end">
+                  <span className="text-[10px] text-brand-orange font-bold uppercase tracking-wider">Churchwin Mandate</span>
+                  <span className="text-white font-display font-bold text-xl uppercase italic">The Gap</span>
+                </div>
+                <ArrowUpRight className="text-brand-orange" size={24} />
+              </div>
+            </GlassCard>
+          </motion.div>
+
+        </div>
+      </motion.div>
+      
+      {/* Decorative Blur Orbs */}
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-orange/20 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-navy-light/30 blur-[120px] rounded-full pointer-events-none" />
     </div>
   );
 }
