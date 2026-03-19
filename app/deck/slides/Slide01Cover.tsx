@@ -32,35 +32,35 @@ export function Slide01Cover() {
       <div className="absolute inset-0 bg-brand-navy/30 z-[1] pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent z-[2] pointer-events-none" />
 
-      {/* === LAYER 2: Centered Content Stack === */}
-      <div className="w-full h-full flex flex-col justify-center items-center px-10 md:px-24 z-10 relative text-center">
+      {/* === LAYER 2: Centered Content Stack (Pushed Slightly Higher) === */}
+      <div className="w-full h-full flex flex-col justify-start items-center pt-24 md:pt-32 lg:pt-40 px-10 md:px-24 z-10 relative text-center">
         <motion.div
           variants={sectionTitleStagger}
           initial="hidden"
           animate={animState}
-          className="max-w-7xl flex flex-col items-center"
+          className="max-w-6xl flex flex-col items-center"
         >
-          {/* Brand Logo - Centered Box (Provides Brand Identity) */}
-          <motion.div variants={fadeUp} className="mb-12 relative w-64 h-24 md:w-96 md:h-32 bg-white rounded-2xl overflow-hidden p-6 shadow-2xl flex items-center justify-center">
+          {/* Brand Logo - Compact & Pushed Up */}
+          <motion.div variants={fadeUp} className="mb-14 relative w-48 h-12 md:w-64 md:h-16 bg-white rounded-xl overflow-hidden p-4 shadow-xl flex items-center justify-center">
              <Image 
                 src="/assets/images/churchwin_logo_new.png" 
                 alt="Churchwin Trading Logo" 
                 fill
-                className="object-contain p-2" 
+                className="object-contain p-1" 
               />
           </motion.div>
 
-          {/* Strategic Tagline: Now the Primary Headline in White */}
-          <motion.div variants={fadeUp} className="mb-10">
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-display font-black text-brand-white leading-tight tracking-tight drop-shadow-2xl uppercase">
+          {/* Strategic Tagline: Primary Headline in White, Reduced Scale */}
+          <motion.div variants={fadeUp} className="mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-brand-white leading-tight tracking-tight drop-shadow-2xl uppercase">
               Filling Africa&apos;s Missing Middle
             </h1>
           </motion.div>
 
-          {/* Optional Subtext: High Visibility Orange Hook */}
-          <motion.div variants={fadeUp} className="flex flex-col items-center mt-4">
-             <div className="w-20 h-[3px] bg-brand-orange mb-10 shadow-[0_0_12px_rgba(242,101,34,0.4)]" />
-             <p className="text-lg md:text-2xl lg:text-3xl text-brand-orange font-primary font-black tracking-wide drop-shadow-lg whitespace-nowrap uppercase">
+          {/* Optional Subtext: White Hook, Reduced Scale */}
+          <motion.div variants={fadeUp} className="flex flex-col items-center">
+             <div className="w-12 h-[1px] bg-brand-white/40 mb-8" />
+             <p className="text-sm md:text-base lg:text-lg text-brand-white/90 font-primary font-medium tracking-widest drop-shadow-lg whitespace-nowrap uppercase">
               Africa doesn&apos;t lack supply. It lacks structured demand.
              </p>
           </motion.div>
@@ -72,12 +72,12 @@ export function Slide01Cover() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-12 right-16 md:right-24 z-20 text-right"
+        className="absolute bottom-12 right-16 md:right-24 z-20 text-right opacity-60"
       >
-         <p className="text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-brand-white/30 font-semibold text-shadow">
+         <p className="text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-brand-white/50 font-semibold">
           Presented By
         </p>
-        <p className="text-xs md:text-sm font-display font-black text-brand-white/60 tracking-[0.25em] mt-1 uppercase text-shadow">
+        <p className="text-xs md:text-sm font-display font-black text-brand-white/70 tracking-[0.25em] mt-1 uppercase">
           CEPHAS KUDALOR
         </p>
       </motion.div>
