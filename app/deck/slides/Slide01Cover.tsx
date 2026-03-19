@@ -41,9 +41,9 @@ export function Slide01Cover() {
         >
           {/* BEHIND-TEXT GLOW REMOVED AS REQUESTED (the underlying one) */}
           
-          <div className="relative z-10 bg-brand-white/[0.05] backdrop-blur-xl border border-brand-white/10 p-12 md:p-20 rounded-[2.5rem] shadow-[0_8px_32px_rgba(0,0,0,0.5)] flex flex-col items-center">
+          <div className="relative z-10 flex flex-col items-center">
             
-            {/* Logo inside glass stack */}
+            {/* Logo inside */}
             <motion.div variants={fadeUp} className="mb-6 relative w-20 h-20 opacity-90 drop-shadow-md">
               <img 
                 src="/assets/images/churchwin_logo_new.png" 
