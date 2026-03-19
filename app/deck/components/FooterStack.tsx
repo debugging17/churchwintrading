@@ -34,6 +34,8 @@ export function FooterStack({ total }: FooterStackProps) {
 
   return (
     <div className="absolute bottom-0 left-0 w-full z-[100] flex flex-col pointer-events-none px-10 pb-6">
+      {/* Global Contrast Vignette - ensures white text is visible on light slides */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent h-32 -z-10 mt-auto pointer-events-none" />
       
       {/* --- Main Footer Layer --- */}
       <div className="flex items-end justify-between w-full mb-6">

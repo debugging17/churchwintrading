@@ -20,14 +20,16 @@ const sections = [
 ];
 
 export function Slide01BOverview() {
+  const animState = "visible"; 
+
   return (
     <div className="w-full h-full bg-white flex relative overflow-hidden">
 
       {/* ── Left Panel ─────────────────────────────────────────── */}
-      <div className="w-1/2 h-full flex flex-col justify-center px-16 xl:px-24 z-10 bg-white">
+      <div className="w-[40%] h-full flex flex-col justify-center px-16 xl:px-24 z-10 bg-white">
         <motion.div
           initial="hidden"
-          animate="visible"
+          animate={animState}
           className="max-w-xl"
         >
           {/* Eyebrow */}
@@ -96,16 +98,14 @@ export function Slide01BOverview() {
       </div>
 
       {/* ── Right Panel — Image ────────────────────────────────── */}
-      <div className="w-1/2 h-full relative overflow-hidden">
-
-        {/* Subtle background wash */}
-        <div className="absolute inset-0 bg-slate-50" />
-
-        {/* Slant edge on left side of image panel */}
+      <div className="w-[60%] h-full relative overflow-hidden">
+        {/* Slant edge on left side of image panel - DRAMATIC BLEND */}
         <div
-          className="absolute inset-y-0 left-0 w-20 bg-white z-10"
-          style={{ clipPath: "polygon(0 0, 100% 0, 30% 100%, 0 100%)" }}
+          className="absolute inset-y-0 left-0 w-32 bg-white z-10"
+          style={{ clipPath: "polygon(0 0, 100% 0, 0 100%, 0 100%)" }} 
         />
+        {/* Soft edge blend gradient */}
+        <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-white via-white/40 to-transparent z-[5] pointer-events-none" />
 
         {/* Truck Image */}
         <motion.div
@@ -121,13 +121,13 @@ export function Slide01BOverview() {
             className="object-cover object-center"
             priority
           />
-          {/* Subtle dark vignette bottom */}
+          {/* Subtle dark vignette bottom for footer visibility */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
         </motion.div>
       </div>
 
       {/* Orange accent bar at the bottom */}
-      <div className="absolute bottom-0 left-0 w-1/2 h-[3px] bg-brand-orange/20" />
+      <div className="absolute bottom-0 left-0 w-[40%] h-[3px] bg-brand-orange/20" />
     </div>
   );
 }
