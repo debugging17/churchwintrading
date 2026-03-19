@@ -3,8 +3,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeUp, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { RemotionPlayerWrapper } from "../components/RemotionPlayerWrapper";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+
+const RemotionPlayerWrapper = dynamic(
+  () => import("../components/RemotionPlayerWrapper").then((mod) => mod.RemotionPlayerWrapper),
+  { ssr: false }
+);
 
 // COVER SLIDE — Minimal & Clean Overhaul
 export function Slide01Cover() {
