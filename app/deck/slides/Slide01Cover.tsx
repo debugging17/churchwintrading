@@ -45,7 +45,7 @@ export function Slide01Cover() {
           <div className="relative z-10 flex flex-col items-center">
             
             {/* Logo inside */}
-            <motion.div variants={fadeUp} className="mb-8 relative w-64 h-24 md:w-[26rem] md:h-[9rem] opacity-95 drop-shadow-xl bg-white rounded-[2rem] overflow-hidden flex items-center justify-center p-4">
+            <motion.div variants={fadeUp} className="mb-6 relative w-56 h-20 md:w-[20rem] md:h-[7rem] opacity-95 drop-shadow-xl bg-white rounded-[1.5rem] overflow-hidden flex items-center justify-center p-3 text-center">
               <Image 
                 src="/assets/images/churchwin_logo_new.png" 
                 alt="Churchwin Trading Logo" 
@@ -55,7 +55,7 @@ export function Slide01Cover() {
             </motion.div>
 
             {/* Eyebrow */}
-            <motion.div variants={fadeUp} className="flex flex-row justify-center items-center gap-4 mb-6">
+            <motion.div variants={fadeUp} className="flex flex-row justify-center items-center gap-4 mb-4 md:mb-6">
               <div className="w-8 h-[2px] bg-brand-orange" />
               <span className="font-display tracking-[0.2em] text-xs md:text-sm font-semibold uppercase text-brand-orange drop-shadow-md">
                 Corporate Prospectus
@@ -66,7 +66,7 @@ export function Slide01Cover() {
             {/* Headline */}
             <motion.h1
               variants={fadeUp}
-              className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-brand-white leading-[0.9] tracking-tighter mb-8 drop-shadow-2xl text-center"
+              className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-brand-white leading-[0.9] tracking-tighter mb-2 md:mb-3 drop-shadow-2xl text-center"
             >
               Churchwin <span className="text-brand-orange/90 font-medium">Trading Co. Ltd</span>
             </motion.h1>
@@ -79,7 +79,7 @@ export function Slide01Cover() {
             {/* Mission statement */}
             <motion.p
               variants={fadeUp}
-              className="text-lg md:text-xl text-brand-white/80 font-primary font-light max-w-2xl leading-relaxed mt-6 relative drop-shadow-md text-center mx-auto"
+              className="text-lg md:text-xl text-brand-white/90 font-primary font-semibold max-w-2xl leading-relaxed mt-2 md:mt-3 relative drop-shadow-md text-center mx-auto"
             >
               Institutionalizing global access to premium African ingredients.
             </motion.p>

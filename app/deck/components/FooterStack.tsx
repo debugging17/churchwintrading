@@ -56,7 +56,7 @@ export function FooterStack({ total }: FooterStackProps) {
              Presented By
            </span>
            <div className="flex items-center gap-2">
-             <span className="text-xs font-display font-bold tracking-[0.2em] text-brand-white uppercase drop-shadow-sm">
+             <span className="text-xs font-display font-black tracking-[0.2em] text-brand-white uppercase drop-shadow-sm">
                CEPHAS KUDALOR
              </span>
            </div>
