@@ -65,14 +65,16 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
     "max-age=31536000; includeSubDomains; preload"
   );
 
-  // Content Security Policy — prevents XSS and injection of untrusted scripts
-  // Note: 'unsafe-inline' is required by Next.js 14 App Router for RSC hydration.
-  // 'unsafe-eval' has been removed — it is only needed in dev mode (Next.js handles this).
+  // Content Security Policy — strict lockdown to prevent XSS, script injection,
+  // and untrusted module loading (e.g. whisper.cpp wasm/worker injections).
   response.headers.set(
     "Content-Security-Policy",
     [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline'",
+      "object-src 'none'",
+      "worker-src 'none'",
+      "script-src-attr 'none'",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com data:",
       "img-src 'self' data: blob:",
@@ -81,7 +83,6 @@ function addSecurityHeaders(response: NextResponse): NextResponse {
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
-      "object-src 'none'",
       "upgrade-insecure-requests",
     ].join("; ")
   );

@@ -14,6 +14,7 @@ import { SlideLogo } from "./components/SlideLogo"; // Keep if needed elsewhere,
 
 // Slides
 import { Slide01Cover } from "./slides/Slide01Cover";
+import { Slide01BOverview } from "./slides/Slide01BOverview";
 import { Slide02Crossroads } from "./slides/Slide02Crossroads";
 import { Slide03MacroMoment } from "./slides/Slide03MacroMoment";
 import { Slide04MissingMiddle } from "./slides/Slide04MissingMiddle";
@@ -41,7 +42,7 @@ import { Slide24CTA } from "./slides/Slide24CTA";
 
 export default function DeckLayout() {
   const [mounted, setMounted] = useState(false);
-  const totalSlides = 25; // Added Slide12A Bulk Gallery
+  const totalSlides = 26; // Increased for Overview slide
 
   useEffect(() => {
     setMounted(true);
@@ -68,6 +69,10 @@ export default function DeckLayout() {
         {/* Slides */}
         <SwiperSlide>
           <Slide01Cover />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide01BOverview />
         </SwiperSlide>
 
         <SwiperSlide>

@@ -43,7 +43,7 @@ export function Slide12ABulkGallery() {
           </div>
 
           <div className="col-span-1 row-span-1 rounded-xl overflow-hidden relative border border-brand-white/10 group shadow-2xl">
-             <Image src="/assets/b2b_qa_laboratory_1773793831592.png" alt="QA" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+             <Image src="/assets/ghana_qa_lab.png" alt="QA" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
              <div className="absolute bottom-4 left-4 z-20 bg-brand-navy/80 tracking-widest backdrop-blur-sm px-3 py-1 rounded-sm text-[10px] text-brand-white uppercase font-bold border border-brand-white/20">
                Tier-1 Compliance Lab
              </div>

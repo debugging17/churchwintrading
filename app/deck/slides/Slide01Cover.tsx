@@ -33,6 +33,29 @@ export function Slide01Cover() {
       <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent z-[2] pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/60 via-transparent to-transparent z-[2] pointer-events-none w-2/3" />
 
+      {/* === LAYER 5: Slanted Glass Overlay === */}
+      <motion.div 
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="absolute inset-0 z-[5] pointer-events-none overflow-hidden"
+      >
+        <div 
+          className="absolute inset-0 bg-gradient-to-br from-brand-white/25 via-brand-white/15 to-transparent backdrop-blur-3xl border-r border-brand-white/20 shadow-2xl"
+          style={{ 
+            clipPath: "polygon(0 0, 65% 0, 45% 100%, 0% 100%)",
+          }}
+        />
+        {/* Secondary subtle accent slant */}
+        <div 
+          className="absolute inset-0 bg-brand-orange/15 backdrop-blur-sm"
+          style={{ 
+            clipPath: "polygon(0 0, 66% 0, 65.5% 0, 44.5% 100%, 45% 100%, 0% 100%)",
+            opacity: 0.3
+          }}
+        />
+      </motion.div>
+
       {/* === LAYER 10: Content overlay === */}
       <div className="w-full h-full flex flex-col justify-center items-center py-16 md:py-24 px-10 md:px-24 z-10 relative">
         
@@ -41,8 +64,12 @@ export function Slide01Cover() {
           variants={sectionTitleStagger}
           initial="hidden"
           animate={animState}
-          className="flex flex-col items-center text-center max-w-5xl mx-auto"
+          className="flex flex-col items-center text-center max-w-5xl mx-auto relative group"
         >
+          {/* Subtle glow behind text */}
+          <div className="absolute -inset-20 bg-brand-orange/10 blur-[100px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-1000" />
+          
+          <div className="relative z-10 bg-brand-navy/45 backdrop-blur-xl border border-brand-white/20 p-12 md:p-20 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
           {/* Eyebrow */}
           <motion.div variants={fadeUp} className="flex items-center gap-4 mb-8">
             <div className="w-12 h-[2px] bg-brand-orange" />
@@ -81,6 +108,7 @@ export function Slide01Cover() {
           >
             Institutionalizing global access to premium African ingredients.
           </motion.p>
+          </div>
         </motion.div>
 
 
