@@ -40,8 +40,8 @@ export function Slide01Cover() {
           animate={animState}
           className="max-w-7xl flex flex-col items-center"
         >
-          {/* Brand Logo - Centered Box */}
-          <motion.div variants={fadeUp} className="mb-10 relative w-56 h-20 md:w-80 md:h-24 bg-white rounded-2xl overflow-hidden p-4 shadow-2xl flex items-center justify-center">
+          {/* Brand Logo - Centered Box (Provides Brand Identity) */}
+          <motion.div variants={fadeUp} className="mb-12 relative w-64 h-24 md:w-96 md:h-32 bg-white rounded-2xl overflow-hidden p-6 shadow-2xl flex items-center justify-center">
              <Image 
                 src="/assets/images/churchwin_logo_new.png" 
                 alt="Churchwin Trading Logo" 
@@ -50,25 +50,17 @@ export function Slide01Cover() {
               />
           </motion.div>
 
-          {/* Headline: Now smaller (Secondary Hierarchy) */}
-          <motion.h1
-            variants={fadeUp}
-            className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold text-brand-white/80 leading-tight tracking-[0.2em] mb-4 drop-shadow-lg whitespace-nowrap uppercase"
-          >
-            Churchwin Trading Co. Ltd
-          </motion.h1>
-
-          {/* Strategic Tagline: Now Larger & Bolder (Primary Hierarchy) */}
+          {/* Strategic Tagline: Now the Primary Headline in White */}
           <motion.div variants={fadeUp} className="mb-10">
-            <h2 className="text-3xl md:text-6xl lg:text-7xl font-display font-black text-brand-orange leading-tight tracking-tight drop-shadow-2xl">
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-display font-black text-brand-white leading-tight tracking-tight drop-shadow-2xl uppercase">
               Filling Africa&apos;s Missing Middle
-            </h2>
+            </h1>
           </motion.div>
 
-          {/* Optional Subtext: Single Line Hook */}
-          <motion.div variants={fadeUp} className="flex flex-col items-center">
-             <div className="w-16 h-[2px] bg-brand-white/20 mb-8" />
-             <p className="text-base md:text-xl lg:text-2xl text-brand-white font-primary font-medium tracking-wide drop-shadow-lg whitespace-nowrap">
+          {/* Optional Subtext: High Visibility Orange Hook */}
+          <motion.div variants={fadeUp} className="flex flex-col items-center mt-4">
+             <div className="w-20 h-[3px] bg-brand-orange mb-10 shadow-[0_0_12px_rgba(242,101,34,0.4)]" />
+             <p className="text-lg md:text-2xl lg:text-3xl text-brand-orange font-primary font-black tracking-wide drop-shadow-lg whitespace-nowrap uppercase">
               Africa doesn&apos;t lack supply. It lacks structured demand.
              </p>
           </motion.div>
@@ -82,10 +74,10 @@ export function Slide01Cover() {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-12 right-16 md:right-24 z-20 text-right"
       >
-         <p className="text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-brand-white/30 font-semibold">
+         <p className="text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-brand-white/30 font-semibold text-shadow">
           Presented By
         </p>
-        <p className="text-xs md:text-sm font-display font-black text-brand-white/50 tracking-[0.25em] mt-1 uppercase">
+        <p className="text-xs md:text-sm font-display font-black text-brand-white/60 tracking-[0.25em] mt-1 uppercase text-shadow">
           CEPHAS KUDALOR
         </p>
       </motion.div>
