@@ -29,7 +29,8 @@ export function GlassCard({ children, className = "", delay = 0, theme = "dark" 
   return (
     <motion.div
       variants={variant}
-      className={`${baseClasses} border backdrop-blur-md rounded-xl p-8 shadow-2xl ${className}`}
+      className={`${baseClasses} border backdrop-blur-[var(--brand-glass-blur)] rounded-[1.5rem] p-[2rem] shadow-[var(--brand-shadow-soft)] ${className}`}
+      role="region"
     >
       {children}
     </motion.div>

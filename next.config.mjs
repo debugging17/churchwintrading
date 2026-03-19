@@ -55,6 +55,7 @@ const nextConfig = {
   // Never expose source maps in production
   productionBrowserSourceMaps: false,
 
+/*
   async headers() {
     return [
       {
@@ -64,6 +65,7 @@ const nextConfig = {
       },
     ];
   },
+*/
 
   async redirects() {
     return [

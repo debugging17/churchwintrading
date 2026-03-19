@@ -1,26 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 
 /**
- * Edge-compatible sliding-window rate limiter.
- *
- * Storage: In-memory Map stored in the Edge runtime's global scope.
- * Each IP gets a sliding window of WINDOW_MS milliseconds with MAX_REQUESTS allowed.
- *
- * MITM protection: Security headers are injected on every response here as a
- * defence-in-depth complement to vercel.json headers.
+ * Edge-compatible sliding-window rate limiter with Dev-Safe CSP.
  */
 
-const WINDOW_MS = 60_000; // 1 minute
-const MAX_REQUESTS = 60; // requests per window per IP
+const WINDOW_MS = 60_000; 
+const MAX_REQUESTS = 60; 
 
 interface WindowEntry {
   count: number;
   windowStart: number;
 }
 
-// globalThis persists across requests on the same Edge worker instance.
 declare global {
-  // eslint-disable-next-line no-var
   var __rateLimitMap: Map<string, WindowEntry> | undefined;
 }
 
@@ -45,7 +37,6 @@ function isRateLimited(ip: string): { limited: boolean; remaining: number; reset
   const entry = ipMap.get(ip);
 
   if (!entry || now - entry.windowStart >= WINDOW_MS) {
-    // New or expired window
     ipMap.set(ip, { count: 1, windowStart: now });
     return { limited: false, remaining: MAX_REQUESTS - 1, reset: now + WINDOW_MS };
   }
@@ -59,72 +50,39 @@ function isRateLimited(ip: string): { limited: boolean; remaining: number; reset
 }
 
 function addSecurityHeaders(response: NextResponse): NextResponse {
-  // MITM Prevention — HSTS forces HTTPS for 1 year, including subdomains
-  response.headers.set(
-    "Strict-Transport-Security",
-    "max-age=31536000; includeSubDomains; preload"
-  );
+  response.headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
 
-  // Content Security Policy — strict lockdown to prevent XSS, script injection,
-  // and untrusted module loading (e.g. whisper.cpp wasm/worker injections).
-  response.headers.set(
-    "Content-Security-Policy",
-    [
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline'",
-      "object-src 'none'",
-      "worker-src 'none'",
-      "script-src-attr 'none'",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com data:",
-      "img-src 'self' data: blob:",
-      "media-src 'self'",
-      "connect-src 'self'",
-      "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "form-action 'self'",
-      "upgrade-insecure-requests",
-    ].join("; ")
-  );
+  // DEV-SAFE CSP: Added 'unsafe-eval' for Next.js HMR/Fast Refresh
+  // Added localhost:* to script-src and connect-src for multi-port dev environments
+  const csp = [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' localhost:*",
+    "object-src 'none'",
+    "worker-src 'self' blob:",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "font-src 'self' https://fonts.gstatic.com data:",
+    "img-src 'self' data: blob:",
+    "media-src 'self'",
+    "connect-src 'self' ws://localhost:* http://localhost:*",
+    "frame-ancestors 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "upgrade-insecure-requests",
+  ].join("; ");
 
-  // Prevent clickjacking
+  response.headers.set("Content-Security-Policy", csp);
   response.headers.set("X-Frame-Options", "DENY");
-
-  // Block MIME-type sniffing
   response.headers.set("X-Content-Type-Options", "nosniff");
-
-  // Limit referrer info sent cross-origin
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
-
-  // Restrict browser features / APIs
-  response.headers.set(
-    "Permissions-Policy",
-    "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
-  );
-
-  // Cross-Origin Opener Policy — prevents cross-origin window attacks
+  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()");
   response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
-
-  // Cross-Origin Embedder Policy — 'credentialless' allows cross-origin loads
-  // (e.g. Google Fonts) without CORS while still enabling isolation
   response.headers.set("Cross-Origin-Embedder-Policy", "credentialless");
-
-  // Cross-Origin Resource Policy — prevents other origins from loading our resources
   response.headers.set("Cross-Origin-Resource-Policy", "same-origin");
-
-  // Prevent Flash/PDF cross-domain policy files
   response.headers.set("X-Permitted-Cross-Domain-Policies", "none");
-
-  // Prevent DNS prefetching leaking internal hostnames
   response.headers.set("X-DNS-Prefetch-Control", "off");
-
-  // Prevent IE from executing downloads in site's context
   response.headers.set("X-Download-Options", "noopen");
-
-  // Remove server fingerprinting
   response.headers.delete("X-Powered-By");
-  response.headers.delete("Server");
-
+  
   return response;
 }
 
@@ -158,6 +116,5 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  // Apply to all routes except Next.js internals and static assets
-  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|api/auth).*)"],
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Keyboard, EffectFade } from "swiper/modules";
 
@@ -10,7 +10,6 @@ import "swiper/css/effect-fade";
 
 // Global UI Layout Overlays
 import { FooterStack } from "./components/FooterStack";
-import { SlideLogo } from "./components/SlideLogo"; // Keep if needed elsewhere, but removing from main render below
 
 // Slides
 import { Slide01Cover } from "./slides/Slide01Cover";
@@ -42,21 +41,28 @@ import { Slide24CTA } from "./slides/Slide24CTA";
 
 import { useSearchParams } from "next/navigation";
 
-import { Suspense } from "react";
-
 function DeckContent() {
   const [mounted, setMounted] = useState(false);
   const searchParams = useSearchParams();
   const isPrintMode = searchParams.get("mode") === "print";
-  const totalSlides = 26; // Increased for Overview slide
+  const totalSlides = 26;
 
   useEffect(() => {
     setMounted(true);
+    console.log("DeckContent Mounted");
   }, []);
 
   if (!mounted) {
-    return <div className="h-screen w-full bg-brand-navy" />; // Prevent hydration mismatch
+    return (
+      <div className="h-screen w-full bg-brand-navy flex items-center justify-center">
+        <div className="text-white font-display text-xl animate-pulse">Initializing Pitch Deck...</div>
+      </div>
+    );
   }
+
+  // Handle slide index from query param
+  const slideParam = searchParams.get("slide");
+  const initialSlide = slideParam ? parseInt(slideParam) : 0;
 
   if (isPrintMode) {
     const slides = [
@@ -92,116 +98,38 @@ function DeckContent() {
         mousewheel={{ invert: false, thresholdDelta: 50, forceToAxis: false }}
         keyboard={{ enabled: true, onlyInViewport: true }}
         speed={800}
+        initialSlide={initialSlide}
         simulateTouch={false}
         className="h-full w-full"
       >
-        {/* Global UI */}
         <FooterStack total={totalSlides} />
-
-        {/* Slides */}
-        <SwiperSlide>
-          <Slide01Cover />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide01BOverview />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide02Crossroads />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide03MacroMoment />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide04MissingMiddle />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide05WhereWePlay />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide06Segmentation />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide07VPCSegments />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide08HowWeWin />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide09ValuePropDesirability />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide10ValuePropViability />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide11Capabilities />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide12SupplyChainAdvantage />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide12ABulkGallery />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide13CompetitiveReality />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide14WhoOwnsSpace />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide15DigitalVisibility />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide16B2BPipeline />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide17Roadmap />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide18Phase1 />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide19Phase2 />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide20Phase3 />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide21Impact />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide22ImpactTransformed />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide23TheAsk />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <Slide24CTA />
-        </SwiperSlide>
+        
+        <SwiperSlide><Slide01Cover /></SwiperSlide>
+        <SwiperSlide><Slide01BOverview /></SwiperSlide>
+        <SwiperSlide><Slide02Crossroads /></SwiperSlide>
+        <SwiperSlide><Slide03MacroMoment /></SwiperSlide>
+        <SwiperSlide><Slide04MissingMiddle /></SwiperSlide>
+        <SwiperSlide><Slide05WhereWePlay /></SwiperSlide>
+        <SwiperSlide><Slide06Segmentation /></SwiperSlide>
+        <SwiperSlide><Slide07VPCSegments /></SwiperSlide>
+        <SwiperSlide><Slide08HowWeWin /></SwiperSlide>
+        <SwiperSlide><Slide09ValuePropDesirability /></SwiperSlide>
+        <SwiperSlide><Slide10ValuePropViability /></SwiperSlide>
+        <SwiperSlide><Slide11Capabilities /></SwiperSlide>
+        <SwiperSlide><Slide12SupplyChainAdvantage /></SwiperSlide>
+        <SwiperSlide><Slide12ABulkGallery /></SwiperSlide>
+        <SwiperSlide><Slide13CompetitiveReality /></SwiperSlide>
+        <SwiperSlide><Slide14WhoOwnsSpace /></SwiperSlide>
+        <SwiperSlide><Slide15DigitalVisibility /></SwiperSlide>
+        <SwiperSlide><Slide16B2BPipeline /></SwiperSlide>
+        <SwiperSlide><Slide17Roadmap /></SwiperSlide>
+        <SwiperSlide><Slide18Phase1 /></SwiperSlide>
+        <SwiperSlide><Slide19Phase2 /></SwiperSlide>
+        <SwiperSlide><Slide20Phase3 /></SwiperSlide>
+        <SwiperSlide><Slide21Impact /></SwiperSlide>
+        <SwiperSlide><Slide22ImpactTransformed /></SwiperSlide>
+        <SwiperSlide><Slide23TheAsk /></SwiperSlide>
+        <SwiperSlide><Slide24CTA /></SwiperSlide>
       </Swiper>
     </main>
   );
@@ -209,7 +137,7 @@ function DeckContent() {
 
 export default function DeckLayout() {
   return (
-    <Suspense fallback={<div className="h-screen w-full bg-brand-navy" />}>
+    <Suspense fallback={<div className="h-screen w-full bg-brand-navy flex items-center justify-center text-white">Loading...</div>}>
       <DeckContent />
     </Suspense>
   );
