@@ -50,21 +50,8 @@ export function FooterStack({ total }: FooterStackProps) {
           </div>
         </div>
 
-        {/* Center: Attribution */}
-        <div className="flex flex-col items-center justify-center group transition-all duration-300 w-1/3 min-h-[40px]">
-           {current === 1 && (
-             <>
-               <span className="text-xs font-display tracking-[0.35em] text-brand-white/50 uppercase mb-1 font-semibold">
-                 Presented By
-               </span>
-               <div className="flex items-center gap-2">
-                 <span className="text-sm md:text-base font-display font-black tracking-[0.3em] text-brand-white uppercase drop-shadow-md">
-                   CEPHAS KUDALOR
-                 </span>
-               </div>
-             </>
-           )}
-        </div>
+        {/* Center: Attribution - Removed for cleaner institutional look on cover */}
+        <div className="w-1/3" />
 
         {/* Right: Empty balance to keep flex-between centered */}
         <div className="w-1/3" />
