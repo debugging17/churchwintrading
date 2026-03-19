@@ -10,65 +10,64 @@ export function Slide09ValuePropDesirability() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col md:flex-row bg-brand-white overflow-hidden relative">
+    <div className="w-full h-full flex flex-col md:flex-row bg-brand-navy overflow-hidden relative">
       
-      {/* Visual Left - Refined Blending to reduce "white glow" */}
-      <div className="hidden md:flex w-[45%] h-full relative overflow-hidden group">
-         <div className="absolute inset-0 z-0 bg-brand-navy/5">
-            <Image 
-              src="/assets/trucking.jpeg" 
-              alt="Industrial Logistic Support" 
-              fill 
-              className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[6s] ease-out brightness-90 contrast-[1.1]"
-              style={{ 
-                maskImage: 'linear-gradient(to right, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)', 
-                WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)' 
-              }}
-              priority
-            />
-         </div>
-         {/* Subtle overlay gradient to kill the "white wash" */}
-         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-brand-white to-transparent z-10" />
+      {/* Visual Left - Background Image */}
+      <div className="absolute inset-0 z-0 w-[40%] h-full">
+         <Image 
+           src="/assets/trucking.jpeg" 
+           alt="Industrial Logistic Support" 
+           fill 
+           className="object-cover opacity-60 grayscale-[20%]"
+           priority
+         />
       </div>
 
-      {/* Content Right - Premium Uplift */}
-      <div className="w-full md:w-[55%] h-full flex flex-col justify-center px-10 md:px-24 z-20 relative bg-brand-white">
-        
-        {/* Background Decorative Element */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/5 rounded-full blur-3xl -mr-32 -mt-32" />
+      {/* Spacing for layout */}
+      <div className="hidden md:block w-[30%] h-full relative z-10" />
 
-        <motion.div initial="hidden" animate={animState} variants={staggerContainer} className="max-w-3xl">
+      {/* Content Right - Premium Floating Container */}
+      <div className="w-full md:w-[70%] h-full flex flex-col justify-center items-center z-20 relative px-6 md:px-0">
+        
+        <motion.div 
+          initial="hidden" 
+          animate={animState} 
+          variants={staggerContainer} 
+          className="w-full max-w-6xl bg-brand-white h-[90vh] md:h-[85vh] rounded-[40px] md:rounded-l-[60px] md:rounded-r-none flex flex-col justify-center px-10 md:px-20 py-12 shadow-2xl relative overflow-hidden"
+        >
+          {/* Subtle decoration */}
+          <div className="absolute top-0 right-0 w-80 h-80 bg-brand-orange/5 rounded-full blur-[100px] -mr-40 -mt-40 opacity-40 pointer-events-none" />
+
           <motion.div variants={fadeUp} className="flex items-center gap-3 mb-6">
-            <div className="h-[2px] w-12 bg-brand-orange" />
-            <span className="text-brand-orange font-display font-medium uppercase tracking-[0.2em] text-xs">The Churchwin Solution</span>
+            <div className="h-[1.5px] w-12 bg-brand-orange/60" />
+            <span className="text-brand-orange font-display font-bold uppercase tracking-[0.3em] text-[10px]">The Churchwin Solution</span>
           </motion.div>
 
-          <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-6xl font-black text-brand-navy leading-[1.1] mb-8">
-            Eliminating the <br/>
-            <span className="text-brand-orange font-light">Exact Pain Points</span> <br/>
+          <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-brand-navy leading-[1.15] mb-8 max-w-5xl whitespace-normal break-words">
+            Eliminating the Exact <span className="whitespace-nowrap">Pain Points</span> <br className="hidden md:block" />
             of Global Buyers.
           </motion.h2>
 
-          <motion.p variants={fadeUp} className="text-lg md:text-xl text-brand-navy/70 font-primary leading-relaxed mb-12 max-w-xl">
-            We bridge the gap between rural production and global standards with a vertically integrated supply engine.
+          <motion.p variants={fadeUp} className="text-base md:text-lg text-brand-navy/60 font-primary leading-relaxed mb-10 max-w-3xl">
+            We bridge the gap between rural production and global standards with a <span className="text-brand-navy font-semibold">vertically integrated supply engine</span>, ensuring every shipment meets the highest quality and compliance benchmarks.
           </motion.p>
 
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 gap-4 w-full max-w-4xl">
             {[
               { 
-                icon: <ShoppingBag className="w-5 h-5" />, 
+                icon: <ShoppingBag className="w-5 h-5 text-brand-navy/30 group-hover:text-brand-orange" />, 
                 label: "For The Retailer", 
                 val: "Flexible order quantities + consistent quality", 
                 res: "no more multi-supplier chaos" 
               },
               { 
-                icon: <Warehouse className="w-5 h-5" />, 
+                icon: <Warehouse className="w-5 h-5 text-brand-navy/30 group-hover:text-brand-orange" />, 
                 label: "For The Wholesaler", 
                 val: "Guaranteed mass production + buffer stocking", 
                 res: "no more seasonal contract losses" 
               },
               { 
-                icon: <FileCheck className="w-5 h-5" />, 
+                icon: <FileCheck className="w-5 h-5 text-brand-navy/30 group-hover:text-brand-orange" />, 
                 label: "For Procurement", 
                 val: "Instant compliance documentation download", 
                 res: "no certificate hunting" 
@@ -77,19 +76,21 @@ export function Slide09ValuePropDesirability() {
               <motion.div 
                 key={idx} 
                 variants={fadeUp} 
-                className="group flex items-start gap-6 p-6 rounded-2xl bg-brand-navy/[0.02] border border-brand-navy/5 hover:bg-brand-navy/[0.04] hover:border-brand-orange/20 transition-all duration-300"
+                className="group flex items-center gap-6 p-4 rounded-2xl bg-[#F8F9FB] border border-brand-navy/5 hover:border-brand-orange/20 hover:bg-brand-white hover:shadow-xl transition-all duration-500"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-navy/5 flex items-center justify-center text-brand-navy/60 group-hover:bg-brand-orange/10 group-hover:text-brand-orange transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-brand-navy/5 flex items-center justify-center transition-all duration-300">
                   {item.icon}
                 </div>
                 <div className="flex-grow">
-                  <h4 className="font-display text-brand-navy font-bold text-sm uppercase tracking-wider mb-2 flex items-center justify-between">
-                    {item.label}
-                    <CheckCircle2 className="w-4 h-4 text-brand-orange opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </h4>
-                  <p className="font-primary text-brand-navy/80 text-base leading-relaxed">
-                    <span className="text-brand-navy/50">{item.val}</span> <br/>
-                    <span className="font-bold text-brand-navy">Result: {item.res}.</span>
+                  <div className="flex items-center justify-between mb-0.5">
+                    <h4 className="font-display text-brand-navy/40 font-bold text-[9px] uppercase tracking-[0.2em]">
+                      {item.label}
+                    </h4>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-orange opacity-0 group-hover:opacity-100 transition-all scale-50 group-hover:scale-100" />
+                  </div>
+                  <p className="font-primary text-brand-navy text-sm md:text-base leading-snug">
+                    <span className="opacity-50">{item.val} = </span>
+                    <span className="font-bold">{item.res}.</span>
                   </p>
                 </div>
               </motion.div>
