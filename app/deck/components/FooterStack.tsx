@@ -51,23 +51,13 @@ export function FooterStack({ total }: FooterStackProps) {
         </div>
 
         {/* Center: Attribution */}
-        <div className="flex flex-col items-center gap-2 group transition-all duration-300">
-           <div className="flex items-center gap-3">
-             <span className="text-[10px] font-display tracking-[0.3em] text-brand-white/40 uppercase">
-               Presented By
-             </span>
-             <div className="w-6 h-[1px] bg-brand-orange/40" />
-             <span className="text-xs font-display font-medium text-brand-white tracking-widest uppercase">
-                Cephas Kudalor
-             </span>
-           </div>
-           
-           <div className="flex items-center gap-2 mt-1">
-             <span className="text-[9px] font-display tracking-[0.1em] text-brand-white/30 lowercase italic">
-               designed by
-             </span>
-             <span className="text-[10px] font-display font-bold tracking-[0.2em] text-brand-orange uppercase">
-               OrangeOrange.agency
+        <div className="flex flex-col items-center justify-center group transition-all duration-300">
+           <span className="text-[10px] font-display tracking-[0.3em] text-brand-white/40 uppercase mb-1">
+             Presented By
+           </span>
+           <div className="flex items-center gap-2">
+             <span className="text-xs font-display font-bold tracking-[0.2em] text-brand-white uppercase drop-shadow-sm">
+               CEPHAS KUDALOR
              </span>
            </div>
         </div>
