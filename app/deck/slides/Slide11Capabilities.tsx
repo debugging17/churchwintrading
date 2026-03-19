@@ -12,10 +12,30 @@ export function Slide11Capabilities() {
   const animState = useSlideEnter(100);
 
   const capabilities = [
-    { icon: Users, label: "11 Women-Led Processing Co-operatives", sub: "Empowering rural supply chains" },
-    { icon: PackageCheck, label: "6-Product Certified Export Line", sub: "Shea, Black Soap, Neem, Cocoa, Baobab, Moringa" },
-    { icon: Box, label: "12-Month Buffer Stock Guarantee", sub: "Ensuring seasonal price stability" },
-    { icon: ShieldCheck, label: "International Compliance Vault", sub: "COA, MSDS, Organic Certifications" },
+    { 
+      icon: Users, 
+      label: "11 Women-Led Processing Co-operatives", 
+      sub: "Empowering rural supply chains",
+      img: "/images/visual_supremacy/shea_orchard.png"
+    },
+    { 
+      icon: PackageCheck, 
+      label: "6-Product Certified Export Line", 
+      sub: "Shea, Black Soap, Neem, Cocoa, Baobab, Moringa",
+      img: "/images/visual_supremacy/shea_factory.png"
+    },
+    { 
+      icon: Box, 
+      label: "12-Month Buffer Stock Guarantee", 
+      sub: "Ensuring seasonal price stability",
+      img: "/images/visual_supremacy/industrial_wholesaler.png" 
+    },
+    { 
+      icon: ShieldCheck, 
+      label: "International Compliance Vault", 
+      sub: "COA, MSDS, Organic Certifications",
+      img: "/images/visual_supremacy/compliance_lab.png"
+    },
   ];
 
   return (
@@ -68,23 +88,29 @@ export function Slide11Capabilities() {
             We bridge the gap between rural production and global standards through a vertically integrated infrastructure.
           </motion.p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {capabilities.map((cap, idx) => (
-              <GlassCard 
+              <motion.div 
                 key={idx} 
-                delay={0.4 + (idx * 0.1)}
-                className="p-6 hover:border-brand-orange/30 transition-all duration-500 group"
+                variants={fadeUp}
+                custom={idx}
+                className="relative group rounded-2xl overflow-hidden shadow-xl border border-brand-navy/5 h-[220px]"
               >
-                <div className="w-10 h-10 mb-4 bg-brand-orange/10 rounded-lg flex items-center justify-center group-hover:bg-brand-orange transition-colors duration-500">
-                  <cap.icon className="w-5 h-5 text-brand-orange group-hover:text-white transition-colors duration-500" />
+                <Image src={cap.img} alt={cap.label} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent" />
+                
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <div className="w-10 h-10 mb-3 bg-brand-orange/20 backdrop-blur-md border border-brand-orange/30 rounded-lg flex items-center justify-center group-hover:bg-brand-orange transition-colors duration-500">
+                    <cap.icon className="w-5 h-5 text-brand-orange group-hover:text-white transition-colors duration-500" />
+                  </div>
+                  <h4 className="font-display text-white text-lg font-bold mb-1 leading-tight drop-shadow-md">
+                    {cap.label}
+                  </h4>
+                  <p className="text-xs text-brand-white/80 font-primary drop-shadow-md">
+                    {cap.sub}
+                  </p>
                 </div>
-                <h4 className="font-display text-brand-navy text-lg font-bold mb-1 leading-tight">
-                  {cap.label}
-                </h4>
-                <p className="text-sm text-brand-navy/60 font-primary">
-                  {cap.sub}
-                </p>
-              </GlassCard>
+              </motion.div>
             ))}
           </div>
         </motion.div>

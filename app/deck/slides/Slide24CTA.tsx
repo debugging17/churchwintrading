@@ -6,6 +6,8 @@ import { useSlideEnter } from "../motion/useSlideEnter";
 import { CTAButton } from "../components/CTAButton";
 import { Banknote, Users, Lightbulb } from "lucide-react";
 
+import Image from "next/image";
+
 export function Slide24CTA() {
   const animState = useSlideEnter(100);
 
@@ -19,38 +21,61 @@ export function Slide24CTA() {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16 text-left">
-          
-          {/* Ask 1 */}
-          <motion.div variants={fadeUp} className="bg-brand-navy border border-brand-white/10 rounded-xl p-8 relative overflow-hidden group hover:border-brand-orange/50 transition-colors">
-            <div className="w-12 h-12 bg-brand-orange/10 rounded-full flex items-center justify-center mb-6">
-              <Banknote className="text-brand-orange w-6 h-6" />
+                    {/* Ask 1 */}
+          <motion.div variants={fadeUp} className="relative group rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02] border border-brand-white/10 h-full min-h-[400px]">
+            <Image src="/images/visual_supremacy/budget_action.png" alt="Budget Action" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent" />
+            
+            <div className="absolute inset-0 p-8 flex flex-col justify-end">
+              <div className="w-12 h-12 bg-brand-orange/20 backdrop-blur-md border border-brand-orange/40 rounded-full flex items-center justify-center mb-6">
+                <Banknote className="text-brand-orange w-6 h-6" />
+              </div>
+              <h3 className="font-display text-2xl font-black text-white mb-4 drop-shadow-md">
+                <span className="text-brand-orange block text-[10px] uppercase tracking-widest mb-1 italic">Resolution 01</span>
+                Authorize Strategic B2B Growth Fund
+              </h3>
+              <p className="font-primary text-brand-white/90 text-sm leading-relaxed drop-shadow-md">
+                Formalize the 180-day $150K allocation to fund the digital sales stack and EU buffer warehouse—securing the infrastructure that converts global leads into local wealth.
+              </p>
             </div>
-            <h3 className="font-display text-xl font-bold text-brand-white mb-4">Approve $150K B2B Budget</h3>
-            <p className="font-primary text-brand-white/70 text-sm leading-relaxed">
-              Fund the digital sales stack (CRM, outbound automation, buyer portal) and establish a buffer warehouse in the EU — the infrastructure that converts leads into contracts.
-            </p>
           </motion.div>
 
           {/* Ask 2 */}
-          <motion.div variants={fadeUp} className="bg-brand-navy border border-brand-white/10 rounded-xl p-8 relative overflow-hidden group hover:border-brand-orange/50 transition-colors">
-            <div className="w-12 h-12 bg-brand-orange/10 rounded-full flex items-center justify-center mb-6">
-              <Users className="text-brand-orange w-6 h-6" />
+          <motion.div variants={fadeUp} className="relative group rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02] border border-brand-white/10 h-full min-h-[400px]">
+            <Image src="/images/visual_supremacy/networking_rolodex.png" alt="Networking Rolodex" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent" />
+            
+            <div className="absolute inset-0 p-8 flex flex-col justify-end">
+              <div className="w-12 h-12 bg-brand-orange/20 backdrop-blur-md border border-brand-orange/40 rounded-full flex items-center justify-center mb-6">
+                <Users className="text-brand-orange w-6 h-6" />
+              </div>
+              <h3 className="font-display text-2xl font-black text-white mb-4 drop-shadow-md">
+                <span className="text-brand-orange block text-[10px] uppercase tracking-widest mb-1 italic">Resolution 02</span>
+                Activation of Institutional Networks
+              </h3>
+              <p className="font-primary text-brand-white/90 text-sm leading-relaxed drop-shadow-md">
+                Direct introductions to 3 Tier-1 global procurement leads. Leverage our 42% shared seed-base to open doors that belong to Churchwin Trading.
+              </p>
             </div>
-            <h3 className="font-display text-xl font-bold text-brand-white mb-4">Open Your Rolodex</h3>
-            <p className="font-primary text-brand-white/70 text-sm leading-relaxed">
-              Introduce Churchwin to 3 Tier-1 EU/US cosmetics procurement leads. 42% of 1,544 Seed companies already do business together — we need those warm doors opened.
-            </p>
           </motion.div>
 
           {/* Ask 3 */}
-          <motion.div variants={fadeUp} className="bg-brand-navy border border-brand-white/10 rounded-xl p-8 relative overflow-hidden group hover:border-brand-orange/50 transition-colors">
-            <div className="w-12 h-12 bg-brand-orange/10 rounded-full flex items-center justify-center mb-6">
-              <Lightbulb className="text-brand-orange w-6 h-6" />
+          <motion.div variants={fadeUp} className="relative group rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.02] border border-brand-white/10 h-full min-h-[400px]">
+            <Image src="/images/visual_supremacy/steering_committee.png" alt="Steering Committee" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent" />
+            
+            <div className="absolute inset-0 p-8 flex flex-col justify-end">
+              <div className="w-12 h-12 bg-brand-orange/20 backdrop-blur-md border border-brand-orange/40 rounded-full flex items-center justify-center mb-6">
+                <Lightbulb className="text-brand-orange w-6 h-6" />
+              </div>
+              <h3 className="font-display text-2xl font-black text-white mb-4 drop-shadow-md">
+                <span className="text-brand-orange block text-[10px] uppercase tracking-widest mb-1 italic">Resolution 03</span>
+                Mandate certification & Entry
+              </h3>
+              <p className="font-primary text-brand-white/90 text-sm leading-relaxed drop-shadow-md">
+                Appoint a Board-level steering committee to fast-track COSMOS/NATRUE certification. Goal: Roadmap approved within 90 days.
+              </p>
             </div>
-            <h3 className="font-display text-xl font-bold text-brand-white mb-4">Mandate a Steering Committee</h3>
-            <p className="font-primary text-brand-white/70 text-sm leading-relaxed">
-              Appoint a Board-level committee to oversee COSMOS/NATRUE certification and EU market entry. First milestone: certification roadmap approved within 90 days.
-            </p>
           </motion.div>
 
         </div>
