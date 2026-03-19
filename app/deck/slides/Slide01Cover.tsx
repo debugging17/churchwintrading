@@ -41,17 +41,17 @@ export function Slide01Cover() {
         className="absolute inset-0 z-[5] pointer-events-none overflow-hidden"
       >
         <div 
-          className="absolute inset-0 bg-gradient-to-br from-brand-white/25 via-brand-white/15 to-transparent backdrop-blur-3xl border-r border-brand-white/20 shadow-2xl"
+          className="absolute inset-0 bg-gradient-to-br from-brand-white/10 via-brand-white/5 to-transparent backdrop-blur-lg border-r border-brand-white/10"
           style={{ 
             clipPath: "polygon(0 0, 65% 0, 45% 100%, 0% 100%)",
           }}
         />
         {/* Secondary subtle accent slant */}
         <div 
-          className="absolute inset-0 bg-brand-orange/15 backdrop-blur-sm"
+          className="absolute inset-0 bg-brand-orange/5 backdrop-blur-none"
           style={{ 
             clipPath: "polygon(0 0, 66% 0, 65.5% 0, 44.5% 100%, 45% 100%, 0% 100%)",
-            opacity: 0.3
+            opacity: 0.1
           }}
         />
       </motion.div>
@@ -67,9 +67,9 @@ export function Slide01Cover() {
           className="flex flex-col items-center text-center max-w-5xl mx-auto relative group"
         >
           {/* Subtle glow behind text */}
-          <div className="absolute -inset-20 bg-brand-orange/10 blur-[100px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-1000" />
+          <div className="absolute -inset-20 bg-brand-orange/5 blur-[100px] rounded-full opacity-30 group-hover:opacity-60 transition-opacity duration-1000" />
           
-          <div className="relative z-10 bg-brand-navy/45 backdrop-blur-xl border border-brand-white/20 p-12 md:p-20 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+          <div className="relative z-10 bg-brand-navy/20 backdrop-blur-md border border-brand-white/10 p-12 md:p-20 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
           {/* Eyebrow */}
           <motion.div variants={fadeUp} className="flex items-center gap-4 mb-8">
             <div className="w-12 h-[2px] bg-brand-orange" />
