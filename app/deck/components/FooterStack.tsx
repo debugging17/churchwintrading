@@ -6,14 +6,22 @@ import Image from "next/image";
 
 interface FooterStackProps {
   total: number;
+  currentOverride?: number;
 }
 
-export function FooterStack({ total }: FooterStackProps) {
+export function FooterStack({ total, currentOverride }: FooterStackProps) {
   const swiper = useSwiper();
-  const [current, setCurrent] = useState(1);
+  const [current, setCurrent] = useState(currentOverride || 1);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    // If we have an override (print mode), we don't need swiper listeners
+    if (currentOverride) {
+      setCurrent(currentOverride);
+      setProgress((currentOverride / total) * 100);
+      return;
+    }
+
     if (!swiper) return;
     const update = () => {
       setCurrent(swiper.activeIndex + 1);
@@ -28,7 +36,7 @@ export function FooterStack({ total }: FooterStackProps) {
       swiper.off("slideChange", update);
       swiper.off("progress", update);
     };
-  }, [swiper]);
+  }, [swiper, currentOverride, total]);
 
   const formatNum = (num: number) => num.toString().padStart(2, "0");
 
@@ -42,7 +50,7 @@ export function FooterStack({ total }: FooterStackProps) {
         
         {/* Left: Slide Counter */}
         <div className="flex flex-col items-start gap-1 w-1/3">
-          <span className="text-[10px] font-display tracking-[0.2em] text-brand-white/40 uppercase">
+          <span className="text-[10px] font-display tracking-[0.2em] text-brand-white/60 uppercase">
             Navigation
           </span>
           <div className="flex items-center gap-4 text-brand-white font-display text-sm tracking-widest">

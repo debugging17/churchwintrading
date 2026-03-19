@@ -59,35 +59,26 @@ function DeckContent() {
   }
 
   if (isPrintMode) {
+    const slides = [
+      Slide01Cover, Slide01BOverview, Slide02Crossroads, Slide03MacroMoment, 
+      Slide04MissingMiddle, Slide05WhereWePlay, Slide06Segmentation, 
+      Slide07VPCSegments, Slide08HowWeWin, Slide09ValuePropDesirability, 
+      Slide10ValuePropViability, Slide11Capabilities, Slide12SupplyChainAdvantage, 
+      Slide12ABulkGallery, Slide13CompetitiveReality, Slide14WhoOwnsSpace, 
+      Slide15DigitalVisibility, Slide16B2BPipeline, Slide17Roadmap, 
+      Slide18Phase1, Slide19Phase2, Slide20Phase3, Slide21Impact, 
+      Slide22ImpactTransformed, Slide23TheAsk, Slide24CTA
+    ];
+
     return (
       <main className="w-full bg-brand-navy min-h-screen">
         <div className="flex flex-col">
-          <Slide01Cover />
-          <Slide01BOverview />
-          <Slide02Crossroads />
-          <Slide03MacroMoment />
-          <Slide04MissingMiddle />
-          <Slide05WhereWePlay />
-          <Slide06Segmentation />
-          <Slide07VPCSegments />
-          <Slide08HowWeWin />
-          <Slide09ValuePropDesirability />
-          <Slide10ValuePropViability />
-          <Slide11Capabilities />
-          <Slide12SupplyChainAdvantage />
-          <Slide12ABulkGallery />
-          <Slide13CompetitiveReality />
-          <Slide14WhoOwnsSpace />
-          <Slide15DigitalVisibility />
-          <Slide16B2BPipeline />
-          <Slide17Roadmap />
-          <Slide18Phase1 />
-          <Slide19Phase2 />
-          <Slide20Phase3 />
-          <Slide21Impact />
-          <Slide22ImpactTransformed />
-          <Slide23TheAsk />
-          <Slide24CTA />
+          {slides.map((SlideComponent, index) => (
+            <div key={index} className="relative h-screen overflow-hidden">
+              <SlideComponent />
+              <FooterStack total={totalSlides} currentOverride={index + 1} />
+            </div>
+          ))}
         </div>
       </main>
     );
