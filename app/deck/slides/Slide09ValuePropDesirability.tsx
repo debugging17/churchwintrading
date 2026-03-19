@@ -10,16 +10,18 @@ export function Slide09ValuePropDesirability() {
 
   return (
     <div className="w-full h-full flex flex-col md:flex-row bg-gradient-to-r from-brand-white via-brand-white/80 to-brand-cream overflow-hidden">
-      {/* Visual Left */}
-      <div className="hidden md:flex w-[40%] h-full relative items-center justify-center p-12">
-         <div className="absolute inset-0 bg-gradient-to-t from-brand-white/50 to-transparent z-10 pointer-events-none" />
-         <div className="relative z-20 w-full aspect-[4/5] rounded-xl overflow-hidden border border-brand-navy/10 flex items-center justify-center p-0 shadow-lg">
+      {/* Visual Left - Widened and Blended */}
+      <div className="hidden md:flex w-[50%] h-full relative overflow-hidden group">
+         <div className="absolute inset-0 z-0">
             <Image 
-              src="/assets/b2b_industrial_processing_1773793847510.png" 
-              alt="Industrial Scale Processing Facility" 
+              src="/assets/trucking.jpeg" 
+              alt="Industrial Logistic Support" 
               fill 
-              className="object-cover"
+              className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[4s] ease-out"
+              priority
             />
+            {/* Blending Gradient to right edge */}
+            <div className="absolute inset-y-0 right-0 w-[50%] bg-gradient-to-r from-transparent via-brand-white/20 to-brand-white z-10" />
             <div className="absolute inset-0 bg-brand-navy/5 mix-blend-multiply pointer-events-none" />
          </div>
       </div>
