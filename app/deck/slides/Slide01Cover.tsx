@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeUp, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { RemotionPlayerWrapper } from "../components/RemotionPlayerWrapper";
+import Image from "next/image";
 
 // COVER SLIDE — Minimal & Clean Overhaul
 export function Slide01Cover() {
@@ -45,10 +46,11 @@ export function Slide01Cover() {
             
             {/* Logo inside */}
             <motion.div variants={fadeUp} className="mb-6 relative w-20 h-20 opacity-90 drop-shadow-md">
-              <img 
+              <Image 
                 src="/assets/images/churchwin_logo_new.png" 
                 alt="Churchwin Trading Logo" 
-                className="w-full h-full object-contain"
+                fill
+                className="object-contain"
               />
             </motion.div>
 
