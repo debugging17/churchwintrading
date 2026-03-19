@@ -33,12 +33,12 @@ export function FooterStack({ total }: FooterStackProps) {
   const formatNum = (num: number) => num.toString().padStart(2, "0");
 
   return (
-    <div className="absolute bottom-0 left-0 w-full z-[100] flex flex-col pointer-events-none px-10 pb-6">
+    <div className="absolute bottom-0 left-0 w-full h-32 z-[100] pointer-events-none">
       {/* Global Contrast Vignette - ensures white text is visible on light slides */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent h-32 -z-10 mt-auto pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black/50 via-black/10 to-transparent z-[-1] pointer-events-none" />
       
       {/* --- Main Footer Layer --- */}
-      <div className="flex items-end justify-between w-full mb-6">
+      <div className="flex items-end justify-between w-full h-full px-10 pb-6">
         
         {/* Left: Slide Counter */}
         <div className="flex flex-col items-start gap-1 w-1/3">
