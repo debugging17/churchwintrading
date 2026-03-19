@@ -10,7 +10,7 @@ export function Slide09ValuePropDesirability() {
 
   return (
     <div className="w-full h-full flex flex-col md:flex-row bg-gradient-to-r from-brand-white via-brand-white/80 to-brand-cream overflow-hidden">
-      {/* Visual Left - Widened and Blended */}
+      {/* Visual Left - Seamlessly Blended */}
       <div className="hidden md:flex w-[50%] h-full relative overflow-hidden group">
          <div className="absolute inset-0 z-0">
             <Image 
@@ -18,10 +18,9 @@ export function Slide09ValuePropDesirability() {
               alt="Industrial Logistic Support" 
               fill 
               className="object-cover scale-105 group-hover:scale-100 transition-transform duration-[4s] ease-out"
+              style={{ maskImage: 'linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)', WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)' }}
               priority
             />
-            {/* Blending Gradient to right edge */}
-            <div className="absolute inset-y-0 right-0 w-[50%] bg-gradient-to-r from-transparent via-brand-white/20 to-brand-white z-10" />
             <div className="absolute inset-0 bg-brand-navy/5 mix-blend-multiply pointer-events-none" />
          </div>
       </div>
