@@ -66,12 +66,9 @@ export function Slide01Cover() {
             {/* Headline */}
             <motion.h1
               variants={fadeUp}
-              className="font-display text-5xl md:text-8xl font-bold text-brand-white leading-[0.9] tracking-tighter mb-8 drop-shadow-2xl"
+              className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-brand-white leading-[0.9] tracking-tighter mb-8 drop-shadow-2xl text-center"
             >
-              Churchwin
-              <span className="block text-brand-orange/90 text-2xl md:text-4xl tracking-[0.15em] mt-3 md:mt-4 uppercase font-medium">
-                Trading Co. Ltd
-              </span>
+              Churchwin <span className="text-brand-orange/90 font-medium">Trading Co. Ltd</span>
             </motion.h1>
 
             <RemotionPlayerWrapper
