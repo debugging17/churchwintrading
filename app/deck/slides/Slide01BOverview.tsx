@@ -104,8 +104,6 @@ export function Slide01BOverview() {
           className="absolute inset-y-0 left-0 w-32 bg-white z-10"
           style={{ clipPath: "polygon(0 0, 100% 0, 0 100%, 0 100%)" }} 
         />
-        {/* Soft edge blend gradient */}
-        <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-white via-white/40 to-transparent z-[5] pointer-events-none" />
 
         {/* Truck Image */}
         <motion.div
