@@ -31,7 +31,7 @@ export function Slide01Cover() {
       {/* OVERLY COMPLICATED LAYER 5 WAS REMOVED AS REQUESTED */}
 
       {/* === LAYER 10: Content overlay === */}
-      <div className="w-full h-full flex flex-col justify-center items-center py-16 md:py-24 px-10 md:px-24 z-10 relative">
+      <div className="w-full h-full flex flex-col justify-start items-center pt-24 md:pt-32 px-10 md:px-24 z-10 relative">
         
         {/* --- CENTRAL HERO SECTION --- */}
         <motion.div
@@ -45,12 +45,12 @@ export function Slide01Cover() {
           <div className="relative z-10 flex flex-col items-center">
             
             {/* Logo inside */}
-            <motion.div variants={fadeUp} className="mb-8 relative w-32 h-32 md:w-[12rem] md:h-[12rem] opacity-95 drop-shadow-xl">
+            <motion.div variants={fadeUp} className="mb-8 relative w-64 h-24 md:w-[26rem] md:h-[9rem] opacity-95 drop-shadow-xl bg-white rounded-[2rem] overflow-hidden flex items-center justify-center p-4">
               <Image 
                 src="/assets/images/churchwin_logo_new.png" 
                 alt="Churchwin Trading Logo" 
                 fill
-                className="object-cover rounded-[2rem]"
+                className="object-contain p-4"
               />
             </motion.div>
 
