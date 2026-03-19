@@ -33,22 +33,22 @@ export function Slide02Crossroads() {
       </div>
 
       {/* === LAYER 1: Content Overlay === */}
-      <div className="w-full h-full flex flex-col justify-center px-16 xl:px-24 z-20 relative">
+      <div className="w-full h-full flex flex-col justify-center px-[4rem] xl:px-[6rem] pb-[8rem] z-20 relative">
         <motion.div
           initial="hidden"
           animate={animState}
-          className="max-w-3xl"
+          className="max-w-[48rem]"
         >
           {/* Section Marker */}
           <motion.div
             variants={fadeUp}
-            className="flex items-center gap-4 mb-12"
+            className="flex items-center gap-[1rem] mb-[3rem]"
           >
-             <span className="text-brand-orange text-3xl font-black tracking-tighter">
+             <span className="text-brand-orange text-[2rem] font-black tracking-tighter">
               01
              </span>
-             <div className="w-16 h-[2px] bg-brand-orange/60" />
-             <p className="text-brand-white/60 text-xs tracking-[0.5em] uppercase font-bold">
+             <div className="w-[4rem] h-[2px] bg-brand-orange/60" />
+             <p className="text-brand-white/60 text-[0.6rem] tracking-[0.5em] uppercase font-bold">
               The Strategic Context
              </p>
           </motion.div>
@@ -56,36 +56,25 @@ export function Slide02Crossroads() {
           {/* Heading */}
           <motion.h2
             variants={slideFromLeft}
-            className="text-6xl md:text-8xl xl:text-9xl font-black text-brand-white leading-[0.9] mb-12 tracking-tighter drop-shadow-2xl"
+            className="text-[clamp(3rem,8vw,8rem)] font-black text-brand-white leading-[0.9] mb-[3rem] tracking-tighter drop-shadow-2xl"
           >
             THE INDUSTRIAL <br />
-            <span className="text-brand-orange text-shadow-lg">CROSSROADS.</span>
+            <span className="text-brand-orange text-shadow-lg drop-shadow-[0_0_15px_rgba(255,106,0,0.3)]">CROSSROADS.</span>
           </motion.h2>
 
           {/* Hardened Copy in Glass Container */}
           <motion.div 
             variants={fadeUp} 
-            className="space-y-8 bg-brand-navy/40 backdrop-blur-xl border-l-[6px] border-brand-orange p-10 max-w-2xl rounded-r-2xl shadow-2xl"
+            className="space-y-[2rem] bg-brand-navy/40 backdrop-blur-xl border-l-[0.4rem] border-brand-orange p-[2.5rem] max-w-[40rem] rounded-r-[1rem] shadow-2xl"
           >
-            <p className="text-xl md:text-2xl text-brand-white leading-relaxed italic font-light">
+            <p className="text-[1.25rem] md:text-[1.5rem] text-brand-white leading-relaxed italic font-light">
               &ldquo;Africa does not have a supply problem. It has a professional infrastructure and demand aggregation problem.&rdquo;
             </p>
-            <p className="text-base md:text-lg text-brand-white/70 font-primary leading-relaxed font-light">
+            <p className="text-[1rem] text-brand-white/70 font-primary leading-relaxed font-light">
               Ghana&apos;s economy is currently hamstrung by fragmented SMEs that cannot institutionalize. To fix the middle, we must professionalize the gatekeepers.
             </p>
           </motion.div>
         </motion.div>
-      </div>
-
-      {/* Subtle branding detail */}
-      <div className="absolute bottom-12 left-16 xl:left-24 z-30 opacity-40">
-        <Image 
-          src="/assets/images/churchwin_logo_new.png" 
-          alt="Logo" 
-          width={120} 
-          height={30} 
-          className="grayscale invert"
-        />
       </div>
     </div>
   );

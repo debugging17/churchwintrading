@@ -22,7 +22,7 @@ export function Slide04MissingMiddle() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden bg-brand-navy">
+    <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden bg-brand-navy pb-[8rem]">
       
       {/* === LAYER 0: Background Context === */}
       <div className="absolute inset-0 z-0 opacity-20">
@@ -40,28 +40,28 @@ export function Slide04MissingMiddle() {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10 px-10 md:px-24"
+        className="w-full max-w-[85rem] mx-auto flex flex-col md:flex-row items-center gap-[4rem] z-10 px-[2.5rem] md:px-[6rem]"
       >
         
         {/* Narrative Left */}
         <div className="w-full md:w-1/2 flex flex-col">
-          <motion.div variants={fadeUp} className="flex items-center gap-4 mb-8">
-             <div className="w-12 h-[2px] bg-brand-orange" />
-             <p className="text-brand-orange text-xs tracking-[0.4em] uppercase font-black">The Structural Bottleneck</p>
+          <motion.div variants={fadeUp} className="flex items-center gap-[1rem] mb-[2rem]">
+             <div className="w-[3rem] h-[2px] bg-brand-orange" />
+             <p className="text-brand-orange text-[0.6rem] tracking-[0.4em] uppercase font-black">The Structural Bottleneck</p>
           </motion.div>
 
-          <motion.h2 variants={slideFromLeft} className="text-5xl md:text-7xl font-black text-brand-white leading-[0.95] mb-8 tracking-tighter">
+          <motion.h2 variants={slideFromLeft} className="text-[clamp(2.5rem,6vw,5rem)] font-black text-brand-white leading-[0.95] mb-[2rem] tracking-tighter">
             80% of jobs.<br />
             <span className="text-brand-orange drop-shadow-lg italic">The trap is real.</span>
           </motion.h2>
 
-          <motion.div variants={fadeUp} className="bg-brand-white/5 border-l-4 border-brand-orange p-10 backdrop-blur-3xl rounded-r-2xl shadow-3xl">
-            <p className="text-xl text-brand-white/90 font-primary leading-relaxed font-light italic mb-6">
+          <motion.div variants={fadeUp} className="bg-brand-white/5 border-l-[0.3rem] border-brand-orange p-[2rem] md:p-[2.5rem] backdrop-blur-3xl rounded-r-[1rem] shadow-3xl">
+            <p className="text-[1.2rem] text-brand-white/90 font-primary leading-relaxed font-light italic mb-[1.5rem]">
               &ldquo;Africa&apos;s economy is currently hamstrung by fragmented SMEs that find it impossible to institutionalize.&rdquo;
             </p>
-            <div className="bg-brand-navy border border-brand-white/10 p-6 rounded-xl">
-               <h3 className="font-display font-black text-2xl text-brand-orange mb-2">Churchwin solves the middle.</h3>
-               <p className="font-primary text-brand-white/60 text-sm leading-relaxed">
+            <div className="bg-brand-navy border border-brand-white/10 p-[1.5rem] rounded-[1rem]">
+               <h3 className="font-display font-black text-[1.5rem] text-brand-orange mb-[0.5rem]">Churchwin solves the middle.</h3>
+               <p className="font-primary text-brand-white/60 text-[0.875rem] leading-relaxed">
                   We bridge the gap from micro-fragmentation to industrial-scale B2B excellence.
                </p>
             </div>
@@ -71,7 +71,7 @@ export function Slide04MissingMiddle() {
         {/* Visual Right (Hourglass Funnel) */}
         <div className="w-full md:w-1/2 flex flex-col items-center relative">
           
-          <div className="w-full max-w-lg space-y-4">
+          <div className="w-full max-w-[32rem] space-y-[1rem]">
             {funnelTiers.map((tier, idx) => (
               <motion.div 
                 key={idx}
@@ -80,24 +80,24 @@ export function Slide04MissingMiddle() {
               >
                 {/* Connector Taper (Up) */}
                 {idx === 2 && (
-                  <div className="w-full h-16 flex justify-center mb-[-1px] opacity-20 group-hover:opacity-40 transition-opacity">
+                  <div className="w-full h-[4rem] flex justify-center mb-[-1px] opacity-20 group-hover:opacity-40 transition-opacity">
                     <div className="w-full h-full bg-brand-white/10" style={{ clipPath: "polygon(40% 0, 60% 0, 100% 100%, 0 100%)" }} />
                   </div>
                 )}
 
                 <div 
-                  className={`relative p-8 rounded-2xl border border-brand-white/10 flex flex-col items-center justify-center text-center transition-all duration-500 group-hover:scale-[1.02] ${tier.fill}`}
+                  className={`relative p-[2rem] rounded-[1rem] border border-brand-white/10 flex flex-col items-center justify-center text-center transition-all duration-500 group-hover:scale-[1.02] ${tier.fill}`}
                   style={{ width: tier.width }}
                 >
-                  <p className="text-[10px] uppercase font-black tracking-widest opacity-40 mb-1">{idx === 0 ? "Entry" : idx === 1 ? "Pivot" : "Target"}</p>
-                  <h3 className="text-xl md:text-2xl font-black tracking-tight">{tier.label}</h3>
-                  <p className="text-xs font-primary font-bold opacity-60 mt-1">{tier.sub}</p>
+                  <p className="text-[0.625rem] uppercase font-black tracking-widest opacity-40 mb-[0.25rem]">{idx === 0 ? "Entry" : idx === 1 ? "Pivot" : "Target"}</p>
+                  <h3 className="text-[1.25rem] md:text-[1.5rem] font-black tracking-tight">{tier.label}</h3>
+                  <p className="text-[0.75rem] font-primary font-bold opacity-60 mt-[0.25rem]">{tier.sub}</p>
 
                   {tier.active && (
                     <>
-                      <div className="absolute -inset-2 border border-brand-orange/40 rounded-3xl animate-pulse pointer-events-none" />
-                      <div className="absolute -right-6 -top-6 w-16 h-16 rounded-full bg-brand-navy border-4 border-brand-orange flex items-center justify-center shadow-2xl scale-75 md:scale-100">
-                        <span className="text-white font-display font-black text-base italic drop-shadow-lg">CW</span>
+                      <div className="absolute -inset-[0.5rem] border border-brand-orange/40 rounded-[1.5rem] animate-pulse pointer-events-none" />
+                      <div className="absolute -right-[1.5rem] -top-[1.5rem] w-[4rem] h-[4rem] rounded-full bg-brand-navy border-[0.25rem] border-brand-orange flex items-center justify-center shadow-2xl scale-75 md:scale-100">
+                        <span className="text-white font-display font-black text-[1rem] italic drop-shadow-lg">CW</span>
                       </div>
                     </>
                   )}
@@ -105,7 +105,7 @@ export function Slide04MissingMiddle() {
 
                 {/* Connector Taper (Down) */}
                 {idx === 0 && (
-                  <div className="w-full h-16 flex justify-center mt-[-1px] opacity-20 group-hover:opacity-40 transition-opacity">
+                  <div className="w-full h-[4rem] flex justify-center mt-[-1px] opacity-20 group-hover:opacity-40 transition-opacity">
                     <div className="w-full h-full bg-brand-white/10" style={{ clipPath: "polygon(0 0, 100% 0, 60% 100%, 40% 100%)" }} />
                   </div>
                 )}
@@ -113,7 +113,7 @@ export function Slide04MissingMiddle() {
             ))}
           </div>
 
-          <motion.p variants={fadeUp} className="mt-12 text-[10px] font-display font-black tracking-[0.4em] text-brand-white/20 uppercase">
+          <motion.p variants={fadeUp} className="mt-[3rem] text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-white/20 uppercase">
              PROVEN INFRASTRUCTURE FOR MARKET ENTRY
           </motion.p>
         </div>

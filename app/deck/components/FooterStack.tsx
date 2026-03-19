@@ -43,28 +43,38 @@ export function FooterStack({ total, currentOverride }: FooterStackProps) {
   return (
     <div className="absolute bottom-0 left-0 w-full h-32 z-[100] pointer-events-none">
       {/* Global Contrast Vignette - ensures white text is visible on light slides */}
-      <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black/50 via-black/10 to-transparent z-[-1] pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-brand-navy/60 via-brand-navy/20 to-transparent z-[-1] pointer-events-none" />
       
       {/* --- Main Footer Layer --- */}
-      <div className="flex items-end justify-between w-full h-full px-10 pb-6">
+      <div className="flex items-end justify-between w-full h-full px-10 pb-8">
         
         {/* Left: Slide Counter */}
         <div className="flex flex-col items-start gap-1 w-1/3">
-          <span className="text-[10px] font-display tracking-[0.2em] text-brand-white/60 uppercase">
+          <span className="text-[0.6rem] font-display tracking-[0.4em] text-brand-white/40 uppercase font-black">
             Navigation
           </span>
-          <div className="flex items-center gap-4 text-brand-white font-display text-sm tracking-widest">
+          <div className="flex items-center gap-4 text-brand-white font-display text-sm tracking-[0.2em] font-bold">
             <span className="opacity-100 drop-shadow-sm">{formatNum(current)}</span>
-            <div className="w-8 h-[1px] bg-brand-white/40" />
-            <span className="opacity-60 drop-shadow-sm">{formatNum(total)}</span>
+            <div className="w-10 h-[1px] bg-brand-white/20" />
+            <span className="opacity-40 drop-shadow-sm">{formatNum(total)}</span>
           </div>
         </div>
 
-        {/* Center: Attribution - Removed for cleaner institutional look on cover */}
-        <div className="w-1/3" />
+        {/* Center: Spacer or Attribution */}
+        <div className="w-1/3 text-center">
+        </div>
 
-        {/* Right: Empty balance to keep flex-between centered */}
-        <div className="w-1/3" />
+        {/* Right: Global Brand Mark */}
+        <div className="w-1/3 flex justify-end">
+          <div className="relative w-28 h-8 opacity-80 hover:opacity-100 transition-opacity">
+            <Image 
+              src="/assets/images/churchwin_logo_new.png" 
+              alt="Churchwin Logo" 
+              fill
+              className="object-contain grayscale invert brightness-200"
+            />
+          </div>
+        </div>
 
       </div>
 
