@@ -45,12 +45,12 @@ export function Slide01Cover() {
           <div className="relative z-10 flex flex-col items-center">
             
             {/* Logo inside */}
-            <motion.div variants={fadeUp} className="mb-6 relative w-20 h-20 opacity-90 drop-shadow-md">
+            <motion.div variants={fadeUp} className="mb-8 relative w-32 h-32 md:w-[12rem] md:h-[12rem] opacity-95 drop-shadow-xl">
               <Image 
                 src="/assets/images/churchwin_logo_new.png" 
                 alt="Churchwin Trading Logo" 
                 fill
-                className="object-contain"
+                className="object-cover rounded-[2rem]"
               />
             </motion.div>
 
