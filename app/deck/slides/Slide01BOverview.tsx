@@ -13,10 +13,10 @@ const fadeUp = {
 };
 
 const sections = [
-  { num: "01", label: "The Opportunity" },
-  { num: "02", label: "Strategic Playbook" },
-  { num: "03", label: "Execution Engine" },
-  { num: "04", label: "Impact & Growth" },
+  { num: "01", label: "The Yield Gap (Ghana vs. World)" },
+  { num: "02", label: "Institutionalizing the Missing Middle" },
+  { num: "03", label: "Digital B2B Scale Engine" },
+  { num: "04", label: "ESG as a Competitive Advantage" },
 ];
 
 export function Slide01BOverview() {
