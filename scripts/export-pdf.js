@@ -18,7 +18,7 @@ const path = require('path')
 const CONFIG = {
   url: process.argv[3] || 'http://localhost:3000/deck?mode=print',
   outputDir: process.argv[5] || path.join(process.cwd(), 'public/exports'),
-  slideCount: 19,           // Update to match actual slide count
+  slideCount: 26,           // Update to match actual slide count
   viewport: { width: 1920, height: 1080 },
   slideDelay: 1200,         // ms to wait for animations to complete
   filename: `churchwin-deck-${new Date().toISOString().split('T')[0]}.pdf`
@@ -44,7 +44,7 @@ async function exportToPDF() {
 
   // Navigate to print mode (disables Swiper, enables full-page static layout)
   await page.goto(CONFIG.url, { waitUntil: 'networkidle0', timeout: 30000 })
-  await page.waitForTimeout(2000) // Wait for fonts + images
+  await new Promise(r => setTimeout(r, 2000)) // Wait for fonts + images
 
   const screenshots = []
 
@@ -57,7 +57,7 @@ async function exportToPDF() {
       window.scrollTo(0, slideIndex * slideHeight)
     }, i, CONFIG.viewport.height)
 
-    await page.waitForTimeout(CONFIG.slideDelay)
+    await new Promise(r => setTimeout(r, CONFIG.slideDelay))
 
     const screenshot = await page.screenshot({
       type: 'png',

@@ -40,8 +40,14 @@ import { Slide22ImpactTransformed } from "./slides/Slide22ImpactTransformed";
 import { Slide23TheAsk } from "./slides/Slide23TheAsk";
 import { Slide24CTA } from "./slides/Slide24CTA";
 
-export default function DeckLayout() {
+import { useSearchParams } from "next/navigation";
+
+import { Suspense } from "react";
+
+function DeckContent() {
   const [mounted, setMounted] = useState(false);
+  const searchParams = useSearchParams();
+  const isPrintMode = searchParams.get("mode") === "print";
   const totalSlides = 26; // Increased for Overview slide
 
   useEffect(() => {
@@ -50,6 +56,41 @@ export default function DeckLayout() {
 
   if (!mounted) {
     return <div className="h-screen w-full bg-brand-navy" />; // Prevent hydration mismatch
+  }
+
+  if (isPrintMode) {
+    return (
+      <main className="w-full bg-brand-navy min-h-screen">
+        <div className="flex flex-col">
+          <Slide01Cover />
+          <Slide01BOverview />
+          <Slide02Crossroads />
+          <Slide03MacroMoment />
+          <Slide04MissingMiddle />
+          <Slide05WhereWePlay />
+          <Slide06Segmentation />
+          <Slide07VPCSegments />
+          <Slide08HowWeWin />
+          <Slide09ValuePropDesirability />
+          <Slide10ValuePropViability />
+          <Slide11Capabilities />
+          <Slide12SupplyChainAdvantage />
+          <Slide12ABulkGallery />
+          <Slide13CompetitiveReality />
+          <Slide14WhoOwnsSpace />
+          <Slide15DigitalVisibility />
+          <Slide16B2BPipeline />
+          <Slide17Roadmap />
+          <Slide18Phase1 />
+          <Slide19Phase2 />
+          <Slide20Phase3 />
+          <Slide21Impact />
+          <Slide22ImpactTransformed />
+          <Slide23TheAsk />
+          <Slide24CTA />
+        </div>
+      </main>
+    );
   }
 
   return (
@@ -172,5 +213,13 @@ export default function DeckLayout() {
         </SwiperSlide>
       </Swiper>
     </main>
+  );
+}
+
+export default function DeckLayout() {
+  return (
+    <Suspense fallback={<div className="h-screen w-full bg-brand-navy" />}>
+      <DeckContent />
+    </Suspense>
   );
 }
