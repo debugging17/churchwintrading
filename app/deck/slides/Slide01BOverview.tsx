@@ -72,7 +72,7 @@ export function Slide01BOverview() {
               >
                 {/* Numbering - Sophisticated Overlay Style */}
                 <div className="relative shrink-0 pt-1">
-                   <span className="text-3xl font-display font-black text-brand-navy/5 leading-none transition-colors duration-300 group-hover:text-brand-orange/10">
+                   <span className="text-3xl font-display font-black text-brand-navy/15 leading-none transition-colors duration-300 group-hover:text-brand-orange/30">
                     {num}
                    </span>
                    <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">

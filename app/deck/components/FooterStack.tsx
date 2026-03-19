@@ -44,9 +44,9 @@ export function FooterStack({ total }: FooterStackProps) {
             Navigation
           </span>
           <div className="flex items-center gap-4 text-brand-white font-display text-sm tracking-widest">
-            <span className="opacity-100">{formatNum(current)}</span>
-            <div className="w-8 h-[1px] bg-brand-white/20" />
-            <span className="opacity-40">{formatNum(total)}</span>
+            <span className="opacity-100 drop-shadow-sm">{formatNum(current)}</span>
+            <div className="w-8 h-[1px] bg-brand-white/40" />
+            <span className="opacity-60 drop-shadow-sm">{formatNum(total)}</span>
           </div>
         </div>
 
