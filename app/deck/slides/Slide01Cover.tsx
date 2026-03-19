@@ -28,9 +28,15 @@ export function Slide01Cover() {
         <source src="/assets/videos/apply_cinematic,_8k_202603181845.mp4" type="video/mp4" />
       </video>
 
-      {/* === LAYER 1: Subtle Gradient Overlays === */}
-      <div className="absolute inset-0 bg-brand-navy/30 z-[1] pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent z-[2] pointer-events-none" />
+      {/* === LAYER 1: Dynamic Brand Overlays (Navy & Orange Infusion) === */}
+      {/* Subtle brand orange glow from the bottom-left */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-brand-orange/20 via-transparent to-transparent z-[1] pointer-events-none" />
+      
+      {/* Navy wash for text readability */}
+      <div className="absolute inset-0 bg-brand-navy/20 z-[2] pointer-events-none" />
+      
+      {/* Deep institutional gradient from bottom */}
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent z-[3] pointer-events-none" />
 
       {/* === LAYER 2: Centered Content Stack (Pushed Slightly Higher) === */}
       <div className="w-full h-full flex flex-col justify-start items-center pt-24 md:pt-32 lg:pt-40 px-10 md:px-24 z-10 relative text-center">
@@ -60,7 +66,7 @@ export function Slide01Cover() {
           {/* Optional Subtext: White Hook, Reduced Scale */}
           <motion.div variants={fadeUp} className="flex flex-col items-center">
              <div className="w-12 h-[1px] bg-brand-white/40 mb-8" />
-             <p className="text-sm md:text-base lg:text-lg text-brand-white/90 font-primary font-medium tracking-widest drop-shadow-lg whitespace-nowrap uppercase">
+             <p className="text-sm md:text-base lg:text-lg text-brand-white/90 font-primary font-medium tracking-widest drop-shadow-lg whitespace-nowrap uppercase text-shadow-sm">
               Africa doesn&apos;t lack supply. It lacks structured demand.
              </p>
           </motion.div>
@@ -82,8 +88,8 @@ export function Slide01Cover() {
         </p>
       </motion.div>
 
-      {/* Subtle bottom accent bar */}
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/10 z-20" />
+      {/* Subtle bottom orange brand bar */}
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-brand-orange/40 z-20" />
     </div>
   );
 }
