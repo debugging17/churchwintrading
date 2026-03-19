@@ -13,10 +13,10 @@ const fadeUp = {
 };
 
 const sections = [
-  { num: "01", label: "The Yield Gap (Ghana vs. World)" },
-  { num: "02", label: "Institutionalizing the Missing Middle" },
-  { num: "03", label: "Digital B2B Scale Engine" },
-  { num: "04", label: "ESG as a Competitive Advantage" },
+  { num: "01", label: "The Yield Gap", sub: "Bridging the Ghanaian productivity deficit vs. global benchmarks." },
+  { num: "02", label: "Institutionalizing the Middle", sub: "Transforming fragmented supply chains into professional infrastructure." },
+  { num: "03", label: "Digital B2B Scale Engine", sub: "Proprietary technology stack driving logistics and demand aggregation." },
+  { num: "04", label: "ESG as Competitive Edge", sub: "Sustainable impact as a fundamental driver of institutional value." },
 ];
 
 export function Slide01BOverview() {
@@ -24,54 +24,74 @@ export function Slide01BOverview() {
     <div className="w-full h-full bg-white flex relative overflow-hidden">
 
       {/* ── Left Panel ─────────────────────────────────────────── */}
-      <div className="w-1/2 h-full flex flex-col justify-center px-20 xl:px-28 z-10">
+      <div className="w-1/2 h-full flex flex-col justify-center px-16 xl:px-24 z-10 bg-white">
         <motion.div
           initial="hidden"
           animate="visible"
-          className="space-y-10"
+          className="max-w-xl"
         >
           {/* Eyebrow */}
-          <motion.p
+          <motion.div
             custom={0}
             variants={fadeUp}
-            className="text-brand-orange text-xs tracking-[0.3em] uppercase font-semibold"
+            className="flex items-center gap-3 mb-6"
           >
-            At a Glance
-          </motion.p>
+             <div className="w-8 h-[1px] bg-brand-orange" />
+             <p className="text-brand-orange text-[10px] tracking-[0.4em] uppercase font-bold">
+              The Strategic Roadmap
+             </p>
+          </motion.div>
 
-          {/* Heading */}
+          {/* Heading - Refined & Authoritative */}
           <motion.h2
             custom={1}
             variants={fadeUp}
-            className="text-5xl xl:text-6xl font-display font-bold text-brand-navy leading-[1.1]"
+            className="text-4xl md:text-5xl xl:text-6xl font-display font-black text-brand-navy leading-[1.05] mb-12"
           >
-            What We&apos;re<br />
-            <span className="text-brand-orange">Building.</span>
+            What We Are <br />
+            <span className="relative inline-block">
+              Building.
+              <motion.div 
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ delay: 1, duration: 0.8 }}
+                className="absolute -bottom-2 left-0 h-[6px] bg-brand-orange/10 w-full" 
+              />
+            </span>
           </motion.h2>
 
-          {/* Divider */}
-          <motion.div
-            custom={2}
-            variants={fadeUp}
-            className="w-10 h-[2px] bg-brand-orange/30"
-          />
-
-          {/* Section List */}
-          <motion.ul custom={3} variants={fadeUp} className="space-y-6">
-            {sections.map(({ num, label }) => (
-              <li key={num} className="flex items-center gap-5 group cursor-default">
-                <span className="text-[11px] font-mono text-brand-orange/60 tracking-widest w-5 shrink-0">
-                  {num}
-                </span>
-                <div className="flex-1 flex items-center gap-4">
-                  <span className="text-base font-display font-medium text-brand-navy/80 tracking-wide group-hover:text-brand-navy transition-colors duration-200">
-                    {label}
-                  </span>
+          {/* Pillar List - Rehauled for Depth */}
+          <motion.div custom={3} variants={fadeUp} className="space-y-8">
+            {sections.map(({ num, label, sub }, i) => (
+              <motion.div 
+                key={num} 
+                className="flex items-start gap-8 group"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 + (i * 0.1) }}
+              >
+                {/* Numbering - Sophisticated Overlay Style */}
+                <div className="relative shrink-0 pt-1">
+                   <span className="text-3xl font-display font-black text-brand-navy/5 leading-none transition-colors duration-300 group-hover:text-brand-orange/10">
+                    {num}
+                   </span>
+                   <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                      <div className="w-[1px] h-0 group-hover:h-full bg-brand-orange/40 transition-all duration-500" />
+                   </div>
                 </div>
-                <div className="w-6 h-[1px] bg-brand-navy/10 group-hover:bg-brand-orange/40 transition-colors duration-300" />
-              </li>
+
+                {/* Content */}
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-lg md:text-xl font-display font-bold text-brand-navy tracking-tight group-hover:text-brand-orange transition-colors duration-300">
+                    {label}
+                  </h3>
+                  <p className="text-xs md:text-sm text-brand-navy/60 font-primary leading-relaxed max-w-sm">
+                    {sub}
+                  </p>
+                </div>
+              </motion.div>
             ))}
-          </motion.ul>
+          </motion.div>
         </motion.div>
       </div>
 
