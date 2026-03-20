@@ -14,21 +14,21 @@ export const sectors = [
         market: "Premium Skincare Brands", 
         solution: "High-purity Grade A Shea Butter with clinical-grade traceability.",
         details: "Eliminating the 'impurities bottleneck' in luxury serum production through our proprietary 3-stage filtration process.",
-        image: "/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
+        image: "/images/visual_supremacy/shea_orchard.png" 
       },
       { 
         title: "Regenerative Hair Care", 
         market: "Professional Salons", 
         solution: "Custom Neem Oil infusions for scalp health and follicle strength.",
         details: "Moving beyond generic oils to standardized Neem extracts that guarantee consistent antimicrobial properties for salon-grade treatments.",
-        image: "/images/IMG_0471-min-min-scaled.jpg" 
+        image: "/images/visual_supremacy/compliance_lab.png" 
       },
       { 
         title: "Luxury Body Oils", 
         market: "Spa Product Lines", 
         solution: "Cold-pressed Baobab oils for rapid absorption and moisture retention.",
         details: "Optimizing absorption rates through molecular-level refining that retains Vitamin E without the greasy residue typical of unrefined oils.",
-        image: "/images/backgrounds/divergence_landscape.png" 
+        image: "/images/visual_supremacy/shea_factory.png" 
       }
     ]
   },
@@ -45,21 +45,21 @@ export const sectors = [
         market: "Wellness Startups", 
         solution: "Bioavailable Moringa powder with standardized vitamin C content.",
         details: "Solving the 'Bioavailability Gap' with micronized grinding that increases absorption rates by 40% compared to traditional dry-milling.",
-        image: "/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
+        image: "/images/visual_supremacy/compliance_lab.png" 
       },
       { 
         title: "Superfood Blends", 
         market: "Health Food Stores", 
         solution: "Direct-sourced Baobab pulp for high fiber and antioxidant density.",
         details: "Delivering a 'Whole-Plant' nutrient profile with 0% fillers—ideal for the growing 'Clean Label' consumer segment.",
-        image: "/images/IMG_0471-min-min-scaled.jpg" 
+        image: "/images/visual_supremacy/shea_orchard.png" 
       },
       { 
         title: "Capsule Formulations", 
         market: "Contract Manufacturers", 
         solution: "Fine-milled botanical powders optimized for automated encapsulation.",
         details: "Engineered for zero-clog performance in high-speed rotary capsule machines, reducing manufacturing downtime by up to 15%.",
-        image: "/images/backgrounds/divergence_landscape.png" 
+        image: "/images/visual_supremacy/shea_factory.png" 
       }
     ]
   },
@@ -76,21 +76,21 @@ export const sectors = [
         market: "Functional Beverage Brands", 
         solution: "100% soluble Hibiscus and Baobab concentrates for clean labels.",
         details: "Removing artificial dyes from beverage production by replacing them with high-anthocyanin Hibiscus concentrates that stay stable at low pH.",
-        image: "/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
+        image: "/images/visual_supremacy/luxury_wellness_juice.png" 
       },
       { 
         title: "Energy Bars", 
         market: "Sports Nutrition", 
         solution: "Whole grain inclusions and natural African honey binders.",
         details: "Replacing corn-syrup binders with low-glycemic African honey, providing a natural sustain-release energy profile for endurance athletes.",
-        image: "/images/IMG_0471-min-min-scaled.jpg" 
+        image: "/images/visual_supremacy/shea_factory.png" 
       },
       { 
         title: "Fortified Cereals", 
         market: "Large Scale CPG", 
         solution: "Micro-nutrient dense Moringa fortification for mass-market availability.",
         details: "Implementing cost-effective nutrition fortification that meets WHO benchmarks for school-feeding programs and mass-market retail.",
-        image: "/images/backgrounds/divergence_landscape.png" 
+        image: "/images/visual_supremacy/industrial_wholesaler.png" 
       }
     ]
   },
@@ -107,21 +107,21 @@ export const sectors = [
         market: "Luxury Tea Houses", 
         solution: "Premium dried Moringa and Lemongrass for metabolic support.",
         details: "Curating leaf-cut consistency to ensure perfect infusion timing and visual appeal in luxury pyramid sachets.",
-        image: "/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
+        image: "/images/visual_supremacy/solar_drying_tea.png" 
       },
       { 
         title: "Herbal Infusions", 
         market: "Hospitality Industry", 
         solution: "Single-origin herbal teas with documented ethno-botanical heritage.",
         details: "Providing the 'Origin Narrative' that allows hotels to market premium wellness experiences rather than just tea.",
-        image: "/images/IMG_0471-min-min-scaled.jpg" 
+        image: "/images/visual_supremacy/shea_orchard.png" 
       },
       { 
         title: "Wellness Sachets", 
         market: "Airport Retail", 
         solution: "Retail-ready pyramids containing high-antioxidant West African blends.",
         details: "Solving the 'Portability' challenge with standardized blends that maintain their aromatic profile even in varied water temperatures.",
-        image: "/images/backgrounds/divergence_landscape.png" 
+        image: "/images/visual_supremacy/retail_boutique.png" 
       }
     ]
   },
@@ -138,21 +138,21 @@ export const sectors = [
         market: "Boutique Hotels", 
         solution: "Bespoke miniature Black Soap and Shea Butter sets with custom scenting.",
         details: "Helping boutique brands differentiate with 'Zero-Plastic' solid amenities that tell the story of the 11 women-led Ghanaian cooperatives.",
-        image: "/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
+        image: "/images/visual_supremacy/retail_boutique.png" 
       },
       { 
         title: "Professional Massage Oils", 
         market: "Wellness Resorts", 
         solution: "Gallon-size cold-pressed Shea and Neem oils for therapeutic use.",
         details: "Eliminating paraffin-base fillers from spa rotations with 100% active, medical-grade African botanicals.",
-        image: "/images/IMG_0471-min-min-scaled.jpg" 
+        image: "/images/visual_supremacy/spa_oil_ritual.png" 
       },
       { 
         title: "In-Room Rituals", 
         market: "High-end Lodges", 
         solution: "Curated 'Origin Stories' kits with application rituals for guest engagement.",
         details: "Increasing spa retail revenue by up to 22% through integrated 'Experience-to-Retail' product kits.",
-        image: "/images/backgrounds/divergence_landscape.png" 
+        image: "/images/visual_supremacy/shea_orchard.png" 
       }
     ]
   },
@@ -169,21 +169,21 @@ export const sectors = [
         market: "Major Grocers", 
         solution: "Certified organic bulk supply for house-label packing and branding.",
         details: "Securing the 'Organic Aisle' margin with a direct-from-cooperative model that cuts out three levels of middlemen.",
-        image: "/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
+        image: "/images/visual_supremacy/organic_retail_aisle.png" 
       },
       { 
         title: "Ethnic Specialty", 
         market: "International Distributors", 
         solution: "Authentic West African ingredients with export-grade packaging compliance.",
         details: "Bypassing the 'Export-Failure' risk with standardized packaging that meets EU customs labeling requirements on day one.",
-        image: "/images/IMG_0471-min-min-scaled.jpg" 
+        image: "/images/visual_supremacy/industrial_wholesaler.png" 
       },
       { 
         title: "Health & Beauty Section", 
         market: "Value Retailers", 
         solution: "High-volume, cost-effective Shea and Black Soap for mass retail lines.",
         details: "Delivering institutional scale to the value-retail sector without sacrificing the 'Authenticity' narrative that drives sales.",
-        image: "/images/backgrounds/divergence_landscape.png" 
+        image: "/images/visual_supremacy/retail_boutique.png" 
       }
     ]
   },
