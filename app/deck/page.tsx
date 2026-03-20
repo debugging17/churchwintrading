@@ -10,6 +10,7 @@ import "swiper/css/effect-fade";
 
 // Global UI Layout Overlays
 import { FooterStack } from "./components/FooterStack";
+import { SectorModal } from "./components/SectorModal";
 
 // Slides
 import { Slide01Cover } from "./slides/Slide01Cover";
@@ -43,6 +44,7 @@ import { useSearchParams } from "next/navigation";
 
 function DeckContent() {
   const [mounted, setMounted] = useState(false);
+  const [selectedSector, setSelectedSector] = useState<number | null>(null);
   const searchParams = useSearchParams();
   const isPrintMode = searchParams.get("mode") === "print";
   const totalSlides = 26;
@@ -63,6 +65,11 @@ function DeckContent() {
   // Handle slide index from query param
   const slideParam = searchParams.get("slide");
   const initialSlide = slideParam ? parseInt(slideParam) : 0;
+
+  const handleSectorClick = (idx: number) => {
+    console.log("Global Sector Click:", idx);
+    setSelectedSector(idx);
+  };
 
   if (isPrintMode) {
     const slides = [
@@ -91,7 +98,7 @@ function DeckContent() {
   }
 
   return (
-    <main className="h-screen w-full overflow-hidden bg-brand-navy">
+    <main className="h-screen w-full overflow-hidden bg-brand-navy relative">
       <Swiper
         direction="horizontal"
         modules={[Mousewheel, Keyboard, EffectFade]}
@@ -111,7 +118,7 @@ function DeckContent() {
         <SwiperSlide><Slide03MacroMoment /></SwiperSlide>
         <SwiperSlide><Slide04MissingMiddle /></SwiperSlide>
         <SwiperSlide><Slide05WhereWePlay /></SwiperSlide>
-        <SwiperSlide><Slide06Segmentation /></SwiperSlide>
+        <SwiperSlide><Slide06Segmentation onSectorClick={handleSectorClick} /></SwiperSlide>
         <SwiperSlide><Slide07VPCSegments /></SwiperSlide>
         <SwiperSlide><Slide08HowWeWin /></SwiperSlide>
         <SwiperSlide><Slide09ValuePropDesirability /></SwiperSlide>
@@ -132,6 +139,13 @@ function DeckContent() {
         <SwiperSlide><Slide23TheAsk /></SwiperSlide>
         <SwiperSlide><Slide24CTA /></SwiperSlide>
       </Swiper>
+
+      {/* Global Sector Modal rendered outside Swiper */}
+      <SectorModal 
+        selectedIdx={selectedSector} 
+        onClose={() => setSelectedSector(null)} 
+        onSelectSector={(idx: number) => setSelectedSector(idx)}
+      />
     </main>
   );
 }
