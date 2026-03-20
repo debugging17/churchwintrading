@@ -48,7 +48,7 @@ export function Slide16B2BPipeline() {
               >
                 <div className="flex items-center gap-4">
                    <div className="w-10 h-10 rounded-xl bg-brand-navy/5 flex items-center justify-center text-brand-orange text-lg">
-                      {typeof item.icon === 'function' ? <item.icon className="w-5 h-5" /> : item.icon}
+                      {typeof item.icon === 'string' ? item.icon : <item.icon className="w-5 h-5" />}
                    </div>
                    <div>
                       <h4 className="font-display font-bold text-brand-navy group-hover:text-brand-orange transition-colors">
