@@ -76,40 +76,39 @@ export function Slide11Capabilities() {
         <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="max-w-2xl">
           <motion.div variants={slideFromLeft} className="flex items-center gap-3 mb-6">
             <div className="h-px w-12 bg-brand-orange/40" />
-            <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">The Churchwin Bridge</span>
+            <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold">Execution Mechanics</span>
           </motion.div>
 
           <motion.h2 variants={slideFromLeft} className="font-display text-5xl md:text-6xl font-extrabold text-brand-navy leading-[1.1] mb-8 tracking-tight">
-            Institutionalizing <br />
-            <span className="text-brand-orange italic font-light">the Supply Chain.</span>
+            The Engine of <br />
+            <span className="text-brand-orange italic font-light">Conversion.</span>
           </motion.h2>
 
           <motion.p variants={fadeUp} className="text-xl text-brand-navy/50 font-primary mb-12 max-w-lg leading-relaxed">
-            We bridge the gap between rural production and global standards through a vertically integrated infrastructure.
+            From Prospect → to Partner. A structured, 4-stage pipeline designed for institutional scale.
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {capabilities.map((cap, idx) => (
+            {[
+              { label: "Lead Generation", sub: "LinkedIn Sales Navigator & specialized industry datasets targeting R&D heads.", icon: Users },
+              { label: "Structured Outreach", sub: "Value-first pitches focused on supply security and margin capture.", icon: Box },
+              { label: "Verification Gate", sub: "Rapid sample dispatch paired with COA/MSDS compliance documentation.", icon: ShieldCheck },
+              { label: "Institutional Closing", sub: "Transitioning from trial orders to multi-year, volume-locked contracts.", icon: PackageCheck }
+            ].map((cap, idx) => (
               <motion.div 
                 key={idx} 
                 variants={fadeUp}
-                custom={idx}
-                className="relative group rounded-2xl overflow-hidden shadow-xl border border-brand-navy/5 h-[220px]"
+                className="p-6 bg-brand-navy/5 border border-brand-navy/10 rounded-2xl group hover:bg-brand-navy hover:text-white transition-all duration-500"
               >
-                <Image src={cap.img} alt={cap.label} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent" />
-                
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <div className="w-10 h-10 mb-3 bg-brand-orange/20 backdrop-blur-md border border-brand-orange/30 rounded-lg flex items-center justify-center group-hover:bg-brand-orange transition-colors duration-500">
-                    <cap.icon className="w-5 h-5 text-brand-orange group-hover:text-white transition-colors duration-500" />
-                  </div>
-                  <h4 className="font-display text-white text-lg font-bold mb-1 leading-tight drop-shadow-md">
-                    {cap.label}
-                  </h4>
-                  <p className="text-xs text-brand-white/80 font-primary drop-shadow-md">
-                    {cap.sub}
-                  </p>
+                <div className="w-10 h-10 mb-4 bg-brand-orange/20 rounded-xl flex items-center justify-center group-hover:bg-brand-orange transition-colors">
+                   <cap.icon className="w-5 h-5 text-brand-orange group-hover:text-white" />
                 </div>
+                <h4 className="font-display font-bold text-lg mb-2 leading-tight">
+                  {cap.label}
+                </h4>
+                <p className="text-xs font-primary opacity-60 group-hover:opacity-80">
+                  {cap.sub}
+                </p>
               </motion.div>
             ))}
           </div>

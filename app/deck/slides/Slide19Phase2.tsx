@@ -15,48 +15,44 @@ export function Slide19Phase2() {
         {/* Phase Header */}
         <div className="w-full md:w-1/3 border-l-[6px] border-brand-orange pl-6 py-2 h-max">
            <motion.h4 variants={fadeUp} className="text-sm font-display tracking-widest text-[#ff8022] uppercase mb-2 font-bold">Months 6–12</motion.h4>
-           <motion.h2 variants={slideFromLeft} className="font-display text-4xl font-bold text-brand-navy leading-tight">
-             Phase 2:<br /><span className="text-brand-orange">Infrastructure<br/>& Digital</span>
+           <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl font-black text-brand-navy leading-none tracking-tighter uppercase">
+             Phase 2:<br /><span className="text-brand-orange italic">Infrastructure<br/>& Digital</span>
            </motion.h2>
         </div>
 
         {/* Phase Content */}
         <div className="w-full md:w-2/3 flex flex-col gap-8">
            
-           <motion.div variants={fadeUp} className="bg-brand-navy/5 border border-brand-navy/10 rounded-xl p-8 shadow-sm relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-navy/5 rounded-bl-[100px] pointer-events-none" />
-             <h3 className="text-brand-navy font-display text-xl font-bold mb-6 flex items-center gap-3">
-                <Globe className="text-brand-orange w-5 h-5" /> Sub-Initiatives
-             </h3>
+           <motion.div variants={fadeUp} className="bg-brand-navy text-white rounded-[40px] p-10 shadow-2xl relative overflow-hidden border-b-8 border-brand-orange">
+             <div className="absolute top-0 right-0 p-8 opacity-10">
+                <Globe className="w-24 h-24 text-brand-orange" />
+             </div>
+             <h3 className="text-white font-display text-2xl font-black mb-8 uppercase tracking-tight">Sub-Initiatives</h3>
              <ul className="space-y-4">
                 {[
-                  "International Compliance Vault live (self-service B2B portal)",
-                  "First international buffer stock hub established",
-                  "Automated sample request + MOQ calculator deployed",
-                  "B2B Pipeline Active: Newsletter reaches 1,000+ subscribers; first automated contracts closing"
+                  "International Compliance Vault live (self-service B2B portal).",
+                  "Automated sample requests and MOQ calculator integration.",
+                  "Scale-up of B2B newsletter targeting 1,000+ industry decision makers."
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 border-b border-brand-navy/5 pb-3">
-                     <span className="w-1.5 h-1.5 rounded-full bg-brand-navy/40 mt-2 shrink-0" />
-                     <span className="font-primary text-brand-navy/80 font-medium">{item}</span>
+                  <li key={i} className="flex items-start gap-4 border-b border-white/10 pb-4">
+                     <span className="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0 shadow-[0_0_10px_rgba(244,121,32,0.5)]" />
+                     <span className="font-primary text-white/80 font-medium text-sm">{item}</span>
                   </li>
                 ))}
              </ul>
            </motion.div>
 
-           <motion.div variants={fadeUp} className="bg-brand-orange/5 border border-brand-orange/30 rounded-xl p-8 relative overflow-hidden group shadow-sm">
-             <div className="absolute top-0 left-0 w-2 h-full bg-brand-orange" />
-             <h3 className="text-brand-orange font-display text-lg font-bold mb-4 uppercase tracking-widest text-sm flex items-center gap-3">
-                <Flag className="w-4 h-4" /> KPIs & Outcomes
-             </h3>
-             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-               <div className="flex flex-col">
-                 <span className="font-display text-3xl font-bold text-brand-navy mb-1">50</span>
-                 <span className="font-primary text-brand-navy/80 text-sm font-semibold">Qualified B2B sample requests processed digitally within Month 2</span>
-               </div>
-               <div className="flex flex-col">
-                 <span className="font-display text-3xl font-bold text-brand-navy mb-1">10–20</span>
-                 <span className="font-primary text-brand-navy/80 text-sm font-semibold">New bulk clients secured by Month 6</span>
-               </div>
+           <motion.div variants={fadeUp} className="bg-brand-orange/5 border border-brand-orange/20 rounded-[40px] p-10 relative overflow-hidden group shadow-sm flex items-center justify-between">
+             <div className="flex flex-col">
+                <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-2 font-bold">Demand Captured</p>
+                <p className="text-4xl md:text-5xl font-display font-black text-brand-navy tracking-tighter">1,000+</p>
+                <p className="text-sm font-primary text-brand-navy/60">Industry subscribers.</p>
+             </div>
+             <div className="w-[1px] h-16 bg-brand-navy/10" />
+             <div className="flex flex-col text-right">
+                <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-2 font-bold">Revenue Anchor</p>
+                <p className="text-4xl md:text-5xl font-display font-black text-brand-navy tracking-tighter">10–20</p>
+                <p className="text-sm font-primary text-brand-navy/60">New bulk manufacturing clients.</p>
              </div>
            </motion.div>
 

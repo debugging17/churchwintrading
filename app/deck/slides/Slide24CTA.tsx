@@ -16,9 +16,13 @@ export function Slide24CTA() {
       
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col items-center z-10 text-center my-auto">
         
-        <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-6xl font-bold text-brand-white leading-tight mb-16">
-          Three Board Actions. <br className="md:hidden" /><span className="text-brand-orange font-light">One Transformation.</span>
+        <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-7xl font-black text-brand-white leading-none mb-4 uppercase tracking-tighter">
+          Rising to <br /><span className="text-brand-orange italic">Systematize Scale.</span>
         </motion.h2>
+        
+        <motion.p variants={fadeUp} className="text-xl md:text-2xl text-brand-white/40 font-primary mb-16 italic max-w-2xl mx-auto">
+          Built on African soil. Sold globally through a systematic demand engine.
+        </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16 text-left">
                     {/* Ask 1 */}

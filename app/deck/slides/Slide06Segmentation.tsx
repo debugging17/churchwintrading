@@ -19,55 +19,61 @@ export function Slide06Segmentation({ onSectorClick }: Slide06SegmentationProps)
   };
 
   return (
-    <div className="w-full h-full flex flex-col py-10 md:py-12 px-10 md:px-24 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(4rem+var(--header-height,0px))] overflow-y-auto">
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto z-10">
-        
-        <motion.div variants={fadeUp} className="mb-8 text-center">
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-3">
-            Six target sectors. <span className="text-brand-orange font-light">One core infrastructure.</span>
-          </h2>
-          <div className="w-16 h-1 bg-brand-orange/50 mx-auto mt-6" />
-        </motion.div>
+    <div className="w-full h-full flex flex-col py-10 md:py-12 px-10 md:px-24 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(4rem+var(--header-height,0px))] overflow-y-auto relative">
+      <div className="absolute inset-0 z-0 opacity-10">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle,rgba(244,121,32,0.15)_0%,transparent_70%)]" />
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-          {sectors.map((sector, idx) => (
-            <button 
-              key={idx}
-              onClick={(e) => { 
-                e.stopPropagation(); 
-                handleCardClick(idx); 
-              }}
-              onKeyDown={(e) => { if(e.key === 'Enter' || e.key === ' ') handleCardClick(idx); }}
-              type="button"
-              className="w-full text-left bg-brand-navy/5 border border-brand-navy/10 p-6 rounded-xl group hover:bg-brand-navy/10 transition-colors duration-300 relative overflow-hidden shadow-sm cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-brand-orange/50 z-20 pointer-events-auto no-swiping"
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto z-10 text-center flex flex-col items-center">
+        {/* Title - Structural Focus */}
+        <motion.h2 
+          variants={fadeUp}
+          className="font-display text-4xl md:text-5xl lg:text-7xl font-black text-brand-white leading-none tracking-tight mb-8"
+        >
+          Multiple industries. <br />
+          <span className="text-brand-orange underline decoration-white/10 italic">One core infrastructure.</span>
+        </motion.h2>
+
+        <motion.p
+          variants={fadeUp}
+          className="text-base md:text-lg text-brand-white/70 max-w-2xl font-medium leading-relaxed mb-12"
+        >
+          Churchwin’s operational model serves the three highest-growth segments in the global botanical market, leveraging a single integrated supply chain for maximum efficiency.
+        </motion.p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-12">
+          {[
+            { label: "Cosmetic Manufacturers", sub: "Grade A anti-aging & skin repair inputs.", detail: "Shea Butter, Baobab Oil, Neem Oil" },
+            { label: "Nutraceuticals", sub: "Standardized supplements & functional powders.", detail: "Hibiscus, Moringa, Baobab Fruit" },
+            { label: "Food & Beverage", sub: "Soluble concentrates & mass fortification.", detail: "Cashew, Ginger, Cocoa derivatives" }
+          ].map((sector, i) => (
+            <motion.div 
+              key={i}
+              variants={fadeUp}
+              className="p-8 bg-brand-white/5 border border-brand-white/10 rounded-[32px] hover:border-brand-orange/40 transition-all group relative overflow-hidden"
             >
-              {/* Hover effect glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/0 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 border border-brand-navy/10 group-hover:border-brand-orange/50 transition-colors shadow-sm">
-                  <sector.icon className="w-4 h-4 text-brand-orange" />
-                </div>
-                
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-display text-lg font-semibold text-brand-navy">
-                    {sector.title}
-                  </h3>
-                  <ChevronRight className="w-4 h-4 text-brand-orange opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0" />
-                </div>
-                
-                <p className="font-primary text-xs text-brand-navy/70 mb-4 flex-grow">
-                  {sector.desc}
-                </p>
-                
-                <div className="mt-auto pt-4 border-t border-brand-navy/10">
-                  <span className="text-[10px] font-display uppercase tracking-widest text-brand-orange font-bold">🎯 Target: </span>
-                  <span className="text-xs font-primary text-brand-navy/80 font-medium">{sector.target}</span>
-                </div>
+              <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+                <div className="text-6xl font-black text-white italic">0{i+1}</div>
               </div>
-            </button>
+              <h3 className="text-brand-white font-display font-bold text-xl mb-3 group-hover:text-brand-orange transition-colors">{sector.label}</h3>
+              <p className="text-brand-white/60 text-sm font-primary leading-relaxed mb-6">{sector.sub}</p>
+              <div className="pt-4 border-t border-white/10 text-left">
+                 <span className="text-[9px] font-black uppercase tracking-widest text-brand-orange block mb-1">Key Inputs:</span>
+                 <p className="text-xs text-brand-white/40 font-medium">{sector.detail}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
+
+        {/* INSIGHT CLOSE */}
+        <motion.div 
+          variants={fadeUp}
+          className="py-6 border-y border-white/5 w-full max-w-2xl"
+        >
+          <p className="text-brand-white/60 text-lg md:text-xl font-primary italic">
+            "Same supply chain. <span className="text-brand-orange font-bold not-italic">Multiple revenue paths.</span>"
+          </p>
+        </motion.div>
       </motion.div>
     </div>
   );

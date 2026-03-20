@@ -53,26 +53,38 @@ export function Slide02Crossroads() {
              </p>
           </motion.div>
 
-          {/* Heading */}
+          {/* HEADING — The Structural Point */}
           <motion.h2
-            variants={slideFromLeft}
-            className="text-[clamp(3rem,8vw,8rem)] font-black text-brand-white leading-[0.9] mb-[3rem] tracking-tighter drop-shadow-2xl"
+            variants={fadeUp}
+            className="text-4xl md:text-5xl xl:text-7xl font-display font-black text-brand-white leading-tight mb-10 tracking-tighter drop-shadow-2xl"
           >
-            THE INDUSTRIAL <br />
-            <span className="text-brand-orange text-shadow-lg drop-shadow-[0_0_15px_rgba(255,106,0,0.3)]">CROSSROADS.</span>
+            Africa is at a <br />
+            <span className="text-brand-orange drop-shadow-sm">structural</span> turning point
           </motion.h2>
 
-          {/* Hardened Copy in Glass Container */}
+          {/* POINTS — Reality-Backed */}
+          <motion.div variants={fadeUp} className="space-y-8 max-w-xl">
+            {[
+              { label: "Resource-Rich", sub: "Vast reserves of raw botanical and mineral potential." },
+              { label: "Labor-Abundant", sub: "The world's youngest and fastest-growing workforce." },
+              { label: "Underperforming Globally", sub: "Yet consistently capturing less than 5% of global value chains." },
+            ].map((pt, i) => (
+              <div key={i} className="flex items-start gap-5">
+                <div className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-2.5 shrink-0 shadow-[0_0_8px_rgba(244,121,32,0.4)]" />
+                <div className="flex flex-col gap-1">
+                  <span className="text-lg md:text-xl font-display font-bold text-brand-white tracking-tight">{pt.label}</span>
+                  <p className="text-sm text-brand-white/60 leading-relaxed">{pt.sub}</p>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* INSIGHT CLOSE — Systemic Focus */}
           <motion.div 
-            variants={fadeUp} 
-            className="space-y-[2rem] bg-brand-navy/40 backdrop-blur-xl border-l-[0.4rem] border-brand-orange p-[2.5rem] max-w-[40rem] rounded-r-[1rem] shadow-2xl"
+            variants={fadeUp}
+            className="mt-14 p-6 bg-brand-orange/[0.03] border-l-4 border-brand-orange/50 italic text-brand-white/70 text-lg md:text-xl font-medium max-w-lg leading-relaxed shadow-sm rounded-r-xl"
           >
-            <p className="text-[1.25rem] md:text-[1.5rem] text-brand-white leading-relaxed italic font-light">
-              &ldquo;Africa does not have a supply problem. It has a professional infrastructure and demand aggregation problem.&rdquo;
-            </p>
-            <p className="text-[1rem] text-brand-white/70 font-primary leading-relaxed font-light">
-              Ghana&apos;s economy is currently hamstrung by fragmented SMEs that cannot institutionalize. To fix the middle, we must professionalize the gatekeepers.
-            </p>
+            "This is not a resource problem. <span className="text-brand-white font-black not-italic">It is a systems problem.</span>"
           </motion.div>
         </motion.div>
       </div>

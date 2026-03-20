@@ -13,56 +13,46 @@ export function Slide20Phase3() {
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-12 my-auto">
         
         {/* Phase Header */}
-        <div className="w-full md:w-1/3 border-l-[6px] border-[#ff8022] pl-6 py-2 h-max relative">
-           <div className="absolute top-0 left-[-6px] w-[6px] h-1/2 bg-gradient-to-b from-brand-orange to-[#ff8022]" />
-           <motion.h4 variants={fadeUp} className="text-sm font-display tracking-widest text-[#ff8022] uppercase mb-2 font-bold">Months 12–18</motion.h4>
-           <motion.h2 variants={slideFromLeft} className="font-display text-4xl font-bold text-brand-navy leading-tight">
-             Phase 3:<br /><span className="text-brand-orange">Scale</span>
+        <div className="w-full md:w-1/3 border-l-[6px] border-brand-orange pl-6 py-2 h-max">
+           <motion.h4 variants={fadeUp} className="text-sm font-display tracking-widest text-brand-orange uppercase mb-2 font-bold">Months 12–18</motion.h4>
+           <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl font-black text-brand-navy leading-none tracking-tighter uppercase">
+             Phase 3:<br /><span className="text-brand-orange italic whitespace-nowrap">Scale & Expansion</span>
            </motion.h2>
         </div>
 
         {/* Phase Content */}
         <div className="w-full md:w-2/3 flex flex-col gap-8">
            
-           <motion.div variants={fadeUp} className="bg-brand-white border border-brand-navy/10 rounded-xl p-8 shadow-sm relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-navy/5 rounded-bl-[100px] pointer-events-none" />
-             <h3 className="text-brand-navy font-display text-xl font-bold mb-6 flex items-center gap-3">
-                <TrendingUp className="text-[#ff8022] w-5 h-5" /> Expansion Initiatives
-             </h3>
+           <motion.div variants={fadeUp} className="bg-brand-navy text-white rounded-[40px] p-10 shadow-2xl relative overflow-hidden border-b-8 border-brand-orange">
+             <div className="absolute top-0 right-0 p-8 opacity-10">
+                <TrendingUp className="w-24 h-24 text-brand-orange" />
+             </div>
+             <h3 className="text-white font-display text-2xl font-black mb-8 uppercase tracking-tight">Sub-Initiatives</h3>
              <ul className="space-y-4">
                 {[
-                  "Private labeling capacity expanded to Tier-1 retail volume",
-                  "Baobab + Moringa added to certified export line at scale",
-                  "White-label portals launched per sector (Cosmetics / Nutraceuticals / Spa)",
-                  <span key="cosmos">COSMOS/NATRUE certification achieved → <span className="text-brand-orange font-semibold">unlocks EU cosmetics manufacturer tier</span></span>,
-                  <span key="cross" className="flex items-center gap-2 text-brand-navy font-semibold"><RefreshCcw className="w-4 h-4 text-brand-orange" /> The Cross-Sell Engine: Existing Shea clients upgraded to Baobab/Moringa</span>
+                  "Private labeling capacity expanded to Tier-1 retail volume.",
+                  "COSMOS/NATRUE certification achieved (unlocks EU manufacturers).",
+                  "Cross-Sell Engine: Shea clients upgraded to Baobab/Moringa supply pairs."
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 border-b border-brand-navy/5 pb-3">
-                     {typeof item === 'string' && <span className="w-1.5 h-1.5 rounded-full bg-brand-navy/40 mt-2 shrink-0" />}
-                     <div className="font-primary text-brand-navy/80 font-medium">{item}</div>
+                  <li key={i} className="flex items-start gap-4 border-b border-white/10 pb-4">
+                     <span className="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0 shadow-[0_0_10px_rgba(244,121,32,0.5)]" />
+                     <span className="font-primary text-white/80 font-medium text-sm">{item}</span>
                   </li>
                 ))}
              </ul>
            </motion.div>
 
-           <motion.div variants={fadeUp} className="bg-brand-orange/5 border border-brand-orange/30 rounded-xl p-8 relative overflow-hidden group shadow-sm">
-             <div className="absolute top-0 left-0 w-2 h-full bg-brand-orange" />
-             <h3 className="text-brand-orange font-display text-lg font-bold mb-4 uppercase tracking-widest text-sm flex items-center gap-3">
-                <Flag className="w-4 h-4" /> Final KPIs
-             </h3>
-             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-               <div className="flex flex-col">
-                 <span className="font-display text-3xl font-bold text-brand-navy mb-1">Tier-1</span>
-                 <span className="font-primary text-brand-navy/80 text-sm font-semibold">First private label contract closed</span>
-               </div>
-               <div className="flex flex-col">
-                 <span className="font-display text-3xl font-bold text-brand-navy mb-1">&gt;20%</span>
-                 <span className="font-primary text-brand-navy/80 text-sm font-semibold">New ingredient revenue</span>
-               </div>
-               <div className="flex flex-col">
-                 <span className="font-display text-3xl font-bold text-brand-navy mb-1">&gt;70%</span>
-                 <span className="font-primary text-brand-navy/80 text-sm font-semibold">Recurring order retention rate</span>
-               </div>
+           <motion.div variants={fadeUp} className="bg-brand-orange/5 border border-brand-orange/20 rounded-[40px] p-10 relative overflow-hidden group shadow-sm flex items-center justify-between">
+             <div className="flex flex-col">
+                <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-2 font-bold">Market Unlock</p>
+                <p className="text-4xl md:text-5xl font-display font-black text-brand-navy tracking-tighter">EU 🇪🇺</p>
+                <p className="text-sm font-primary text-brand-navy/60">Tier-1 manufacturers.</p>
+             </div>
+             <div className="w-[1px] h-16 bg-brand-navy/10" />
+             <div className="flex flex-col text-right">
+                <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-2 font-bold">Retention</p>
+                <p className="text-4xl md:text-5xl font-display font-black text-brand-navy tracking-tighter">&gt;70%</p>
+                <p className="text-sm font-primary text-brand-navy/60">Recurring order rate.</p>
              </div>
            </motion.div>
 

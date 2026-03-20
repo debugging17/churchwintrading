@@ -39,33 +39,44 @@ export function Slide05WhereWePlay() {
         variants={staggerContainer}
         className="relative z-10 flex flex-col items-center text-center max-w-5xl px-8"
       >
-        {/* Section Number */}
-        <motion.div 
-          variants={fadeUp}
-          className="font-display text-brand-orange text-3xl font-black tracking-[0.5em] mb-8"
-        >
-          02
-        </motion.div>
-        
-        {/* Title */}
-        <div className="overflow-hidden mb-8">
-          <motion.h2 
-            variants={slideFromLeft}
-            className="font-display text-6xl md:text-8xl font-black text-brand-white tracking-tighter leading-[0.9] text-center"
+              {/* HEADING — The Strategic Paradox */}
+          <motion.h2
+            variants={fadeUp}
+            className="text-4xl md:text-5xl xl:text-7xl font-display font-black text-brand-navy leading-tight mb-10 tracking-tighter"
           >
-            WHERE WE <br />
-            <span className="text-brand-orange drop-shadow-[0_10px_30px_rgba(255,119,0,0.5)]">PLAY.</span>
+            Even inside the system, <br />
+            <span className="text-brand-orange drop-shadow-sm italic">scale is broken</span>
           </motion.h2>
-        </div>
-        
-        {/* Subtitle / Positioning Statement */}
-        <motion.p
-          variants={fadeUp}
-          className="font-primary text-xl md:text-2xl text-brand-white/90 font-light italic leading-relaxed max-w-3xl border-t border-brand-white/20 pt-10 mt-4"
-        >
-          Six industries. <span className="text-brand-orange font-bold">One supply chain advantage.</span>
-        </motion.p>
-        
+
+          {/* REALITY POINTS — High Conviction */}
+          <motion.div variants={fadeUp} className="space-y-4 max-w-xl">
+             <div className="flex gap-[1px] mb-6">
+                <div className="flex-1 p-4 bg-brand-navy text-white font-display font-black text-xs uppercase tracking-widest text-center border-r border-white/10">The Presence</div>
+                <div className="flex-1 p-4 bg-brand-orange text-white font-display font-black text-xs uppercase tracking-widest text-center">The Failure</div>
+             </div>
+            {[
+              { label: "Supply Exists", res: "NO Structured Demand", icon: "✓" },
+              { label: "Buyers Exist", res: "NO Consistent Contracts", icon: "✓" },
+              { label: "Infrastructure Ready", res: "NO Visibility", icon: "✓" },
+            ].map((pt, i) => (
+              <div key={i} className="flex items-center group">
+                <div className="flex-1 p-4 bg-brand-navy/5 text-brand-navy/60 font-medium border-l-4 border-brand-navy/20">{pt.label}</div>
+                <div className="w-10 h-10 flex items-center justify-center bg-brand-navy text-brand-orange font-bold z-10 scale-125 rounded-full shadow-lg">⚡</div>
+                <div className="flex-1 p-4 bg-brand-orange/10 text-brand-navy font-black border-r-4 border-brand-orange">{pt.res}</div>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* CALL TO ACTION / INSIGHT */}
+          <motion.div 
+            variants={fadeUp}
+            className="mt-12 inline-block px-10 py-5 bg-brand-navy text-brand-white rounded-2xl shadow-2xl border-b-4 border-brand-orange"
+          >
+            <p className="text-sm font-display font-black uppercase tracking-[0.2em] leading-tight">
+               Existing models act as a sponge, <br />
+               not an engine.
+            </p>
+          </motion.div>
         {/* Accent Bar */}
         <motion.div 
           variants={fadeUp}

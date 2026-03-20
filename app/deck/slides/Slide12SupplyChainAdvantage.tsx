@@ -14,41 +14,46 @@ export function Slide12SupplyChainAdvantage() {
       
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto z-10 my-auto">
         
-        <motion.div variants={fadeUp} className="mb-16">
-          <h2 className="font-display text-4xl md:text-6xl font-bold text-brand-navy leading-tight mb-4 max-w-4xl">
-            When Ghana&apos;s Shea sector lost 40%, <span className="text-brand-orange font-light">Churchwin Trading held contracts.</span>
-          </h2>
-          <div className="w-16 h-1 bg-brand-orange/50 mt-6" />
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          
-          <GlassCard theme="light" delay={0.2} className="bg-brand-white/80 border-brand-navy/10 shadow-lg">
-            <h3 className="text-xs font-display tracking-widest uppercase text-brand-navy/50 mb-8 font-bold">The 2024 Industry Headwinds</h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-6">
-              <StatCard theme="light" label="Nut Price Surge" value="140%" trend="Costs" />
-              <StatCard theme="light" label="Yield Shortfall" value="45%" />
-              <div className="sm:col-span-2">
-                <StatCard theme="light" label="Sector-wide Revenue Decline" value="40%" />
-              </div>
-            </div>
-          </GlassCard>
-
-          <motion.div variants={fadeUp} className="flex flex-col justify-center pl-4 md:pl-12 border-l border-brand-navy/10 relative">
-             <div className="absolute top-0 left-[-1px] w-[2px] h-1/3 bg-gradient-to-b from-brand-orange to-transparent" />
-             
-             <h3 className="font-display text-3xl font-bold text-brand-navy mb-6 leading-tight">
-               Mass stocking + supplier relationships with 11 cooperatives = <span className="text-brand-orange">supply continuity our competitors couldn&apos;t match.</span>
-             </h3>
-             
-             <div className="bg-brand-orange/10 border border-brand-orange/30 rounded-lg p-4 mt-4">
-               <div className="font-display text-3xl font-bold text-brand-orange">Zero contracts lost.</div>
-               <p className="font-primary text-sm text-brand-navy/70 mt-1">While the industry shed 40% of revenue, Churchwin retained every active buyer through buffer inventory and cooperative loyalty.</p>
-             </div>
+          <motion.div variants={fadeUp} className="mb-16">
+            <h2 className="font-display text-4xl md:text-6xl font-black text-brand-navy leading-tight mb-4 max-w-4xl uppercase tracking-tighter">
+              The Growth <span className="text-brand-orange">Engine:</span> <br />
+              <span className="italic font-light">Repeatability & Expansion.</span>
+            </h2>
+            <div className="w-16 h-1 bg-brand-orange/50 mt-6" />
           </motion.div>
 
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-12">
+            {[
+              { label: "One System", sub: "Same acquisition engine scales across Cosmetics, F&B, and Nutraceuticals.", icon: "⚙️" },
+              { label: "High Efficiency", sub: "Automated prospecting reduces outreach cost by 60% vs. traditional brokers.", icon: "⚡" },
+              { label: "Scalable Management", sub: "Cloud-based CRM allows one manager to handle 200+ active prospects.", icon: "📊" }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                variants={fadeUp}
+                className="p-8 bg-brand-white border border-brand-navy/10 rounded-3xl shadow-xl hover:border-brand-orange/40 transition-all flex flex-col items-center text-center"
+              >
+                 <div className="text-4xl mb-6">{item.icon}</div>
+                 <h3 className="text-xl font-display font-bold text-brand-navy mb-3">{item.label}</h3>
+                 <p className="text-sm text-brand-navy/60 font-primary leading-relaxed">{item.sub}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div 
+            variants={fadeUp}
+            className="p-8 bg-brand-navy text-white rounded-3xl flex items-center justify-between border-b-8 border-brand-orange"
+          >
+             <p className="font-display font-black text-lg md:text-2xl uppercase tracking-tight">
+                Winning the market <br />
+                <span className="text-brand-orange">one contract at a time.</span>
+             </p>
+             <div className="hidden md:block h-12 w-[1px] bg-white/10 mx-8" />
+             <div className="text-right">
+                <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-1">Target CAC</p>
+                <p className="text-2xl font-display font-bold tracking-tighter">-$420/Lead</p>
+             </div>
+          </motion.div>
       </motion.div>
     </div>
   );

@@ -48,45 +48,52 @@ export function Slide04MissingMiddle() {
               <div className="w-12 h-[2px] bg-brand-orange" />
               <p className="text-brand-orange text-[10px] tracking-[0.4em] uppercase font-black">Industrial Transformation</p>
            </div>
-           <h2 className="text-3xl md:text-5xl font-black text-brand-white leading-tight tracking-tighter">
-              Institutionalizing the <span className="text-brand-orange italic">Supply Chain.</span>
-           </h2>
-        </motion.div>
+            <h2 className="text-3xl md:text-5xl font-black text-brand-white leading-tight tracking-tighter">
+               The engine of employment. <br />
+               <span className="text-brand-orange italic underline decoration-white/10">The failure point of scale.</span>
+            </h2>
+         </motion.div>
 
-        {/* Comparison Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-           {/* BEFORE */}
-           <motion.div variants={fadeUp} className="group">
-              <div className="relative h-[25vh] md:h-[30vh] rounded-2xl overflow-hidden border border-brand-white/10 shadow-2xl mb-4">
-                 <Image src="/images/IMG_0471-min-min-scaled.jpg" alt="Before" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-                 <div className="absolute inset-0 bg-brand-navy/20" />
-                 <div className="absolute top-4 left-4 px-3 py-1.5 bg-brand-navy/80 backdrop-blur-md rounded-lg border border-brand-white/10">
-                    <span className="text-brand-white text-[10px] font-black tracking-widest uppercase">Before: Fragmented Scale</span>
-                 </div>
-              </div>
-              <div className="bg-brand-white/5 p-5 md:p-6 rounded-2xl border-l-4 border-l-brand-white/20">
-                 <p className="text-brand-white/80 font-primary italic text-sm md:text-base leading-relaxed">
-                    &ldquo;Micro-scale operations struggle with manual logistics and inconsistent output. This is the bottleneck that keeps Africa fragmented.&rdquo;
-                 </p>
-              </div>
-           </motion.div>
+         {/* Comparison Grid */}
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            {/* SME REALITY */}
+            <motion.div variants={fadeUp} className="group">
+               <div className="relative h-[25vh] md:h-[30vh] rounded-2xl overflow-hidden border border-brand-white/10 shadow-2xl mb-4">
+                  <Image src="/images/IMG_0471-min-min-scaled.jpg" alt="Local SMEs" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-brand-navy/60" />
+                  <div className="absolute inset-0 flex items-center justify-center p-8 text-center">
+                     <div className="flex flex-col gap-2">
+                        <span className="text-brand-orange text-4xl md:text-6xl font-black italic">~80%</span>
+                        <span className="text-brand-white text-[10px] font-black tracking-widest uppercase">Of Total Employment</span>
+                     </div>
+                  </div>
+               </div>
+               <div className="bg-brand-white/5 p-5 md:p-6 rounded-2xl border-l-4 border-l-brand-white/20">
+                  <p className="text-brand-white/80 font-primary italic text-sm md:text-base leading-relaxed">
+                    SMEs are the bedrock of the African economy, yet they are structurally excluded from global growth.
+                  </p>
+               </div>
+            </motion.div>
 
-           {/* AFTER */}
-           <motion.div variants={fadeUp} className="group">
-              <div className="relative h-[25vh] md:h-[30vh] rounded-2xl overflow-hidden border border-brand-orange/20 shadow-[0_0_50px_rgba(255,119,0,0.1)] mb-4">
-                 <Image src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" alt="After" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
-                 <div className="absolute inset-0 bg-brand-orange/10" />
-                 <div className="absolute top-4 left-4 px-3 py-1.5 bg-brand-orange backdrop-blur-md rounded-lg border border-brand-white/20 shadow-lg">
-                    <span className="text-white text-[10px] font-black tracking-widest uppercase">After: Institutional Scale</span>
-                 </div>
-              </div>
-              <div className="bg-brand-orange/10 p-5 md:p-6 rounded-2xl border-l-4 border-l-brand-orange shadow-[inset_0_0_20px_rgba(255,119,0,0.05)]">
-                 <p className="text-brand-white text-sm md:text-base font-primary font-medium leading-relaxed">
-                    Growth isn&apos;t just about size; it&apos;s about structure. Just as South Korea transformed via institutional scale, Churchwin builds the bridge for the Missing Middle.
-                 </p>
-              </div>
-           </motion.div>
-        </div>
+            {/* THE SCALE FAILURE */}
+            <motion.div variants={fadeUp} className="group">
+               <div className="relative h-[25vh] md:h-[30vh] rounded-2xl overflow-hidden border border-brand-orange/20 shadow-[0_0_50px_rgba(255,119,0,0.1)] mb-4">
+                  <Image src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" alt="Global Markets" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-brand-orange/40" />
+                  <div className="absolute inset-0 flex items-center justify-center p-8 text-center">
+                     <div className="flex flex-col gap-2 text-white">
+                        <span className="text-5xl md:text-7xl font-black italic drop-shadow-xl">&lt;10%</span>
+                        <span className="text-[10px] font-black tracking-widest uppercase drop-shadow-lg">Ever Reach Global Scale</span>
+                     </div>
+                  </div>
+               </div>
+               <div className="bg-brand-orange/10 p-5 md:p-6 rounded-2xl border-l-4 border-l-brand-orange shadow-[inset_0_0_20px_rgba(255,119,0,0.05)]">
+                  <p className="text-brand-white text-sm md:text-base font-primary font-medium leading-relaxed">
+                    The gap is not a lack of effort—it is a lack of institutional connection. <span className="text-brand-orange font-black">This is where growth breaks.</span>
+                  </p>
+               </div>
+            </motion.div>
+         </div>
 
         {/* Call to action / Metric */}
         <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center justify-between border-t border-brand-white/10 pt-6 gap-4">

@@ -50,48 +50,28 @@ export function Slide01BOverview() {
             variants={fadeUp}
             className="text-4xl md:text-5xl xl:text-6xl font-display font-black text-brand-navy leading-[1.05] mb-12"
           >
-            What We Are <br />
-            <span className="relative inline-block">
-              Building.
-              <motion.div 
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ delay: 1, duration: 0.8 }}
-                className="absolute -bottom-2 left-0 h-[6px] bg-brand-orange/10 w-full" 
-              />
+            Operating inside <br />
+            <span className="relative inline-block text-brand-orange">
+              the constraint.
             </span>
           </motion.h2>
 
-          {/* Pillar List - Rehauled for Depth */}
-          <motion.div custom={3} variants={fadeUp} className="space-y-8">
-            {sections.map(({ num, label, sub }, i) => (
-              <motion.div 
-                key={num} 
-                className="flex items-start gap-8 group"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5 + (i * 0.1) }}
-              >
-                {/* Numbering - Sophisticated Overlay Style */}
-                <div className="relative shrink-0 pt-1">
-                   <span className="text-3xl font-display font-black text-brand-navy/15 leading-none transition-colors duration-300 group-hover:text-brand-orange/30">
-                    {num}
-                   </span>
-                   <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                      <div className="w-[1px] h-0 group-hover:h-full bg-brand-orange/40 transition-all duration-500" />
-                   </div>
+          {/* REALITY FEED — The Churchwin Today Status */}
+          <motion.div custom={3} variants={fadeUp} className="space-y-6">
+            {[
+              { label: "Active Production", val: "Shea, Baobab, & Neem lines operational.", type: "pos" },
+              { label: "Supply Network", val: "11+ Women-led cooperatives integrated.", type: "pos" },
+              { label: "Export Capability", val: "Proven logistics to EU/US markets.", type: "pos" },
+              { label: "The Reality", val: "Demand is inconsistent & manual.", type: "neg" },
+              { label: "The Risk", val: "Processing capacity is underutilized.", type: "neg" },
+            ].map((pt, i) => (
+              <div key={i} className={`flex items-start gap-4 p-4 rounded-xl border ${pt.type === 'pos' ? 'bg-brand-navy/5 border-brand-navy/10' : 'bg-brand-orange/5 border-brand-orange/20'}`}>
+                <div className={`w-2 h-2 rounded-full mt-2 ${pt.type === 'pos' ? 'bg-brand-navy/40' : 'bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.3)]'}`} />
+                <div>
+                   <span className={`text-[10px] uppercase font-black tracking-widest ${pt.type === 'pos' ? 'text-brand-navy/40' : 'text-brand-orange'}`}>{pt.label}</span>
+                   <p className="text-sm font-primary font-bold text-brand-navy leading-none mt-1">{pt.val}</p>
                 </div>
-
-                {/* Content */}
-                <div className="flex flex-col gap-1">
-                  <h3 className="text-lg md:text-xl font-display font-bold text-brand-navy tracking-tight group-hover:text-brand-orange transition-colors duration-300">
-                    {label}
-                  </h3>
-                  <p className="text-xs md:text-sm text-brand-navy/60 font-primary leading-relaxed max-w-sm">
-                    {sub}
-                  </p>
-                </div>
-              </motion.div>
+              </div>
             ))}
           </motion.div>
         </motion.div>

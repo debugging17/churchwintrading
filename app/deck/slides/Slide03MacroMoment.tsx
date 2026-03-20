@@ -51,14 +51,29 @@ export function Slide03MacroMoment() {
       >
         {/* Provocative Headline Overlay */}
         <motion.div variants={fadeUp} className="text-center mb-8 max-w-[50rem]">
-          <h2 className="font-display text-[clamp(1.5rem,4vw,3.5rem)] font-black text-brand-white leading-tight mb-4 tracking-tighter">
-            Africa had the lead in 1960. 
-            <br />
-            <span className="text-brand-orange drop-shadow-lg italic text-[clamp(1.5rem,4.5vw,4rem)]">Then the divergence began.</span>
-          </h2>
-          <p className="font-primary text-base md:text-lg text-brand-white/80 font-light mx-auto max-w-[35rem] px-6 py-3 bg-brand-orange/10 backdrop-blur-md rounded-full border border-brand-orange/20">
-             Churchwin is building the <span className="text-brand-orange font-bold">institutional scale</span> that West Africa never developed.
-          </p>
+          <motion.h2
+            variants={fadeUp}
+            className="text-4xl md:text-5xl xl:text-6xl font-display font-black text-brand-navy leading-[1.1] mb-8 tracking-tighter"
+          >
+            Africa had the lead. <br />
+            <span className="text-brand-orange/90 italic drop-shadow-sm">Then the divergence began.</span>
+          </motion.h2>
+
+          <motion.p
+            variants={fadeUp}
+            className="text-base md:text-lg text-brand-navy/70 leading-relaxed font-primary mb-10 max-w-lg"
+          >
+            In 1960, West African GDP trajectories mirrored those of East Asian tigers like South Korea. Over six decades, the gap didn't just grow—it exploded. This widening chasm was not caused by a lack of potential, but a failure to institutionalize the production engine.
+          </motion.p>
+
+          <motion.div
+            variants={fadeUp}
+            className="inline-block px-8 py-4 bg-brand-navy text-brand-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-l-[6px] border-brand-orange"
+          >
+            <p className="text-sm md:text-base font-display font-bold tracking-tight">
+              Execution—not potential—determines outcomes.
+            </p>
+          </motion.div>
         </motion.div>
 
         {/* Data Visualization Card */}

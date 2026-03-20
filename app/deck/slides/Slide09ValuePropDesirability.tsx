@@ -42,56 +42,51 @@ export function Slide09ValuePropDesirability() {
             <span className="text-brand-orange font-display font-bold uppercase tracking-[0.3em] text-[10px] drop-shadow-md">The Churchwin Solution</span>
           </motion.div>
 
-          <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-5xl lg:text-5xl font-black text-white leading-[1.1] mb-8 drop-shadow-2xl">
-            Eliminating the Exact <span className="whitespace-nowrap">Pain Points</span> <br className="hidden md:block" />
-            of Global Buyers.
+          <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-5xl lg:text-5xl font-black text-white leading-[1.1] mb-8 drop-shadow-2xl uppercase">
+            From trading company <br />
+            <span className="text-brand-orange">→ to infrastructure layer</span>
           </motion.h2>
 
-          <motion.p variants={fadeUp} className="text-base md:text-lg text-white/90 font-primary leading-relaxed mb-10 max-w-3xl drop-shadow-md">
-            We bridge the gap between rural production and global standards with a <span className="text-white font-semibold border-b-2 border-brand-orange/50 whitespace-nowrap">vertically integrated supply engine</span>.
-          </motion.p>
-
-          <div className="grid grid-cols-1 gap-4 w-full">
+          <div className="flex flex-col gap-6 w-full">
             {[
               { 
-                icon: <ShoppingBag className="w-5 h-5 text-white" />, 
-                label: "For The Retailer", 
-                val: "Flexible order quantities + consistent quality", 
-                res: "no more multi-supplier chaos" 
+                ver: "1.0", 
+                label: "Commodity Trading", 
+                desc: "Moving raw materials via manual referrals and traditional brokers.", 
+                active: false 
               },
               { 
-                icon: <Warehouse className="w-5 h-5 text-white" />, 
-                label: "For The Wholesaler", 
-                val: "Guaranteed mass production + buffer stocking", 
-                res: "no more seasonal contract losses" 
+                ver: "2.0", 
+                label: "Supply Chain Operator", 
+                desc: "Vertical integration of 11+ cooperatives and direct export logistics.", 
+                active: false 
               },
               { 
-                icon: <FileCheck className="w-5 h-5 text-white" />, 
-                label: "For Procurement", 
-                val: "Instant compliance documentation download", 
-                res: "no certificate hunting" 
+                ver: "3.0", 
+                label: "Demand + Supply Engine", 
+                desc: "Predictable B2B acquisition paired with scalable processing capacity.", 
+                active: true 
               }
             ].map((item, idx) => (
               <motion.div 
                 key={idx} 
                 variants={fadeUp} 
-                className="group flex items-center gap-6 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-orange/40 hover:bg-white/10 transition-all duration-500 backdrop-blur-md shadow-lg"
+                className={`group flex items-center gap-8 p-6 rounded-3xl border transition-all duration-500 ${item.active ? 'bg-brand-orange/20 border-brand-orange shadow-[0_0_30px_rgba(255,106,0,0.2)]' : 'bg-white/5 border-white/10 opacity-60'}`}
               >
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center transition-all duration-300 shadow-inner">
-                  {item.icon}
+                <div className={`text-4xl font-display font-black leading-none ${item.active ? 'text-brand-orange' : 'text-white/20'}`}>
+                  {item.ver}
                 </div>
                 <div className="flex-grow">
-                  <div className="flex items-center justify-between mb-0.5">
-                    <h4 className="font-display text-white/50 font-bold text-[9px] uppercase tracking-[0.2em]">
-                      {item.label}
-                    </h4>
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-orange shadow-md" />
-                  </div>
-                  <p className="font-primary text-white text-sm md:text-base leading-snug">
-                    <span className="opacity-70">{item.val} = </span>
-                    <span className="font-bold text-white drop-shadow-md">{item.res}.</span>
-                  </p>
+                   <h4 className={`font-display font-bold text-lg uppercase tracking-tight ${item.active ? 'text-white' : 'text-white/40'}`}>
+                    {item.label}
+                   </h4>
+                   <p className={`font-primary text-sm leading-snug mt-1 ${item.active ? 'text-white/90' : 'text-white/30'}`}>
+                    {item.desc}
+                   </p>
                 </div>
+                {item.active && (
+                   <div className="w-4 h-4 rounded-full bg-brand-orange animate-ping" />
+                )}
               </motion.div>
             ))}
           </div>

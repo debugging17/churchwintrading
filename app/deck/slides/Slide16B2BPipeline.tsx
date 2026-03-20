@@ -26,63 +26,67 @@ export function Slide16B2BPipeline() {
         
         {/* Left Side: Pitch */}
         <div className="w-full lg:w-[45%] flex flex-col justify-center">
-          <motion.h2 variants={slideFromLeft} className="font-display text-3xl md:text-5xl font-bold text-brand-navy leading-tight mb-4">
-            From reactive selling to a <span className="text-brand-orange font-light">systematic client acquisition engine.</span>
+          <motion.h2 variants={slideFromLeft} className="font-display text-3xl md:text-5xl font-extrabold text-brand-navy leading-tight mb-4 uppercase tracking-tighter">
+            The Operational <span className="text-brand-orange">Moat:</span> <br />
+            <span className="italic font-light">Institutional Systems.</span>
           </motion.h2>
           
-          <motion.p variants={fadeUp} className="text-lg md:text-xl text-brand-navy/70 font-primary border-l-2 border-brand-navy/20 pl-6 mb-8">
-            Replacing founder-dependent networking with a 4-channel B2B measurable pipeline.
+          <motion.p variants={fadeUp} className="text-lg md:text-xl text-brand-navy/70 font-primary border-l-2 border-brand-navy/20 pl-6 mb-8 italic">
+            Standardizing the unpredictable. Trading becomes a system.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="bg-brand-navy/5 border border-brand-navy/10 rounded-xl p-8 backdrop-blur-sm shadow-sm">
-            <h4 className="text-xs font-display tracking-widest text-[#ff8022] uppercase mb-6 font-bold">First 90 Days KPI Targets</h4>
-            <ul className="space-y-4 font-primary text-brand-navy/90">
-              <li className="flex items-center justify-between border-b border-brand-navy/10 pb-2">
-                <span className="font-medium">Targets identified & scored</span>
-                <span className="font-display font-bold text-brand-orange text-xl">500+</span>
-              </li>
-              <li className="flex items-center justify-between border-b border-brand-navy/10 pb-2">
-                <span className="font-medium">Pre-qualified sample kits</span>
-                <span className="font-display font-bold text-brand-orange text-xl">20+</span>
-              </li>
-              <li className="flex items-center justify-between pt-2">
-                <span className="text-brand-navy/60 font-semibold tracking-wide uppercase text-xs">Month 6 Target:</span>
-                <span className="font-bold text-brand-navy">10–20 Bulk Clients</span>
-              </li>
-            </ul>
-          </motion.div>
-        </div>
-
-        {/* Right Side: The Funnel Flow */}
-        <div className="w-full lg:w-[55%] flex flex-col justify-center relative">
-          <motion.div variants={sectionTitleStagger} className="space-y-3 relative z-10 w-full max-w-md mx-auto">
-            
-            {/* The vertical connector line behind the nodes */}
-            <div className="absolute left-[23px] top-6 bottom-6 w-px bg-gradient-to-b from-brand-navy/10 via-brand-orange/40 to-brand-orange" />
-
-            {pipeline.map((step, idx) => (
+          <div className="grid grid-cols-1 gap-4">
+            {[
+              { title: "CRM Visibility", desc: "Real-time tracking of buyer pipeline, from sample request to L/C opening.", icon: Target },
+              { label: "Traceability Protocol", desc: "Digital verification of nut origin, worker fair pay, and refining timestamps.", icon: "🔗" },
+              { label: "Compliance Vault", desc: "Instant digital access to COA, MSDS, and Organic certificates for every batch.", icon: "📂" }
+            ].map((item, idx) => (
               <motion.div 
                 key={idx} 
                 variants={fadeUp}
-                className={`flex items-center gap-6 p-4 rounded-lg border ${step.highlight ? 'bg-brand-orange/10 border-brand-orange/50 shadow-[0_0_20px_rgba(255,106,0,0.1)] mt-8' : 'bg-white border-brand-navy/10 shadow-sm'} relative`}
+                className="p-6 bg-white border border-brand-navy/10 rounded-2xl shadow-sm hover:border-brand-orange transition-all group"
               >
-                <div className={`w-12 h-12 rounded-full flex shrink-0 items-center justify-center relative z-10 overflow-hidden ${step.highlight ? 'bg-brand-orange text-brand-white shadow-md' : 'bg-brand-white border border-brand-navy/20 shadow-sm p-2 bg-white'}`}>
-                  {step.image ? (
-                    <Image src={step.image} alt={step.name} fill className="object-contain p-2" />
-                  ) : step.icon ? (
-                    <step.icon className="w-5 h-5 text-brand-white" />
-                  ) : null}
-                </div>
-                <div>
-                  <h5 className={`font-display text-xs tracking-widest uppercase font-bold mb-1 ${step.highlight ? 'text-brand-orange' : 'text-brand-navy/50'}`}>
-                    {idx + 1}. {step.name}
-                  </h5>
-                  <p className={`font-primary text-sm ${step.highlight ? 'text-brand-navy font-bold' : 'text-brand-navy/80 font-medium'}`}>
-                    {step.desc}
-                  </p>
+                <div className="flex items-center gap-4">
+                   <div className="w-10 h-10 rounded-xl bg-brand-navy/5 flex items-center justify-center text-brand-orange text-lg">
+                      {typeof item.icon === 'function' ? <item.icon className="w-5 h-5" /> : item.icon}
+                   </div>
+                   <div>
+                      <h4 className="font-display font-bold text-brand-navy group-hover:text-brand-orange transition-colors">
+                        {item.title || item.label}
+                      </h4>
+                      <p className="text-xs font-primary text-brand-navy/60">
+                        {item.desc}
+                      </p>
+                   </div>
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+
+        {/* Right Side: The Funnel Flow / Visual Moat */}
+        <div className="w-full lg:w-[55%] flex flex-col justify-center relative">
+          <motion.div variants={sectionTitleStagger} className="space-y-4 relative z-10 w-full max-w-md mx-auto">
+            <div className="p-8 bg-brand-navy text-white rounded-[40px] shadow-2xl relative overflow-hidden border-b-8 border-brand-orange">
+               <div className="absolute top-0 right-0 p-8 opacity-10">
+                  <Target className="w-24 h-24 text-brand-orange" />
+               </div>
+               <h3 className="text-2xl font-display font-black uppercase mb-6 tracking-tight">The Stability <br /><span className="text-brand-orange">Architecture</span></h3>
+               <p className="text-sm text-white/60 font-primary leading-relaxed mb-8">
+                  While competitors rely on opaque manual processes, Churchwin operates with 100% digital visibility. This is our bridge to the global institution.
+               </p>
+               <div className="flex items-center gap-4 pt-6 border-t border-white/10">
+                  <div className="text-center flex-1">
+                     <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-1">Visibility</p>
+                     <p className="text-xl font-display font-black">100%</p>
+                  </div>
+                  <div className="w-[1px] h-8 bg-white/10" />
+                  <div className="text-center flex-1">
+                     <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-1">Errors</p>
+                     <p className="text-xl font-display font-black">&lt;1%</p>
+                  </div>
+               </div>
+            </div>
           </motion.div>
         </div>
 

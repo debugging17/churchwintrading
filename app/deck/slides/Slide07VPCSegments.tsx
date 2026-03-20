@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeUp, sectionTitleStagger } from "../motion/variants";
+import { fadeUp, sectionTitleStagger, staggerContainer } from "../motion/variants";
 import { ShoppingBag, Boxes } from "lucide-react";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { GlassCard } from "../components/GlassCard";
@@ -17,76 +17,59 @@ export function Slide07VPCSegments() {
   // 3. proposal-strategist: Exact VPC segment definitions.
 
   return (
-    <div className="w-full h-full flex flex-col py-8 md:py-12 px-6 md:px-12 bg-brand-cream relative overflow-hidden pb-[var(--footer-height)]">
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-7xl mx-auto my-auto flex flex-col items-center">
-        <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl lg:text-7xl font-black text-brand-navy mb-12 text-center drop-shadow-sm">
-          Engineered for the exact pains of our buyers.
-        </motion.h2>
+    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-20 bg-brand-navy relative overflow-hidden pb-[var(--footer-height)]">
+      {/* Background Accent */}
+      <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-brand-orange/5 blur-[120px] rounded-full" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 w-full items-stretch">
-          
-          {/* Segment A: The Premium Retailer */}
-          <motion.div variants={fadeUp} className="relative group rounded-[40px] overflow-hidden shadow-2xl border border-brand-navy/10 min-h-[550px] flex flex-col">
-            <Image src="/images/visual_supremacy/retail_boutique.png" alt="Premium Retailer" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/50 to-transparent transition-opacity duration-500 group-hover:opacity-95" />
-            
-            <div className="absolute inset-0 p-10 md:p-14 flex flex-col justify-end">
-              <div className="mb-8">
-                <div className="w-16 h-16 rounded-2xl bg-brand-orange/20 backdrop-blur-xl border border-brand-orange/30 flex items-center justify-center mb-6">
-                  <ShoppingBag className="w-8 h-8 text-brand-orange" />
-                </div>
-                <h3 className="font-display text-4xl md:text-5xl font-black text-white mb-2 tracking-tight drop-shadow-md">The Premium Retailer</h3>
-                <p className="text-brand-orange text-sm font-black uppercase tracking-[0.2em] mb-4 italic drop-shadow-sm">Sephora, Credo, Oh My Cream!</p>
-              </div>
+      <motion.div initial="hidden" animate={animState} variants={staggerContainer} className="w-full max-w-6xl mx-auto my-auto flex flex-col items-center z-10">
+        
+        {/* HEADING — The Demand Logic */}
+        <motion.div variants={fadeUp} className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-black text-brand-white leading-tight mb-4 tracking-tighter">
+            Two buyers. <br />
+            <span className="text-brand-orange italic underline decoration-white/10">Two distinct needs.</span>
+          </h2>
+          <p className="text-brand-white/40 text-lg font-primary max-w-xl mx-auto">
+            We solve the structural isolation of the African SME by anchoring them to global procurement standards.
+          </p>
+        </motion.div>
 
-              <div className="space-y-6">
-                <div className="relative">
-                  <p className="text-white/50 font-bold text-xs mb-2 uppercase tracking-widest">Critical Pain Point</p>
-                  <p className="text-white text-lg md:text-xl leading-relaxed drop-shadow-lg font-medium">
-                    Lack of directly-sourced, high-integrity African products that meet EU/US clinical safety and branding standards.
-                  </p>
-                </div>
-                <div className="relative pt-4 border-t border-white/10">
-                  <p className="text-brand-orange font-bold text-xs mb-2 uppercase tracking-widest">The Opportunity</p>
-                  <p className="text-white text-lg md:text-xl leading-relaxed drop-shadow-lg font-medium">
-                    Churchwin provides shelf-ready, certified private-label solutions with a 100% traceable Ghanaian origin story.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+          {/* RETAILERS */}
+          <motion.div
+            variants={fadeUp}
+            className="p-12 rounded-[40px] bg-white/5 backdrop-blur-xl border border-white/10 border-b-8 border-brand-orange shadow-2xl relative overflow-hidden group"
+          >
+             <div className="absolute top-0 right-0 p-8 text-brand-orange/10 text-8xl font-display font-black group-hover:text-brand-orange/20 transition-colors">01</div>
+             <h3 className="text-3xl font-display font-black uppercase mb-8 tracking-tighter text-brand-white">Retailers</h3>
+             <ul className="space-y-6 font-primary text-base text-brand-white/80">
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.5)]" /> Small MOQ Support</li>
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.5)]" /> Retail-Ready Branding</li>
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.5)]" /> Direct Consumer Access</li>
+             </ul>
+             <div className="mt-10 p-4 bg-brand-orange/10 rounded-xl border border-brand-orange/20">
+                <p className="text-[10px] font-black uppercase text-brand-orange tracking-widest mb-1">Target Outcome</p>
+                <p className="text-xs text-brand-white/60">Inventory responsiveness without over-stocking risk.</p>
+             </div>
           </motion.div>
 
-          {/* Segment B: The Global Wholesaler */}
-          <motion.div variants={fadeUp} className="relative group rounded-[40px] overflow-hidden shadow-2xl border border-brand-navy/10 min-h-[550px] flex flex-col">
-            <Image src="/images/visual_supremacy/industrial_wholesaler.png" alt="Global Wholesaler" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/50 to-transparent transition-opacity duration-500 group-hover:opacity-95" />
-            
-            <div className="absolute inset-0 p-10 md:p-14 flex flex-col justify-end">
-              <div className="mb-8">
-                <div className="w-16 h-16 rounded-2xl bg-brand-navy/40 backdrop-blur-xl border border-brand-navy/30 flex items-center justify-center mb-6">
-                  <Boxes className="w-8 h-8 text-brand-orange" />
-                </div>
-                <h3 className="font-display text-4xl md:text-5xl font-black text-white mb-2 tracking-tight drop-shadow-md">The Global Wholesaler</h3>
-                <p className="text-brand-orange text-sm font-black uppercase tracking-[0.2em] mb-4 italic drop-shadow-sm">Ingredients Distributors, B2B Brokers</p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="relative">
-                  <p className="text-white/50 font-bold text-xs mb-2 uppercase tracking-widest">Critical Pain Point</p>
-                  <p className="text-white text-lg md:text-xl leading-relaxed drop-shadow-lg font-medium">
-                    Sourcing from fragmented middlemen results in inventory unpredictability, quality variance, and margin erosion.
-                  </p>
-                </div>
-                <div className="relative pt-4 border-t border-white/10">
-                  <p className="text-brand-orange font-bold text-xs mb-2 uppercase tracking-widest">The Opportunity</p>
-                  <p className="text-white text-lg md:text-xl leading-relaxed drop-shadow-lg font-medium">
-                    Direct institutional supply from Churchwin&apos;s primary processing plant ensures industrial consistency and maximum margin capture.
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* WHOLESALERS */}
+          <motion.div
+            variants={fadeUp}
+            className="p-12 rounded-[40px] bg-white border-b-8 border-brand-navy shadow-2xl relative overflow-hidden group"
+          >
+             <div className="absolute top-0 right-0 p-8 text-brand-navy/5 text-8xl font-display font-black group-hover:text-brand-navy/10 transition-colors">02</div>
+             <h3 className="text-3xl font-display font-black uppercase mb-8 tracking-tighter text-brand-navy">Wholesalers</h3>
+             <ul className="space-y-6 font-primary text-base text-brand-navy/70">
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-navy" /> Bulk Volume Fulfillment</li>
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-navy" /> Price Consistency</li>
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-navy" /> Industrial Procurement Grade</li>
+             </ul>
+             <div className="mt-10 p-4 bg-brand-navy/5 rounded-xl border border-brand-navy/10">
+                <p className="text-[10px] font-black uppercase text-brand-navy/50 tracking-widest mb-1">Target Outcome</p>
+                <p className="text-xs text-brand-navy/60">Reliable supply contracts for high-volume manufacturing.</p>
+             </div>
           </motion.div>
-
         </div>
       </motion.div>
     </div>
