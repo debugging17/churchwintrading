@@ -6,7 +6,6 @@ import { useSlideEnter } from "../motion/useSlideEnter";
 import { Beaker, Pill, Grape, Coffee, Leaf, ShoppingBag, X, ChevronRight, Target, Zap } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Portal } from "../components/Portal";
 
 const sectors = [
   { 
@@ -239,16 +238,15 @@ export function Slide06Segmentation() {
       </motion.div>
 
       {/* --- SECTOR MODAL --- */}
-      <Portal>
-        <AnimatePresence>
-          {selectedIdx !== null && (
-            <div className="fixed inset-0 z-[1000] flex items-center justify-center p-6 md:p-12">
-              {/* Backdrop */}
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={closeModal}
+      <AnimatePresence>
+        {selectedIdx !== null && (
+          <div className="fixed inset-0 z-[2000] flex items-center justify-center p-6 md:p-12 overflow-hidden pointer-events-auto">
+            {/* Backdrop */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeModal}
                 className="absolute inset-0 bg-brand-navy/60 backdrop-blur-xl"
               />
 
@@ -382,10 +380,9 @@ export function Slide06Segmentation() {
                   </div>
                 </div>
               </motion.div>
-            </div>
-          )}
-        </AnimatePresence>
-      </Portal>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
