@@ -41,17 +41,19 @@ export function FooterStack({ total, currentOverride }: FooterStackProps) {
   const formatNum = (num: number) => num.toString().padStart(2, "0");
 
   // Identify slides with light backgrounds (White/Cream) to switch footer color to navy
-  const lightSlides = [5, 6, 7, 9, 10, 11, 15]; 
+  const lightSlides = [6, 7, 10, 11, 12, 15, 16, 17, 19, 20, 21, 23]; 
   const isLight = lightSlides.includes(current - 1);
   const textColor = isLight ? "text-brand-navy" : "text-brand-white";
-  const labelColor = isLight ? "text-brand-navy/40" : "text-brand-white/40";
-  const lineColor = isLight ? "bg-brand-navy/10" : "bg-brand-white/20";
+  const labelColor = isLight ? "text-brand-navy/70" : "text-brand-white/40";
+  const lineColor = isLight ? "bg-brand-navy/20" : "bg-brand-white/20";
   const progressBg = isLight ? "bg-brand-navy/5" : "bg-brand-white/10";
 
   return (
     <div className="absolute bottom-0 left-0 w-full h-20 z-[100] pointer-events-none">
-      {/* Global Contrast Vignette - ensures white text is visible on light slides */}
-      <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-brand-navy/40 via-brand-navy/10 to-transparent z-[-1] pointer-events-none" />
+      {/* Global Contrast Vignette - ensures white text is visible on dark slides */}
+      {!isLight && (
+        <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-brand-navy/40 via-brand-navy/10 to-transparent z-[-1] pointer-events-none" />
+      )}
       
       {/* --- Main Footer Layer --- */}
       <div className="flex items-end justify-between w-full h-full px-12 md:px-20 pb-6 md:pb-8">
