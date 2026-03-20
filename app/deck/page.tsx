@@ -99,7 +99,6 @@ function DeckContent() {
         keyboard={{ enabled: true, onlyInViewport: true }}
         speed={800}
         initialSlide={initialSlide}
-        simulateTouch={false}
         className="h-full w-full"
       >
         <FooterStack total={totalSlides} />
