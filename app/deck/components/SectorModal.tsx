@@ -145,10 +145,13 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                     <div className="p-8 md:p-10 bg-white rounded-[2rem] border border-brand-navy/5 shadow-sm">
                       <h5 className="font-display text-2xl md:text-3xl font-black text-brand-navy mb-6 tracking-tight">Strategic Fit</h5>
                       <p className="text-brand-navy/60 text-sm md:text-base leading-relaxed mb-10">
-                        By targeting the <span className="font-bold text-brand-navy border-b-2 border-brand-orange/30 italic">{sector.subSegments[activeTab].title}</span> segment, Churchwin leverage its 11 women-led cooperatives to deliver high-compliance, traceable ingredients.
+                        {sector.strategicFit}{" "}
+                        <span className="font-bold text-brand-navy border-b-2 border-brand-orange/30 italic">
+                          {sector.subSegments[activeTab].details}
+                        </span>
                       </p>
                       <ul className="space-y-4">
-                        {["ESG Compliance Included", "12-Month Price Stability", "Custom formulation Support"].map((item, i) => (
+                        {(sector.features || []).map((item, i) => (
                            <li key={i} className="flex items-center gap-4 text-xs md:text-sm font-bold text-brand-navy">
                               <div className="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_8px_rgba(244,121,32,0.6)]" />
                               {item}
