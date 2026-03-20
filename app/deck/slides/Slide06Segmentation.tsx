@@ -246,7 +246,7 @@ export function Slide06Segmentation() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={closeModal}
-                className="absolute inset-0 bg-brand-navy/80 backdrop-blur-xl"
+                className="absolute inset-0 bg-brand-navy/60 backdrop-blur-xl"
               />
 
               {/* Modal Container */}
@@ -291,7 +291,7 @@ export function Slide06Segmentation() {
                       {sectors[selectedIdx].title}
                     </h3>
                     
-                    <div className="flex gap-2 border-b border-brand-navy/10 pb-px">
+                    <div className="flex gap-4 border-b border-brand-navy/10 pb-3">
                       {sectors[selectedIdx].subSegments.map((sub, idx) => (
                         <button
                           key={idx}
@@ -300,7 +300,7 @@ export function Slide06Segmentation() {
                         >
                           {sub.title}
                           {activeTab === idx && (
-                            <motion.div layoutId="tab-underline" className="absolute bottom-0 left-0 right-0 h-1 bg-brand-orange rounded-t-full" />
+                            <motion.div layoutId="tab-underline" className="absolute bottom-[-3px] left-0 right-0 h-[3px] bg-brand-orange rounded-full shadow-[0_2px_10px_rgba(244,121,32,0.4)]" />
                           )}
                         </button>
                       ))}
@@ -326,7 +326,7 @@ export function Slide06Segmentation() {
                             className="object-cover"
                           />
                           {/* Content Overlay */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/20 to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 via-brand-navy/10 to-transparent" />
                           
                           <div className="absolute bottom-0 left-0 w-full p-8 flex flex-col gap-4">
                              <div className="flex flex-col md:flex-row gap-6">
