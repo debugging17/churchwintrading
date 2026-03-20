@@ -22,7 +22,7 @@ export function Slide04MissingMiddle() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(4rem+var(--header-height,0px))] px-10 md:px-20">
+    <div className="w-full h-full flex flex-col items-center justify-start relative overflow-hidden bg-brand-navy pb-[calc(var(--footer-height)+4rem)] pt-[calc(3rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] px-10 md:px-20 overflow-y-auto">
       
       {/* === LAYER 0: Background Context === */}
       <div className="absolute inset-0 z-0 opacity-10">
@@ -40,7 +40,7 @@ export function Slide04MissingMiddle() {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-[90rem] mx-auto flex flex-col z-10 px-10 md:px-20"
+        className="w-full max-w-[90rem] mx-auto flex flex-col z-10 px-10 md:px-20 my-auto"
       >
         {/* Title Area */}
         <motion.div variants={fadeUp} className="mb-8 text-left">

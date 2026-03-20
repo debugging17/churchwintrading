@@ -188,8 +188,8 @@ export function Slide06Segmentation() {
   // 4. proposal-strategist: Verbatim table text from "Judith Brigue Addendum".
 
   return (
-    <div className="w-full h-full flex flex-col py-10 md:py-12 px-10 md:px-24 bg-brand-white pb-[var(--footer-height)]">
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto">
+    <div className="w-full h-full flex flex-col py-10 md:py-12 px-10 md:px-24 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(4rem+var(--header-height,0px))] overflow-y-auto">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto z-10">
         
         <motion.div variants={fadeUp} className="mb-8 text-center">
           <h2 className="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-3">
@@ -204,7 +204,10 @@ export function Slide06Segmentation() {
               key={idx}
               variants={fadeUp}
               onClick={() => handleCardClick(idx)}
-              className="bg-brand-navy/5 border border-brand-navy/10 p-6 rounded-xl group hover:bg-brand-navy/10 transition-colors duration-300 relative overflow-hidden shadow-sm cursor-pointer"
+              onKeyDown={(e) => { if(e.key === 'Enter' || e.key === ' ') handleCardClick(idx); }}
+              role="button"
+              tabIndex={0}
+              className="bg-brand-navy/5 border border-brand-navy/10 p-6 rounded-xl group hover:bg-brand-navy/10 transition-colors duration-300 relative overflow-hidden shadow-sm cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-brand-orange/50 z-20"
             >
               {/* Hover effect glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/0 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

@@ -27,7 +27,7 @@ export function Slide03MacroMoment() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center p-[2rem] md:p-[4rem] pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(4rem+var(--header-height,0px))] relative overflow-hidden bg-brand-navy">
+    <div className="w-full h-full flex flex-col items-center justify-start p-[2rem] md:p-[4rem] pb-[calc(var(--footer-height)+4rem)] pt-[calc(3rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] relative overflow-hidden bg-brand-navy overflow-y-auto">
       
       {/* === LAYER 0: Background Cinematic === */}
       <div className="absolute inset-0 z-0">
@@ -47,7 +47,7 @@ export function Slide03MacroMoment() {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-[80rem] mx-auto flex flex-col items-center z-10"
+        className="w-full max-w-[80rem] mx-auto flex flex-col items-center z-10 my-auto"
       >
         {/* Provocative Headline Overlay */}
         <motion.div variants={fadeUp} className="text-center mb-8 max-w-[50rem]">
