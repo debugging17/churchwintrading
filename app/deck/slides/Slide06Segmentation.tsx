@@ -172,7 +172,9 @@ export function Slide06Segmentation() {
   const [activeTab, setActiveTab] = React.useState(0);
 
   const handleCardClick = (idx: number) => {
+    console.log("Card Clicked:", sectors[idx].title);
     setSelectedIdx(idx);
+    setActiveTab(0);
   };
 
   const closeModal = () => {
@@ -199,13 +201,15 @@ export function Slide06Segmentation() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {sectors.map((sector, idx) => (
-            <motion.button 
+            <button 
               key={idx}
-              variants={fadeUp}
-              onClick={() => handleCardClick(idx)}
+              onClick={(e) => { 
+                e.stopPropagation(); 
+                handleCardClick(idx); 
+              }}
               onKeyDown={(e) => { if(e.key === 'Enter' || e.key === ' ') handleCardClick(idx); }}
               type="button"
-              className="w-full text-left bg-brand-navy/5 border border-brand-navy/10 p-6 rounded-xl group hover:bg-brand-navy/10 transition-colors duration-300 relative overflow-hidden shadow-sm cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-brand-orange/50 z-50 pointer-events-auto"
+              className="w-full text-left bg-brand-navy/5 border border-brand-navy/10 p-6 rounded-xl group hover:bg-brand-navy/10 transition-colors duration-300 relative overflow-hidden shadow-sm cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-brand-orange/50 z-50 pointer-events-auto no-swiping"
             >
               {/* Hover effect glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/0 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -231,7 +235,7 @@ export function Slide06Segmentation() {
                   <span className="text-xs font-primary text-brand-navy/80 font-medium">{sector.target}</span>
                 </div>
               </div>
-            </motion.button>
+            </button>
           ))}
         </div>
       </motion.div>
@@ -239,7 +243,7 @@ export function Slide06Segmentation() {
       {/* --- SECTOR MODAL --- */}
       <AnimatePresence>
         {selectedIdx !== null && (
-          <div className="fixed inset-0 z-[2000] flex items-center justify-center p-6 md:p-12 overflow-hidden pointer-events-auto">
+          <div key="sector-modal-overlay" className="fixed inset-0 z-[5000] flex items-center justify-center p-6 md:p-12 overflow-hidden pointer-events-auto">
             {/* Backdrop */}
             <motion.div 
               initial={{ opacity: 0 }}
