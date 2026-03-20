@@ -32,7 +32,7 @@ export function Slide12ABulkGallery() {
             </motion.h2>
             <motion.p variants={fadeUp} className="text-xl md:text-2xl text-brand-white/60 font-primary font-light leading-relaxed">
               Institutional infrastructure driving global wholesale supply. 
-              We bridge the "missing middle" with industrial-grade capacity.
+              We bridge the &ldquo;missing middle&rdquo; with industrial-grade capacity.
             </motion.p>
           </div>
           
