@@ -48,7 +48,7 @@ export function Slide13CompetitiveReality() {
           className="mt-16 p-8 bg-brand-orange/10 border border-brand-orange/20 rounded-3xl text-center"
         >
            <p className="text-brand-white font-display font-black text-xl uppercase tracking-widest">
-              "We don't just trade. <span className="text-brand-orange">We institutionalize the origin.</span>"
+              &quot;We don&apos;t just trade. <span className="text-brand-orange">We institutionalize the origin.</span>&quot;
            </p>
         </motion.div>
       </motion.div>

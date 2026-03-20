@@ -71,7 +71,7 @@ export function Slide06Segmentation({ onSectorClick }: Slide06SegmentationProps)
           className="py-6 border-y border-white/5 w-full max-w-2xl"
         >
           <p className="text-brand-white/60 text-lg md:text-xl font-primary italic">
-            "Same supply chain. <span className="text-brand-orange font-bold not-italic">Multiple revenue paths.</span>"
+            &quot;Same supply chain. <span className="text-brand-orange font-bold not-italic">Multiple revenue paths.</span>&quot;
           </p>
         </motion.div>
       </motion.div>

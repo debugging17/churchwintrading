@@ -47,7 +47,7 @@ export function Slide21Impact() {
           className="mt-16 p-8 bg-brand-orange/10 border border-brand-orange/20 rounded-3xl"
         >
            <p className="text-brand-white font-display font-black text-xl uppercase tracking-widest">
-              "We don't just empower. <span className="text-brand-orange italic">We de-risk the supply chain.</span>"
+              &quot;We don&apos;t just empower. <span className="text-brand-orange italic">We de-risk the supply chain.</span>&quot;
            </p>
         </motion.div>
       </motion.div>

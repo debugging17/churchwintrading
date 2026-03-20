@@ -63,7 +63,7 @@ export function Slide03MacroMoment() {
             variants={fadeUp}
             className="text-base md:text-lg text-brand-navy/70 leading-relaxed font-primary mb-10 max-w-lg"
           >
-            In 1960, West African GDP trajectories mirrored those of East Asian tigers like South Korea. Over six decades, the gap didn't just grow—it exploded. This widening chasm was not caused by a lack of potential, but a failure to institutionalize the production engine.
+            In 1960, West African GDP trajectories mirrored those of East Asian tigers like South Korea. Over six decades, the gap didn&apos;t just grow—it exploded. This widening chasm was not caused by a lack of potential, but a failure to institutionalize the production engine.
           </motion.p>
 
           <motion.div

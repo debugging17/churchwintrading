@@ -84,7 +84,7 @@ export function Slide02Crossroads() {
             variants={fadeUp}
             className="mt-14 p-6 bg-brand-orange/[0.03] border-l-4 border-brand-orange/50 italic text-brand-white/70 text-lg md:text-xl font-medium max-w-lg leading-relaxed shadow-sm rounded-r-xl"
           >
-            "This is not a resource problem. <span className="text-brand-white font-black not-italic">It is a systems problem.</span>"
+            &quot;This is not a resource problem. <span className="text-brand-white font-black not-italic">It is a systems problem.</span>&quot;
           </motion.div>
         </motion.div>
       </div>

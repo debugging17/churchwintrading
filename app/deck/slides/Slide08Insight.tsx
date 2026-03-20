@@ -59,7 +59,7 @@ export function Slide08Insight() {
           className="border-t border-white/10 pt-10"
         >
           <p className="text-brand-white/80 text-xl font-primary italic">
-            "We build the engine that connects <span className="text-brand-orange font-bold not-italic">unstructured supply</span> to <span className="text-brand-orange font-bold not-italic">predictable demand</span>."
+            &quot;We build the engine that connects <span className="text-brand-orange font-bold not-italic">unstructured supply</span> to <span className="text-brand-orange font-bold not-italic">predictable demand</span>.&quot;
           </p>
         </motion.div>
       </motion.div>
