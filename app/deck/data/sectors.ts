@@ -21,14 +21,14 @@ export const sectors = [
         market: "Professional Salons", 
         solution: "Custom Neem Oil infusions for scalp health and follicle strength.",
         details: "Moving beyond generic oils to standardized Neem extracts that guarantee consistent antimicrobial properties for salon-grade treatments.",
-        image: "/images/visual_supremacy/compliance_lab.png" 
+        image: "/images/visual_supremacy/cosmetic_rd_lab.png" 
       },
       { 
         title: "Luxury Body Oils", 
         market: "Spa Product Lines", 
         solution: "Cold-pressed Baobab oils for rapid absorption and moisture retention.",
         details: "Optimizing absorption rates through molecular-level refining that retains Vitamin E without the greasy residue typical of unrefined oils.",
-        image: "/images/visual_supremacy/shea_factory.png" 
+        image: "/images/visual_supremacy/cosmetic_rd_lab.png" 
       }
     ]
   },
@@ -59,7 +59,7 @@ export const sectors = [
         market: "Contract Manufacturers", 
         solution: "Fine-milled botanical powders optimized for automated encapsulation.",
         details: "Engineered for zero-clog performance in high-speed rotary capsule machines, reducing manufacturing downtime by up to 15%.",
-        image: "/images/visual_supremacy/shea_factory.png" 
+        image: "/images/visual_supremacy/compliance_lab.png" 
       }
     ]
   },
@@ -83,7 +83,7 @@ export const sectors = [
         market: "Sports Nutrition", 
         solution: "Whole grain inclusions and natural African honey binders.",
         details: "Replacing corn-syrup binders with low-glycemic African honey, providing a natural sustain-release energy profile for endurance athletes.",
-        image: "/images/visual_supremacy/shea_factory.png" 
+        image: "/images/visual_supremacy/industrial_wholesaler.png" 
       },
       { 
         title: "Fortified Cereals", 
