@@ -50,10 +50,10 @@ export function Slide03MacroMoment() {
         className="w-full max-w-[80rem] mx-auto flex flex-col items-center z-10 my-auto"
       >
         {/* Provocative Headline Overlay */}
-        <motion.div variants={fadeUp} className="text-center mb-8 max-w-[50rem]">
+        <motion.div variants={fadeUp} className="text-center mb-4 max-w-[50rem]">
           <motion.h2
             variants={fadeUp}
-            className="text-4xl md:text-5xl xl:text-6xl font-display font-black text-brand-navy leading-[1.1] mb-8 tracking-tighter"
+            className="text-3xl md:text-5xl xl:text-6xl font-display font-black text-brand-navy leading-[1.1] mb-6 tracking-tighter"
           >
             Africa had the lead. <br />
             <span className="text-brand-orange/90 italic drop-shadow-sm">Then the divergence began.</span>
@@ -79,10 +79,10 @@ export function Slide03MacroMoment() {
         {/* Data Visualization Card */}
         <motion.div 
           variants={fadeUp}
-          className="w-full aspect-video md:aspect-auto md:h-[35vh] bg-brand-white/95 backdrop-blur-2xl rounded-[1.5rem] p-6 md:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.5)] border border-white/20 relative"
+          className="w-full flex-grow min-h-[40vh] md:h-[45vh] bg-brand-white/95 backdrop-blur-2xl rounded-[1.5rem] p-6 md:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.5)] border border-white/20 relative"
         >
-          <div className="absolute top-[2rem] left-[3rem]">
-             <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-navy/30 uppercase">GDP PER CAPITA (USD)</p>
+          <div className="absolute top-[1.5rem] left-[1.5rem] md:left-[2.5rem] z-30">
+             <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-navy/40 uppercase">GDP PER CAPITA (USD)</p>
           </div>
 
           <ResponsiveContainer width="100%" height="100%">
@@ -137,13 +137,13 @@ export function Slide03MacroMoment() {
 
           {/* Pivot Callout Overlay */}
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 2 }}
-            className="absolute top-1/2 right-[2rem] md:right-[4rem] -translate-y-[25%] w-[14rem] md:w-[18rem] p-[1.5rem] bg-brand-navy shadow-3xl rounded-[1rem] border-l-[0.4rem] border-brand-orange z-20"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 2, type: "spring", stiffness: 100 }}
+            className="absolute top-[3.5rem] left-[1.5rem] md:left-[2.5rem] w-[14rem] md:w-[18rem] p-[1.5rem] bg-brand-navy/95 backdrop-blur-xl shadow-2xl rounded-[1rem] border border-brand-orange/30 border-l-[0.4rem] border-l-brand-orange z-20"
           >
             <h4 className="font-display font-black text-brand-orange text-[1.125rem] mb-[0.5rem] uppercase tracking-widest">The Divergence</h4>
-            <p className="font-primary text-brand-white/80 text-[0.875rem] leading-relaxed">
+            <p className="font-primary text-brand-white/90 text-[0.875rem] leading-relaxed">
               South Korea leveraged <span className="font-bold text-white italic underline">institutional scale</span> by 1980. West Africa remained fragmented. 
               <br /><br />
               <span className="text-brand-orange font-bold uppercase text-[0.625rem]">Churchwin Mandate:</span>
