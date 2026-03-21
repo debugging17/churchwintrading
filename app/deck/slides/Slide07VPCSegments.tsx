@@ -26,11 +26,30 @@ export function Slide07VPCSegments({ isActive }: { isActive: boolean }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           
           {/* Segment A: The Premium Retailer */}
-          <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-brand-navy/10 min-h-[500px] flex flex-col">
-            <Image src="/images/visual_supremacy/retail_boutique.png" alt="Premium Retailer" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/40 to-transparent" />
+          <motion.div 
+            variants={fadeUp} 
+            className="relative group rounded-3xl overflow-hidden shadow-2xl border border-brand-navy/10 min-h-[500px] flex flex-col bg-brand-navy/5"
+          >
+            <motion.div
+              initial="hidden"
+              animate={animState}
+              variants={{
+                hidden: { opacity: 0, scale: 1.05 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 1.2, ease: "easeOut" } }
+              }}
+              className="absolute inset-0"
+            >
+              <Image 
+                src="/images/visual_supremacy/retail_boutique.png" 
+                alt="Premium Retailer" 
+                fill 
+                className="object-cover transition-transform duration-1000 group-hover:scale-110" 
+                priority
+              />
+            </motion.div>
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/40 to-transparent z-[1]" />
             
-            <div className="absolute inset-0 p-10 flex flex-col justify-end">
+            <div className="absolute inset-0 p-10 flex flex-col justify-end z-[2]">
               <div className="mb-6">
                 <div className="w-14 h-14 rounded-2xl bg-brand-orange/20 backdrop-blur-xl border border-brand-orange/30 flex items-center justify-center mb-4">
                   <ShoppingBag className="w-7 h-7 text-brand-orange" />
@@ -59,11 +78,30 @@ export function Slide07VPCSegments({ isActive }: { isActive: boolean }) {
           </motion.div>
 
           {/* Segment B: The Global Wholesaler */}
-          <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-brand-navy/10 min-h-[500px] flex flex-col">
-            <Image src="/images/visual_supremacy/industrial_wholesaler.png" alt="Global Wholesaler" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/30 to-transparent" />
+          <motion.div 
+            variants={fadeUp} 
+            className="relative group rounded-3xl overflow-hidden shadow-2xl border border-brand-navy/10 min-h-[500px] flex flex-col bg-brand-navy/5"
+          >
+            <motion.div
+              initial="hidden"
+              animate={animState}
+              variants={{
+                hidden: { opacity: 0, scale: 1.05 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 1.2, ease: "easeOut", delay: 0.1 } }
+              }}
+              className="absolute inset-0"
+            >
+              <Image 
+                src="/images/visual_supremacy/industrial_wholesaler.png" 
+                alt="Global Wholesaler" 
+                fill 
+                className="object-cover transition-transform duration-1000 group-hover:scale-110" 
+                priority
+              />
+            </motion.div>
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/30 to-transparent z-[1]" />
             
-            <div className="absolute inset-0 p-10 flex flex-col justify-end">
+            <div className="absolute inset-0 p-10 flex flex-col justify-end z-[2]">
               <div className="mb-6">
                 <div className="w-14 h-14 rounded-2xl bg-brand-navy/20 backdrop-blur-xl border border-brand-navy/30 flex items-center justify-center mb-4">
                   <Boxes className="w-7 h-7 text-brand-orange" />
