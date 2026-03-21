@@ -48,8 +48,8 @@ export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean 
         className="w-full max-w-7xl mx-auto my-auto flex flex-col z-10"
       >
         {/* HEADING */}
-        <motion.div variants={fadeUp} className="mb-16 text-center">
-          <h2 className="text-4xl md:text-6xl font-display font-black text-brand-navy leading-tight mb-4 tracking-tighter uppercase">
+        <motion.div variants={fadeUp} className="mb-8 text-center">
+          <h2 className="text-4xl md:text-6xl font-display font-black text-brand-navy leading-tight mb-2 tracking-tighter uppercase">
             Institutional <span className="text-brand-orange">Readiness.</span>
           </h2>
           <p className="text-brand-navy/70 text-lg font-primary max-w-2xl mx-auto italic">
@@ -68,10 +68,10 @@ export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean 
               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors">
                 <pillar.icon className="w-7 h-7 text-brand-orange group-hover:text-white" />
               </div>
-              <h3 className="text-xl font-display font-black text-brand-navy mb-6 tracking-tight group-hover:text-brand-orange transition-colors uppercase">
+              <h3 className="text-xl font-display font-black text-brand-navy mb-4 tracking-tight group-hover:text-brand-orange transition-colors uppercase">
                 {pillar.title}
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {pillar.points.map((pt, j) => (
                   <li key={j} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
@@ -86,7 +86,7 @@ export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean 
         {/* BOTTOM MOAT STATEMENT — Principle 11: Mimicry (Consistency) */}
         <motion.div 
           variants={fadeUp}
-          className="mt-20 pt-12 border-t border-brand-navy/10 flex flex-col lg:flex-row items-center justify-between gap-12"
+          className="mt-10 pt-8 border-t border-brand-navy/10 flex flex-col lg:flex-row items-center justify-between gap-12"
         >
           <div className="max-w-2xl text-center lg:text-left">
              <p className="text-brand-navy font-display font-black text-xl md:text-3xl lg:text-4xl uppercase tracking-tighter leading-[0.9]">
