@@ -72,21 +72,13 @@ export function Slide08Insight() {
 
            {/* African Supply Card */}
            <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px] flex flex-col items-center justify-center p-8 bg-brand-navy">
-             <video 
-               autoPlay 
-               loop 
-               muted 
-               playsInline 
-               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-             >
-               <source src="/videos/lv_0_20260321112550.gif" type="video/mp4" />
-             </video>
              <Image 
-               src="/videos/lv_0_20260321112550.gif"
+               src="/images/lv_0_20260321112550.gif"
                alt="African Supply"
                fill
                className="object-cover absolute inset-0 transition-transform duration-1000 group-hover:scale-105"
                unoptimized
+               priority
              />
              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent pointer-events-none" />
              
