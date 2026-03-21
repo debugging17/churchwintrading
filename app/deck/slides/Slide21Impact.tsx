@@ -31,12 +31,12 @@ export function Slide21Impact({ isActive }: { isActive: boolean }) {
             <motion.div 
               key={i}
               variants={fadeUp}
-              className="p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[40px] shadow-2xl group hover:border-brand-orange transition-all"
+              className="p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[40px] shadow-2xl group hover:border-brand-orange transition-all text-left"
             >
-               <div className="w-16 h-16 rounded-3xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center mb-8 mx-auto group-hover:bg-brand-orange transition-colors">
+               <div className="w-16 h-16 rounded-3xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center mb-8 group-hover:bg-brand-orange transition-colors">
                   <item.icon className="w-8 h-8 text-brand-orange group-hover:text-white" />
                </div>
-               <h3 className="text-2xl font-display font-black text-brand-white mb-4 uppercase">{item.title}</h3>
+               <h3 className="text-2xl font-display font-black text-brand-white mb-4 uppercase tracking-tight">{item.title}</h3>
                <p className="text-sm text-brand-white/50 font-primary leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
