@@ -97,11 +97,18 @@ export function Slide08Insight({ isActive }: { isActive: boolean }) {
 
         <motion.div 
           variants={fadeUp}
-          className="border-t border-white/10 pt-10 w-full"
+          className="border-t border-white/10 pt-10 w-full flex flex-col md:flex-row items-center justify-between gap-8"
         >
-          <p className="text-brand-white/80 text-xl font-primary italic">
+          <p className="text-brand-white/80 text-xl font-primary italic max-w-2xl text-left">
             &quot;We build the engine that connects <span className="text-brand-orange font-bold not-italic">unstructured supply</span> to <span className="text-brand-orange font-bold not-italic">predictable demand</span>.&quot;
           </p>
+          <div className="flex flex-col items-start bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-md">
+             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-orange mb-2">The Churchwin Edge</span>
+             <p className="text-xs text-white/60 font-medium leading-relaxed">
+               <span className="text-white font-bold">On-Demand Freshness:</span> Solar-dried at peak potency vs years-old aged inventory of global competitors. <br />
+               <span className="text-white font-bold">Direct Origin Pricing:</span> Removing 3 layers of trade middlemen.
+             </p>
+          </div>
         </motion.div>
       </motion.div>
     </div>
