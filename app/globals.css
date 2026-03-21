@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Native REM Scaling: 1rem = approx 1% of viewport width */
-  /* Reduced max size to 22px to prevent oversized headings on mid-sized screens */
-  font-size: clamp(14px, 1vw, 21px);
+  /* Native REM Scaling: Balanced across width & height to prevent distortion */
+  font-size: clamp(14px, 0.8vw + 0.4vh, 20px);
   
   --font-display: var(--font-outfit), 'Poppins', system-ui, sans-serif;
   --font-primary: var(--font-inter), 'Inter', system-ui, sans-serif;

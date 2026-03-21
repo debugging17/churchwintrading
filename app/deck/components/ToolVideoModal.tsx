@@ -64,7 +64,7 @@ export const ToolVideoModal: React.FC<ToolVideoModalProps> = ({
               {/* Top Bar with Logo */}
               <div className="w-full h-24 flex items-center justify-center relative border-b border-white/5 bg-white/5 backdrop-blur-md">
                  <div className="flex flex-col items-center gap-1">
-                   <div className="relative w-32 h-8">
+                   <div className="relative w-48 h-10">
                      <Image 
                        src={logoSrc} 
                        alt={toolName} 
