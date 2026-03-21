@@ -25,84 +25,77 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
       {/* Cinematic architectural overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#012787 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
       
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-[95rem] mx-auto my-auto flex flex-col lg:flex-row gap-12 lg:gap-24 z-10">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-[90rem] mx-auto my-auto flex flex-col gap-8 z-10">
         
-        {/* Left Side: Pitch */}
-        <div className="w-full lg:w-[40%] flex flex-col justify-center">
-          <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl lg:text-7xl font-extrabold text-brand-navy leading-none mb-6 uppercase tracking-tighter">
-            The B2B <br />
-            <span className="text-brand-orange italic font-light">Demand Engine.</span>
-          </motion.h2>
-          
-          <motion.p variants={fadeUp} className="text-xl md:text-2xl text-brand-navy/70 font-primary border-l-2 border-brand-navy/20 pl-8 mb-12 italic">
-            Converting digital visibility into locked institutional revenue. 
-          </motion.p>
-
-          <div className="grid grid-cols-1 gap-6">
-            {[
-              { title: "CRM Visibility", desc: "Real-time tracking of buyer pipeline, from sample request to L/C opening.", icon: Target },
-              { title: "Traceability Protocol", desc: "Digital verification of nut origin, worker fair pay, and refining timestamps.", icon: "🔗" },
-              { title: "Compliance Vault", desc: "Instant digital access to COA, MSDS, and Organic certificates for every batch.", icon: "📂" }
-            ].map((item, idx) => (
-              <motion.div 
-                key={idx} 
-                variants={fadeUp}
-                className="p-8 bg-white border border-brand-navy/10 rounded-[2rem] shadow-sm hover:border-brand-orange hover:shadow-xl transition-all group"
-              >
-                <div className="flex items-center gap-6">
-                   <div className="w-12 h-12 rounded-2xl bg-brand-navy/5 flex items-center justify-center text-brand-orange text-xl">
-                      {typeof item.icon === 'string' ? item.icon : <item.icon className="w-6 h-6" />}
-                   </div>
-                   <div>
-                      <h4 className="font-display text-lg font-bold text-brand-navy group-hover:text-brand-orange transition-colors">
-                        {item.title}
-                      </h4>
-                      <p className="text-sm font-primary text-brand-navy/60 mt-1">
-                        {item.desc}
-                      </p>
-                   </div>
-                </div>
-              </motion.div>
-            ))}
+        {/* Top: Pitch */}
+        <div className="w-full flex flex-col md:flex-row items-end justify-between gap-8 mb-4">
+          <div className="max-w-2xl">
+            <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-navy leading-none mb-4 uppercase tracking-tighter">
+              The B2B <br />
+              <span className="text-brand-orange italic font-light">Demand Engine.</span>
+            </motion.h2>
+            
+            <motion.p variants={fadeUp} className="text-lg md:text-xl text-brand-navy/70 font-primary border-l-2 border-brand-navy/20 pl-6 italic mb-0">
+              Converting digital visibility into locked institutional revenue. 
+            </motion.p>
           </div>
+
+          <motion.div variants={fadeUp} className="flex gap-4">
+            {[
+              { title: "CRM Visibility", icon: Target },
+              { title: "Traceability Protocol", icon: "🔗" },
+              { title: "Compliance Vault", icon: "📂" }
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-brand-navy/10 shadow-sm">
+                 <span className="text-brand-orange text-xs">{typeof item.icon === 'string' ? item.icon : <item.icon className="w-3 h-4" />}</span>
+                 <span className="text-[10px] font-black uppercase tracking-widest text-brand-navy">{item.title}</span>
+              </div>
+            ))}
+          </motion.div>
         </div>
 
-        {/* Right Side: The Tool Stack Visualization */}
-        <div className="w-full lg:w-[60%] flex flex-col justify-center relative min-h-[600px]">
-           <DigitalStackGrid 
-             isActive={isActive} 
-             onToolSelect={(id) => {
-               const tool = pipeline.find(p => p.id === id);
-               if (tool) setSelectedTool({ name: tool.name, action: tool.action, logo: tool.image });
-             }} 
-           />
+        {/* Middle: The Tool Stack Visualization */}
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+           <div className="lg:col-span-8">
+              <DigitalStackGrid 
+                isActive={isActive} 
+                onToolSelect={(id) => {
+                  const tool = pipeline.find(p => p.id === id);
+                  if (tool) setSelectedTool({ name: tool.name, action: tool.action, logo: tool.image });
+                }} 
+              />
+           </div>
 
-           <motion.div variants={fadeUp} className="mt-12 p-8 bg-brand-navy text-white rounded-[2.5rem] shadow-2xl relative overflow-hidden border-b-8 border-brand-orange">
-              <div className="absolute top-0 right-0 p-8 opacity-10">
-                 <Target className="w-24 h-24 text-brand-orange" />
-              </div>
-              <p className="text-xs uppercase tracking-[0.5em] text-brand-orange font-black mb-4">Strategic Outcome</p>
-              <h3 className="text-2xl md:text-3xl font-display font-bold mb-8 tracking-tight leading-tight max-w-2xl">100% Digital Traceability from Outreach to Agreement.</h3>
-              <div className="flex items-center gap-8 md:gap-12">
-                 <div>
-                    <p className="text-white/40 text-[10px] uppercase font-black mb-2 tracking-widest">Qualified Leads</p>
-                    <p className="text-3xl md:text-4xl font-display font-black text-brand-orange">12/mo</p>
+           <div className="lg:col-span-4 h-full">
+              <motion.div variants={fadeUp} className="h-full p-8 bg-brand-navy text-white rounded-[2.5rem] shadow-2xl relative overflow-hidden border-b-8 border-brand-orange flex flex-col justify-center">
+                 <div className="absolute top-0 right-0 p-8 opacity-10">
+                    <Target className="w-20 h-20 text-brand-orange" />
                  </div>
-                 <div className="w-[1px] h-12 bg-white/10" />
-                 <div>
-                    <p className="text-white/40 text-[10px] uppercase font-black mb-2 tracking-widest">Conversion</p>
-                    <p className="text-3xl md:text-4xl font-display font-black text-brand-orange">22%</p>
+                 <p className="text-[10px] uppercase tracking-[0.5em] text-brand-orange font-black mb-4">Strategic Outcome</p>
+                 <h3 className="text-xl md:text-2xl font-display font-bold mb-6 tracking-tight leading-tight">100% Digital Traceability from Outreach to Agreement.</h3>
+                 <div className="space-y-6">
+                    <div className="flex items-center gap-6">
+                       <div>
+                          <p className="text-white/40 text-[8px] uppercase font-black mb-1 tracking-widest">Qualified Leads</p>
+                          <p className="text-2xl md:text-3xl font-display font-black text-brand-orange">12/mo</p>
+                       </div>
+                       <div className="w-[1px] h-8 bg-white/10" />
+                       <div>
+                          <p className="text-white/40 text-[8px] uppercase font-black mb-1 tracking-widest">Conversion</p>
+                          <p className="text-2xl md:text-3xl font-display font-black text-brand-orange">22%</p>
+                       </div>
+                    </div>
+                    <div className="pt-6 border-t border-white/10">
+                       <p className="text-white/40 text-[8px] uppercase font-black mb-1 tracking-widest">Target CAC</p>
+                       <p className="text-2xl md:text-3xl font-display font-black text-brand-orange">$420</p>
+                    </div>
                  </div>
-                 <div className="w-[1px] h-12 bg-white/10" />
-                 <div>
-                    <p className="text-white/40 text-[10px] uppercase font-black mb-2 tracking-widest">Target CAC</p>
-                    <p className="text-3xl md:text-4xl font-display font-black text-brand-orange">$420</p>
-                 </div>
-              </div>
-           </motion.div>
+              </motion.div>
+           </div>
         </div>
 
       </motion.div>
+
 
       {/* Video Popover */}
       <ToolVideoModal 

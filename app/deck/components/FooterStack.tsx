@@ -41,7 +41,7 @@ export function FooterStack({ total, currentOverride }: FooterStackProps) {
   const formatNum = (num: number) => num.toString().padStart(2, "0");
 
   // Identify slides with light backgrounds (White/Cream) to switch footer color to navy
-  const lightSlides = [6, 7, 10, 11, 12, 15, 16, 17, 19, 20, 21, 23]; 
+  const lightSlides = [1, 4, 5, 7, 10, 11, 12, 13, 14, 15, 16, 17, 19, 21]; 
   const isLight = lightSlides.includes(current - 1);
   const textColor = isLight ? "text-brand-navy" : "text-brand-white";
   const labelColor = isLight ? "text-brand-navy/70" : "text-brand-white/40";

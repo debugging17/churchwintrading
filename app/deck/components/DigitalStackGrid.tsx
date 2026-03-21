@@ -270,7 +270,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       variants={container}
       initial="hidden"
       animate={isActive ? "show" : "hidden"}
-      className="grid grid-cols-2 gap-4 w-full h-full max-h-[600px]"
+      className="grid grid-cols-2 gap-4 w-full h-full max-h-[500px]"
     >
       <motion.div variants={item} onClick={() => onToolSelect?.("apollo")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
         <ApolloCard />
