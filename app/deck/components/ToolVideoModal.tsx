@@ -59,7 +59,7 @@ export const ToolVideoModal: React.FC<ToolVideoModalProps> = ({
               initial={{ scale: 0.98, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.98, opacity: 0 }}
-              className="relative w-[98vw] h-[96vh] bg-black rounded-[2rem] overflow-hidden shadow-2xl flex flex-col items-center justify-center p-0"
+              className="relative w-[88vw] max-w-7xl h-[85vh] max-h-[1000px] bg-black rounded-[2rem] overflow-hidden shadow-2xl flex flex-col items-center justify-center p-0"
             >
               {/* Close Button - Subtle Overlay */}
               <button
