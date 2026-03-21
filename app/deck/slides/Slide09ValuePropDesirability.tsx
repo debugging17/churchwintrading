@@ -10,7 +10,7 @@ export function Slide09ValuePropDesirability({ isActive }: { isActive: boolean }
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex items-center justify-end bg-brand-navy overflow-hidden relative">
+    <div className="w-full h-full flex items-center justify-end bg-brand-navy overflow-y-auto relative pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))]">
       
       {/* Visual Background - Full Visibility */}
       <div className="absolute inset-0 z-0">

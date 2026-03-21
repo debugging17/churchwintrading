@@ -17,7 +17,7 @@ export function Slide07VPCSegments({ isActive }: { isActive: boolean }) {
   // 3. proposal-strategist: Exact VPC segment definitions.
 
   return (
-    <div className="w-full h-full flex flex-col py-8 md:py-12 px-8 md:px-12 lg:px-16 bg-brand-cream relative overflow-hidden pb-[var(--footer-height)]">
+    <div className="w-full h-full flex flex-col py-6 md:py-8 px-8 md:px-20 bg-brand-cream pb-[calc(var(--footer-height)+2rem)] pt-[calc(1.5rem+var(--header-height,0px))] md:pt-[calc(2rem+var(--header-height,0px))] overflow-y-auto relative">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-[100rem] mx-auto my-auto">
         <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-brand-navy mb-6 text-center leading-tight">
           Two buyers. <span className="text-brand-orange italic">Two distinct needs.</span>

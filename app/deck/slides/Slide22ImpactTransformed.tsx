@@ -15,7 +15,7 @@ export function Slide22ImpactTransformed({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-cream relative">
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-cream pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
       <div className="absolute top-0 left-1/4 w-[50vh] h-[50vh] bg-brand-orange/5 mix-blend-multiply rounded-full blur-[100px]" />
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-16 my-auto z-10">
         
