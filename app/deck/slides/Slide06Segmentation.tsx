@@ -28,10 +28,9 @@ export function Slide06Segmentation({ onSectorClick }: Slide06SegmentationProps)
         {/* Title - Structural Focus */}
         <motion.h2 
           variants={fadeUp}
-          className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-brand-white leading-none tracking-tight mb-4"
+          className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-brand-white leading-tight tracking-tight mb-2 w-full"
         >
-          Multiple industries. <br />
-          <span className="text-brand-orange underline decoration-white/10 italic">One core infrastructure.</span>
+          Multiple industries. <span className="text-white drop-shadow-sm italic">One core infrastructure.</span>
         </motion.h2>
 
         <motion.p
