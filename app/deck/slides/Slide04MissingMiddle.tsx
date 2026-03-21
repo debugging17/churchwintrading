@@ -55,7 +55,7 @@ export function Slide04MissingMiddle() {
          </motion.div>
 
          {/* Comparison Grid — Principle 8: Storytelling (Height Locked & Shifted Left) */}
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 w-full mb-6">
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 w-full mb-6 relative">
             
             {/* LEFT: THE CONSTRAINT (Current Office) */}
             <motion.div 
@@ -84,6 +84,29 @@ export function Slide04MissingMiddle() {
                     Fragmented <br />Production
                   </h3>
                   <div className="w-12 h-1 bg-brand-orange/40 mt-4 rounded-full" />
+               </div>
+            </motion.div>
+
+            {/* TRANSFORMATION LOOP decoration — Principle 9: Grace (Flow) */}
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, scale: 0.5, rotate: -45 },
+                visible: { 
+                  opacity: 1, 
+                  scale: 1, 
+                  rotate: 0,
+                  transition: { delay: 0.6, duration: 1, ease: "easeOut" } 
+                }
+              }}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block"
+            >
+               <div className="relative w-40 h-40">
+                  <Image 
+                    src="/images/transformed-loop.png" 
+                    alt="Transformation Flow" 
+                    fill 
+                    className="object-contain"
+                  />
                </div>
             </motion.div>
 
@@ -135,8 +158,8 @@ export function Slide04MissingMiddle() {
             </p>
          </motion.div>
 
-         {/* Footer Strategy — Principle 11: Language */}
-         <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center justify-between border-t border-white/10 pt-6 gap-4 opacity-40">
+         {/* Footer Strategy — Principle 11: Language (Shifted Right to avoid overlap) */}
+         <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center justify-between border-t border-white/10 pt-6 gap-4 opacity-40 ml-0 md:ml-32">
            <div className="flex gap-12">
               <div>
                  <p className="text-white/40 text-[9px] uppercase font-black tracking-widest mb-1">Operational Shift</p>
