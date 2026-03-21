@@ -22,7 +22,7 @@ export function Slide04MissingMiddle() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-start relative overflow-hidden bg-brand-navy pb-[calc(var(--footer-height)+4rem)] pt-[calc(3rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] px-10 md:px-20 overflow-y-auto">
+    <div className="w-full h-full flex flex-col items-center justify-start relative overflow-hidden bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(4rem+var(--header-height,0px))] px-10 md:px-20 overflow-y-auto">
       
       {/* === LAYER 0: Background Context === */}
       <div className="absolute inset-0 z-0 opacity-10">
@@ -40,22 +40,22 @@ export function Slide04MissingMiddle() {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-[90rem] mx-auto flex flex-col z-10 px-10 md:px-20 my-auto"
+        className="w-full max-w-[95rem] mx-auto flex flex-col z-10 px-6 md:px-12 my-auto"
       >
-        {/* Title Area */}
-        <motion.div variants={fadeUp} className="mb-8 text-left">
+        {/* Title Area — Shifted Upwards */}
+        <motion.div variants={fadeUp} className="mb-6 md:mb-10 text-left">
            <div className="flex items-center gap-4 mb-3">
               <div className="w-12 h-[2px] bg-brand-orange" />
               <p className="text-brand-orange text-[10px] tracking-[0.4em] uppercase font-black">The Demand Bottleneck</p>
            </div>
-            <h2 className="text-3xl md:text-5xl font-black text-brand-white leading-tight tracking-tighter">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-brand-white leading-[1.1] tracking-tighter">
                Africa lacks structured demand. <br />
                <span className="text-brand-orange italic underline decoration-white/10">This is the failure point of scale.</span>
             </h2>
          </motion.div>
 
-         {/* Comparison Grid — Principle 8: Storytelling (The Transformation) */}
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mb-12">
+         {/* Comparison Grid — Principle 8: Storytelling (The Transformation - Height Expanded) */}
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 w-full mb-10">
             
             {/* LEFT: THE CONSTRAINT (Current Office) */}
             <motion.div 
@@ -68,7 +68,7 @@ export function Slide04MissingMiddle() {
                   transition: { type: "spring", stiffness: 60, damping: 20, delay: 0.2 }
                 }
               }}
-              className="group relative h-[45vh] md:h-[50vh] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-brand-navy"
+              className="group relative h-[50vh] md:h-[58vh] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-brand-navy"
             >
                <Image 
                  src="/images/IMG_0471-min-min-scaled.jpg" 
@@ -80,7 +80,7 @@ export function Slide04MissingMiddle() {
                
                <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left">
                   <span className="text-brand-orange text-[10px] uppercase font-black tracking-[0.4em] mb-4">Local Constraint</span>
-                  <h3 className="text-2xl md:text-3xl font-display font-black text-white leading-tight uppercase tracking-tighter">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-display font-black text-white leading-tight uppercase tracking-tighter">
                     Fragmented <br />Production
                   </h3>
                   <div className="w-12 h-1 bg-brand-orange/40 mt-4 rounded-full" />
@@ -98,7 +98,7 @@ export function Slide04MissingMiddle() {
                   transition: { type: "spring", stiffness: 60, damping: 20, delay: 0.4 }
                 }
               }}
-              className="group relative h-[45vh] md:h-[50vh] rounded-[3rem] overflow-hidden border border-brand-orange/20 shadow-[0_0_80px_rgba(255,106,0,0.1)] bg-brand-navy"
+              className="group relative h-[50vh] md:h-[58vh] rounded-[3rem] overflow-hidden border border-brand-orange/20 shadow-[0_0_80px_rgba(255,106,0,0.1)] bg-brand-navy"
             >
                <Image 
                  src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
@@ -111,7 +111,7 @@ export function Slide04MissingMiddle() {
                
                <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left bg-gradient-to-t from-brand-navy via-brand-navy/40 to-transparent">
                   <span className="text-brand-orange text-[10px] uppercase font-black tracking-[0.4em] mb-4">Global Scale</span>
-                  <h3 className="text-2xl md:text-3xl font-display font-black text-white leading-tight uppercase tracking-tighter">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-display font-black text-white leading-tight uppercase tracking-tighter">
                     Institutional <br />Infrastructure
                   </h3>
                   <div className="w-12 h-1 bg-brand-orange mt-4 rounded-full shadow-[0_0_15px_rgba(255,106,0,0.8)]" />
@@ -129,8 +129,8 @@ export function Slide04MissingMiddle() {
          </div>
 
          {/* Insight Bar — Principle 7: Purpose */}
-         <motion.div variants={fadeUp} className="bg-brand-white/5 p-6 md:p-8 rounded-3xl border-l-8 border-brand-orange shadow-2xl backdrop-blur-md">
-            <p className="text-brand-white/90 font-primary italic text-base md:text-lg leading-relaxed">
+         <motion.div variants={fadeUp} className="bg-brand-white/5 p-6 md:p-8 rounded-3xl border-l-[10px] border-brand-orange shadow-2xl backdrop-blur-md">
+            <p className="text-brand-white/90 font-primary italic text-base md:text-xl leading-relaxed">
               Moving from the constraint of manual heroics to the scale of <span className="text-brand-orange font-black not-italic underline decoration-white/20 underline-offset-4">Physical Trust Infrastructure.</span>
             </p>
          </motion.div>
