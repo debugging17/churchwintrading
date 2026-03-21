@@ -28,6 +28,7 @@ import { Slide11InstitutionalReadiness } from "./slides/Slide11InstitutionalRead
 import { Slide12ABulkGallery } from "./slides/Slide12ABulkGallery";
 import { Slide13CompetitiveReality } from "./slides/Slide13CompetitiveReality";
 import { Slide14WhoOwnsSpace } from "./slides/Slide14WhoOwnsSpace";
+import { Slide15DigitalVisibility } from "./slides/Slide15DigitalVisibility";
 import { Slide16B2BPipeline } from "./slides/Slide16B2BPipeline";
 import { Slide17Roadmap } from "./slides/Slide17Roadmap";
 import { Slide18Phase1 } from "./slides/Slide18Phase1";
@@ -76,7 +77,7 @@ function DeckContent() {
       Slide07VPCSegments, Slide08Insight, Slide09ValuePropDesirability, 
       Slide10ValuePropViability, Slide11InstitutionalReadiness, 
       Slide12ABulkGallery, Slide13CompetitiveReality, Slide14WhoOwnsSpace, 
-      Slide16B2BPipeline, Slide17Roadmap, 
+      Slide15DigitalVisibility, Slide16B2BPipeline, Slide17Roadmap, 
       Slide18Phase1, Slide19Phase2, Slide20Phase3, Slide21Impact, 
       Slide22ImpactTransformed, Slide23TheAsk, Slide24CTA
     ];
@@ -125,6 +126,7 @@ function DeckContent() {
         <SwiperSlide>{({ isActive }) => <Slide12ABulkGallery isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide13CompetitiveReality isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide14WhoOwnsSpace isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide15DigitalVisibility isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide16B2BPipeline isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide17Roadmap isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide18Phase1 isActive={isActive} />}</SwiperSlide>
