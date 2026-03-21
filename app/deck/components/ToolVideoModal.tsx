@@ -59,10 +59,10 @@ export const ToolVideoModal: React.FC<ToolVideoModalProps> = ({
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-6xl aspect-[16/9] bg-white/5 border border-white/10 rounded-[3rem] overflow-hidden shadow-[0_5rem_10rem_-2rem_rgba(0,0,0,0.5)] flex flex-col"
+              className="relative w-full max-w-[90vw] h-[85vh] bg-white/5 backdrop-blur-2xl rounded-[3rem] overflow-hidden shadow-[0_5rem_10rem_-2rem_rgba(0,0,0,0.5)] flex flex-col"
             >
               {/* Top Bar with Logo */}
-              <div className="w-full h-24 flex items-center justify-center relative border-b border-white/5">
+              <div className="w-full h-20 flex items-center justify-center relative border-b border-white/5">
                  <div className="flex flex-col items-center gap-1">
                    <div className="relative w-32 h-8">
                      <Image 
@@ -83,9 +83,9 @@ export const ToolVideoModal: React.FC<ToolVideoModalProps> = ({
               </div>
 
               <div className="flex-grow flex overflow-hidden">
-                {/* Left: Video / Animation */}
-                <div className="w-[60%] h-full relative p-8">
-                  <div className="w-full h-full rounded-[2rem] overflow-hidden border border-white/10 shadow-inner">
+                {/* Left: Video / Animation - Expanded to 68% */}
+                <div className="w-[68%] h-full relative p-6 md:p-10">
+                  <div className="w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl relative">
                     <ToolPlayer 
                       toolName={toolName} 
                       toolAction={toolAction} 
@@ -94,8 +94,8 @@ export const ToolVideoModal: React.FC<ToolVideoModalProps> = ({
                   </div>
                 </div>
 
-                {/* Right: Guided Script */}
-                <div className="w-[40%] h-full flex flex-col justify-center p-12 bg-white/5 backdrop-blur-md border-l border-white/5">
+                {/* Right: Guided Script - Adjusted to 32% */}
+                <div className="w-[32%] h-full flex flex-col justify-center p-12 bg-black/10 backdrop-blur-3xl border-l border-white/5">
                   <div className="space-y-6">
                     <div className="flex items-center gap-3 mb-8">
                        <div className="w-8 h-px bg-brand-orange/40" />

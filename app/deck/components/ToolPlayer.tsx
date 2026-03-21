@@ -12,7 +12,7 @@ interface ToolPlayerProps {
 export const ToolPlayer: React.FC<ToolPlayerProps> = ({ toolName, toolAction, videoSrc }) => {
   if (videoSrc) {
     return (
-      <div className="w-full h-full bg-black rounded-3xl overflow-hidden shadow-2xl relative">
+      <div className="w-full h-full bg-black overflow-hidden relative">
         <video 
           src={videoSrc} 
           autoPlay 
