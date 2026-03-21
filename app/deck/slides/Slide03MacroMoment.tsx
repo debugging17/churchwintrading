@@ -49,113 +49,109 @@ export function Slide03MacroMoment() {
         variants={staggerContainer}
         className="w-full max-w-[80rem] mx-auto flex flex-col items-center z-10 my-auto"
       >
-        {/* Provocative Headline Overlay */}
-        <motion.div variants={fadeUp} className="text-center mb-4 max-w-[50rem]">
-          <motion.h2
-            variants={fadeUp}
-            className="text-3xl md:text-5xl xl:text-6xl font-display font-black text-brand-navy leading-[1.1] mb-6 tracking-tighter"
-          >
-            Africa had the lead. <br />
-            <span className="text-brand-orange/90 italic drop-shadow-sm">Then the divergence began.</span>
-          </motion.h2>
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center h-full flex-grow">
+          {/* Left Column: Text & Context */}
+          <motion.div variants={fadeUp} className="text-left lg:col-span-4 flex flex-col justify-center gap-6 h-full">
+            <motion.h2
+              variants={fadeUp}
+              className="text-4xl md:text-5xl xl:text-6xl font-display font-black text-brand-white leading-[1.1] tracking-tighter"
+            >
+              Africa had the lead. <br />
+              <span className="text-brand-orange/90 italic drop-shadow-sm">Then the divergence began.</span>
+            </motion.h2>
 
-          <motion.p
-            variants={fadeUp}
-            className="text-base md:text-lg text-brand-navy/70 leading-relaxed font-primary mb-10 max-w-lg"
-          >
-            In 1960, West African GDP trajectories mirrored those of East Asian tigers like South Korea. Over six decades, the gap didn&apos;t just grow—it exploded. This widening chasm was not caused by a lack of potential, but a failure to institutionalize the production engine.
-          </motion.p>
+            <motion.p
+              variants={fadeUp}
+              className="text-base md:text-lg text-brand-white/70 leading-relaxed font-primary"
+            >
+              In 1960, West African GDP trajectories mirrored those of East Asian tigers like South Korea. Over six decades, the gap didn&apos;t just grow—it exploded. This widening chasm was not caused by a lack of potential, but a failure to institutionalize the production engine.
+            </motion.p>
 
-          <motion.div
-            variants={fadeUp}
-            className="inline-block px-8 py-4 bg-brand-navy text-brand-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-l-[6px] border-brand-orange"
-          >
-            <p className="text-sm md:text-base font-display font-bold tracking-tight">
-              Execution—not potential—determines outcomes.
-            </p>
+            {/* Pivot Callout Overlay (Now integrated inline) */}
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1, type: "spring", stiffness: 100 }}
+              className="w-full p-[1.5rem] bg-brand-white/5 backdrop-blur-xl shadow-2xl rounded-[1rem] border border-white/10"
+            >
+              <h4 className="font-display font-black text-brand-orange text-[1.25rem] mb-[0.5rem] uppercase tracking-widest">The Divergence</h4>
+              <p className="font-primary text-brand-white/90 text-[0.875rem] leading-relaxed">
+                South Korea leveraged <span className="font-bold text-white italic underline">institutional scale</span> by 1980. West Africa remained fragmented. 
+                <br /><br />
+                <span className="text-brand-orange font-bold uppercase text-[0.625rem] tracking-widest">Churchwin Mandate:</span>
+                <br />
+                Institutionalizing the supply chain to reclaim that delta.
+              </p>
+            </motion.div>
           </motion.div>
-        </motion.div>
 
-        {/* Data Visualization Card */}
-        <motion.div 
-          variants={fadeUp}
-          className="w-full flex-grow min-h-[40vh] md:h-[45vh] bg-brand-white/95 backdrop-blur-2xl rounded-[1.5rem] p-6 md:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.5)] border border-white/20 relative"
-        >
-          <div className="absolute top-[1.5rem] left-[1.5rem] md:left-[2.5rem] z-30">
-             <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-navy/40 uppercase">GDP PER CAPITA (USD)</p>
-          </div>
-
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={data} margin={{ top: 40, right: 30, left: 20, bottom: 20 }}>
-              <defs>
-                <linearGradient id="colorKorea" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#ff6a00" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#ff6a00" stopOpacity={0}/>
-                </linearGradient>
-                <linearGradient id="colorGhana" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#012787" stopOpacity={0.1}/>
-                  <stop offset="95%" stopColor="#012787" stopOpacity={0}/>
-                </linearGradient>
-              </defs>
-              <XAxis 
-                dataKey="year" 
-                axisLine={false} 
-                tickLine={false} 
-                tick={{ fill: "#012787", fontSize: 12, fontWeight: 700, fontFamily: "var(--font-display)" }} 
-                dy={15}
-              />
-              <YAxis hide={true} />
-              <Tooltip 
-                contentStyle={{ borderRadius: '1rem', border: 'none', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', fontFamily: 'var(--font-primary)' }}
-                labelStyle={{ fontWeight: 'bold', color: '#012787' }}
-              />
-              
-              {/* Ghana Path (Stagnation) */}
-              <Area 
-                name="West Africa (Average)"
-                type="monotone" 
-                dataKey="ghana" 
-                stroke="#012787" 
-                strokeWidth={4}
-                fillOpacity={1} 
-                fill="url(#colorGhana)" 
-              />
-              
-              {/* Korea Path (Scale) */}
-              <Area 
-                name="South Korea (Scale Path)"
-                type="monotone" 
-                dataKey="korea" 
-                stroke="#ff6a00" 
-                strokeWidth={5}
-                fillOpacity={1} 
-                fill="url(#colorKorea)" 
-                animationDuration={2500}
-              />
-            </AreaChart>
-          </ResponsiveContainer>
-
-          {/* Pivot Callout Overlay */}
+          {/* Right Column: Data Visualization Card */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 2, type: "spring", stiffness: 100 }}
-            className="absolute top-[3.5rem] left-[1.5rem] md:left-[2.5rem] w-[14rem] md:w-[18rem] p-[1.5rem] bg-brand-navy/95 backdrop-blur-xl shadow-2xl rounded-[1rem] border border-brand-orange/30 border-l-[0.4rem] border-l-brand-orange z-20"
+            variants={fadeUp}
+            className="w-full lg:col-span-8 h-[50vh] lg:h-[60vh] bg-brand-white/95 backdrop-blur-2xl rounded-[1.5rem] p-6 md:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.5)] border border-white/20 relative flex flex-col"
           >
-            <h4 className="font-display font-black text-brand-orange text-[1.125rem] mb-[0.5rem] uppercase tracking-widest">The Divergence</h4>
-            <p className="font-primary text-brand-white/90 text-[0.875rem] leading-relaxed">
-              South Korea leveraged <span className="font-bold text-white italic underline">institutional scale</span> by 1980. West Africa remained fragmented. 
-              <br /><br />
-              <span className="text-brand-orange font-bold uppercase text-[0.625rem]">Churchwin Mandate:</span>
-              <br />
-              Institutionalizing the supply chain to reclaim that delta.
+            <div className="absolute top-[1.5rem] left-[1.5rem] md:left-[2.5rem] z-30">
+               <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-navy/60 uppercase">GDP PER CAPITA (USD)</p>
+            </div>
+
+            <div className="flex-grow pt-[1rem]">
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart data={data} margin={{ top: 20, right: 10, left: 10, bottom: 0 }}>
+                  <defs>
+                    <linearGradient id="colorKorea" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#ff6a00" stopOpacity={0.8}/>
+                      <stop offset="95%" stopColor="#ff6a00" stopOpacity={0}/>
+                    </linearGradient>
+                    <linearGradient id="colorGhana" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#012787" stopOpacity={0.1}/>
+                      <stop offset="95%" stopColor="#012787" stopOpacity={0}/>
+                    </linearGradient>
+                  </defs>
+                  <XAxis 
+                    dataKey="year" 
+                    axisLine={false} 
+                    tickLine={false} 
+                    tick={{ fill: "#012787", fontSize: 13, fontWeight: 700, fontFamily: "var(--font-display)" }} 
+                    dy={15}
+                    padding={{ left: 10, right: 10 }}
+                  />
+                  <YAxis hide={true} />
+                  <Tooltip 
+                    contentStyle={{ borderRadius: '1rem', border: 'none', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', fontFamily: 'var(--font-primary)' }}
+                    labelStyle={{ fontWeight: 'bold', color: '#012787' }}
+                  />
+                  
+                  {/* Ghana Path (Stagnation) */}
+                  <Area 
+                    name="West Africa (Average)"
+                    type="monotone" 
+                    dataKey="ghana" 
+                    stroke="#012787" 
+                    strokeWidth={4}
+                    fillOpacity={1} 
+                    fill="url(#colorGhana)" 
+                  />
+                  
+                  {/* Korea Path (Scale) */}
+                  <Area 
+                    name="South Korea (Scale Path)"
+                    type="monotone" 
+                    dataKey="korea" 
+                    stroke="#ff6a00" 
+                    strokeWidth={5}
+                    fillOpacity={1} 
+                    fill="url(#colorKorea)" 
+                    animationDuration={2500}
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
+            
+            <p className="mt-[1rem] text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-navy/40 uppercase self-end">
+              DATA SOURCE: WORLD BANK GDP INDICATORS 1960–2024
             </p>
           </motion.div>
-        </motion.div>
-
-        <motion.p variants={fadeUp} className="mt-[2rem] text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-white/30 uppercase">
-          DATA SOURCE: WORLD BANK GDP INDICATORS 1960–2024
-        </motion.p>
+        </div>
       </motion.div>
     </div>
   );
