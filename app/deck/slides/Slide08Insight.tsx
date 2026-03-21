@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { Zap, Link, Globe } from "lucide-react";
+import { Zap, Boxes, Unlink, Globe } from "lucide-react";
 import { GlobalDemandVideo } from "../components/GlobalDemandVideo";
 
 import Image from "next/image";
@@ -61,7 +61,7 @@ export function Slide08Insight({ isActive }: { isActive: boolean }) {
               <div className="relative">
                  <div className="absolute inset-0 bg-brand-orange blur-[40px] opacity-30 rounded-full animate-pulse" />
                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-brand-orange border border-white/20 shadow-[0_0_40px_rgba(255,106,0,0.4)] rotate-45 flex items-center justify-center mb-6 relative z-20">
-                   <Link className="w-8 h-8 text-white -rotate-45" />
+                   <Unlink className="w-8 h-8 text-white -rotate-45" />
                  </div>
               </div>
               <h3 className="text-2xl md:text-3xl font-display font-black text-brand-orange mb-2 text-center drop-shadow-md whitespace-nowrap">The Gap</h3>
@@ -84,7 +84,7 @@ export function Slide08Insight({ isActive }: { isActive: boolean }) {
              
              <div className="relative z-10 flex flex-col items-center text-center">
                <div className="w-16 h-16 rounded-2xl bg-brand-orange/20 backdrop-blur-xl border border-brand-orange/30 flex items-center justify-center mb-6">
-                 <Zap className="w-8 h-8 text-brand-orange" />
+                 <Boxes className="w-8 h-8 text-brand-orange" />
                </div>
                <h3 className="text-3xl font-display font-black text-white mb-2 tracking-tight">African Supply</h3>
                <p className="text-sm text-brand-white/80 leading-relaxed font-primary max-w-xs">
