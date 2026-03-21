@@ -45,7 +45,7 @@ function DeckContent() {
   const [selectedSector, setSelectedSector] = useState<number | null>(null);
   const searchParams = useSearchParams();
   const isPrintMode = searchParams.get("mode") === "print";
-  const totalSlides = 23;
+  const totalSlides = 24;
 
   useEffect(() => {
     setMounted(true);

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
   /* Native REM Scaling: Balanced across width & height to prevent distortion */
   font-size: clamp(14px, 0.8vw + 0.4vh, 20px);
   

@@ -35,29 +35,30 @@ export const UnifiedVideoModal: React.FC<UnifiedVideoModalProps> = ({
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-7xl aspect-video bg-black rounded-[2rem] overflow-hidden shadow-2xl border border-white/10"
+              className="relative w-full max-w-[90vw] aspect-video bg-black rounded-[2rem] overflow-hidden shadow-2xl border border-white/10"
             >
               {/* Floating Close Button */}
               <button
                 onClick={onClose}
-                className="absolute right-6 top-6 z-[110] p-3 bg-black/50 hover:bg-black/80 backdrop-blur-md rounded-full transition-all group border border-white/20"
+                className="absolute right-6 top-6 z-[120] p-3 bg-black/50 hover:bg-black/80 backdrop-blur-md rounded-full transition-all group border border-white/20"
               >
                 <X className="w-6 h-6 text-white/50 group-hover:text-white" />
               </button>
 
               {/* Full Boundary Video */}
-              <div className="w-full h-full">
+              <div className="w-full h-full relative">
                 <ToolPlayer 
                   toolName={toolName} 
                   toolAction={toolAction} 
-                  videoSrc={
-                    toolName.toUpperCase().includes("APOLLO") || toolName.toUpperCase().includes("REVENUE") 
-                    ? "/videos/sample.mp4" 
-                    : toolName.toUpperCase().includes("EXECUTION")
-                    ? "/assets/videos/apply_cinematic,_8k_202603181845.mp4"
-                    : undefined
-                  } 
+                  videoSrc="/assets/videos/apply_cinematic,_8k_202603181845.mp4"
                 />
+                
+                {/* Unmute Pill - Matching Step 1028 Reference */}
+                <div className="absolute bottom-8 right-8 z-[110]">
+                  <div className="px-6 py-3 bg-brand-navy/60 backdrop-blur-xl border border-white/10 rounded-full flex items-center gap-3">
+                    <span className="text-[10px] font-display font-black text-white/90 uppercase tracking-[0.2em]">Unmute to hear audio</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>

@@ -24,10 +24,10 @@ export function Slide01BOverview({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100); 
 
   return (
-    <div className="w-full h-full bg-white flex relative pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto">
+    <div className="w-full h-full bg-white flex relative pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-hidden">
 
       {/* ── Left Panel ─────────────────────────────────────────── */}
-      <div className="w-[40%] h-full flex flex-col justify-center px-16 xl:px-24 z-10 bg-white">
+      <div className="w-[40%] h-full flex flex-col justify-center px-16 xl:px-24 z-10 bg-white pb-[var(--footer-height)]">
         <motion.div
           initial="hidden"
           animate={animState}
