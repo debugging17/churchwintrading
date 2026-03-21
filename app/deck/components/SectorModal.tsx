@@ -40,7 +40,7 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="relative w-full max-w-7xl h-full max-h-[90vh] md:max-h-[85vh] bg-white rounded-[2.5rem] overflow-hidden shadow-[0_32px_128px_rgba(0,0,0,0.3)] flex flex-col md:flex-row border border-white/20"
+          className="relative w-full max-w-7xl h-full max-h-[92vh] md:max-h-[90vh] bg-white rounded-[2.5rem] overflow-hidden shadow-[0_32px_128px_rgba(0,0,0,0.3)] flex flex-col md:flex-row border border-white/20"
         >
           <button 
             onClick={onClose}
@@ -97,7 +97,7 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
             </div>
 
             {/* Tab Content */}
-            <div className="flex-grow p-6 md:p-8 pt-0 overflow-y-auto no-scrollbar">
+            <div className="flex-grow p-6 md:px-8 pb-8 pt-0 overflow-y-auto no-scrollbar">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`${selectedIdx}-${activeTab}`}
@@ -141,8 +141,8 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                     </div>
                   </div>
                   
-                  <div className="lg:col-span-5 flex flex-col gap-6">
-                    <div className="p-8 bg-white rounded-[2.5rem] border border-brand-navy/5 shadow-sm flex flex-col">
+                  <div className="lg:col-span-5 flex flex-col gap-4">
+                    <div className="p-6 md:p-7 bg-white rounded-[2.5rem] border border-brand-navy/5 shadow-sm flex flex-col">
                       <h5 className="font-display text-xl md:text-2xl font-black text-brand-navy mb-4 tracking-tight">Strategic Fit</h5>
                       <p className="text-brand-navy/60 text-xs md:text-sm leading-relaxed mb-6">
                         {sector.strategicFit}{" "}
@@ -161,7 +161,7 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                     </div>
 
                     {(sector as any).commercialProof && (
-                      <div className="p-8 bg-brand-navy text-white rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col justify-center">
+                      <div className="p-6 md:p-7 bg-brand-navy text-white rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col justify-center">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/10 blur-3xl rounded-full -mr-16 -mt-16" />
                         <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-orange mb-4">Board-Level Commercial Proof</h5>
                         <div className="grid grid-cols-2 gap-y-6 gap-x-4">
