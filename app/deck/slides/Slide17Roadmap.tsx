@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { TrendingUp, Layers } from "lucide-react";
 
 export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
@@ -22,7 +21,7 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative items-stretch">
           
           {/* Phase 1: Stabilize */}
-          <motion.div variants={fadeUp} className="p-8 bg-brand-navy/5 border border-brand-navy/10 rounded-[32px] flex flex-col">
+          <motion.div variants={fadeUp} className="p-8 bg-brand-navy/5 border border-brand-navy/10 rounded-[32px] flex flex-col h-full min-h-[400px]">
              <div className="w-10 h-10 rounded-xl bg-brand-navy/10 flex items-center justify-center mb-6">
                 <span className="text-brand-navy font-black">01</span>
              </div>
@@ -43,7 +42,7 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
           </motion.div>
 
           {/* Phase 2: Expand */}
-          <motion.div variants={fadeUp} className="p-8 bg-brand-navy text-white rounded-[32px] border-b-4 border-brand-orange shadow-2xl relative overflow-hidden flex flex-col">
+          <motion.div variants={fadeUp} className="p-8 bg-brand-navy text-white rounded-[32px] border-b-4 border-brand-orange shadow-2xl relative overflow-hidden flex flex-col h-full min-h-[400px]">
              <div className="w-10 h-10 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center mb-6">
                 <span className="text-brand-orange font-black">02</span>
              </div>
@@ -64,7 +63,7 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
           </motion.div>
 
           {/* Phase 3: Scaling */}
-          <motion.div variants={fadeUp} className="p-8 bg-brand-navy/5 border border-brand-navy/10 rounded-[32px] flex flex-col">
+          <motion.div variants={fadeUp} className="p-8 bg-brand-navy/5 border border-brand-navy/10 rounded-[32px] flex flex-col h-full min-h-[400px]">
              <div className="w-10 h-10 rounded-xl bg-brand-navy/10 flex items-center justify-center mb-6">
                 <span className="text-brand-navy font-black">03</span>
              </div>

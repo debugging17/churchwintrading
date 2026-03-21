@@ -67,8 +67,8 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
                 />
              </div>
 
-             <div className="lg:col-span-4 flex flex-col">
-                <motion.div variants={fadeUp} className="flex-1 p-5 bg-brand-navy text-white rounded-[1.5rem] shadow-2xl relative overflow-hidden border-b-4 border-brand-orange flex flex-col justify-center min-h-[300px]">
+             <div className="lg:col-span-4 flex flex-col h-full">
+                <motion.div variants={fadeUp} className="flex-1 p-8 bg-brand-navy text-white rounded-[1.5rem] shadow-2xl relative overflow-hidden border-b-4 border-brand-orange flex flex-col justify-center min-h-[400px]">
                    <div className="absolute top-0 right-0 p-4 opacity-10">
                       <Target className="w-10 h-10 text-brand-orange" />
                    </div>
