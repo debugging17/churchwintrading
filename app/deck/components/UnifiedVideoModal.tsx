@@ -22,27 +22,27 @@ export const UnifiedVideoModal: React.FC<UnifiedVideoModalProps> = ({
     <Portal>
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-8 md:p-16">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={onClose}
-              className="absolute inset-0 bg-brand-navy/95 backdrop-blur-3xl"
+              className="absolute inset-0 bg-brand-navy/90 backdrop-blur-2xl"
             />
             
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-[90vw] aspect-video bg-black rounded-[2rem] overflow-hidden shadow-2xl border border-white/10"
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="relative w-full max-w-6xl aspect-video bg-black rounded-[3rem] md:rounded-[5rem] overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.5)] border border-white/5"
             >
-              {/* Floating Close Button */}
+              {/* Subtle Close Button */}
               <button
                 onClick={onClose}
-                className="absolute right-6 top-6 z-[120] p-3 bg-black/50 hover:bg-black/80 backdrop-blur-md rounded-full transition-all group border border-white/20"
+                className="absolute right-8 top-8 z-[120] p-4 bg-white/10 hover:bg-white/20 backdrop-blur-xl rounded-full transition-all group border border-white/10"
               >
-                <X className="w-6 h-6 text-white/50 group-hover:text-white" />
+                <X className="w-5 h-5 text-white/40 group-hover:text-white" />
               </button>
 
               {/* Full Boundary Video */}
@@ -53,10 +53,10 @@ export const UnifiedVideoModal: React.FC<UnifiedVideoModalProps> = ({
                   videoSrc="/assets/videos/apply_cinematic,_8k_202603181845.mp4"
                 />
                 
-                {/* Unmute Pill - Matching Step 1028 Reference */}
-                <div className="absolute bottom-8 right-8 z-[110]">
-                  <div className="px-6 py-3 bg-brand-navy/60 backdrop-blur-xl border border-white/10 rounded-full flex items-center gap-3">
-                    <span className="text-[10px] font-display font-black text-white/90 uppercase tracking-[0.2em]">Unmute to hear audio</span>
+                {/* Refined Unmute Pill */}
+                <div className="absolute bottom-10 right-10 z-[110]">
+                  <div className="px-5 py-2.5 bg-brand-navy/40 backdrop-blur-md border border-white/5 rounded-2xl flex items-center gap-2">
+                    <span className="text-[9px] font-display font-black text-white/60 uppercase tracking-[0.2em]">Unmute to hear audio</span>
                   </div>
                 </div>
               </div>
