@@ -79,29 +79,36 @@ export function Slide01BOverview({ isActive }: { isActive: boolean }) {
       </div>
 
       {/* ── Right Panel — Image ────────────────────────────────── */}
-      <div className="w-[60%] h-full relative overflow-hidden">
+      <div className="w-[60%] h-full relative overflow-hidden bg-brand-navy/5">
         {/* Slant edge on left side of image panel - DRAMATIC BLEND */}
         <div
-          className="absolute inset-y-0 left-0 w-32 bg-white z-10"
-          style={{ clipPath: "polygon(0 0, 100% 0, 0 100%, 0 100%)" }} 
+          className="absolute inset-y-0 left-0 w-32 bg-white z-[5]"
+          style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }} 
         />
 
         {/* Truck Image */}
         <motion.div
-          initial={{ opacity: 0, scale: 1.04 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          initial="hidden"
+          animate={animState}
+          variants={{
+            hidden: { opacity: 0, scale: 1.04 },
+            visible: { 
+              opacity: 1, 
+              scale: 1,
+              transition: { duration: 1.5, ease: "easeOut", delay: 0.2 } 
+            }
+          }}
           className="absolute inset-0"
         >
           <Image
-            src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg"
+            src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
             alt="Churchwin Logistics Fleet"
             fill
             className="object-cover object-center"
             priority
           />
           {/* Subtle dark vignette bottom for footer visibility */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 via-transparent to-transparent" />
         </motion.div>
       </div>
 
