@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { fadeUp, slideFromLeft, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { ValueGapFramer } from "../components/ValueGapFramer";
+import { ValueGapChart } from "../components/ValueGapChart";
 
 // SLIDE 02: THE INDUSTRIAL CROSSROADS
 // Skills applied:
@@ -34,7 +34,7 @@ export function Slide02Crossroads() {
       </div>
 
       {/* === LAYER 1: Content Overlay === */}
-      <div className="w-full h-full flex flex-col justify-center px-[4rem] xl:px-[8rem] pb-[4rem] lg:pb-[8rem] z-20 relative">
+      <div className="w-full h-full flex flex-col justify-center px-[4rem] xl:px-[8rem] pb-[4rem] lg:pb-[8rem] pt-[calc(var(--header-height,0px)+4rem)] z-20 relative">
         <motion.div
           initial="hidden"
           animate={animState}
@@ -109,26 +109,15 @@ export function Slide02Crossroads() {
             className="flex flex-col gap-8 bg-brand-navy/40 backdrop-blur-md p-8 lg:p-12 rounded-[2.5rem] border border-white/10 shadow-2xl"
           >
             <div className="space-y-2">
-               <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-orange uppercase">Visualizing the Gap</p>
-               <h3 className="text-2xl lg:text-3xl font-display font-black text-white leading-tight">Where value vanishes.</h3>
+               <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-orange uppercase text-center">Visualizing the Gap</p>
+               <h3 className="text-2xl lg:text-3xl font-display font-black text-white leading-tight text-center">Where value vanishes.</h3>
             </div>
 
-            <div className="py-4">
-              <ValueGapFramer />
+            <div className="py-2">
+              <ValueGapChart />
             </div>
 
-            <div className="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
-               <div>
-                  <p className="text-[1.5rem] font-display font-black text-white">90%</p>
-                  <p className="text-[0.6rem] text-brand-white/40 uppercase tracking-widest font-bold">Lost Value</p>
-               </div>
-               <div>
-                  <p className="text-[1.5rem] font-display font-black text-brand-orange">10%</p>
-                  <p className="text-[0.6rem] text-brand-white/40 uppercase tracking-widest font-bold">Local Capture</p>
-               </div>
-            </div>
-
-            <p className="text-[0.7rem] text-brand-white/40 font-primary leading-relaxed opacity-60">
+            <p className="text-[0.7rem] text-brand-white/40 font-primary leading-relaxed opacity-60 text-center">
                The current model forces Africa to export raw potential, only to buy back the finished value at a 10x premium.
             </p>
           </motion.div>
