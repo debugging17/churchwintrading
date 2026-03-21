@@ -69,7 +69,13 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
 
         {/* Right Side: The Tool Stack Visualization */}
         <div className="w-full lg:w-[55%] flex flex-col justify-center relative min-h-[500px]">
-           <DigitalStackGrid isActive={isActive} />
+           <DigitalStackGrid 
+             isActive={isActive} 
+             onToolSelect={(id) => {
+               const tool = pipeline.find(p => p.id === id);
+               if (tool) setSelectedTool({ name: tool.name, action: tool.action, logo: tool.image });
+             }} 
+           />
 
            <motion.div variants={fadeUp} className="mt-8 p-6 bg-brand-navy text-white rounded-3xl shadow-xl relative overflow-hidden border-b-4 border-brand-orange">
               <div className="absolute top-0 right-0 p-6 opacity-10">

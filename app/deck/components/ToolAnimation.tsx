@@ -9,7 +9,23 @@ interface ToolAnimationProps {
 
 export const ToolAnimation: React.FC<ToolAnimationProps> = ({ toolName, toolAction }) => {
   const frame = useCurrentFrame();
-  const { fps, width, height } = useVideoConfig();
+  const { fps } = useVideoConfig();
+
+  const isApollo = toolName.toLowerCase().includes("apollo");
+  const isLinkedIn = toolName.toLowerCase().includes("linkedin");
+  const isMailchimp = toolName.toLowerCase().includes("mailchimp");
+  const isInstantly = toolName.toLowerCase().includes("instantly");
+
+  const config = {
+    color: isMailchimp ? '#FFD700' : isLinkedIn ? '#0a66c2' : isApollo ? '#ff6a00' : '#012787',
+    gradient: isMailchimp ? 'radial-gradient(circle, #FFD700 0%, #FFB900 100%)' :
+              isLinkedIn ? 'radial-gradient(circle, #0a66c2 0%, #004182 100%)' :
+              isApollo ? 'radial-gradient(circle, #ff6a00 0%, #cc5500 100%)' :
+              'radial-gradient(circle, #012787 0%, #001a5e 100%)',
+    label: isApollo ? "Leads sourced" : isLinkedIn ? "Prospects connected" : isMailchimp ? "Campaigns active" : "emails sent",
+    count: isApollo ? 34218 : isLinkedIn ? 1240 : isMailchimp ? 42 : 567,
+    textColor: isMailchimp ? '#1a1a1a' : '#ffffff'
+  };
 
   const entrance = spring({
     frame,
@@ -17,7 +33,7 @@ export const ToolAnimation: React.FC<ToolAnimationProps> = ({ toolName, toolActi
     config: { damping: 12 },
   });
 
-  const emailCount = Math.round(interpolate(frame, [20, 100], [0, 567], {
+  const displayCount = Math.round(interpolate(frame, [20, 100], [0, config.count], {
     extrapolateRight: 'clamp',
   }));
 
@@ -26,12 +42,12 @@ export const ToolAnimation: React.FC<ToolAnimationProps> = ({ toolName, toolActi
   return (
     <div style={{ 
       flex: 1, 
-      background: 'radial-gradient(circle, #FFD700 0%, #FFB900 100%)', 
+      background: config.gradient, 
       display: 'flex', 
       flexDirection: 'column', 
       alignItems: 'center', 
       justifyContent: 'center',
-      color: '#1a1a1a',
+      color: config.textColor,
       fontFamily: 'Inter, system-ui, sans-serif',
       position: 'relative',
       overflow: 'hidden'
@@ -60,19 +76,21 @@ export const ToolAnimation: React.FC<ToolAnimationProps> = ({ toolName, toolActi
         zIndex: 10,
         border: '1px solid rgba(255,255,255,0.8)'
       }}>
-        {/* Send Icon SVG */}
+        {/* Dynamic Icon SVG */}
         <svg 
           width="32" 
           height="32" 
           viewBox="0 0 24 24" 
           fill="none" 
-          stroke="#333" 
+          stroke={isMailchimp ? "#333" : isLinkedIn ? "#0a66c2" : isApollo ? "#ff6a00" : "#012787"} 
           strokeWidth="1.5" 
           strokeLinecap="round" 
           strokeLinejoin="round"
         >
-          <line x1="22" y1="2" x2="11" y2="13" />
-          <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          {isApollo ? <circle cx="12" cy="12" r="10" /> : 
+           isLinkedIn ? <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /> :
+           <polygon points="22 2 15 22 11 13 2 9 22 2" />}
+          {isLinkedIn && <rect x="2" y="9" width="4" height="12" />}
         </svg>
 
         <div style={{ 
@@ -83,8 +101,8 @@ export const ToolAnimation: React.FC<ToolAnimationProps> = ({ toolName, toolActi
           display: 'flex',
           gap: '12px'
         }}>
-          <span style={{ fontWeight: '700' }}>{emailCount}</span>
-          <span>emails sent</span>
+          <span style={{ fontWeight: '700' }}>{displayCount.toLocaleString()}</span>
+          <span>{config.label}</span>
         </div>
       </div>
 
@@ -93,7 +111,7 @@ export const ToolAnimation: React.FC<ToolAnimationProps> = ({ toolName, toolActi
         position: 'absolute',
         bottom: '40px',
         textAlign: 'center',
-        opacity: 0.2,
+        opacity: isMailchimp ? 0.3 : 0.2,
         textTransform: 'uppercase',
         letterSpacing: '0.4em',
         fontSize: '12px',

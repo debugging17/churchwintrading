@@ -47,14 +47,18 @@ const apolloData = [
 
 const ApolloCard = () => (
   <BrowserWindow title="Apollo.io" url="apollo.io/search">
-    <div className="p-4 flex flex-col h-full">
-      <div className="flex justify-between items-end mb-4">
-        <div>
-          <p className="text-[8px] uppercase font-bold text-brand-navy/40 tracking-wider">Total Leads</p>
-          <p className="text-xl font-display font-black text-brand-orange">34,218</p>
+    <div className="p-4 flex flex-col h-full relative">
+      {/* Subtle Dot Pattern Overlay */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#ff6a00 0.5px, transparent 0.5px)', backgroundSize: '10px 10px' }} />
+      
+      <div className="relative z-10 flex flex-col h-full">
+        <div className="flex justify-between items-end mb-4">
+          <div>
+            <p className="text-[8px] uppercase font-bold text-brand-navy/40 tracking-wider">Total Leads</p>
+            <p className="text-xl font-display font-black text-brand-orange">34,218</p>
+          </div>
         </div>
-      </div>
-      <div className="h-20 w-full mb-4">
+        <div className="h-20 w-full mb-4">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={apolloData}>
             <defs>
@@ -75,7 +79,7 @@ const ApolloCard = () => (
           </AreaChart>
         </ResponsiveContainer>
       </div>
-      <div className="space-y-2">
+      <div className="space-y-2 mt-auto">
         {[
           { role: "R&D Director", tag: "Cosmetics" },
           { role: "Head Formulator", tag: "Skincare" },
@@ -96,6 +100,7 @@ const ApolloCard = () => (
         ))}
       </div>
     </div>
+  </div>
   </BrowserWindow>
 );
 
@@ -228,7 +233,7 @@ const LinkedInCard = () => (
 
 // --- GRID EXPORT ---
 
-export function DigitalStackGrid({ isActive }: { isActive: boolean }) {
+export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean, onToolSelect?: (toolId: string) => void }) {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -260,10 +265,34 @@ export function DigitalStackGrid({ isActive }: { isActive: boolean }) {
       animate={isActive ? "show" : "hidden"}
       className="grid grid-cols-2 gap-4 w-full h-full max-h-[600px]"
     >
-      <motion.div variants={item}><ApolloCard /></motion.div>
-      <motion.div variants={item}><InstantlyCard /></motion.div>
-      <motion.div variants={item}><MailchimpCard /></motion.div>
-      <motion.div variants={item}><LinkedInCard /></motion.div>
+      <motion.div variants={item} onClick={() => onToolSelect?.("apollo")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
+        <ApolloCard />
+        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
+          <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Apollo.io</p>
+          <p className="text-xs font-primary leading-relaxed opacity-90">Sourcing 500+ ICP-matched prospects based on botanical demand signals.</p>
+        </div>
+      </motion.div>
+      <motion.div variants={item} onClick={() => onToolSelect?.("instantly")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
+        <InstantlyCard />
+        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
+          <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Instantly.ai</p>
+          <p className="text-xs font-primary leading-relaxed opacity-90">High-deliverability 4-touch sequences maintaining 60%+ open rates.</p>
+        </div>
+      </motion.div>
+      <motion.div variants={item} onClick={() => onToolSelect?.("mailchimp")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
+        <MailchimpCard />
+        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
+          <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Mailchimp</p>
+          <p className="text-xs font-primary leading-relaxed opacity-90">Monthly 'Churchwin Origins' content educating buyers on supply stability.</p>
+        </div>
+      </motion.div>
+      <motion.div variants={item} onClick={() => onToolSelect?.("linkedin")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
+        <LinkedInCard />
+        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
+          <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">LinkedIn Sales Nav</p>
+          <p className="text-xs font-primary leading-relaxed opacity-90">Strategic connection with R&D and Procurement leads in EU/US markets.</p>
+        </div>
+      </motion.div>
     </motion.div>
   );
 }
