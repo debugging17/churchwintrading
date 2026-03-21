@@ -25,29 +25,28 @@ export function Slide12ABulkGallery({ isActive }: { isActive: boolean }) {
         initial="hidden" 
         animate={animState} 
         variants={sectionTitleStagger} 
-        className="relative z-10 w-full max-w-[95rem] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 h-full my-auto items-center"
+        className="relative z-10 w-full max-w-[98rem] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 h-full my-auto items-center"
       >
-        {/* Left Side: Content & Stats */}
-        <div className="w-full lg:w-[35%] flex flex-col justify-center">
-          <motion.div variants={fadeUp} className="mb-12">
-            <motion.h2 variants={slideFromLeft} className="font-display text-5xl md:text-6xl lg:text-8xl font-bold text-brand-white leading-[0.9] mb-8 tracking-tighter uppercase">
+        {/* Left Side: Content & Stats - Compressed to give more room to images */}
+        <div className="w-full lg:w-[28%] flex flex-col justify-center">
+          <motion.div variants={fadeUp} className="mb-10">
+            <motion.h2 variants={slideFromLeft} className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-brand-white leading-[0.85] mb-6 tracking-tighter uppercase whitespace-nowrap">
               Operations <br />
               <span className="text-brand-orange italic font-light">at Scale.</span>
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-xl md:text-2xl text-brand-white/60 font-primary font-light leading-relaxed border-l-2 border-brand-orange/30 pl-8">
+            <motion.p variants={fadeUp} className="text-lg md:text-xl text-brand-white/60 font-primary font-light leading-relaxed border-l-2 border-brand-orange/30 pl-6">
               Institutional infrastructure driving global wholesale supply. 
-              We bridge the &ldquo;missing middle&rdquo; with industrial-grade capacity.
             </motion.p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 scale-90 origin-left">
+          <div className="flex flex-col gap-4 scale-90 origin-left">
             <StatCard label="Annual Capacity" value="10k+ MT" trend="Top 5 in West Africa" delay={0.4} />
             <StatCard label="Global Standards" value="Tier-1" trend="ISO & HACCP Compliant" delay={0.5} />
           </div>
         </div>
 
-        {/* Right Side: Masonry Gallery — Principle 9: Grace (Flow) */}
-        <div className="w-full lg:w-[65%] grid grid-cols-2 lg:grid-cols-12 grid-rows-6 gap-4 h-[65vh] lg:h-[75vh]">
+        {/* Right Side: Masonry Gallery — Principle 9: Grace (Flow) - Expanded */}
+        <div className="w-full lg:w-[72%] grid grid-cols-2 lg:grid-cols-12 grid-rows-6 gap-4 h-[70vh] lg:h-[80vh]">
           
           {/* Main Feature: Industrial Extraction (Tall Tile) */}
           <motion.div 
