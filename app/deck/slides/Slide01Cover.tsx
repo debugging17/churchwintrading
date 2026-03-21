@@ -58,16 +58,15 @@ export function Slide01Cover() {
 
           {/* Strategic Tagline: Primary Headline in White, Reduced Scale */}
           <motion.div variants={fadeUp} className="mb-6">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-brand-white leading-tight tracking-tight drop-shadow-2xl uppercase">
-              FILLING AFRICA’S MISSING MIDDLE
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-display font-black text-brand-white leading-tight tracking-tight drop-shadow-2xl uppercase max-w-5xl">
+              PROVIDING GLOBAL ACCESS TO AFRICAN PRODUCTS
             </h1>
           </motion.div>
 
-          {/* Optional Subtext: White Hook, Reduced Scale */}
           <motion.div variants={fadeUp} className="flex flex-col items-center">
-             <div className="w-12 h-[1px] bg-brand-white/40 mb-8" />
-             <p className="text-sm md:text-base lg:text-lg text-brand-white/90 font-primary font-medium tracking-widest drop-shadow-lg whitespace-nowrap text-shadow-sm px-4">
-              Africa doesn’t lack supply. It lacks structured demand.
+             <div className="w-12 h-[1px] bg-brand-orange mb-8" />
+             <p className="text-sm md:text-base lg:text-lg text-brand-white/90 font-primary font-bold tracking-[0.3em] drop-shadow-lg uppercase px-4">
+              WHILE CARING FOR CONSUMER WELL-BEING
              </p>
           </motion.div>
         </motion.div>
