@@ -15,7 +15,7 @@ export function Slide19Phase2({ isActive }: { isActive: boolean }) {
         {/* Phase Header */}
         <div className="w-full md:w-[35%] border-l-[6px] border-brand-orange pl-6 py-2 h-max">
            <motion.h4 variants={fadeUp} className="text-sm font-display tracking-widest text-[#ff8022] uppercase mb-2 font-bold">Months 6–12</motion.h4>
-           <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl font-black text-brand-navy leading-none tracking-tighter uppercase">
+           <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase">
              Phase 2:<br /><span className="text-brand-orange italic">Infrastructure<br/>& Digital</span>
            </motion.h2>
         </div>
@@ -24,7 +24,7 @@ export function Slide19Phase2({ isActive }: { isActive: boolean }) {
         <div className="w-full md:w-[65%] flex flex-col gap-8">
            
            <motion.div variants={fadeUp} className="bg-brand-navy text-white rounded-[40px] p-10 shadow-2xl relative overflow-hidden border-b-8 border-brand-orange">
-             <div className="absolute top-0 right-0 p-8 opacity-25">
+             <div className="absolute top-0 right-0 p-8 opacity-60">
                 <Globe className="w-24 h-24 text-brand-orange" />
              </div>
              <h3 className="text-white font-display text-2xl font-black mb-8 uppercase tracking-tight">Sub-Initiatives</h3>
@@ -45,14 +45,14 @@ export function Slide19Phase2({ isActive }: { isActive: boolean }) {
            <motion.div variants={fadeUp} className="bg-brand-orange/5 border border-brand-orange/20 rounded-[40px] p-10 relative overflow-hidden group shadow-sm flex items-center justify-between">
              <div className="flex flex-col">
                 <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-2 font-bold">Demand Captured</p>
-                <p className="text-4xl md:text-5xl font-display font-black text-brand-navy tracking-tighter">1,000+</p>
-                <p className="text-sm font-primary text-brand-navy/60">Industry subscribers.</p>
+                <p className="text-4xl md:text-5xl font-display font-black text-white tracking-tighter">1,000+</p>
+                <p className="text-sm font-primary text-white/60">Industry subscribers.</p>
              </div>
              <div className="w-[1px] h-16 bg-brand-navy/10" />
              <div className="flex flex-col text-right">
                 <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-2 font-bold">Revenue Anchor</p>
-                <p className="text-4xl md:text-5xl font-display font-black text-brand-navy tracking-tighter">10–20</p>
-                <p className="text-sm font-primary text-brand-navy/60">New bulk manufacturing clients.</p>
+                <p className="text-4xl md:text-5xl font-display font-black text-white tracking-tighter">10–20</p>
+                <p className="text-sm font-primary text-white/60">New bulk manufacturing clients.</p>
              </div>
            </motion.div>
 
