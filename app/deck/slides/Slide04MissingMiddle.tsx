@@ -89,7 +89,44 @@ export function Slide04MissingMiddle({ isActive }: { isActive: boolean }) {
 
 
 
-            {/* RIGHT: THE SCALE (Workshop/Industrial State) */}
+            {/* TRANSFORMATION ARROW — Principle 9: Grace (Flow) */}
+            <motion.div 
+               initial={{ opacity: 0, scale: 0.8 }}
+               animate={animState}
+               variants={{
+                 hidden: { opacity: 0, scale: 0.8 },
+                 visible: { opacity: 1, scale: 1, transition: { delay: 0.8, duration: 0.8 } }
+               }}
+               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block"
+            >
+               <svg width="180" height="80" viewBox="0 0 180 80" fill="none" className="drop-shadow-[0_0_15px_rgba(255,106,0,0.5)]">
+                  <motion.path 
+                    d="M10 40C60 40 120 40 170 40" 
+                    stroke="url(#arrowGradient)" 
+                    strokeWidth="4" 
+                    strokeLinecap="round"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ delay: 1.2, duration: 1, ease: "easeInOut" }}
+                  />
+                  <motion.path 
+                    d="M155 25L170 40L155 55" 
+                    stroke="#ff6a00" 
+                    strokeWidth="4" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 2, duration: 0.4 }}
+                  />
+                  <defs>
+                    <linearGradient id="arrowGradient" x1="10" y1="40" x2="170" y2="40" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="white" stopOpacity="0.2" />
+                      <stop offset="1" stopColor="#ff6a00" />
+                    </linearGradient>
+                  </defs>
+               </svg>
+            </motion.div>
             <motion.div 
               variants={{
                 hidden: { opacity: 0, x: 50, scale: 0.95 },
