@@ -47,7 +47,7 @@ export function Slide06Segmentation({ onSectorClick }: Slide06SegmentationProps)
               key={i}
               variants={fadeUp}
               onClick={() => handleCardClick(i)}
-              className="p-4 md:p-5 lg:p-6 bg-brand-white/5 border border-brand-white/10 rounded-[20px] md:rounded-[24px] hover:border-brand-orange/40 transition-all group relative overflow-hidden cursor-pointer"
+              className="p-4 md:p-5 lg:p-6 bg-white/10 backdrop-blur-md border border-brand-white/10 rounded-[20px] md:rounded-[24px] hover:border-brand-orange/40 transition-all group relative overflow-hidden cursor-pointer shadow-lg"
             >
               <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                 <div className="text-4xl md:text-5xl font-black text-white italic">0{i+1}</div>
