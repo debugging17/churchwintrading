@@ -52,13 +52,6 @@ export const UnifiedVideoModal: React.FC<UnifiedVideoModalProps> = ({
                   toolAction={toolAction} 
                   videoSrc="/assets/videos/apply_cinematic,_8k_202603181845.mp4"
                 />
-                
-                {/* Refined Unmute Pill */}
-                <div className="absolute bottom-10 right-10 z-[110]">
-                  <div className="px-5 py-2.5 bg-brand-navy/40 backdrop-blur-md border border-white/5 rounded-2xl flex items-center gap-2">
-                    <span className="text-[9px] font-display font-black text-white/60 uppercase tracking-[0.2em]">Unmute to hear audio</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
