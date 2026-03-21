@@ -11,7 +11,7 @@ export function Slide08Insight() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center relative bg-brand-navy overflow-hidden px-10 md:px-20">
+    <div className="w-full h-full flex flex-col items-center justify-center relative bg-brand-navy overflow-hidden px-8 md:px-12 lg:px-16 pb-[var(--footer-height)]">
       {/* Decorative Glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-orange/10 rounded-full blur-[100px] animate-pulse-subtle" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-navy/30 rounded-full blur-[100px]" />
@@ -20,7 +20,7 @@ export function Slide08Insight() {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-5xl flex flex-col items-center text-center z-10"
+        className="w-full max-w-[100rem] flex flex-col items-center text-center z-10"
       >
         <motion.div variants={fadeUp} className="mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-orange/20 border border-brand-orange/30 rounded-full mb-6">
@@ -37,8 +37,16 @@ export function Slide08Insight() {
           
           {/* Global Demand Card */}
           <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px] flex flex-col">
-            <Image src="/images/visual_supremacy/organic_retail_aisle.png" alt="Global Demand" fill className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-90" />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent" />
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-70 group-hover:opacity-90"
+            >
+              <source src="/assets/images/mansory/grok-video-7864786d-3736-496a-abd9-5b4b705fd073.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent pointer-events-none" />
             
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center mb-6">
