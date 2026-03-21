@@ -83,20 +83,24 @@ export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean 
           ))}
         </div>
 
-        {/* BOTTOM MOAT STATEMENT */}
+        {/* BOTTOM MOAT STATEMENT — Principle 11: Mimicry (Consistency) */}
         <motion.div 
           variants={fadeUp}
-          className="mt-16 pt-10 border-t border-brand-navy/10 flex flex-col md:flex-row items-center justify-between gap-8"
+          className="mt-20 pt-12 border-t border-brand-navy/10 flex flex-col lg:flex-row items-center justify-between gap-12"
         >
-          <div className="max-w-xl">
-             <p className="text-brand-navy font-display font-black text-xl md:text-2xl uppercase tracking-tighter leading-none">
-                We remove the <span className="text-brand-orange">compliance friction</span> <br />
+          <div className="max-w-2xl text-center lg:text-left">
+             <p className="text-brand-navy font-display font-black text-xl md:text-3xl lg:text-4xl uppercase tracking-tighter leading-[0.9]">
+                We remove the <span className="text-brand-orange italic font-light">compliance friction</span> <br />
                 from African origin trade.
              </p>
           </div>
-          <div className="px-8 py-4 bg-brand-navy text-white rounded-2xl shadow-xl">
-             <p className="text-[10px] font-black uppercase text-brand-orange tracking-widest mb-1 text-center md:text-left">Moat Status</p>
-             <p className="text-sm font-primary font-bold">Operational infrastructure that cannot be coded away.</p>
+          <div className="px-10 py-6 bg-brand-navy text-white rounded-[2rem] shadow-2xl relative overflow-hidden group">
+             <div className="absolute top-0 right-0 w-24 h-24 bg-brand-orange/10 blur-2xl rounded-full -mr-10 -mt-10" />
+             <p className="text-[10px] font-black uppercase text-brand-orange tracking-[0.4em] mb-3 text-left">Moat Status</p>
+             <p className="text-base md:text-lg font-primary font-bold leading-tight max-w-xs text-left">
+                Operational infrastructure <br />
+                that cannot be coded away.
+             </p>
           </div>
         </motion.div>
       </motion.div>
