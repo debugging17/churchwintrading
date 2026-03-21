@@ -75,6 +75,7 @@ export function Slide04MissingMiddle({ isActive }: { isActive: boolean }) {
                  alt="Churchwin Current Office" 
                  fill 
                  className="object-cover opacity-80 xl:opacity-90 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
+                 priority
                />
                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/10 to-transparent opacity-80" />
                
@@ -87,8 +88,6 @@ export function Slide04MissingMiddle({ isActive }: { isActive: boolean }) {
                </div>
             </motion.div>
 
-
-
             {/* TRANSFORMATION ARROW — Principle 9: Grace (Flow) */}
             <motion.div 
                initial={{ opacity: 0, scale: 0.8 }}
@@ -97,36 +96,39 @@ export function Slide04MissingMiddle({ isActive }: { isActive: boolean }) {
                  hidden: { opacity: 0, scale: 0.8 },
                  visible: { opacity: 1, scale: 1, transition: { delay: 0.8, duration: 0.8 } }
                }}
-               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block"
+               className="absolute left-1/2 top-1/2 -track-x-1/2 -translate-y-1/2 z-30 hidden lg:block pointer-events-none"
+               style={{ left: "50%", transform: "translate(-50%, -50%)" }}
             >
-               <svg width="180" height="80" viewBox="0 0 180 80" fill="none" className="drop-shadow-[0_0_15px_rgba(255,106,0,0.5)]">
+               <svg width="240" height="80" viewBox="0 0 240 80" fill="none" className="drop-shadow-[0_0_20px_rgba(255,106,0,0.6)]">
                   <motion.path 
-                    d="M10 40C60 40 120 40 170 40" 
+                    d="M20 40C80 40 160 40 220 40" 
                     stroke="url(#arrowGradient)" 
-                    strokeWidth="4" 
+                    strokeWidth="6" 
                     strokeLinecap="round"
                     initial={{ pathLength: 0 }}
                     animate={{ pathLength: 1 }}
                     transition={{ delay: 1.2, duration: 1, ease: "easeInOut" }}
                   />
                   <motion.path 
-                    d="M155 25L170 40L155 55" 
+                    d="M205 20L225 40L205 60" 
                     stroke="#ff6a00" 
-                    strokeWidth="4" 
+                    strokeWidth="6" 
                     strokeLinecap="round" 
                     strokeLinejoin="round"
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 2, duration: 0.4 }}
+                    transition={{ delay: 2.2, duration: 0.4 }}
                   />
                   <defs>
-                    <linearGradient id="arrowGradient" x1="10" y1="40" x2="170" y2="40" gradientUnits="userSpaceOnUse">
+                    <linearGradient id="arrowGradient" x1="20" y1="40" x2="220" y2="40" gradientUnits="userSpaceOnUse">
                       <stop stopColor="white" stopOpacity="0.2" />
                       <stop offset="1" stopColor="#ff6a00" />
                     </linearGradient>
                   </defs>
                </svg>
             </motion.div>
+
+            {/* RIGHT: THE SCALE (Workshop/Industrial State) */}
             <motion.div 
               variants={{
                 hidden: { opacity: 0, x: 50, scale: 0.95 },
@@ -144,6 +146,7 @@ export function Slide04MissingMiddle({ isActive }: { isActive: boolean }) {
                  alt="Churchwin Workshop Scale" 
                  fill 
                  className="object-cover opacity-90 group-hover:scale-105 transition-all duration-1000 ease-out"
+                 priority
                />
                <div className="absolute inset-0 bg-gradient-to-t from-brand-orange/20 via-transparent to-transparent mix-blend-overlay opacity-50" />
                <div className="absolute inset-0 bg-brand-navy/10 opacity-40" />
