@@ -40,7 +40,7 @@ export function Slide04MissingMiddle({ isActive }: { isActive: boolean }) {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-[95rem] flex flex-col z-10"
+        className="w-full max-w-[95rem] mx-auto my-auto flex flex-col z-10"
       >
         {/* Title Area — Shifted Upwards & Left Aligned */}
         <motion.div variants={fadeUp} className="mb-4 md:mb-6 text-left">

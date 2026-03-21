@@ -37,89 +37,91 @@ export function Slide15DigitalVisibility({ isActive }: { isActive: boolean }) {
 
   return (
     <>
-      <div className="relative w-full h-full flex flex-col md:flex-row bg-[#FDFDFD] pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto">
+      <div className="relative w-full h-full flex flex-col bg-[#FDFDFD] pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto">
         <NoiseOverlay />
         
         {/* Dynamic Background Elements */}
         <div className="absolute top-[-20%] right-[-10%] w-[70vw] h-[70vw] bg-brand-orange/5 blur-[10rem] rounded-full pointer-events-none" />
         <div className="absolute bottom-[-20%] left-[-10%] w-[70vw] h-[70vw] bg-brand-navy/5 blur-[10rem] rounded-full pointer-events-none" />
 
-        {/* Content Side */}
-        <div className="w-full md:w-[45%] h-full flex flex-col justify-center px-10 md:px-20 z-20">
-          <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="max-w-xl">
-            <motion.div variants={slideFromLeft} className="flex items-center gap-3 mb-6">
-              <div className="h-px w-12 bg-brand-orange/40" />
-              <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold font-primary">Market Opportunity</span>
-            </motion.div>
+        {/* Layout Container */}
+        <div className="w-full max-w-[95rem] mx-auto my-auto flex flex-col md:flex-row z-20">
+          {/* Content Side */}
+          <div className="w-full md:w-[45%] flex flex-col justify-center px-10 md:px-20">
+            <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="max-w-xl">
+              <motion.div variants={slideFromLeft} className="flex items-center gap-3 mb-6">
+                <div className="h-px w-12 bg-brand-orange/40" />
+                <span className="text-brand-orange uppercase tracking-[0.3em] text-xs font-bold font-primary">Market Opportunity</span>
+              </motion.div>
 
-            <motion.h2 variants={slideFromLeft} className="font-display text-5xl md:text-6xl font-bold text-brand-navy leading-tight mb-8 tracking-tight">
-              Digital <br />
-              <span className="text-brand-orange italic font-light">Gravity.</span>
-            </motion.h2>
+              <motion.h2 variants={slideFromLeft} className="font-display text-5xl md:text-6xl font-bold text-brand-navy leading-tight mb-8 tracking-tight">
+                Digital <br />
+                <span className="text-brand-orange italic font-light">Gravity.</span>
+              </motion.h2>
 
-            <motion.p variants={fadeUp} className="text-xl text-brand-navy/60 font-primary mb-12 leading-relaxed italic">
-              Market leaders like Baraka capture <span className="text-brand-navy font-black not-italic">~52,000</span> monthly B2B visitors. <br />
-              Churchwin is at <span className="text-brand-orange font-black not-italic">~200.</span> <br />
-              <span className="text-brand-navy font-medium not-italic mt-2 block">This is our expansion opportunity.</span>
-            </motion.p>
+              <motion.p variants={fadeUp} className="text-xl text-brand-navy/60 font-primary mb-12 leading-relaxed italic">
+                Market leaders like Baraka capture <span className="text-brand-navy font-black not-italic">~52,000</span> monthly B2B visitors. <br />
+                Churchwin is at <span className="text-brand-orange font-black not-italic">~200.</span> <br />
+                <span className="text-brand-navy font-medium not-italic mt-2 block">This is our expansion opportunity.</span>
+              </motion.p>
 
-            <div className="space-y-4">
-              <GlassCard delay={0.3} className="border-l-4 border-l-brand-orange p-6 group hover:translate-x-2 transition-transform duration-500">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.1em] font-medium text-brand-navy/40 mb-1">Global Organic Cosmetics TAM</p>
-                    <h3 className="text-3xl font-display font-bold text-brand-navy group-hover:text-brand-orange transition-colors duration-500">$18.5B</h3>
-                  </div>
-                  <div className="bg-brand-orange/10 p-2 rounded-full">
-                    <Globe2 className="w-5 h-5 text-brand-orange" />
-                  </div>
-                </div>
-                <div className="h-1 w-full bg-brand-navy/5 rounded-full overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    animate={{ width: "65%" }}
-                    transition={{ duration: 1.5, delay: 0.8 }}
-                    className="h-full bg-brand-orange"
-                  />
-                </div>
-                <p className="text-xs text-brand-navy/50 mt-3 font-primary">Growing at 12% CAGR annually</p>
-              </GlassCard>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <GlassCard delay={0.4} className="p-5 border-l-4 border-l-brand-navy/20">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Search className="w-4 h-4 text-brand-orange" />
-                    <span className="text-brand-navy font-bold font-primary text-xs uppercase tracking-wider">Search Intent</span>
-                  </div>
-                  <p className="text-[11px] text-brand-navy/60 font-primary font-medium italic leading-relaxed">
-                    "Shea Butter Wholesale", "Ethical Cocoa Sourcing"
-                  </p>
-                </GlassCard>
-
-                {/* Apollo.io / Revenue Engine Trigger */}
-                <GlassCard 
-                  delay={0.5} 
-                  className="p-5 border-l-4 border-l-brand-orange cursor-pointer hover:bg-brand-orange/5 transition-colors group"
-                  onClick={() => setIsModalOpen(true)}
-                >
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-3">
-                      <Zap className="w-4 h-4 text-brand-orange fill-brand-orange/20" />
-                      <span className="text-brand-navy font-bold font-primary text-xs uppercase tracking-wider">Lead Engine</span>
+              <div className="space-y-4">
+                <GlassCard delay={0.3} className="border-l-4 border-l-brand-orange p-6 group hover:translate-x-2 transition-transform duration-500">
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.1em] font-medium text-brand-navy/40 mb-1">Global Organic Cosmetics TAM</p>
+                      <h3 className="text-3xl font-display font-bold text-brand-navy group-hover:text-brand-orange transition-colors duration-500">$18.5B</h3>
                     </div>
-                    <div className="px-1.5 py-0.5 rounded bg-brand-orange text-white text-[8px] font-black tracking-tighter uppercase">Live</div>
+                    <div className="bg-brand-orange/10 p-2 rounded-full">
+                      <Globe2 className="w-5 h-5 text-brand-orange" />
+                    </div>
                   </div>
-                  <p className="text-[11px] text-brand-navy font-black underline decoration-brand-orange/30 underline-offset-4 group-hover:text-brand-orange transition-colors">
-                    Visualize apollo.io integration →
-                  </p>
+                  <div className="h-1 w-full bg-brand-navy/5 rounded-full overflow-hidden">
+                    <motion.div 
+                      initial={{ width: 0 }}
+                      animate={{ width: "65%" }}
+                      transition={{ duration: 1.5, delay: 0.8 }}
+                      className="h-full bg-brand-orange"
+                    />
+                  </div>
+                  <p className="text-xs text-brand-navy/50 mt-3 font-primary">Growing at 12% CAGR annually</p>
                 </GlassCard>
-              </div>
-            </div>
-          </motion.div>
-        </div>
 
-        {/* Visual / Dashboard Side */}
-        <div className="w-full md:w-[55%] h-full flex items-center justify-center p-8 md:p-12 z-10 relative">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <GlassCard delay={0.4} className="p-5 border-l-4 border-l-brand-navy/20">
+                    <div className="flex items-center gap-3 mb-2">
+                      <Search className="w-4 h-4 text-brand-orange" />
+                      <span className="text-brand-navy font-bold font-primary text-xs uppercase tracking-wider">Search Intent</span>
+                    </div>
+                    <p className="text-[11px] text-brand-navy/60 font-primary font-medium italic leading-relaxed">
+                      "Shea Butter Wholesale", "Ethical Cocoa Sourcing"
+                    </p>
+                  </GlassCard>
+
+                  {/* Apollo.io / Revenue Engine Trigger */}
+                  <GlassCard 
+                    delay={0.5} 
+                    className="p-5 border-l-4 border-l-brand-orange cursor-pointer hover:bg-brand-orange/5 transition-colors group"
+                    onClick={() => setIsModalOpen(true)}
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-3">
+                        <Zap className="w-4 h-4 text-brand-orange fill-brand-orange/20" />
+                        <span className="text-brand-navy font-bold font-primary text-xs uppercase tracking-wider">Lead Engine</span>
+                      </div>
+                      <div className="px-1.5 py-0.5 rounded bg-brand-orange text-white text-[8px] font-black tracking-tighter uppercase">Live</div>
+                    </div>
+                    <p className="text-[11px] text-brand-navy font-black underline decoration-brand-orange/30 underline-offset-4 group-hover:text-brand-orange transition-colors">
+                      Visualize apollo.io integration →
+                    </p>
+                  </GlassCard>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Visual / Dashboard Side */}
+          <div className="w-full md:w-[55%] flex items-center justify-center p-8 md:p-12 relative">
           <motion.div 
             initial="hidden" 
             animate={animState} 
@@ -219,6 +221,7 @@ export function Slide15DigitalVisibility({ isActive }: { isActive: boolean }) {
               </div>
             </div>
           </motion.div>
+          </div>
         </div>
       </div>
 

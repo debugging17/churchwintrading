@@ -9,7 +9,7 @@ export function Slide10ValuePropViability({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto">
           <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl lg:text-7xl font-black text-brand-navy mb-4 text-center tracking-tighter uppercase">
             The Operational <span className="text-brand-orange">Bridge.</span>

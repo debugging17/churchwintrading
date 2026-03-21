@@ -10,7 +10,7 @@ export function Slide09ValuePropDesirability({ isActive }: { isActive: boolean }
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex items-center justify-end bg-brand-navy overflow-y-auto relative pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))]">
+    <div className="w-full h-full flex items-center justify-end bg-brand-navy overflow-y-auto relative pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))]">
       
       {/* Visual Background - Full Visibility */}
       <div className="absolute inset-0 z-0">
@@ -32,7 +32,7 @@ export function Slide09ValuePropDesirability({ isActive }: { isActive: boolean }
           initial="hidden" 
           animate={animState} 
           variants={staggerContainer} 
-          className="w-full bg-brand-navy/25 backdrop-blur-xl border border-white/10 rounded-[40px] flex flex-col justify-center px-10 md:px-16 py-12 shadow-2xl relative overflow-hidden"
+          className="w-full bg-brand-navy/25 backdrop-blur-xl border border-white/10 rounded-[40px] flex flex-col justify-center px-10 md:px-16 py-12 shadow-2xl relative overflow-hidden my-auto"
         >
           {/* Subtle brand glow inside the glass */}
           <div className="absolute -top-32 -right-32 w-80 h-80 bg-brand-orange/10 rounded-full blur-[120px] pointer-events-none" />

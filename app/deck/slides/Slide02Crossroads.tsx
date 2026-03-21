@@ -34,7 +34,7 @@ export function Slide02Crossroads({ isActive }: { isActive: boolean }) {
       </div>
 
       {/* === LAYER 1: Content Overlay === */}
-      <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-transparent pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto z-20 relative">
+      <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-transparent pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto z-20 relative">
         <motion.div
           initial="hidden"
           animate={animState}

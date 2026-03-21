@@ -25,7 +25,7 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
       {/* Cinematic architectural overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#012787 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
       
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-[95rem] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24 my-auto z-10 transition-all duration-700">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-[95rem] mx-auto my-auto flex flex-col lg:flex-row gap-12 lg:gap-24 z-10">
         
         {/* Left Side: Pitch */}
         <div className="w-full lg:w-[40%] flex flex-col justify-center">

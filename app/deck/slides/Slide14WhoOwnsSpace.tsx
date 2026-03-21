@@ -140,13 +140,13 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
         </div>
       </Modal>
 
-      <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
+      <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
         
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-[40vw] h-[40vw] rounded-full bg-brand-orange/5 blur-[120px] mix-blend-multiply" />
         <div className="absolute bottom-0 left-0 w-[50vw] h-[50vw] rounded-full bg-brand-navy/5 blur-[120px] mix-blend-multiply" />
 
-        <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-[95rem] mx-auto flex flex-col h-full z-10 relative">
+        <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-[95rem] mx-auto my-auto flex flex-col z-10 relative">
           <motion.div variants={fadeUp} className="mb-10 text-center max-w-5xl mx-auto">
             <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-brand-navy mb-4 leading-tight tracking-tighter uppercase">
               The Value <span className="text-brand-orange">Leakage.</span>

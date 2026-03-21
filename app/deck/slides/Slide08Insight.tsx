@@ -12,7 +12,7 @@ export function Slide08Insight({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
       {/* Decorative Glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-orange/10 rounded-full blur-[100px] animate-pulse-subtle" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-navy/30 rounded-full blur-[100px]" />
@@ -21,7 +21,7 @@ export function Slide08Insight({ isActive }: { isActive: boolean }) {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-[100rem] flex flex-col items-center text-center mx-auto z-10"
+        className="w-full max-w-[100rem] flex flex-col items-center text-center mx-auto my-auto z-10"
       >
         <motion.div variants={fadeUp} className="mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-orange/20 border border-brand-orange/30 rounded-full mb-6">

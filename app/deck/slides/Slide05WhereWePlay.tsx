@@ -34,7 +34,7 @@ export function Slide05WhereWePlay({ isActive }: { isActive: boolean }) {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="relative z-10 flex flex-col items-center text-center max-w-5xl px-8"
+        className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto my-auto p-4 md:p-8"
       >
               {/* HEADING — The Strategic Paradox */}
           <motion.h2

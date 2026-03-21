@@ -36,7 +36,7 @@ export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean 
   ];
 
   return (
-    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
       {/* Background Accents */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-brand-orange/5 blur-[120px] rounded-full" />
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-brand-navy/5 blur-[120px] rounded-full" />
@@ -45,7 +45,7 @@ export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean 
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-7xl z-10"
+        className="w-full max-w-7xl mx-auto my-auto flex flex-col z-10"
       >
         {/* HEADING */}
         <motion.div variants={fadeUp} className="mb-16 text-center">
