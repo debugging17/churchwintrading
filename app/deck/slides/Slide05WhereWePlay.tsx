@@ -42,27 +42,26 @@ export function Slide05WhereWePlay() {
               {/* HEADING — The Strategic Paradox */}
           <motion.h2
             variants={fadeUp}
-            className="text-4xl md:text-5xl xl:text-7xl font-display font-black text-brand-navy leading-tight mb-10 tracking-tighter"
+            className="text-3xl md:text-5xl xl:text-6xl font-display font-black text-white leading-tight mb-12 tracking-tighter w-full"
           >
-            Current models are <br />
-            <span className="text-brand-orange drop-shadow-sm italic text-5xl md:text-6xl">extractive, not expansive.</span>
+            Current models are <span className="text-white drop-shadow-sm italic">extractive, not expansive.</span>
           </motion.h2>
 
           {/* REALITY POINTS — High Conviction */}
-          <motion.div variants={fadeUp} className="space-y-4 max-w-xl">
-             <div className="flex gap-[1px] mb-6">
-                <div className="flex-1 p-4 bg-brand-navy text-white font-display font-black text-xs uppercase tracking-widest text-center border-r border-white/10">The Presence</div>
-                <div className="flex-1 p-4 bg-brand-orange text-white font-display font-black text-xs uppercase tracking-widest text-center">The Failure</div>
+          <motion.div variants={fadeUp} className="space-y-4 w-full max-w-[80rem] px-4 md:px-12 items-center flex flex-col">
+             <div className="flex gap-[1px] mb-6 w-full">
+                <div className="flex-1 p-6 bg-brand-navy text-white font-display font-black text-sm md:text-base uppercase tracking-widest text-center border-r border-white/10">The Presence</div>
+                <div className="flex-1 p-6 bg-brand-orange text-white font-display font-black text-sm md:text-base uppercase tracking-widest text-center">The Failure</div>
              </div>
             {[
-              { label: "Supply Exists", res: "NO Structured Demand", icon: "✓" },
-              { label: "Buyers Exist", res: "NO Consistent Contracts", icon: "✓" },
-              { label: "Infrastructure Ready", res: "NO Visibility", icon: "✓" },
+              { label: "Supply Exists", res: "NO Structured Demand", icon: "⚡" },
+              { label: "Buyers Exist", res: "NO Consistent Contracts", icon: "⚡" },
+              { label: "Infrastructure Ready", res: "NO Visibility", icon: "⚡" },
             ].map((pt, i) => (
-              <div key={i} className="flex items-center group">
-                <div className="flex-1 p-4 bg-brand-navy/5 text-brand-navy/60 font-medium border-l-4 border-brand-navy/20">{pt.label}</div>
-                <div className="w-10 h-10 flex items-center justify-center bg-brand-navy text-brand-orange font-bold z-10 scale-125 rounded-full shadow-lg">⚡</div>
-                <div className="flex-1 p-4 bg-brand-orange/10 text-brand-navy font-black border-r-4 border-brand-orange">{pt.res}</div>
+              <div key={i} className="flex items-center group w-full">
+                <div className="flex-1 p-6 bg-brand-navy/80 text-white font-medium text-lg md:text-xl border-l-4 border-brand-navy/20 backdrop-blur-md">{pt.label}</div>
+                <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-brand-navy text-brand-orange font-bold z-10 scale-125 rounded-full shadow-lg text-xl md:text-2xl">{pt.icon}</div>
+                <div className="flex-1 p-6 bg-brand-orange/80 text-white font-black text-lg md:text-xl border-r-4 border-brand-orange backdrop-blur-md">{pt.res}</div>
               </div>
             ))}
           </motion.div>
