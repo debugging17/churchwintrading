@@ -27,7 +27,7 @@ export function Slide03MacroMoment() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-start p-[2rem] md:p-[4rem] pb-[calc(var(--footer-height)+4rem)] pt-[calc(3rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] relative overflow-hidden bg-brand-navy overflow-y-auto">
+    <div className="w-full h-full flex flex-col items-start justify-start px-[1.5rem] md:px-[3rem] pb-[calc(var(--footer-height)+4rem)] pt-[calc(3rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] relative overflow-hidden bg-brand-navy overflow-y-auto">
       
       {/* === LAYER 0: Background Cinematic === */}
       <div className="absolute inset-0 z-0">
@@ -47,7 +47,7 @@ export function Slide03MacroMoment() {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-[90rem] mx-auto flex flex-col items-center z-10 my-auto"
+        className="w-full max-w-[95rem] flex flex-col items-start z-10 my-auto"
       >
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center h-full flex-grow">
           {/* Left Column: Text & Context */}
