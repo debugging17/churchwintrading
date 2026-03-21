@@ -12,9 +12,9 @@ export function Slide24CTA() {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center px-10 md:px-24 bg-brand-navy relative overflow-hidden text-center pb-[var(--footer-height)]">
+    <div className="w-full h-full flex flex-col items-center justify-start px-10 md:px-24 bg-brand-navy relative overflow-y-auto text-center pb-[calc(var(--footer-height)+4rem)] pt-12 md:pt-20">
       
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col items-center z-10 text-center my-auto">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col items-center z-10 text-center">
         
         <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-7xl font-black text-brand-white leading-none mb-4 uppercase tracking-tighter">
           Converting <br /><span className="text-brand-orange italic">Capacity to Revenue.</span>
