@@ -1,30 +1,62 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
-import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
-import { useSlideEnter } from "../motion/useSlideEnter";
-import { Globe, ArrowRight, Flag } from "lucide-react";
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { Globe, Activity, TrendingUp } from "lucide-react";
+
+gsap.registerPlugin(useGSAP);
 
 export function Slide19Phase2({ isActive }: { isActive: boolean }) {
-  const animState = useSlideEnter(100);
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!isActive) return;
+
+    const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.8 } });
+
+    // Header Animation
+    tl.from(".phase-marker", { x: -30, opacity: 0, duration: 0.6 })
+      .from(".phase-title", { y: 20, opacity: 0, stagger: 0.2 }, "-=0.2")
+      .from(".main-card", { scale: 0.98, opacity: 0, y: 30 }, "-=0.4")
+      .from(".list-item", { 
+        x: -20, 
+        opacity: 0, 
+        stagger: 0.15,
+        ease: "power2.out"
+      }, "-=0.3")
+      .from(".metrics-card", { 
+        y: 40, 
+        opacity: 0, 
+        stagger: 0.2,
+        ease: "back.out(1.7)"
+      }, "-=0.5")
+      .from(".globe-icon", {
+        scale: 0.5,
+        rotation: -45,
+        opacity: 0,
+        duration: 2,
+        ease: "elastic.out(1, 0.5)"
+      }, "-=1.5");
+
+  }, { dependencies: [isActive], scope: container });
 
   return (
-    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-7xl mx-auto my-auto flex flex-col md:flex-row gap-12">
+    <div ref={container} className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
+      <div className="w-full max-w-7xl mx-auto my-auto flex flex-col md:flex-row gap-12">
         
         {/* Phase Header */}
-        <div className="w-full md:w-[35%] border-l-[6px] border-brand-orange pl-6 py-2 h-max">
-           <motion.h4 variants={fadeUp} className="text-sm font-display tracking-widest text-[#ff8022] uppercase mb-2 font-bold">Months 6–12</motion.h4>
-           <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase">
+        <div className="w-full md:w-[35%] border-l-[6px] border-brand-orange pl-6 py-2 h-max phase-marker">
+           <h4 className="text-sm font-display tracking-widest text-[#ff8022] uppercase mb-2 font-bold">Months 6–12</h4>
+           <h2 className="font-display text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase phase-title">
              Phase 2:<br /><span className="text-brand-orange italic">Infrastructure<br/>& Digital</span>
-           </motion.h2>
+           </h2>
         </div>
 
         {/* Phase Content */}
         <div className="w-full md:w-[65%] flex flex-col gap-8">
            
-           <motion.div variants={fadeUp} className="bg-brand-navy text-white rounded-[40px] p-10 shadow-2xl relative overflow-hidden border-b-8 border-brand-orange">
-             <div className="absolute top-0 right-0 p-8 opacity-60">
+           <div className="main-card bg-brand-navy text-white rounded-[40px] p-10 shadow-2xl relative overflow-hidden border-b-8 border-brand-orange">
+             <div className="absolute top-0 right-0 p-8 opacity-60 globe-icon">
                 <Globe className="w-24 h-24 text-brand-orange" />
              </div>
              <h3 className="text-white font-display text-2xl font-black mb-8 uppercase tracking-tight">Sub-Initiatives</h3>
@@ -34,15 +66,15 @@ export function Slide19Phase2({ isActive }: { isActive: boolean }) {
                   "Automated sample requests and MOQ calculator integration.",
                   "Scale-up of B2B newsletter targeting 1,000+ industry decision makers."
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-4 border-b border-white/10 pb-4">
+                  <li key={i} className="list-item flex items-start gap-4 border-b border-white/10 pb-4">
                      <span className="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0 shadow-[0_0_10px_rgba(244,121,32,0.5)]" />
                      <span className="font-primary text-white/80 font-medium text-sm">{item}</span>
                   </li>
                 ))}
              </ul>
-           </motion.div>
+           </div>
 
-           <motion.div variants={fadeUp} className="bg-brand-orange/5 border border-brand-orange/20 rounded-[40px] p-10 relative overflow-hidden group shadow-sm flex items-center justify-between">
+           <div className="metrics-card bg-brand-orange/5 border border-brand-orange/20 rounded-[40px] p-10 relative overflow-hidden group shadow-sm flex items-center justify-between">
              <div className="flex flex-col">
                 <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-2 font-bold">Demand Captured</p>
                 <p className="text-4xl md:text-5xl font-display font-black text-white tracking-tighter">1,000+</p>
@@ -54,10 +86,10 @@ export function Slide19Phase2({ isActive }: { isActive: boolean }) {
                 <p className="text-4xl md:text-5xl font-display font-black text-white tracking-tighter">10–20</p>
                 <p className="text-sm font-primary text-white/60">New bulk manufacturing clients.</p>
              </div>
-           </motion.div>
+           </div>
 
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
