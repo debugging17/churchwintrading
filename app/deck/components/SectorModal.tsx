@@ -77,7 +77,7 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                 {sector.title}
               </h3>
               
-              <div className="flex gap-4 md:gap-10 border-b border-brand-navy/5 pb-0 mb-4 overflow-x-auto no-scrollbar scroll-smooth">
+              <div className="flex gap-4 md:gap-10 border-b border-brand-navy/5 pb-0 mb-4 overflow-x-auto overflow-y-hidden scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 {sector.subSegments.map((sub, idx) => (
                   <button
                     key={idx}
