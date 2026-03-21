@@ -36,8 +36,8 @@ export function Slide07VPCSegments() {
                 <div className="w-14 h-14 rounded-2xl bg-brand-orange/20 backdrop-blur-xl border border-brand-orange/30 flex items-center justify-center mb-4">
                   <ShoppingBag className="w-7 h-7 text-brand-orange" />
                 </div>
-                <h3 className="font-display text-3xl font-black text-white mb-2 tracking-tight">Beauty & Personal Care</h3>
-                <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-4 italic">Premium Cosmetic Formulations</p>
+                <h3 className="font-display text-3xl font-black text-white mb-2 tracking-tight">The Premium Retailer</h3>
+                <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-4 italic text-white/80">Sephora, Credo, Oh My Cream!</p>
               </div>
 
               <div className="space-y-4">
@@ -69,8 +69,8 @@ export function Slide07VPCSegments() {
                 <div className="w-14 h-14 rounded-2xl bg-brand-navy/20 backdrop-blur-xl border border-brand-navy/30 flex items-center justify-center mb-4">
                   <Boxes className="w-7 h-7 text-brand-orange" />
                 </div>
-                <h3 className="font-display text-3xl font-black text-white mb-2 tracking-tight">Wellness & Functional Foods</h3>
-                <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-4 italic">Supplements & Health Beverages</p>
+                <h3 className="font-display text-3xl font-black text-white mb-2 tracking-tight">The Global Wholesaler</h3>
+                <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-4 italic text-white/80">Ingredients Distributors, B2B Brokers</p>
               </div>
 
               <div className="space-y-4">
