@@ -88,7 +88,7 @@ export function Slide03MacroMoment() {
           {/* Right Column: Data Visualization Card */}
           <motion.div 
             variants={fadeUp}
-            className="w-full lg:col-span-8 h-[50vh] lg:h-[60vh] bg-brand-white/95 backdrop-blur-2xl rounded-[1.5rem] p-6 md:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.5)] border border-white/20 relative flex flex-col"
+            className="w-full lg:col-span-8 h-[60vh] lg:h-[75vh] bg-brand-white/95 backdrop-blur-2xl rounded-[1.5rem] p-6 md:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.5)] border border-white/20 relative flex flex-col pt-[3rem]"
           >
             <div className="absolute top-[1.5rem] left-[1.5rem] md:left-[2.5rem] z-30">
                <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-navy/60 uppercase">GDP PER CAPITA (USD)</p>
@@ -96,7 +96,7 @@ export function Slide03MacroMoment() {
 
             <div className="flex-grow pt-[1rem]">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={data} margin={{ top: 20, right: 10, left: 10, bottom: 0 }}>
+                <AreaChart data={data} margin={{ top: 20, right: 10, left: 10, bottom: 30 }}>
                   <defs>
                     <linearGradient id="colorKorea" x1="0" y1="0" x2="0" y2="1">
                       <stop offset="5%" stopColor="#ff6a00" stopOpacity={0.8}/>
