@@ -43,28 +43,28 @@ export function Slide09ValuePropDesirability() {
           </motion.div>
 
           <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-5xl lg:text-5xl font-black text-white leading-[1.1] mb-8 drop-shadow-2xl uppercase">
-            Building the <br />
-            <span className="text-brand-orange">Institutional Engine</span>
+            We eliminate the exact <br />
+            <span className="text-brand-orange text-4xl lg:text-6xl">problems your buyers named.</span>
           </motion.h2>
 
           <div className="flex flex-col gap-6 w-full">
             {[
               { 
                 ver: "1.0", 
-                label: "The Commodity Trap", 
-                desc: "Moving raw materials via manual referrals and speculative brokers.", 
+                label: "THE RETAILER", 
+                desc: "Consistency over Chaos: Standardized Grade A quality across all batches = no more multi-supplier friction.", 
                 active: false 
               },
               { 
                 ver: "2.0", 
-                label: "Institutional Readiness", 
-                desc: "Vertical integration of 11+ cooperatives and direct export capacity.", 
+                label: "THE WHOLESALER", 
+                desc: "Moat without Loss: Guaranteed mass production and buffer stocking = no more seasonal contract losses.", 
                 active: false 
               },
               { 
                 ver: "3.0", 
-                label: "The Expansion Engine", 
-                desc: "Predictable B2B acquisition paired with scalable processing infrastructure.", 
+                label: "PROCUREMENT", 
+                desc: "Compliance on Demand: Instant digital access to COA, MSDS, and Organic certifications = no more manual tracking.", 
                 active: true 
               }
             ].map((item, idx) => (
