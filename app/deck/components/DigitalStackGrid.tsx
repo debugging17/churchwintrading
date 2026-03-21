@@ -9,6 +9,7 @@ import {
   Mail, Clock, UserCheck, MessageSquare, 
   CheckCircle2, Globe, Search 
 } from "lucide-react";
+import Image from "next/image";
 
 // --- HELPERS ---
 
@@ -142,8 +143,14 @@ const MailchimpCard = () => {
   return (
     <BrowserWindow url="mailchimp.com" bgColor="bg-[#ffe01b]">
       <div className="p-4 flex flex-col items-center justify-center h-full text-center">
-         <div className="w-8 h-8 relative mb-2">
-            <img src="/assets/images/sales-engine/mailchimp.png" alt="Mailchimp" className="object-contain" />
+         <div className="w-10 h-10 relative mb-4">
+            <Image 
+              src="/assets/images/sales-engine/mailchimp.png" 
+              alt="Mailchimp" 
+              fill 
+              className="object-contain" 
+              priority
+            />
          </div>
          <h4 className="text-[10px] font-black text-brand-navy mb-6 tracking-widest uppercase">Q3 Lead Nurture Campaign</h4>
          
