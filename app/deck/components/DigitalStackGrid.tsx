@@ -16,7 +16,7 @@ import Image from "next/image";
 const BrowserWindow = ({ children, title, url, className = "", bgColor = "bg-white" }: any) => (
   <div className={`rounded-xl overflow-hidden border border-brand-navy/10 shadow-lg flex flex-col h-full ${className} ${bgColor}`}>
     {/* Browser Header */}
-    <div className="px-4 py-2 bg-brand-navy/5 flex items-center justify-between border-b border-brand-navy/5">
+    <div className="px-3 py-1.5 bg-brand-navy/5 flex items-center justify-between border-b border-brand-navy/5">
       <div className="flex gap-1.5">
         <div className="w-2 h-2 rounded-full bg-[#ff5f57]" />
         <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
@@ -48,7 +48,7 @@ const apolloData = [
 
 const ApolloCard = () => (
   <BrowserWindow title="Apollo.io" url="apollo.io/search">
-    <div className="p-4 flex flex-col h-full relative">
+    <div className="p-3 flex flex-col h-full relative">
       {/* Subtle Dot Pattern Overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#ff6a00 0.5px, transparent 0.5px)', backgroundSize: '10px 10px' }} />
       
@@ -59,7 +59,7 @@ const ApolloCard = () => (
             <p className="text-xl font-display font-black text-brand-orange">34,218</p>
           </div>
         </div>
-        <div className="h-20 w-full mb-4">
+        <div className="h-16 w-full mb-3">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={apolloData}>
             <defs>
@@ -109,10 +109,10 @@ const ApolloCard = () => (
 
 const InstantlyCard = () => (
   <BrowserWindow title="Instantly" url="app.instantly.ai">
-    <div className="p-4 flex flex-col h-full gap-3">
-       <div className="p-4 rounded-xl border border-brand-navy/5 bg-white shadow-sm flex items-center gap-4">
-          <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
-            <Mail className="w-5 h-5 text-blue-500" />
+    <div className="p-3 flex flex-col h-full gap-2">
+       <div className="p-3 rounded-xl border border-brand-navy/5 bg-white shadow-sm flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
+            <Mail className="w-4 h-4 text-blue-500" />
           </div>
           <div className="flex-1">
              <p className="text-xs font-bold text-brand-navy">Step 1: Introduction</p>
@@ -120,9 +120,9 @@ const InstantlyCard = () => (
           </div>
           <span className="px-2 py-0.5 rounded bg-green-50 text-green-600 text-[8px] font-black uppercase tracking-tighter">Active</span>
        </div>
-       <div className="p-4 rounded-xl border border-brand-navy/5 bg-white shadow-sm flex items-center gap-4">
-          <div className="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center">
-            <Clock className="w-5 h-5 text-orange-500" />
+       <div className="p-3 rounded-xl border border-brand-navy/5 bg-white shadow-sm flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center">
+            <Clock className="w-4 h-4 text-orange-500" />
           </div>
           <div className="flex-1">
              <p className="text-xs font-bold text-brand-navy">Step 2: Follow-up</p>
@@ -142,7 +142,7 @@ const MailchimpCard = () => {
   
   return (
     <BrowserWindow url="mailchimp.com" bgColor="bg-[#ffe01b]">
-      <div className="p-4 flex flex-col items-center justify-center h-full text-center">
+      <div className="p-3 flex flex-col items-center justify-center h-full text-center">
          <div className="w-10 h-10 relative mb-4">
             <Image 
               src="/assets/images/sales-engine/mailchimp.png" 
@@ -152,9 +152,9 @@ const MailchimpCard = () => {
               priority
             />
          </div>
-         <h4 className="text-[10px] font-black text-brand-navy mb-6 tracking-widest uppercase">Q3 Lead Nurture Campaign</h4>
+         <h4 className="text-[9px] font-black text-brand-navy mb-4 tracking-widest uppercase">Q3 Lead Nurture Campaign</h4>
          
-         <div className="flex gap-8 w-full justify-center bg-white/20 backdrop-blur-md p-4 rounded-2xl">
+         <div className="flex gap-4 w-full justify-center bg-white/20 backdrop-blur-md p-3 rounded-2xl">
             <div className="flex flex-col items-center">
                <div className="w-16 h-16 relative">
                   <ResponsiveContainer width="100%" height="100%">
@@ -216,7 +216,7 @@ const MailchimpCard = () => {
 
 const LinkedInCard = () => (
   <BrowserWindow title="LinkedIn" url="linkedin.com">
-    <div className="p-4 flex flex-col items-center justify-center h-full">
+    <div className="p-3 flex flex-col items-center justify-center h-full text-center">
        <div className="relative mb-4">
           <div className="w-16 h-16 rounded-full bg-brand-navy/5 border-2 border-white shadow-md flex items-center justify-center overflow-hidden">
              <div className="w-10 h-10 bg-brand-navy/10 rounded-full flex items-center justify-center">
@@ -228,9 +228,9 @@ const LinkedInCard = () => (
           </div>
        </div>
        <h4 className="text-[14px] font-black text-brand-navy mb-1 tracking-tight">Prospect Connected</h4>
-       <p className="text-[10px] text-brand-navy/40 font-medium mb-6">VP Procurement @ L&rsquo;Or&eacute;al</p>
+       <p className="text-[9px] text-brand-navy/40 font-medium mb-4">VP Procurement @ L&rsquo;Or&eacute;al</p>
        
-       <button className="w-full bg-[#0a66c2] hover:bg-[#004182] text-white py-3 px-4 rounded-full flex items-center justify-center gap-2 transition-colors shadow-lg active:scale-95 duration-200">
+       <button className="w-full bg-[#0a66c2] hover:bg-[#004182] text-white py-2 px-4 rounded-full flex items-center justify-center gap-2 transition-colors shadow-lg active:scale-95 duration-200">
           <MessageSquare className="w-4 h-4" />
           <span className="text-[11px] font-black uppercase tracking-widest text-white/90">Message</span>
        </button>
@@ -270,7 +270,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       variants={container}
       initial="hidden"
       animate={isActive ? "show" : "hidden"}
-      className="grid grid-cols-2 gap-4 w-full h-full max-h-[500px]"
+      className="grid grid-cols-2 gap-3 w-full h-full max-h-[420px]"
     >
       <motion.div variants={item} onClick={() => onToolSelect?.("apollo")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
         <ApolloCard />
