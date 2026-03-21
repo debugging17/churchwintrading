@@ -12,7 +12,7 @@ export function Slide08Insight({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center relative bg-brand-navy overflow-hidden px-8 md:px-12 lg:px-16 pb-[var(--footer-height)]">
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
       {/* Decorative Glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-orange/10 rounded-full blur-[100px] animate-pulse-subtle" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-navy/30 rounded-full blur-[100px]" />
@@ -21,9 +21,9 @@ export function Slide08Insight({ isActive }: { isActive: boolean }) {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-[100rem] flex flex-col items-center text-center z-10"
+        className="w-full max-w-[100rem] flex flex-col items-center text-center mx-auto z-10"
       >
-        <motion.div variants={fadeUp} className="mb-16">
+        <motion.div variants={fadeUp} className="mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-orange/20 border border-brand-orange/30 rounded-full mb-6">
             <Zap className="w-4 h-4 text-brand-orange" />
             <span className="text-brand-orange text-[10px] font-black uppercase tracking-[0.3em]">The Core Insight</span>
@@ -34,7 +34,7 @@ export function Slide08Insight({ isActive }: { isActive: boolean }) {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-6 w-full mb-16 relative items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-6 w-full mb-10 relative items-stretch">
           
           {/* Global Demand Card */}
            <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px] flex flex-col items-center justify-center p-8 bg-brand-navy">
