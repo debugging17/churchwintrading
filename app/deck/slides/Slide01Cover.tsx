@@ -44,13 +44,16 @@ export function Slide01Cover({ isActive }: { isActive: boolean }) {
           className="max-w-6xl flex flex-col items-center"
         >
           {/* Brand Logo - Compact & Pushed Up */}
-          <motion.div variants={fadeUp} className="mb-14 relative w-48 h-12 md:w-64 md:h-16 bg-white rounded-xl overflow-hidden p-4 shadow-xl flex items-center justify-center">
-             <Image 
-                src="/assets/images/churchwin_logo_new.png" 
-                alt="Churchwin Trading Logo" 
-                fill
-                className="object-contain p-1" 
-              />
+          <motion.div variants={fadeUp} className="mb-14 relative w-48 h-12 md:w-64 md:h-16 bg-white rounded-xl overflow-hidden shadow-xl flex items-center justify-center p-3">
+             <div className="relative w-full h-full">
+               <Image 
+                  src="/assets/images/churchwin_logo_new.png" 
+                  alt="Churchwin Trading Logo" 
+                  fill
+                  className="object-contain" 
+                  priority
+                />
+             </div>
           </motion.div>
 
           {/* Strategic Tagline: Primary Headline in White, Reduced Scale */}
