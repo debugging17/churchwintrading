@@ -59,7 +59,7 @@ const ApolloCard = () => (
             <p className="text-xl font-display font-black text-brand-orange">34,218</p>
           </div>
         </div>
-        <div className="h-16 w-full mb-3">
+        <div className="h-14 w-full mb-2">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={apolloData}>
             <defs>
@@ -142,8 +142,8 @@ const MailchimpCard = () => {
   
   return (
     <BrowserWindow url="mailchimp.com" bgColor="bg-[#ffe01b]">
-      <div className="p-3 flex flex-col items-center justify-center h-full text-center">
-         <div className="w-10 h-10 relative mb-4">
+    <div className="p-3 flex flex-col items-center justify-center h-full text-center">
+       <div className="w-8 h-8 relative mb-2">
             <Image 
               src="/assets/images/sales-engine/mailchimp.png" 
               alt="Mailchimp" 
@@ -152,7 +152,7 @@ const MailchimpCard = () => {
               priority
             />
          </div>
-         <h4 className="text-[9px] font-black text-brand-navy mb-4 tracking-widest uppercase">Q3 Lead Nurture Campaign</h4>
+         <h4 className="text-[8px] font-black text-brand-navy mb-3 tracking-widest uppercase">Q3 Lead Nurture Campaign</h4>
          
          <div className="flex gap-4 w-full justify-center bg-white/20 backdrop-blur-md p-3 rounded-2xl">
             <div className="flex flex-col items-center">
@@ -178,7 +178,7 @@ const MailchimpCard = () => {
                     <span className="text-xs font-black text-brand-navy">42%</span>
                   </div>
                </div>
-               <p className="text-[8px] font-black text-brand-navy/60 mt-2 uppercase tracking-tighter">Open Rate</p>
+               <p className="text-[7px] font-black text-brand-navy/60 mt-1 uppercase tracking-tighter">Open Rate</p>
             </div>
             
             <div className="flex flex-col items-center">
@@ -204,7 +204,7 @@ const MailchimpCard = () => {
                     <span className="text-xs font-black text-brand-navy">12%</span>
                   </div>
                </div>
-               <p className="text-[8px] font-black text-brand-navy/60 mt-2 uppercase tracking-tighter">Click Rate</p>
+               <p className="text-[7px] font-black text-brand-navy/60 mt-1 uppercase tracking-tighter">Click Rate</p>
             </div>
          </div>
       </div>
@@ -228,7 +228,7 @@ const LinkedInCard = () => (
           </div>
        </div>
        <h4 className="text-[14px] font-black text-brand-navy mb-1 tracking-tight">Prospect Connected</h4>
-       <p className="text-[9px] text-brand-navy/40 font-medium mb-4">VP Procurement @ L&rsquo;Or&eacute;al</p>
+       <p className="text-[8px] text-brand-navy/40 font-medium mb-3">VP Procurement @ L&rsquo;Or&eacute;al</p>
        
        <button className="w-full bg-[#0a66c2] hover:bg-[#004182] text-white py-2 px-4 rounded-full flex items-center justify-center gap-2 transition-colors shadow-lg active:scale-95 duration-200">
           <MessageSquare className="w-4 h-4" />
@@ -270,7 +270,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       variants={container}
       initial="hidden"
       animate={isActive ? "show" : "hidden"}
-      className="grid grid-cols-2 gap-3 w-full h-full max-h-[420px]"
+      className="grid grid-cols-2 gap-3 w-full h-full max-h-[350px]"
     >
       <motion.div variants={item} onClick={() => onToolSelect?.("apollo")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
         <ApolloCard />

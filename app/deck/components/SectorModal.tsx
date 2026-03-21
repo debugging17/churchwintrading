@@ -142,9 +142,9 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                   </div>
                   
                   <div className="lg:col-span-5 flex flex-col gap-4">
-                    <div className="p-6 md:p-7 bg-white rounded-[2.5rem] border border-brand-navy/5 shadow-sm flex flex-col">
-                      <h5 className="font-display text-xl md:text-2xl font-black text-brand-navy mb-4 tracking-tight">Strategic Fit</h5>
-                      <p className="text-brand-navy/60 text-xs md:text-sm leading-relaxed mb-6">
+                    <div className="p-5 md:p-6 bg-white rounded-[2rem] border border-brand-navy/5 shadow-sm flex flex-col">
+                      <h5 className="font-display text-lg md:text-xl font-black text-brand-navy mb-3 tracking-tight">Strategic Fit</h5>
+                      <p className="text-brand-navy/60 text-[10px] md:text-xs leading-relaxed mb-4">
                         {sector.strategicFit}{" "}
                         <span className="font-bold text-brand-navy border-b-2 border-brand-orange/30 italic">
                           {sector.subSegments[activeTab].details}
@@ -161,10 +161,10 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                     </div>
 
                     {(sector as any).commercialProof && (
-                      <div className="p-6 md:p-7 bg-brand-navy text-white rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col justify-center">
+                      <div className="p-5 md:p-6 bg-brand-navy text-white rounded-[2rem] shadow-2xl relative overflow-hidden flex flex-col justify-center">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/10 blur-3xl rounded-full -mr-16 -mt-16" />
-                        <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-orange mb-4">Board-Level Commercial Proof</h5>
-                        <div className="grid grid-cols-2 gap-y-6 gap-x-4">
+                        <h5 className="text-[9px] font-black uppercase tracking-[0.4em] text-brand-orange mb-3">Board-Level Commercial Proof</h5>
+                        <div className="grid grid-cols-2 gap-y-4 gap-x-4">
                           <div>
                             <p className="text-[8px] uppercase tracking-widest text-white/40 mb-1">Volume</p>
                             <p className="text-base font-display font-bold">{(sector as any).commercialProof.volume}</p>
