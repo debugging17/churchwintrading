@@ -4,12 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { fadeUp, slideFromLeft } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import dynamic from "next/dynamic";
-
-const RemotionValueGapWrapper = dynamic(
-  () => import("../components/RemotionValueGapWrapper").then((mod) => mod.RemotionValueGapWrapper),
-  { ssr: false }
-);
+import { ValueGapFramer } from "../components/ValueGapFramer";
 
 // SLIDE 02: THE INDUSTRIAL CROSSROADS
 // Skills applied:
@@ -94,7 +89,7 @@ export function Slide02Crossroads() {
                 </div>
                 {i === 1 && (
                   <div className="ml-6">
-                    <RemotionValueGapWrapper />
+                    <ValueGapFramer />
                   </div>
                 )}
               </div>
