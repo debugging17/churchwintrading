@@ -22,9 +22,9 @@ export function Slide04MissingMiddle() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-start relative overflow-hidden bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(4rem+var(--header-height,0px))] px-10 md:px-20 overflow-y-auto">
+    <div className="w-full h-full flex flex-col items-center justify-start relative overflow-hidden bg-brand-navy pb-[calc(var(--footer-height)+1rem)] pt-[calc(1rem+var(--header-height,0px))] md:pt-[calc(2.5rem+var(--header-height,0px))] px-10 md:px-20 overflow-y-auto">
       
-      {/* === LAYER 0: Background Context === */}
+      {/* === LAYER 0: Background Context — Principle 12: Mimic (Depth) === */}
       <div className="absolute inset-0 z-0 opacity-10">
         <Image 
           src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
@@ -33,7 +33,7 @@ export function Slide04MissingMiddle() {
           className="object-cover blur-sm"
           priority
         />
-        <div className="absolute inset-0 bg-brand-navy/80" />
+        <div className="absolute inset-0 bg-brand-navy/90" />
       </div>
 
       <motion.div 
@@ -42,20 +42,19 @@ export function Slide04MissingMiddle() {
         variants={staggerContainer}
         className="w-full max-w-[95rem] mx-auto flex flex-col z-10 px-6 md:px-12 my-auto"
       >
-        {/* Title Area — Shifted Upwards */}
-        <motion.div variants={fadeUp} className="mb-6 md:mb-10 text-left">
-           <div className="flex items-center gap-4 mb-3">
+        {/* Title Area — Shifted Upwards & Single Line Header */}
+        <motion.div variants={fadeUp} className="mb-4 md:mb-8 text-left">
+           <div className="flex items-center gap-4 mb-2">
               <div className="w-12 h-[2px] bg-brand-orange" />
               <p className="text-brand-orange text-[10px] tracking-[0.4em] uppercase font-black">The Demand Bottleneck</p>
            </div>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-brand-white leading-[1.1] tracking-tighter">
-               Africa lacks structured demand. <br />
-               <span className="text-brand-orange italic underline decoration-white/10">This is the failure point of scale.</span>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-brand-white leading-none tracking-tighter whitespace-normal lg:whitespace-nowrap overflow-visible">
+               Africa lacks structured demand. <span className="text-brand-orange italic underline decoration-white/10 decoration-2 underline-offset-8">This is the failure point of scale.</span>
             </h2>
          </motion.div>
 
-         {/* Comparison Grid — Principle 8: Storytelling (The Transformation - Height Expanded) */}
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 w-full mb-10">
+         {/* Comparison Grid — Principle 8: Storytelling (Height Expanded & Overlay Toned Down) */}
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 w-full mb-8">
             
             {/* LEFT: THE CONSTRAINT (Current Office) */}
             <motion.div 
@@ -74,9 +73,10 @@ export function Slide04MissingMiddle() {
                  src="/images/IMG_0471-min-min-scaled.jpg" 
                  alt="Churchwin Current Office" 
                  fill 
-                 className="object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
+                 className="object-cover opacity-80 xl:opacity-90 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
                />
-               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/20 to-transparent" />
+               {/* Lighter Gradient Overlays */}
+               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/10 to-transparent opacity-80" />
                
                <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left">
                   <span className="text-brand-orange text-[10px] uppercase font-black tracking-[0.4em] mb-4">Local Constraint</span>
@@ -104,12 +104,12 @@ export function Slide04MissingMiddle() {
                  src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
                  alt="Churchwin Workshop Scale" 
                  fill 
-                 className="object-cover opacity-80 group-hover:scale-105 transition-all duration-1000 ease-out"
+                 className="object-cover opacity-90 group-hover:scale-105 transition-all duration-1000 ease-out"
                />
-               <div className="absolute inset-0 bg-gradient-to-t from-brand-orange/30 via-transparent to-transparent mix-blend-overlay" />
-               <div className="absolute inset-0 bg-brand-navy/20" />
+               <div className="absolute inset-0 bg-gradient-to-t from-brand-orange/20 via-transparent to-transparent mix-blend-overlay opacity-50" />
+               <div className="absolute inset-0 bg-brand-navy/10 opacity-40" />
                
-               <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left bg-gradient-to-t from-brand-navy via-brand-navy/40 to-transparent">
+               <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left bg-gradient-to-t from-brand-navy/60 via-brand-navy/20 to-transparent">
                   <span className="text-brand-orange text-[10px] uppercase font-black tracking-[0.4em] mb-4">Global Scale</span>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-display font-black text-white leading-tight uppercase tracking-tighter">
                     Institutional <br />Infrastructure
@@ -128,15 +128,15 @@ export function Slide04MissingMiddle() {
             </motion.div>
          </div>
 
-         {/* Insight Bar — Principle 7: Purpose */}
-         <motion.div variants={fadeUp} className="bg-brand-white/5 p-6 md:p-8 rounded-3xl border-l-[10px] border-brand-orange shadow-2xl backdrop-blur-md">
+         {/* Insight Bar — Principle 7: Purpose (Spacing Refinement) */}
+         <motion.div variants={fadeUp} className="bg-brand-white/5 p-6 md:p-8 rounded-3xl border-l-[10px] border-brand-orange shadow-2xl backdrop-blur-md mb-4">
             <p className="text-brand-white/90 font-primary italic text-base md:text-xl leading-relaxed">
-              Moving from the constraint of manual heroics to the scale of <span className="text-brand-orange font-black not-italic underline decoration-white/20 underline-offset-4">Physical Trust Infrastructure.</span>
+              Moving from the constraint of manual heroics to the scale of <span className="text-brand-orange font-black not-italic underline decoration-white/10 underline-offset-4 decoration-2">Physical Trust Infrastructure.</span>
             </p>
          </motion.div>
 
-         {/* Footer Strategy */}
-         <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center justify-between border-t border-white/10 mt-12 pt-8 gap-4 opacity-40">
+         {/* Footer Strategy — Principle 11: Language */}
+         <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center justify-between border-t border-white/10 pt-6 gap-4 opacity-40">
            <div className="flex gap-12">
               <div>
                  <p className="text-white/40 text-[9px] uppercase font-black tracking-widest mb-1">Operational Shift</p>
