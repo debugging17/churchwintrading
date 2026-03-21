@@ -47,11 +47,11 @@ export function Slide03MacroMoment() {
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-[80rem] mx-auto flex flex-col items-center z-10 my-auto"
+        className="w-full max-w-[90rem] mx-auto flex flex-col items-center z-10 my-auto"
       >
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center h-full flex-grow">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center h-full flex-grow">
           {/* Left Column: Text & Context */}
-          <motion.div variants={fadeUp} className="text-left lg:col-span-4 flex flex-col justify-center gap-6 h-full">
+          <motion.div variants={fadeUp} className="text-left lg:col-span-4 xl:col-span-5 flex flex-col justify-center gap-4 h-full">
             <motion.h2
               variants={fadeUp}
               className="text-4xl md:text-5xl xl:text-6xl font-display font-black text-brand-white leading-[1.1] tracking-tighter"
@@ -88,7 +88,7 @@ export function Slide03MacroMoment() {
           {/* Right Column: Data Visualization Card */}
           <motion.div 
             variants={fadeUp}
-            className="w-full lg:col-span-8 h-[60vh] lg:h-[75vh] bg-brand-white/95 backdrop-blur-2xl rounded-[1.5rem] p-6 md:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.5)] border border-white/20 relative flex flex-col pt-[3rem]"
+            className="w-full lg:col-span-8 xl:col-span-7 h-[60vh] lg:h-[75vh] bg-brand-white/95 backdrop-blur-2xl rounded-[1.5rem] p-6 md:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.5)] border border-white/20 relative flex flex-col pt-[3rem]"
           >
             <div className="absolute top-[1.5rem] left-[1.5rem] md:left-[2.5rem] z-30">
                <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-navy/60 uppercase">GDP PER CAPITA (USD)</p>
