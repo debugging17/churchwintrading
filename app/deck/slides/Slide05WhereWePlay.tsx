@@ -44,8 +44,8 @@ export function Slide05WhereWePlay() {
             variants={fadeUp}
             className="text-4xl md:text-5xl xl:text-7xl font-display font-black text-brand-navy leading-tight mb-10 tracking-tighter"
           >
-            Even inside the system, <br />
-            <span className="text-brand-orange drop-shadow-sm italic">scale is broken</span>
+            Current models are <br />
+            <span className="text-brand-orange drop-shadow-sm italic text-5xl md:text-6xl">extractive, not expansive.</span>
           </motion.h2>
 
           {/* REALITY POINTS — High Conviction */}

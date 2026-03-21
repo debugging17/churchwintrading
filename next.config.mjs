@@ -3,8 +3,6 @@ const nextConfig = {
   // 1. Disable the X-Powered-By header to prevent framework fingerprinting
   poweredByHeader: false,
 
-  // 2. Disable font optimization to avoid build-time fetch timeouts in restricted environments
-  optimizeFonts: false,
 
   // 3. Enforce Strict Security Headers globally
   async headers() {

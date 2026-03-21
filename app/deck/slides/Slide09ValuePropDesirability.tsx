@@ -39,32 +39,32 @@ export function Slide09ValuePropDesirability() {
 
           <motion.div variants={fadeUp} className="flex items-center gap-3 mb-6">
             <div className="h-[2px] w-12 bg-brand-orange" />
-            <span className="text-brand-orange font-display font-bold uppercase tracking-[0.3em] text-[10px] drop-shadow-md">The Churchwin Solution</span>
+            <span className="text-brand-orange font-display font-bold uppercase tracking-[0.3em] text-[10px] drop-shadow-md">The Stability Architecture</span>
           </motion.div>
 
           <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-5xl lg:text-5xl font-black text-white leading-[1.1] mb-8 drop-shadow-2xl uppercase">
-            From trading company <br />
-            <span className="text-brand-orange">→ to infrastructure layer</span>
+            Building the <br />
+            <span className="text-brand-orange">Institutional Engine</span>
           </motion.h2>
 
           <div className="flex flex-col gap-6 w-full">
             {[
               { 
                 ver: "1.0", 
-                label: "Commodity Trading", 
-                desc: "Moving raw materials via manual referrals and traditional brokers.", 
+                label: "The Commodity Trap", 
+                desc: "Moving raw materials via manual referrals and speculative brokers.", 
                 active: false 
               },
               { 
                 ver: "2.0", 
-                label: "Supply Chain Operator", 
-                desc: "Vertical integration of 11+ cooperatives and direct export logistics.", 
+                label: "Institutional Readiness", 
+                desc: "Vertical integration of 11+ cooperatives and direct export capacity.", 
                 active: false 
               },
               { 
                 ver: "3.0", 
-                label: "Demand + Supply Engine", 
-                desc: "Predictable B2B acquisition paired with scalable processing capacity.", 
+                label: "The Expansion Engine", 
+                desc: "Predictable B2B acquisition paired with scalable processing infrastructure.", 
                 active: true 
               }
             ].map((item, idx) => (

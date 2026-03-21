@@ -27,12 +27,12 @@ export function Slide16B2BPipeline() {
         {/* Left Side: Pitch */}
         <div className="w-full lg:w-[45%] flex flex-col justify-center">
           <motion.h2 variants={slideFromLeft} className="font-display text-3xl md:text-5xl font-extrabold text-brand-navy leading-tight mb-4 uppercase tracking-tighter">
-            The Operational <span className="text-brand-orange">Moat:</span> <br />
-            <span className="italic font-light">Institutional Systems.</span>
+            The B2B <br />
+            <span className="text-brand-orange italic font-light">Demand Engine.</span>
           </motion.h2>
           
           <motion.p variants={fadeUp} className="text-lg md:text-xl text-brand-navy/70 font-primary border-l-2 border-brand-navy/20 pl-6 mb-8 italic">
-            Standardizing the unpredictable. Trading becomes a system.
+            Converting digital visibility into locked institutional revenue. 
           </motion.p>
 
           <div className="grid grid-cols-1 gap-4">

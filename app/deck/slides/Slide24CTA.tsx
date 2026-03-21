@@ -17,11 +17,11 @@ export function Slide24CTA() {
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto flex flex-col items-center z-10 text-center my-auto">
         
         <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-7xl font-black text-brand-white leading-none mb-4 uppercase tracking-tighter">
-          Rising to <br /><span className="text-brand-orange italic">Systematize Scale.</span>
+          Converting <br /><span className="text-brand-orange italic">Capacity to Revenue.</span>
         </motion.h2>
         
         <motion.p variants={fadeUp} className="text-xl md:text-2xl text-brand-white/40 font-primary mb-16 italic max-w-2xl mx-auto">
-          Built on African soil. Sold globally through a systematic demand engine.
+          Built on African soil. Scaled globally through an institutional demand engine.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16 text-left">

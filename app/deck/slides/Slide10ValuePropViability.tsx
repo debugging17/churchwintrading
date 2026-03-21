@@ -12,11 +12,11 @@ export function Slide10ValuePropViability() {
     <div className="w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-white">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto">
           <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl lg:text-7xl font-black text-brand-navy mb-4 text-center tracking-tighter uppercase">
-            The Expansion <span className="text-brand-orange">Lever.</span>
+            The Operational <span className="text-brand-orange">Bridge.</span>
           </motion.h2>
 
           <motion.p variants={fadeUp} className="text-xl text-brand-navy/60 font-primary mb-16 text-center max-w-3xl mx-auto italic">
-            Expanding by converting existing supply capacity into a predictable, repeatable demand engine.
+            Connecting fragmented origin supply to the rigid requirements of global institutional procurement.
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">

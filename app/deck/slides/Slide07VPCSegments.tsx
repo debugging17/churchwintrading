@@ -35,39 +35,39 @@ export function Slide07VPCSegments() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-          {/* RETAILERS */}
+          {/* BEAUTY & PERSONAL CARE */}
           <motion.div
             variants={fadeUp}
             className="p-12 rounded-[40px] bg-white/5 backdrop-blur-xl border border-white/10 border-b-8 border-brand-orange shadow-2xl relative overflow-hidden group"
           >
              <div className="absolute top-0 right-0 p-8 text-brand-orange/10 text-8xl font-display font-black group-hover:text-brand-orange/20 transition-colors">01</div>
-             <h3 className="text-3xl font-display font-black uppercase mb-8 tracking-tighter text-brand-white">Retailers</h3>
+             <h3 className="text-3xl font-display font-black uppercase mb-8 tracking-tighter text-brand-white">Beauty & <br />Personal Care</h3>
              <ul className="space-y-6 font-primary text-base text-brand-white/80">
-                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.5)]" /> Small MOQ Support</li>
-                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.5)]" /> Retail-Ready Branding</li>
-                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.5)]" /> Direct Consumer Access</li>
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.5)]" /> Batch Consistency</li>
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.5)]" /> Origin Traceability</li>
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.5)]" /> Ethical Governance</li>
              </ul>
              <div className="mt-10 p-4 bg-brand-orange/10 rounded-xl border border-brand-orange/20">
                 <p className="text-[10px] font-black uppercase text-brand-orange tracking-widest mb-1">Target Outcome</p>
-                <p className="text-xs text-brand-white/60">Inventory responsiveness without over-stocking risk.</p>
+                <p className="text-xs text-brand-white/60">Risk-free inclusion in premium cosmetic formulations.</p>
              </div>
           </motion.div>
 
-          {/* WHOLESALERS */}
+          {/* WELLNESS & FUNCTIONAL FOODS */}
           <motion.div
             variants={fadeUp}
             className="p-12 rounded-[40px] bg-white border-b-8 border-brand-navy shadow-2xl relative overflow-hidden group"
           >
              <div className="absolute top-0 right-0 p-8 text-brand-navy/5 text-8xl font-display font-black group-hover:text-brand-navy/10 transition-colors">02</div>
-             <h3 className="text-3xl font-display font-black uppercase mb-8 tracking-tighter text-brand-navy">Wholesalers</h3>
+             <h3 className="text-3xl font-display font-black uppercase mb-8 tracking-tighter text-brand-navy">Wellness & <br />Functional Foods</h3>
              <ul className="space-y-6 font-primary text-base text-brand-navy/70">
-                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-navy" /> Bulk Volume Fulfillment</li>
-                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-navy" /> Price Consistency</li>
-                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-navy" /> Industrial Procurement Grade</li>
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-navy" /> Export-Grade Purity</li>
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-navy" /> Cold-Chain Logistics</li>
+                <li className="flex items-center gap-4"><span className="w-2 h-2 rounded-full bg-brand-navy" /> Volume Reliability</li>
              </ul>
              <div className="mt-10 p-4 bg-brand-navy/5 rounded-xl border border-brand-navy/10">
                 <p className="text-[10px] font-black uppercase text-brand-navy/50 tracking-widest mb-1">Target Outcome</p>
-                <p className="text-xs text-brand-navy/60">Reliable supply contracts for high-volume manufacturing.</p>
+                <p className="text-xs text-brand-navy/60">Institutional supply for supplements and health beverages.</p>
              </div>
           </motion.div>
         </div>

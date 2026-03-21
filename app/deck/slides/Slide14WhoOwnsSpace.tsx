@@ -148,12 +148,12 @@ export function Slide14WhoOwnsSpace() {
 
         <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-7xl mx-auto flex flex-col h-full z-10 relative">
           <motion.div variants={fadeUp} className="mb-6 text-center max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-3 leading-tight">
-              Four players own this market. <br/>
-              <span className="text-brand-orange font-light">None are Ghanaian at scale.</span>
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-3 leading-tight tracking-tighter uppercase">
+              The Value <span className="text-brand-orange">Leakage.</span>
             </h2>
-            <p className="font-primary text-brand-navy/70 text-base md:text-lg font-medium">
-              The market is bifurcated by limitations. Churchwin Trading bridges the gap.
+            <p className="font-primary text-brand-navy/70 text-base md:text-lg font-medium italic">
+              Ghana provides the resource, but the global intermediaries capture the margin. <br />
+              <span className="text-brand-navy font-black not-italic">Churchwin Trading is the integrated alternative.</span>
             </p>
           </motion.div>
 

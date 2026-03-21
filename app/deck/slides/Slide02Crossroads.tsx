@@ -56,18 +56,18 @@ export function Slide02Crossroads() {
           {/* HEADING — The Structural Point */}
           <motion.h2
             variants={fadeUp}
-            className="text-4xl md:text-5xl xl:text-7xl font-display font-black text-brand-white leading-tight mb-10 tracking-tighter drop-shadow-2xl"
+            className="text-4xl md:text-5xl xl:text-7xl font-display font-black text-brand-white leading-[1.1] mb-10 tracking-tighter drop-shadow-2xl"
           >
-            Africa is at a <br />
-            <span className="text-brand-orange drop-shadow-sm">structural</span> turning point
+            Escaping the <br />
+            <span className="text-brand-orange drop-shadow-sm italic">Commodity Trap.</span>
           </motion.h2>
 
           {/* POINTS — Reality-Backed */}
           <motion.div variants={fadeUp} className="space-y-8 max-w-xl">
             {[
-              { label: "Resource-Rich", sub: "Vast reserves of raw botanical and mineral potential." },
-              { label: "Labor-Abundant", sub: "The world's youngest and fastest-growing workforce." },
-              { label: "Underperforming Globally", sub: "Yet consistently capturing less than 5% of global value chains." },
+              { label: "Structural Volatility", sub: "Supply shocks and pricing pressure make traditional exporting a race to the bottom." },
+              { label: "The Infrastructure Gap", sub: "Africa captures <5% of global value because we export raw bulk, not refined trust." },
+              { label: "Institutional Readiness", sub: "The missing layer isn't the product—it's the systems that the global board requires." },
             ].map((pt, i) => (
               <div key={i} className="flex items-start gap-5">
                 <div className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-2.5 shrink-0 shadow-[0_0_8px_rgba(244,121,32,0.4)]" />

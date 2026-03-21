@@ -12,45 +12,57 @@ export function Slide17Roadmap() {
         
         <motion.div variants={fadeUp} className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-black text-brand-navy leading-tight mb-4 uppercase tracking-tighter">
-            Revenue <span className="text-brand-orange">Architecture.</span>
+            Execution <span className="text-brand-orange">Roadmap.</span>
           </h2>
           <p className="text-brand-navy/60 text-lg md:text-xl font-primary max-w-2xl mx-auto italic">
-            Physical commodities meet premium branding. Two streams, one infrastructure.
+            A three-phase transformation from origin trading to an integrated institutional infrastructure.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative items-stretch">
           
-          {/* Stream 1: Bulk */}
-          <motion.div variants={fadeUp} className="p-10 bg-brand-navy/5 border border-brand-navy/10 rounded-[40px] flex flex-col">
-             <div className="w-12 h-12 rounded-2xl bg-brand-navy/10 flex items-center justify-center mb-6">
-                <TrendingUp className="w-6 h-6 text-brand-navy" />
+          {/* Phase 1: Stabilize */}
+          <motion.div variants={fadeUp} className="p-8 bg-brand-navy/5 border border-brand-navy/10 rounded-[32px] flex flex-col">
+             <div className="w-10 h-10 rounded-xl bg-brand-navy/10 flex items-center justify-center mb-6">
+                <span className="text-brand-navy font-black">01</span>
              </div>
-             <h3 className="text-2xl font-display font-black text-brand-navy mb-4 uppercase">Stream 1: Bulk Export</h3>
-             <p className="text-sm font-primary text-brand-navy/70 mb-8 leading-relaxed">
-                Foundation revenue. High-volume commodity export of raw and semi-processed inputs (Shea, Baobab, Cocoa). 
+             <h3 className="text-xl font-display font-black text-brand-navy mb-4 uppercase">Phase 1: Stabilize</h3>
+             <p className="text-xs font-primary text-brand-navy/70 mb-8 leading-relaxed">
+                Baselining the origin. Vertical integration of 11+ co-ops and institutionalizing compliance (COA/MSDS).
              </p>
-             <div className="mt-auto pt-6 border-t border-brand-navy/10">
-                <p className="text-[10px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Primary Driver</p>
-                <p className="text-xl font-display font-bold text-brand-navy">Scale & Cashflow</p>
+             <div className="mt-auto pt-4 border-t border-brand-navy/10">
+                <p className="text-[9px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Impact</p>
+                <p className="text-lg font-display font-bold text-brand-navy">Operational Bedrock</p>
              </div>
           </motion.div>
 
-          {/* Stream 2: Private Label */}
-          <motion.div variants={fadeUp} className="p-10 bg-brand-navy text-white rounded-[40px] border-b-8 border-brand-orange shadow-2xl relative overflow-hidden flex flex-col">
-             <div className="absolute top-0 right-0 p-8 opacity-10">
-                <Layers className="w-20 h-20 text-brand-orange" />
+          {/* Phase 2: Expand */}
+          <motion.div variants={fadeUp} className="p-8 bg-brand-navy text-white rounded-[32px] border-b-4 border-brand-orange shadow-2xl relative overflow-hidden flex flex-col">
+             <div className="w-10 h-10 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center mb-6">
+                <span className="text-brand-orange font-black">02</span>
              </div>
-             <div className="w-12 h-12 rounded-2xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center mb-6">
-                <Layers className="w-6 h-6 text-brand-orange" />
-             </div>
-             <h3 className="text-2xl font-display font-black mb-4 uppercase">Stream 2: Private Label</h3>
-             <p className="text-sm font-primary text-white/70 mb-8 leading-relaxed">
-                Margin multiplier. Branded manufacturing and custom packaging for global retailers and specialized boutiques.
+             <h3 className="text-xl font-display font-black mb-4 uppercase">Phase 2: Expand</h3>
+             <p className="text-xs font-primary text-white/70 mb-8 leading-relaxed">
+                Activating the Demand Engine. Scaling digital visibility (Gravity Strategy) and B2B pipeline conversion.
              </p>
-             <div className="mt-auto pt-6 border-t border-white/10">
-                <p className="text-[10px] font-black uppercase text-brand-orange tracking-widest mb-1">Primary Driver</p>
-                <p className="text-xl font-display font-bold">3–5x Margin Multiplier</p>
+             <div className="mt-auto pt-4 border-t border-white/10">
+                <p className="text-[9px] font-black uppercase text-brand-orange tracking-widest mb-1">Impact</p>
+                <p className="text-lg font-display font-bold text-white">3.5x Volume Multiplier</p>
+             </div>
+          </motion.div>
+
+          {/* Phase 3: Institutionalize */}
+          <motion.div variants={fadeUp} className="p-8 bg-brand-navy/5 border border-brand-navy/10 rounded-[32px] flex flex-col">
+             <div className="w-10 h-10 rounded-xl bg-brand-navy/10 flex items-center justify-center mb-6">
+                <span className="text-brand-navy font-black">03</span>
+             </div>
+             <h3 className="text-xl font-display font-black text-brand-navy mb-4 uppercase">Phase 3: Scale</h3>
+             <p className="text-xs font-primary text-brand-navy/70 mb-8 leading-relaxed">
+                Local value multiplication. Full refining at source and global private label dominance.
+             </p>
+             <div className="mt-auto pt-4 border-t border-brand-navy/10">
+                <p className="text-[9px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Impact</p>
+                <p className="text-lg font-display font-bold text-brand-navy">Global Advantage</p>
              </div>
           </motion.div>
 

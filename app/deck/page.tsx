@@ -21,11 +21,10 @@ import { Slide04MissingMiddle } from "./slides/Slide04MissingMiddle";
 import { Slide05WhereWePlay } from "./slides/Slide05WhereWePlay";
 import { Slide06Segmentation } from "./slides/Slide06Segmentation";
 import { Slide07VPCSegments } from "./slides/Slide07VPCSegments";
-import { Slide08HowWeWin } from "./slides/Slide08HowWeWin";
+import { Slide08Insight } from "./slides/Slide08Insight";
 import { Slide09ValuePropDesirability } from "./slides/Slide09ValuePropDesirability";
 import { Slide10ValuePropViability } from "./slides/Slide10ValuePropViability";
-import { Slide11Capabilities } from "./slides/Slide11Capabilities";
-import { Slide12SupplyChainAdvantage } from "./slides/Slide12SupplyChainAdvantage";
+import { Slide11InstitutionalReadiness } from "./slides/Slide11InstitutionalReadiness";
 import { Slide12ABulkGallery } from "./slides/Slide12ABulkGallery";
 import { Slide13CompetitiveReality } from "./slides/Slide13CompetitiveReality";
 import { Slide14WhoOwnsSpace } from "./slides/Slide14WhoOwnsSpace";
@@ -75,8 +74,8 @@ function DeckContent() {
     const slides = [
       Slide01Cover, Slide01BOverview, Slide02Crossroads, Slide03MacroMoment, 
       Slide04MissingMiddle, Slide05WhereWePlay, Slide06Segmentation, 
-      Slide07VPCSegments, Slide08HowWeWin, Slide09ValuePropDesirability, 
-      Slide10ValuePropViability, Slide11Capabilities, Slide12SupplyChainAdvantage, 
+      Slide07VPCSegments, Slide08Insight, Slide09ValuePropDesirability, 
+      Slide10ValuePropViability, Slide11InstitutionalReadiness, 
       Slide12ABulkGallery, Slide13CompetitiveReality, Slide14WhoOwnsSpace, 
       Slide15DigitalVisibility, Slide16B2BPipeline, Slide17Roadmap, 
       Slide18Phase1, Slide19Phase2, Slide20Phase3, Slide21Impact, 
@@ -120,11 +119,10 @@ function DeckContent() {
         <SwiperSlide><Slide05WhereWePlay /></SwiperSlide>
         <SwiperSlide><Slide06Segmentation onSectorClick={handleSectorClick} /></SwiperSlide>
         <SwiperSlide><Slide07VPCSegments /></SwiperSlide>
-        <SwiperSlide><Slide08HowWeWin /></SwiperSlide>
+        <SwiperSlide><Slide08Insight /></SwiperSlide>
         <SwiperSlide><Slide09ValuePropDesirability /></SwiperSlide>
         <SwiperSlide><Slide10ValuePropViability /></SwiperSlide>
-        <SwiperSlide><Slide11Capabilities /></SwiperSlide>
-        <SwiperSlide><Slide12SupplyChainAdvantage /></SwiperSlide>
+        <SwiperSlide><Slide11InstitutionalReadiness /></SwiperSlide>
         <SwiperSlide><Slide12ABulkGallery /></SwiperSlide>
         <SwiperSlide><Slide13CompetitiveReality /></SwiperSlide>
         <SwiperSlide><Slide14WhoOwnsSpace /></SwiperSlide>

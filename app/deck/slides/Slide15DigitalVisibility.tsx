@@ -47,12 +47,14 @@ export function Slide15DigitalVisibility() {
           </motion.div>
 
           <motion.h2 variants={slideFromLeft} className="font-display text-5xl md:text-6xl font-bold text-brand-navy leading-tight mb-8 tracking-tight">
-            The Digital <br />
-            <span className="text-brand-orange italic font-light">Void.</span>
+            Digital <br />
+            <span className="text-brand-orange italic font-light">Gravity.</span>
           </motion.h2>
 
-          <motion.p variants={fadeUp} className="text-xl text-brand-navy/60 font-primary mb-12 leading-relaxed">
-            The demand for premium agricultural transparency is at an all-time high, but our current visibility remains near zero.
+          <motion.p variants={fadeUp} className="text-xl text-brand-navy/60 font-primary mb-12 leading-relaxed italic">
+            Market leaders like Baraka capture <span className="text-brand-navy font-black not-italic">~52,000</span> monthly B2B visitors. <br />
+            Churchwin is at <span className="text-brand-orange font-black not-italic">~200.</span> <br />
+            <span className="text-brand-navy font-medium not-italic mt-2 block">This is our expansion opportunity.</span>
           </motion.p>
 
           <div className="space-y-4">
