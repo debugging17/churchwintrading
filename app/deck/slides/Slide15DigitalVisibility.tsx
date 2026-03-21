@@ -37,7 +37,7 @@ export function Slide15DigitalVisibility({ isActive }: { isActive: boolean }) {
 
   return (
     <>
-      <div className="relative w-full h-full flex flex-col md:flex-row bg-[#FDFDFD] overflow-hidden pb-[var(--footer-height)]">
+      <div className="relative w-full h-full flex flex-col md:flex-row bg-[#FDFDFD] pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto">
         <NoiseOverlay />
         
         {/* Dynamic Background Elements */}

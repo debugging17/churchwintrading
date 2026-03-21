@@ -16,7 +16,7 @@ export function Slide05WhereWePlay({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center bg-brand-white relative overflow-hidden pb-[var(--footer-height)]">
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
       
       {/* === LAYER 0: Cinematic Video background === */}
       <DeckVideo 

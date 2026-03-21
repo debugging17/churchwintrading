@@ -140,7 +140,7 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
         </div>
       </Modal>
 
-      <div className="w-full h-full flex flex-col py-8 md:py-12 px-10 md:px-20 bg-brand-white relative overflow-hidden pb-[calc(var(--footer-height)+1rem)] pt-12 md:pt-16">
+      <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
         
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-[40vw] h-[40vw] rounded-full bg-brand-orange/5 blur-[120px] mix-blend-multiply" />

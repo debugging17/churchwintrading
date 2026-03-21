@@ -18,7 +18,7 @@ export function Slide01Cover({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col relative overflow-hidden bg-brand-navy pb-[var(--footer-height)]">
+    <div className="w-full h-full flex flex-col relative bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto">
       {/* === LAYER 0: Full-bleed cinematic video background === */}
       <DeckVideo 
         src="/assets/videos/apply_cinematic,_8k_202603181845.mp4" 

@@ -22,7 +22,7 @@ export function Slide04MissingMiddle({ isActive }: { isActive: boolean }) {
   ];
 
   return (
-    <div className="w-full h-screen flex flex-col items-start justify-center relative overflow-hidden bg-brand-navy px-12 md:px-24">
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
       
       {/* === LAYER 0: Background Context — Principle 12: Mimic (Depth) === */}
       <div className="absolute inset-0 z-0 opacity-10">

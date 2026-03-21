@@ -36,7 +36,7 @@ export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean 
   ];
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden bg-brand-white px-10 md:px-24 pb-[var(--footer-height)]">
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
       {/* Background Accents */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-brand-orange/5 blur-[120px] rounded-full" />
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-brand-navy/5 blur-[120px] rounded-full" />

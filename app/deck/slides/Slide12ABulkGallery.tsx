@@ -14,7 +14,7 @@ export function Slide12ABulkGallery({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="relative w-full h-full flex flex-col py-12 md:py-20 px-10 md:px-24 bg-brand-navy overflow-hidden">
+    <div className="relative w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto">
       <NoiseOverlay />
       
       {/* Background Decorative Glow */}

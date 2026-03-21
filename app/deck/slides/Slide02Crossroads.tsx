@@ -34,12 +34,12 @@ export function Slide02Crossroads({ isActive }: { isActive: boolean }) {
       </div>
 
       {/* === LAYER 1: Content Overlay === */}
-      <div className="w-full h-full flex flex-col justify-center px-[4rem] xl:px-[8rem] pb-[4rem] lg:pb-[8rem] pt-[calc(var(--header-height,0px)+4rem)] z-20 relative">
+      <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-transparent pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto z-20 relative">
         <motion.div
           initial="hidden"
           animate={animState}
           variants={staggerContainer}
-          className="w-full max-w-[100rem] mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr,0.8fr] gap-12 lg:gap-20 items-center"
+          className="w-full max-w-[100rem] mx-auto my-auto grid grid-cols-1 lg:grid-cols-[1.2fr,0.8fr] gap-12 lg:gap-20 items-center"
         >
           {/* Left Column: Textual Narrative */}
           <div className="flex flex-col">
