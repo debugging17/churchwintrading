@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { fadeUp, slideFromLeft } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { RemotionValueGapWrapper } from "../components/RemotionValueGapWrapper";
+import dynamic from "next/dynamic";
+
+const RemotionValueGapWrapper = dynamic(
+  () => import("../components/RemotionValueGapWrapper").then((mod) => mod.RemotionValueGapWrapper),
+  { ssr: false }
+);
 
 // SLIDE 02: THE INDUSTRIAL CROSSROADS
 // Skills applied:
