@@ -52,7 +52,7 @@ export function Slide11InstitutionalReadiness() {
           <h2 className="text-4xl md:text-6xl font-display font-black text-brand-navy leading-tight mb-4 tracking-tighter uppercase">
             Institutional <span className="text-brand-orange">Readiness.</span>
           </h2>
-          <p className="text-brand-navy/40 text-lg font-primary max-w-2xl mx-auto italic">
+          <p className="text-brand-navy/70 text-lg font-primary max-w-2xl mx-auto italic">
             Connecting fragmented rural production to the global board&apos;s procurement standards.
           </p>
         </motion.div>
@@ -75,7 +75,7 @@ export function Slide11InstitutionalReadiness() {
                 {pillar.points.map((pt, j) => (
                   <li key={j} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
-                    <span className="text-sm font-primary text-brand-navy/60 leading-snug">{pt}</span>
+                    <span className="text-sm font-primary text-brand-navy/80 leading-snug">{pt}</span>
                   </li>
                 ))}
               </ul>
