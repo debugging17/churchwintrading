@@ -74,7 +74,7 @@ export const ToolVideoModal: React.FC<ToolVideoModalProps> = ({
                 <ToolPlayer 
                   toolName={toolName} 
                   toolAction={toolAction} 
-                  videoSrc={toolName.includes("APOLLO") ? "/videos/sample.mp4" : undefined} 
+                  videoSrc={toolName.includes("APOLLO") ? "/videos/apollo_demo.webm" : undefined} 
                 />
               </div>
             </motion.div>
