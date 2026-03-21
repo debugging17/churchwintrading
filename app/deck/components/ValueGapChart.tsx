@@ -33,8 +33,8 @@ export const ValueGapChart: React.FC = () => {
             data={data}
             cx="50%"
             cy="50%"
-            innerRadius={85}
-            outerRadius={105}
+            innerRadius={105}
+            outerRadius={135}
             paddingAngle={5}
             dataKey="value"
             stroke="none"
