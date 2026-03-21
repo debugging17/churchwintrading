@@ -87,28 +87,7 @@ export function Slide04MissingMiddle({ isActive }: { isActive: boolean }) {
                </div>
             </motion.div>
 
-            {/* TRANSFORMATION LOOP decoration — Principle 9: Grace (Flow) */}
-            <motion.div 
-              variants={{
-                hidden: { opacity: 0, scale: 0.5, rotate: -45 },
-                visible: { 
-                  opacity: 1, 
-                  scale: 1, 
-                  rotate: 0,
-                  transition: { delay: 0.6, duration: 1, ease: "easeOut" } 
-                }
-              }}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block"
-            >
-               <div className="relative w-40 h-40">
-                  <Image 
-                    src="/images/transformed-loop.png" 
-                    alt="Transformation Flow" 
-                    fill 
-                    className="object-contain"
-                  />
-               </div>
-            </motion.div>
+
 
             {/* RIGHT: THE SCALE (Workshop/Industrial State) */}
             <motion.div 
