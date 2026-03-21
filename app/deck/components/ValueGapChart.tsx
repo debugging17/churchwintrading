@@ -97,9 +97,9 @@ export const ValueGapChart: React.FC = () => {
            initial={{ opacity: 0, scale: 0.95 }}
            animate={{ opacity: 1, scale: 1 }}
            transition={{ delay: 2.5, duration: 0.5 }}
-           className="px-4 py-1.5 rounded-full bg-brand-orange shadow-[0_4px_20px_rgba(255,106,0,0.4)] border border-brand-orange/30 backdrop-blur-md"
+           className="px-6 py-2 rounded-full bg-white/10 border border-white/30 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
          >
-            <span className="text-[0.625rem] font-display font-black text-white uppercase tracking-widest">
+            <span className="text-[0.625rem] font-display font-black text-white uppercase tracking-[0.2em] drop-shadow-[0_0_8px_rgba(255,106,0,0.4)]">
                Extraction
             </span>
          </motion.div>
