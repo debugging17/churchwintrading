@@ -19,9 +19,8 @@ export function Slide07VPCSegments() {
   return (
     <div className="w-full h-full flex flex-col py-8 md:py-12 px-8 md:px-12 lg:px-16 bg-brand-cream relative overflow-hidden pb-[var(--footer-height)]">
       <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-[100rem] mx-auto my-auto">
-        <motion.h2 variants={fadeUp} className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-brand-navy mb-10 text-center leading-tight">
-          Two buyers. <br />
-          <span className="text-brand-orange italic">Two distinct needs.</span>
+        <motion.h2 variants={fadeUp} className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-brand-navy mb-6 text-center leading-tight">
+          Two buyers. <span className="text-brand-orange italic">Two distinct needs.</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-stretch">
