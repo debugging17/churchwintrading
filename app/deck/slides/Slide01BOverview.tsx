@@ -27,7 +27,7 @@ export function Slide01BOverview({ isActive }: { isActive: boolean }) {
     <div className="w-full h-full bg-white flex relative pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-hidden">
 
       {/* ── Left Panel ─────────────────────────────────────────── */}
-      <div className="w-[40%] h-full flex flex-col justify-center px-16 xl:px-24 z-10 bg-white pb-[var(--footer-height)]">
+      <div className="w-[40%] h-full flex flex-col justify-center px-16 xl:px-24 z-10 bg-white pb-[calc(var(--footer-height)+3rem)]">
         <motion.div
           initial="hidden"
           animate={animState}
@@ -49,7 +49,7 @@ export function Slide01BOverview({ isActive }: { isActive: boolean }) {
           <motion.h2
             custom={1}
             variants={fadeUp}
-            className="text-4xl md:text-5xl xl:text-6xl font-display font-black text-brand-navy leading-[1.05] mb-12"
+            className="text-4xl md:text-5xl xl:text-6xl font-display font-black text-brand-navy leading-[1.05] mb-8"
           >
             Operating inside <br />
             <span className="relative inline-block text-brand-orange">
@@ -58,7 +58,7 @@ export function Slide01BOverview({ isActive }: { isActive: boolean }) {
           </motion.h2>
 
           {/* REALITY FEED — The Churchwin Today Status */}
-          <motion.div custom={3} variants={fadeUp} className="space-y-6">
+          <motion.div custom={3} variants={fadeUp} className="space-y-4">
             {[
               { label: "Active Production", val: "Shea, Baobab, & Neem lines — 35% utilization.", type: "pos" },
               { label: "Supply Network", val: "11+ Women-led cooperatives integrated & audited.", type: "pos" },
