@@ -1,0 +1,269 @@
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { 
+  AreaChart, Area, ResponsiveContainer, 
+  PieChart, Pie, Cell 
+} from "recharts";
+import { 
+  Mail, Clock, UserCheck, MessageSquare, 
+  CheckCircle2, Globe, Search 
+} from "lucide-react";
+
+// --- HELPERS ---
+
+const BrowserWindow = ({ children, title, url, className = "", bgColor = "bg-white" }: any) => (
+  <div className={`rounded-xl overflow-hidden border border-brand-navy/10 shadow-lg flex flex-col h-full ${className} ${bgColor}`}>
+    {/* Browser Header */}
+    <div className="px-4 py-2 bg-brand-navy/5 flex items-center justify-between border-b border-brand-navy/5">
+      <div className="flex gap-1.5">
+        <div className="w-2 h-2 rounded-full bg-[#ff5f57]" />
+        <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
+        <div className="w-2 h-2 rounded-full bg-[#28c940]" />
+      </div>
+      <div className="flex items-center gap-2">
+        {title && <span className="text-[10px] font-black text-brand-navy/40 uppercase tracking-widest">{title}</span>}
+      </div>
+      <div className="text-[9px] text-brand-navy/30 font-mono truncate max-w-[100px]">{url}</div>
+    </div>
+    {/* Browser Content */}
+    <div className="flex-1 relative overflow-hidden">
+      {children}
+    </div>
+  </div>
+);
+
+// --- APOLLO CARD ---
+
+const apolloData = [
+  { x: 0, y: 5000 },
+  { x: 1, y: 8000 },
+  { x: 2, y: 15000 },
+  { x: 3, y: 12000 },
+  { x: 4, y: 22000 },
+  { x: 5, y: 28000 },
+  { x: 6, y: 34218 },
+];
+
+const ApolloCard = () => (
+  <BrowserWindow title="Apollo.io" url="apollo.io/search">
+    <div className="p-4 flex flex-col h-full">
+      <div className="flex justify-between items-end mb-4">
+        <div>
+          <p className="text-[8px] uppercase font-bold text-brand-navy/40 tracking-wider">Total Leads</p>
+          <p className="text-xl font-display font-black text-brand-orange">34,218</p>
+        </div>
+      </div>
+      <div className="h-20 w-full mb-4">
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart data={apolloData}>
+            <defs>
+              <linearGradient id="colorLeads" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#ff6a00" stopOpacity={0.3}/>
+                <stop offset="95%" stopColor="#ff6a00" stopOpacity={0}/>
+              </linearGradient>
+            </defs>
+            <Area 
+              type="monotone" 
+              dataKey="y" 
+              stroke="#ff6a00" 
+              strokeWidth={3} 
+              fillOpacity={1} 
+              fill="url(#colorLeads)" 
+              animationDuration={2000}
+            />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+      <div className="space-y-2">
+        {[
+          { role: "R&D Director", tag: "Cosmetics" },
+          { role: "Head Formulator", tag: "Skincare" },
+          { role: "VP Procurement", tag: "Beauty" }
+        ].map((lead, i) => (
+          <div key={i} className="flex items-center justify-between p-2 bg-brand-navy/5 rounded-lg border border-brand-navy/5">
+             <div className="flex items-center gap-2">
+                <div className="w-5 h-5 rounded-full bg-brand-navy/10 flex items-center justify-center">
+                  <UserCheck className="w-3 h-3 text-brand-navy/40" />
+                </div>
+                <span className="text-[9px] font-bold text-brand-navy">{lead.role}</span>
+             </div>
+             <div className="flex items-center gap-4">
+                <span className="text-[8px] text-[#28c940] font-bold">Verified</span>
+                <span className="text-[8px] text-brand-navy/40 uppercase font-bold">{lead.tag}</span>
+             </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </BrowserWindow>
+);
+
+// --- INSTANTLY CARD ---
+
+const InstantlyCard = () => (
+  <BrowserWindow title="Instantly" url="app.instantly.ai">
+    <div className="p-4 flex flex-col h-full gap-3">
+       <div className="p-4 rounded-xl border border-brand-navy/5 bg-white shadow-sm flex items-center gap-4">
+          <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
+            <Mail className="w-5 h-5 text-blue-500" />
+          </div>
+          <div className="flex-1">
+             <p className="text-xs font-bold text-brand-navy">Step 1: Introduction</p>
+             <p className="text-[9px] text-brand-navy/40 mt-0.5">Sent immediately on import</p>
+          </div>
+          <span className="px-2 py-0.5 rounded bg-green-50 text-green-600 text-[8px] font-black uppercase tracking-tighter">Active</span>
+       </div>
+       <div className="p-4 rounded-xl border border-brand-navy/5 bg-white shadow-sm flex items-center gap-4">
+          <div className="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center">
+            <Clock className="w-5 h-5 text-orange-500" />
+          </div>
+          <div className="flex-1">
+             <p className="text-xs font-bold text-brand-navy">Step 2: Follow-up</p>
+             <p className="text-[9px] text-brand-navy/40 mt-0.5">Wait 7 days</p>
+          </div>
+          <span className="px-2 py-0.5 rounded bg-orange-50 text-orange-600 text-[8px] font-black uppercase tracking-tighter">Queued</span>
+       </div>
+    </div>
+  </BrowserWindow>
+);
+
+// --- MAILCHIMP CARD ---
+
+const MailchimpCard = () => {
+  const openRate = [{ value: 42 }, { value: 58 }];
+  const clickRate = [{ value: 12 }, { value: 88 }];
+  
+  return (
+    <BrowserWindow url="mailchimp.com" bgColor="bg-[#ffe01b]">
+      <div className="p-4 flex flex-col items-center justify-center h-full text-center">
+         <div className="w-8 h-8 relative mb-2">
+            <img src="/assets/images/sales-engine/mailchimp.png" alt="Mailchimp" className="object-contain" />
+         </div>
+         <h4 className="text-[10px] font-black text-brand-navy mb-6 tracking-widest uppercase">Q3 Lead Nurture Campaign</h4>
+         
+         <div className="flex gap-8 w-full justify-center bg-white/20 backdrop-blur-md p-4 rounded-2xl">
+            <div className="flex flex-col items-center">
+               <div className="w-16 h-16 relative">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie
+                        data={openRate}
+                        innerRadius={20}
+                        outerRadius={30}
+                        startAngle={90}
+                        endAngle={-270}
+                        paddingAngle={0}
+                        dataKey="value"
+                        animationDuration={1500}
+                      >
+                        <Cell fill="#012787" />
+                        <Cell fill="rgba(0,0,0,0.05)" />
+                      </Pie>
+                    </PieChart>
+                  </ResponsiveContainer>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-xs font-black text-brand-navy">42%</span>
+                  </div>
+               </div>
+               <p className="text-[8px] font-black text-brand-navy/60 mt-2 uppercase tracking-tighter">Open Rate</p>
+            </div>
+            
+            <div className="flex flex-col items-center">
+               <div className="w-16 h-16 relative">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie
+                        data={clickRate}
+                        innerRadius={20}
+                        outerRadius={30}
+                        startAngle={90}
+                        endAngle={-270}
+                        paddingAngle={0}
+                        dataKey="value"
+                        animationDuration={1500}
+                      >
+                        <Cell fill="#000" />
+                        <Cell fill="rgba(0,0,0,0.05)" />
+                      </Pie>
+                    </PieChart>
+                  </ResponsiveContainer>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-xs font-black text-brand-navy">12%</span>
+                  </div>
+               </div>
+               <p className="text-[8px] font-black text-brand-navy/60 mt-2 uppercase tracking-tighter">Click Rate</p>
+            </div>
+         </div>
+      </div>
+    </BrowserWindow>
+  );
+};
+
+// --- LINKEDIN CARD ---
+
+const LinkedInCard = () => (
+  <BrowserWindow title="LinkedIn" url="linkedin.com">
+    <div className="p-4 flex flex-col items-center justify-center h-full">
+       <div className="relative mb-4">
+          <div className="w-16 h-16 rounded-full bg-brand-navy/5 border-2 border-white shadow-md flex items-center justify-center overflow-hidden">
+             <div className="w-10 h-10 bg-brand-navy/10 rounded-full flex items-center justify-center">
+                <Globe className="w-6 h-6 text-brand-navy/20" />
+             </div>
+          </div>
+          <div className="absolute bottom-0 right-0 w-5 h-5 bg-blue-500 rounded-full border-2 border-white flex items-center justify-center shadow-lg">
+             <CheckCircle2 className="w-3 h-3 text-white" />
+          </div>
+       </div>
+       <h4 className="text-[14px] font-black text-brand-navy mb-1 tracking-tight">Prospect Connected</h4>
+       <p className="text-[10px] text-brand-navy/40 font-medium mb-6">VP Procurement @ L&rsquo;Or&eacute;al</p>
+       
+       <button className="w-full bg-[#0a66c2] hover:bg-[#004182] text-white py-3 px-4 rounded-full flex items-center justify-center gap-2 transition-colors shadow-lg active:scale-95 duration-200">
+          <MessageSquare className="w-4 h-4" />
+          <span className="text-[11px] font-black uppercase tracking-widest text-white/90">Message</span>
+       </button>
+    </div>
+  </BrowserWindow>
+);
+
+// --- GRID EXPORT ---
+
+export function DigitalStackGrid({ isActive }: { isActive: boolean }) {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30, scale: 0.9 },
+    show: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1, 
+      transition: { 
+        type: "spring" as const, 
+        stiffness: 100, 
+        damping: 15 
+      } 
+    }
+  };
+
+  return (
+    <motion.div 
+      variants={container}
+      initial="hidden"
+      animate={isActive ? "show" : "hidden"}
+      className="grid grid-cols-2 gap-4 w-full h-full max-h-[600px]"
+    >
+      <motion.div variants={item}><ApolloCard /></motion.div>
+      <motion.div variants={item}><InstantlyCard /></motion.div>
+      <motion.div variants={item}><MailchimpCard /></motion.div>
+      <motion.div variants={item}><LinkedInCard /></motion.div>
+    </motion.div>
+  );
+}

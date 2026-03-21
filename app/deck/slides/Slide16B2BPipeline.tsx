@@ -6,6 +6,7 @@ import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { Target, MousePointer2 } from "lucide-react";
 import { ToolVideoModal } from "../components/ToolVideoModal";
+import { DigitalStackGrid } from "../components/DigitalStackGrid";
 
 export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
@@ -66,71 +67,41 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
           </div>
         </div>
 
-        {/* Right Side: The Tool Stack */}
-        <div className="w-full lg:w-[55%] flex flex-col justify-center relative">
-          <div className="grid grid-cols-2 gap-4 w-full">
-            {pipeline.map((tool, idx) => (
-              <motion.div
-                key={tool.id}
-                variants={fadeUp}
-                onClick={() => setSelectedTool({ name: tool.name, action: tool.action, logo: tool.image })}
-                className="group relative bg-white border border-brand-navy/10 rounded-3xl p-6 shadow-sm hover:border-brand-orange hover:shadow-xl transition-all cursor-pointer flex flex-col h-full"
-              >
-                <div className="flex items-center justify-between mb-4">
-                   <div className="w-12 h-12 relative grayscale group-hover:grayscale-0 transition-all opacity-40 group-hover:opacity-100">
-                      <Image src={tool.image} alt={tool.name} fill className="object-contain" />
-                   </div>
-                   <div className="w-8 h-8 rounded-full bg-brand-navy/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <MousePointer2 className="w-4 h-4 text-brand-orange" />
-                   </div>
-                </div>
-                
-                <h4 className="font-display font-black text-xs text-brand-navy/30 group-hover:text-brand-orange uppercase tracking-widest mb-2 transition-colors">
-                  {tool.name}
-                </h4>
-                <p className="font-primary text-[11px] leading-relaxed text-brand-navy/60 group-hover:text-brand-navy transition-colors">
-                  {tool.desc}
-                </p>
+        {/* Right Side: The Tool Stack Visualization */}
+        <div className="w-full lg:w-[55%] flex flex-col justify-center relative min-h-[500px]">
+           <DigitalStackGrid isActive={isActive} />
 
-                <div className="mt-auto pt-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                   <span className="text-[10px] font-black uppercase text-brand-orange tracking-tighter">View Visualization</span>
-                   <div className="h-[1px] flex-1 bg-brand-orange/20" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div variants={fadeUp} className="mt-8 p-6 bg-brand-navy text-white rounded-3xl shadow-xl relative overflow-hidden border-b-4 border-brand-orange">
-             <div className="absolute top-0 right-0 p-6 opacity-10">
-                <Target className="w-16 h-16 text-brand-orange" />
-             </div>
-             <p className="text-xs uppercase tracking-[0.4em] text-brand-orange font-black mb-2">Outcome</p>
-             <h3 className="text-xl font-display font-bold mb-4 tracking-tight leading-tight">100% Digital Traceability from Outreach to Agreement.</h3>
-             <div className="flex items-center gap-6">
-                <div>
-                   <p className="text-white/40 text-[9px] uppercase font-black mb-1">Lead Conversion</p>
-                   <p className="text-2xl font-display font-black text-brand-orange">12%</p>
-                </div>
-                <div className="w-[1px] h-8 bg-white/10" />
-                <div>
-                   <p className="text-white/40 text-[9px] uppercase font-black mb-1">Contract Velocity</p>
-                   <p className="text-2xl font-display font-black">+40%</p>
-                </div>
-             </div>
-          </motion.div>
+           <motion.div variants={fadeUp} className="mt-8 p-6 bg-brand-navy text-white rounded-3xl shadow-xl relative overflow-hidden border-b-4 border-brand-orange">
+              <div className="absolute top-0 right-0 p-6 opacity-10">
+                 <Target className="w-16 h-16 text-brand-orange" />
+              </div>
+              <p className="text-xs uppercase tracking-[0.4em] text-brand-orange font-black mb-2">Outcome</p>
+              <h3 className="text-xl font-display font-bold mb-4 tracking-tight leading-tight">100% Digital Traceability from Outreach to Agreement.</h3>
+              <div className="flex items-center gap-6">
+                 <div>
+                    <p className="text-white/40 text-[9px] uppercase font-black mb-1">Lead Conversion</p>
+                    <p className="text-2xl font-display font-black text-brand-orange">12%</p>
+                 </div>
+                 <div className="w-[1px] h-8 bg-white/10" />
+                 <div>
+                    <p className="text-white/40 text-[9px] uppercase font-black mb-1">Contract Velocity</p>
+                    <p className="text-2xl font-display font-black">+40%</p>
+                 </div>
+              </div>
+           </motion.div>
         </div>
 
-        {/* Video Popover */}
-        <ToolVideoModal 
-          isOpen={!!selectedTool}
-          onClose={() => setSelectedTool(null)}
-          toolName={selectedTool?.name || ""}
-          toolAction={selectedTool?.action || ""}
-          logoSrc={selectedTool?.logo}
-          subtitle="B2B Demand Engine Visualization"
-        />
-
       </motion.div>
+
+      {/* Video Popover */}
+      <ToolVideoModal 
+        isOpen={!!selectedTool}
+        onClose={() => setSelectedTool(null)}
+        toolName={selectedTool?.name || ""}
+        toolAction={selectedTool?.action || ""}
+        logoSrc={selectedTool?.logo}
+        subtitle="B2B Demand Engine Visualization"
+      />
     </div>
   );
 }
