@@ -110,37 +110,44 @@ export function Slide02Crossroads() {
             </motion.div>
           </div>
 
-          {/* Right Column: Data Visualization injected into the industrial background (Principle 12: Mimic / weight) */}
-          <motion.div 
-            variants={{
-              hidden: { opacity: 0, scale: 0.95, x: 30 },
-              visible: { 
-                opacity: 1, 
-                scale: 1, 
-                x: 0,
-                transition: { 
-                  type: "spring", 
-                  stiffness: 70, 
-                  damping: 15,
-                  delay: 0.6 
-                } 
-              }
-            }}
-            className="flex flex-col gap-8 bg-brand-navy/60 backdrop-blur-xl p-8 lg:p-12 rounded-[2.5rem] border border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.5)]"
-          >
-            <div className="space-y-2">
-               <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-orange uppercase text-center">Visualizing the Gap</p>
-               <h3 className="text-2xl lg:text-3xl font-display font-black text-white leading-tight text-center">Where value vanishes.</h3>
-            </div>
+          {/* Right Column: Data Visualization (Principle 12: Mimic - Entering from the "unseen void" at x:100) */}
+          <div className="flex justify-end relative h-full">
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, scale: 0.92, x: 100, filter: 'blur(10px)' },
+                visible: { 
+                  opacity: 1, 
+                  scale: 1, 
+                  x: 0,
+                  filter: 'blur(0px)',
+                  transition: { 
+                    type: "spring", 
+                    stiffness: 60, 
+                    damping: 18,
+                    mass: 0.9,
+                    delay: 0.6 
+                  } 
+                }
+              }}
+              className="w-full max-w-[32rem] flex flex-col gap-8 bg-brand-navy/60 backdrop-blur-xl p-8 lg:p-14 rounded-[3rem] border border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.6)] relative overflow-visible"
+            >
+              {/* Connection Glow (Principle 8: Storytelling - Bridges text to data) */}
+              <div className="absolute top-1/2 -left-32 w-48 h-[2px] bg-gradient-to-r from-transparent via-brand-orange/40 to-brand-orange/60 blur-[1px] hidden xl:block" />
 
-            <div className="py-2">
-              <ValueGapChart />
-            </div>
+              <div className="space-y-2">
+                 <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-orange uppercase text-center">Visualizing the Gap</p>
+                 <h3 className="text-2xl lg:text-3xl font-display font-black text-white leading-tight text-center tracking-tight">Where value vanishes.</h3>
+              </div>
 
-            <p className="text-[0.7rem] text-brand-white/40 font-primary leading-relaxed opacity-60 text-center max-w-xs mx-auto">
-               The current model forces Africa to export raw potential, only to buy back the finished value at a 10x premium.
-            </p>
-          </motion.div>
+              <div className="py-2">
+                <ValueGapChart />
+              </div>
+
+              <p className="text-[0.75rem] text-brand-white/40 font-primary leading-relaxed opacity-60 text-center max-w-[20rem] mx-auto">
+                 The current model forces Africa to export raw potential, only to buy back the finished value at a 10x premium.
+              </p>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </div>
