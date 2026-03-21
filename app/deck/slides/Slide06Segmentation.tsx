@@ -41,25 +41,23 @@ export function Slide06Segmentation({ onSectorClick }: Slide06SegmentationProps)
           Churchwin’s operational model serves the three highest-growth segments in the global botanical market, leveraging a single integrated supply chain for maximum efficiency.
         </motion.p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-12">
-          {[
-            { label: "Cosmetic Manufacturers", sub: "Grade A anti-aging & skin repair inputs.", detail: "Shea Butter, Baobab Oil, Neem Oil" },
-            { label: "Nutraceuticals", sub: "Standardized supplements & functional powders.", detail: "Hibiscus, Moringa, Baobab Fruit" },
-            { label: "Food & Beverage", sub: "Soluble concentrates & mass fortification.", detail: "Cashew, Ginger, Cocoa derivatives" }
-          ].map((sector, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 w-full mb-8">
+          {sectors.map((sector, i) => (
             <motion.div 
               key={i}
               variants={fadeUp}
-              className="p-8 bg-brand-white/5 border border-brand-white/10 rounded-[32px] hover:border-brand-orange/40 transition-all group relative overflow-hidden"
+              onClick={() => handleCardClick(i)}
+              className="p-6 md:p-8 bg-brand-white/5 border border-brand-white/10 rounded-[24px] md:rounded-[32px] hover:border-brand-orange/40 transition-all group relative overflow-hidden cursor-pointer"
             >
               <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-                <div className="text-6xl font-black text-white italic">0{i+1}</div>
+                <div className="text-5xl md:text-6xl font-black text-white italic">0{i+1}</div>
               </div>
-              <h3 className="text-brand-white font-display font-bold text-xl mb-3 group-hover:text-brand-orange transition-colors">{sector.label}</h3>
-              <p className="text-brand-white/60 text-sm font-primary leading-relaxed mb-6">{sector.sub}</p>
+              <h3 className="text-brand-white font-display font-bold text-lg md:text-xl mb-2 md:mb-3 group-hover:text-brand-orange transition-colors">{sector.title}</h3>
+              <p className="text-brand-white/60 text-xs md:text-sm font-primary leading-relaxed mb-4 md:mb-6 line-clamp-2 md:line-clamp-none">{sector.desc}</p>
               <div className="pt-4 border-t border-white/10 text-left">
-                 <span className="text-[9px] font-black uppercase tracking-widest text-brand-orange block mb-1">Key Inputs:</span>
-                 <p className="text-xs text-brand-white/40 font-medium">{sector.detail}</p>
+                 <span className="text-[9px] font-black uppercase tracking-widest text-brand-orange block mb-1">Key Features:</span>
+                 <p className="text-[10px] md:text-xs text-brand-white/40 font-medium truncate">{sector.features[0]}</p>
+                 <p className="text-[10px] md:text-xs text-brand-white/40 font-medium truncate">{sector.features[1]}</p>
               </div>
             </motion.div>
           ))}
