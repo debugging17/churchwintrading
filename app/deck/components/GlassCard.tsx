@@ -7,9 +7,10 @@ interface GlassCardProps {
   className?: string;
   delay?: number;
   theme?: "dark" | "light";
+  onClick?: () => void;
 }
 
-export function GlassCard({ children, className = "", delay = 0, theme = "dark" }: GlassCardProps) {
+export function GlassCard({ children, className = "", delay = 0, theme = "dark", onClick }: GlassCardProps) {
   // Apply a custom delay to the fadeUp variant for staggering
   const variant = {
     ...fadeUp,
@@ -31,6 +32,7 @@ export function GlassCard({ children, className = "", delay = 0, theme = "dark" 
       variants={variant}
       className={`${baseClasses} border backdrop-blur-[var(--brand-glass-blur)] rounded-[1.5rem] p-[2rem] shadow-[var(--brand-shadow-soft)] ${className}`}
       role="region"
+      onClick={onClick}
     >
       {children}
     </motion.div>

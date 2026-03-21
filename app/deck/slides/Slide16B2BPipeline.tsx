@@ -17,7 +17,7 @@ export function Slide16B2BPipeline() {
     { id: "mailchimp", image: "/assets/images/sales-engine/mailchimp.png", name: "MAILCHIMP", action: "NURTURE LOOP", desc: "Monthly 'Churchwin Origins' content educating buyers on supply stability." }
   ];
 
-  const [selectedTool, setSelectedTool] = React.useState<{name: string, action: string} | null>(null);
+  const [selectedTool, setSelectedTool] = React.useState<{name: string, action: string, logo: string} | null>(null);
 
   return (
     <div className="w-full h-full flex flex-col py-8 md:py-12 px-10 md:px-24 bg-brand-cream relative overflow-hidden pb-[var(--footer-height)]">
@@ -73,7 +73,7 @@ export function Slide16B2BPipeline() {
               <motion.div
                 key={tool.id}
                 variants={fadeUp}
-                onClick={() => setSelectedTool({ name: tool.name, action: tool.action })}
+                onClick={() => setSelectedTool({ name: tool.name, action: tool.action, logo: tool.image })}
                 className="group relative bg-white border border-brand-navy/10 rounded-3xl p-6 shadow-sm hover:border-brand-orange hover:shadow-xl transition-all cursor-pointer flex flex-col h-full"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -126,6 +126,8 @@ export function Slide16B2BPipeline() {
           onClose={() => setSelectedTool(null)}
           toolName={selectedTool?.name || ""}
           toolAction={selectedTool?.action || ""}
+          logoSrc={selectedTool?.logo}
+          subtitle="B2B Demand Engine Visualization"
         />
 
       </motion.div>
