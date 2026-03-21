@@ -10,7 +10,7 @@ const data = [
 
 export const ValueGapChart: React.FC = () => {
   return (
-    <div className="w-full h-[320px] relative flex items-center justify-center group/chart">
+    <div className="w-full h-[280px] relative flex items-center justify-center group/chart">
       {/* Background Glow (Principle 10: Life) */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
         <motion.div 
@@ -67,7 +67,7 @@ export const ValueGapChart: React.FC = () => {
                       y={cy - 10}
                       textAnchor="middle"
                       dominantBaseline="middle"
-                      className="fill-white font-display font-black text-5xl lg:text-6xl"
+                      className="fill-white font-display font-black text-4xl lg:text-5xl"
                     >
                       90%
                     </motion.text>
