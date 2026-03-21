@@ -39,7 +39,7 @@ export function Slide08Insight() {
           {/* Global Demand Card */}
           <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px] flex flex-col">
             <GlobalDemandVideo />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent pointer-events-none" />
             
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center mb-6">
@@ -73,7 +73,7 @@ export function Slide08Insight() {
           {/* African Supply Card */}
           <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px] flex flex-col">
             <Image src="/images/visual_supremacy/shea_orchard.png" alt="African Supply" fill className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-90" />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent" />
             
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center mb-6">
