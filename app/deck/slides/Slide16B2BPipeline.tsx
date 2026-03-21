@@ -7,7 +7,7 @@ import { useSlideEnter } from "../motion/useSlideEnter";
 import { Target, MousePointer2 } from "lucide-react";
 import { ToolVideoModal } from "../components/ToolVideoModal";
 
-export function Slide16B2BPipeline() {
+export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   const pipeline = [

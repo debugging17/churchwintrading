@@ -5,7 +5,7 @@ import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { TrendingUp, RefreshCcw, Flag } from "lucide-react";
 
-export function Slide20Phase3() {
+export function Slide20Phase3({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

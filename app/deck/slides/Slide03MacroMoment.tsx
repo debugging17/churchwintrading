@@ -23,7 +23,7 @@ const data = [
   { year: 2020, ghana: 2200, korea: 32000 },
 ];
 
-export function Slide03MacroMoment() {
+export function Slide03MacroMoment({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

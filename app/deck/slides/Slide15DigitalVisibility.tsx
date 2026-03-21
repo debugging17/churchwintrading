@@ -31,7 +31,7 @@ const trafficData = [
   { name: 'Week 4', traffic: 1200, comp1: 54000, comp2: 32000 },
 ];
 
-export function Slide15DigitalVisibility() {
+export function Slide15DigitalVisibility({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 

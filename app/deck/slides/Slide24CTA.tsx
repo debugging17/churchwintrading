@@ -8,7 +8,7 @@ import { Banknote, Users, Lightbulb } from "lucide-react";
 
 import Image from "next/image";
 
-export function Slide24CTA() {
+export function Slide24CTA({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

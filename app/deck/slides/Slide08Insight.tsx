@@ -8,7 +8,7 @@ import { GlobalDemandVideo } from "../components/GlobalDemandVideo";
 
 import Image from "next/image";
 
-export function Slide08Insight() {
+export function Slide08Insight({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
@@ -38,7 +38,7 @@ export function Slide08Insight() {
           
           {/* Global Demand Card */}
            <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px] flex flex-col items-center justify-center p-8 bg-brand-navy">
-             <GlobalDemandVideo />
+             <GlobalDemandVideo isActive={isActive} />
              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent pointer-events-none" />
              
              <div className="relative z-10 flex flex-col items-center text-center">

@@ -13,7 +13,7 @@ import { ValueGapChart } from "../components/ValueGapChart";
 //   brand-guardian: Navy-to-transparent gradient mask preserves branding on complex backgrounds.
 //   ux-architect: Visual hierarchy leads from the big "01" to the provocative quote.
 
-export function Slide02Crossroads() {
+export function Slide02Crossroads({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

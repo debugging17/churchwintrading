@@ -5,7 +5,7 @@ import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { ShieldCheck, Truck, BarChart3, Users } from "lucide-react";
 
-export function Slide11InstitutionalReadiness() {
+export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   const pillars = [

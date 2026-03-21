@@ -9,15 +9,17 @@ const SEQUENCE = [
   "/images/visual_supremacy/organic_retail_aisle.png"
 ];
 
-export function GlobalDemandVideo() {
+export function GlobalDemandVideo({ isActive = true }: { isActive?: boolean }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    if (!isActive) return;
+    
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % SEQUENCE.length);
     }, 3000); // Change image every 3 seconds
     return () => clearInterval(timer);
-  }, []);
+  }, [isActive]);
 
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden bg-brand-navy">

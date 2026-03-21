@@ -3,7 +3,7 @@ import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { TrendingUp, Layers } from "lucide-react";
 
-export function Slide17Roadmap() {
+export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

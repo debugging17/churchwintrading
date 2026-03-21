@@ -5,7 +5,7 @@ import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { GitCommit, FileText, Magnet, Flag } from "lucide-react";
 
-export function Slide18Phase1() {
+export function Slide18Phase1({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

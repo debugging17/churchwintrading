@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useSlideEnter } from "../motion/useSlideEnter";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -19,8 +20,8 @@ const sections = [
   { num: "04", label: "ESG as Competitive Edge", sub: "Sustainable impact as a fundamental driver of institutional value." },
 ];
 
-export function Slide01BOverview() {
-  const animState = "visible"; 
+export function Slide01BOverview({ isActive }: { isActive: boolean }) {
+  const animState = useSlideEnter(100); 
 
   return (
     <div className="w-full h-full bg-white flex relative overflow-hidden">

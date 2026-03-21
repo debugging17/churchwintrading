@@ -10,7 +10,7 @@ interface Slide06SegmentationProps {
   onSectorClick?: (idx: number) => void;
 }
 
-export function Slide06Segmentation({ onSectorClick }: Slide06SegmentationProps) {
+export function Slide06Segmentation({ onSectorClick, isActive }: Slide06SegmentationProps & { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   const handleCardClick = (idx: number) => {

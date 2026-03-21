@@ -8,7 +8,7 @@ import { GlassCard } from "../components/GlassCard";
 
 import Image from "next/image";
 
-export function Slide07VPCSegments() {
+export function Slide07VPCSegments({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   // ROLES APPLIED:

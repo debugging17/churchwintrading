@@ -3,30 +3,27 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeUp, slideFromLeft, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
+import { DeckVideo } from "../components/DeckVideo";
 
 // SLIDE 05: SECTION DIVIDER — WHERE WE PLAY
 // Skills applied:
 //   visual-storyteller: Video background creates high-momentum transition into the "Market Positioning" phase.
 //   brand-guardian: Navy-tinted glass overlay maintains premium brand identity on top of movement.
 //   frontend-engineer: Clean z-index layer stack — video(0) → overlay(1) → content(10).
-//   proposal-strategist: "Six industries. One supply chain advantage." — key positioning statement.
+//   proposal-strategist: "Six industries. One supply chain advantage."
 
-export function Slide05WhereWePlay() {
+export function Slide05WhereWePlay({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center bg-brand-white relative overflow-hidden pb-[var(--footer-height)]">
       
       {/* === LAYER 0: Cinematic Video background === */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 grayscale-[0.5] opacity-60"
-      >
-        <source src="/assets/videos/cinematic-cover.mp4" type="video/mp4" />
-      </video>
+      <DeckVideo 
+        src="/assets/videos/cinematic-cover.mp4" 
+        isActive={isActive}
+        className="grayscale-[0.5] opacity-60"
+      />
 
       {/* === LAYER 1: Deep Navy Overlays === */}
       <div className="absolute inset-0 bg-brand-navy/30 backdrop-blur-[2px] z-[1]" />

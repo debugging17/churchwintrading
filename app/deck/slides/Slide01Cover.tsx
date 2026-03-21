@@ -11,22 +11,19 @@ const RemotionPlayerWrapper = dynamic(
   { ssr: false }
 );
 
+import { DeckVideo } from "../components/DeckVideo";
+
 // COVER SLIDE — Minimal & Clean Overhaul
-export function Slide01Cover() {
+export function Slide01Cover({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
     <div className="w-full h-full flex flex-col relative overflow-hidden bg-brand-navy pb-[var(--footer-height)]">
       {/* === LAYER 0: Full-bleed cinematic video background === */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="/assets/videos/apply_cinematic,_8k_202603181845.mp4" type="video/mp4" />
-      </video>
+      <DeckVideo 
+        src="/assets/videos/apply_cinematic,_8k_202603181845.mp4" 
+        isActive={isActive} 
+      />
 
       {/* === LAYER 1: Dynamic Brand Overlays (Navy & Orange Infusion) === */}
       {/* Subtle brand orange glow from the bottom-left */}

@@ -12,7 +12,7 @@ import Image from "next/image";
 //   ux-architect: Clear labeling of "The Gap" vs "The Goal".
 //   proposal-strategist: Linking South Korea's structural shift to Churchwin's physical infrastructure.
 
-export function Slide04MissingMiddle() {
+export function Slide04MissingMiddle({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   const funnelTiers = [

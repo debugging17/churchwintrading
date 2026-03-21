@@ -8,7 +8,9 @@ import { GlassCard } from "../components/GlassCard";
 import { StatCard } from "../components/StatCard";
 import NoiseOverlay from "../components/NoiseOverlay";
 
-export function Slide12ABulkGallery() {
+import { DeckVideo } from "../components/DeckVideo";
+
+export function Slide12ABulkGallery({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
@@ -51,9 +53,11 @@ export function Slide12ABulkGallery() {
             className="col-span-12 md:col-span-4 row-span-6 rounded-3xl overflow-hidden relative border border-brand-white/10 group shadow-2xl"
           >
              <div className="absolute inset-0 bg-brand-navy/30 mix-blend-multiply z-10 pointer-events-none group-hover:bg-transparent transition-colors duration-700" />
-             <video autoPlay loop muted playsInline className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-[2s] ease-out">
-               <source src="/assets/videos/vid-4.mp4" type="video/mp4" />
-             </video>
+             <DeckVideo 
+               src="/assets/videos/vid-4.mp4" 
+               isActive={isActive}
+               className="scale-105 group-hover:scale-100 transition-transform duration-[2s] ease-out"
+             />
              
              <GlassCard className="absolute bottom-6 left-6 right-6 p-4 backdrop-blur-md border-white/20" delay={0.5}>
                 <h3 className="text-brand-orange text-xs font-bold tracking-[0.2em] uppercase mb-1">Phase 01</h3>

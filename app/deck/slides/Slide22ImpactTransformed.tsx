@@ -11,7 +11,7 @@ const impactData = [
   { label: "Private Label", value: 350, fill: "#ff6a00" }
 ];
 
-export function Slide22ImpactTransformed() {
+export function Slide22ImpactTransformed({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

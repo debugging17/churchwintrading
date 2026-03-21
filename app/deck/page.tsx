@@ -87,7 +87,7 @@ function DeckContent() {
         <div className="flex flex-col">
           {slides.map((SlideComponent, index) => (
             <div key={index} className="relative h-screen overflow-hidden">
-              <SlideComponent />
+              <SlideComponent isActive={true} />
               <FooterStack total={totalSlides} currentOverride={index + 1} />
             </div>
           ))}
@@ -111,31 +111,31 @@ function DeckContent() {
       >
         <FooterStack total={totalSlides} />
         
-        <SwiperSlide><Slide01Cover /></SwiperSlide>
-        <SwiperSlide><Slide01BOverview /></SwiperSlide>
-        <SwiperSlide><Slide02Crossroads /></SwiperSlide>
-        <SwiperSlide><Slide03MacroMoment /></SwiperSlide>
-        <SwiperSlide><Slide04MissingMiddle /></SwiperSlide>
-        <SwiperSlide><Slide05WhereWePlay /></SwiperSlide>
-        <SwiperSlide><Slide06Segmentation onSectorClick={handleSectorClick} /></SwiperSlide>
-        <SwiperSlide><Slide07VPCSegments /></SwiperSlide>
-        <SwiperSlide><Slide08Insight /></SwiperSlide>
-        <SwiperSlide><Slide09ValuePropDesirability /></SwiperSlide>
-        <SwiperSlide><Slide10ValuePropViability /></SwiperSlide>
-        <SwiperSlide><Slide11InstitutionalReadiness /></SwiperSlide>
-        <SwiperSlide><Slide12ABulkGallery /></SwiperSlide>
-        <SwiperSlide><Slide13CompetitiveReality /></SwiperSlide>
-        <SwiperSlide><Slide14WhoOwnsSpace /></SwiperSlide>
-        <SwiperSlide><Slide15DigitalVisibility /></SwiperSlide>
-        <SwiperSlide><Slide16B2BPipeline /></SwiperSlide>
-        <SwiperSlide><Slide17Roadmap /></SwiperSlide>
-        <SwiperSlide><Slide18Phase1 /></SwiperSlide>
-        <SwiperSlide><Slide19Phase2 /></SwiperSlide>
-        <SwiperSlide><Slide20Phase3 /></SwiperSlide>
-        <SwiperSlide><Slide21Impact /></SwiperSlide>
-        <SwiperSlide><Slide22ImpactTransformed /></SwiperSlide>
-        <SwiperSlide><Slide23TheAsk /></SwiperSlide>
-        <SwiperSlide><Slide24CTA /></SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide01Cover isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide01BOverview isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide02Crossroads isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide03MacroMoment isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide04MissingMiddle isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide05WhereWePlay isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide06Segmentation onSectorClick={handleSectorClick} isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide07VPCSegments isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide08Insight isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide09ValuePropDesirability isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide10ValuePropViability isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide11InstitutionalReadiness isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide12ABulkGallery isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide13CompetitiveReality isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide14WhoOwnsSpace isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide15DigitalVisibility isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide16B2BPipeline isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide17Roadmap isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide18Phase1 isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide19Phase2 isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide20Phase3 isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide21Impact isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide22ImpactTransformed isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide23TheAsk isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide24CTA isActive={isActive} />}</SwiperSlide>
       </Swiper>
 
       {/* Global Sector Modal rendered outside Swiper */}

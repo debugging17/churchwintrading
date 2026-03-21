@@ -6,7 +6,7 @@ import { fadeUp, sectionTitleStagger, staggerContainer, slideFromRight } from ".
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { ShoppingBag, Warehouse, FileCheck, CheckCircle2 } from "lucide-react";
 
-export function Slide09ValuePropDesirability() {
+export function Slide09ValuePropDesirability({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

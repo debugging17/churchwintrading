@@ -3,7 +3,7 @@ import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { Banknote, Users, Lightbulb } from "lucide-react";
 
-export function Slide23TheAsk() {
+export function Slide23TheAsk({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

@@ -39,7 +39,7 @@ const comparisonData = {
   ]
 };
 
-export function Slide14WhoOwnsSpace() {
+export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
   const [activeModal, setActiveModal] = useState<"intermediaries" | "suppliers" | "dtcBrands" | "middlemen" | null>(null);
 

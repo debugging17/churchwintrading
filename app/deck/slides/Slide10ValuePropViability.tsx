@@ -5,7 +5,7 @@ import { fadeUp, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { ArrowRight } from "lucide-react";
 
-export function Slide10ValuePropViability() {
+export function Slide10ValuePropViability({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
