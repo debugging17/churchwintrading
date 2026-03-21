@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { fadeUp, slideFromLeft } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
+import { RemotionValueGapWrapper } from "../components/RemotionValueGapWrapper";
 
 // SLIDE 02: THE INDUSTRIAL CROSSROADS
 // Skills applied:
@@ -65,16 +66,32 @@ export function Slide02Crossroads() {
           {/* POINTS — Reality-Backed */}
           <motion.div variants={fadeUp} className="space-y-8 max-w-xl">
             {[
-              { label: "Structural Volatility", sub: "Supply shocks and pricing pressure make traditional exporting a race to the bottom." },
-              { label: "The Infrastructure Gap", sub: "Africa captures <5% of global value because we export raw bulk, not refined trust." },
-              { label: "Institutional Readiness", sub: "The missing layer isn't the product—it's the systems that the global board requires." },
+              { 
+                label: "Structural Volatility", 
+                sub: "33% local price volatility caused by unregulated export dependencies—unrefined shea prices saw year-to-date swings of $0.21 to $0.91/kg." 
+              },
+              { 
+                label: "The Infrastructure Gap", 
+                sub: "Africa produces 60% of Global Shea, but the 'Commodity Trap' ensures only <10% of total economic value is captured locally." 
+              },
+              { 
+                label: "Institutional Readiness", 
+                sub: "90% of value is captured by international refiners who own the 'Trust Infrastructure' (COSMOS/Fair Trade) required by Tier-1 buyers." 
+              },
             ].map((pt, i) => (
-              <div key={i} className="flex items-start gap-5">
-                <div className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-2.5 shrink-0 shadow-[0_0_8px_rgba(244,121,32,0.4)]" />
-                <div className="flex flex-col gap-1">
-                  <span className="text-lg md:text-xl font-display font-bold text-brand-white tracking-tight">{pt.label}</span>
-                  <p className="text-sm text-brand-white/60 leading-relaxed">{pt.sub}</p>
+              <div key={i} className="flex flex-col gap-4">
+                <div className="flex items-start gap-5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-2.5 shrink-0 shadow-[0_0_8px_rgba(244,121,32,0.4)]" />
+                  <div className="flex flex-col gap-1">
+                    <span className="text-lg md:text-xl font-display font-bold text-brand-white tracking-tight">{pt.label}</span>
+                    <p className="text-sm text-brand-white/60 leading-relaxed">{pt.sub}</p>
+                  </div>
                 </div>
+                {i === 1 && (
+                  <div className="ml-6">
+                    <RemotionValueGapWrapper />
+                  </div>
+                )}
               </div>
             ))}
           </motion.div>
