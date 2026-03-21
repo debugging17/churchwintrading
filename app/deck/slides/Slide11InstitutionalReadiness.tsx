@@ -91,7 +91,7 @@ export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean 
           {pillars.map((pillar, i) => (
             <div 
               key={i}
-              className={`pillar-card p-8 rounded-[32px] border ${pillar.accent} hover:shadow-2xl transition-all duration-500 group text-left`}
+              className={`pillar-card p-8 rounded-[32px] border ${pillar.accent} hover:shadow-2xl transition-shadow duration-300 group text-left relative z-20`}
             >
               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors">
                 <pillar.icon className="w-7 h-7 text-brand-orange group-hover:text-white" />
