@@ -54,49 +54,99 @@ export function Slide04MissingMiddle() {
             </h2>
          </motion.div>
 
-         {/* Comparison Grid */}
-             {/* THE REALITY GAP: BARAKA BENCHMARK */}
-             <motion.div variants={fadeUp} className="group">
-                <div className="relative h-[25vh] md:h-[30vh] rounded-2xl overflow-hidden border border-brand-white/10 shadow-2xl mb-4 bg-brand-navy/40 backdrop-blur-md">
-                   <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center gap-6">
-                      <div className="flex flex-col gap-1">
-                         <span className="text-brand-white/40 text-[10px] uppercase font-black tracking-widest">Market Leader (Baraka)</span>
-                         <span className="text-brand-white text-3xl md:text-5xl font-black italic">~52k</span>
-                         <span className="text-brand-white/60 text-[10px] font-bold uppercase tracking-widest whitespace-nowrap">Monthly B2B Traffic</span>
-                      </div>
-                      
-                      <div className="w-12 h-[1px] bg-brand-orange/40" />
+         {/* Comparison Grid — Principle 8: Storytelling (The Transformation) */}
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mb-12">
+            
+            {/* LEFT: THE CONSTRAINT (Current Office) */}
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, x: -50, scale: 0.95 },
+                visible: { 
+                  opacity: 1, 
+                  x: 0, 
+                  scale: 1,
+                  transition: { type: "spring", stiffness: 60, damping: 20, delay: 0.2 }
+                }
+              }}
+              className="group relative h-[45vh] md:h-[50vh] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-brand-navy"
+            >
+               <Image 
+                 src="/images/IMG_0471-min-min-scaled.jpg" 
+                 alt="Churchwin Current Office" 
+                 fill 
+                 className="object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/20 to-transparent" />
+               
+               <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left">
+                  <span className="text-brand-orange text-[10px] uppercase font-black tracking-[0.4em] mb-4">Local Constraint</span>
+                  <h3 className="text-2xl md:text-3xl font-display font-black text-white leading-tight uppercase tracking-tighter">
+                    Fragmented <br />Production
+                  </h3>
+                  <div className="w-12 h-1 bg-brand-orange/40 mt-4 rounded-full" />
+               </div>
+            </motion.div>
 
-                      <div className="flex flex-col gap-1">
-                         <span className="text-brand-orange text-[10px] uppercase font-black tracking-widest">Churchwin Today</span>
-                         <span className="text-brand-orange text-3xl md:text-5xl font-black italic">~200</span>
-                         <span className="text-brand-orange/60 text-[10px] font-bold uppercase tracking-widest whitespace-nowrap">Monthly B2B Traffic</span>
-                      </div>
-                   </div>
-                </div>
-                <div className="bg-brand-white/5 p-5 md:p-6 rounded-2xl border-l-4 border-l-brand-orange shadow-[inset_0_0_20px_rgba(255,119,0,0.05)]">
-                   <p className="text-brand-white/80 font-primary italic text-sm md:text-base leading-relaxed">
-                     The gap isn&apos;t supply—it is <span className="text-brand-orange font-black not-italic">Digital Gravity.</span> To scale, we must build a predictable demand engine.
-                   </p>
-                </div>
-             </motion.div>
+            {/* RIGHT: THE SCALE (Workshop/Industrial State) */}
+            <motion.div 
+              variants={{
+                hidden: { opacity: 0, x: 50, scale: 0.95 },
+                visible: { 
+                  opacity: 1, 
+                  x: 0, 
+                  scale: 1,
+                  transition: { type: "spring", stiffness: 60, damping: 20, delay: 0.4 }
+                }
+              }}
+              className="group relative h-[45vh] md:h-[50vh] rounded-[3rem] overflow-hidden border border-brand-orange/20 shadow-[0_0_80px_rgba(255,106,0,0.1)] bg-brand-navy"
+            >
+               <Image 
+                 src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
+                 alt="Churchwin Workshop Scale" 
+                 fill 
+                 className="object-cover opacity-80 group-hover:scale-105 transition-all duration-1000 ease-out"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-brand-orange/30 via-transparent to-transparent mix-blend-overlay" />
+               <div className="absolute inset-0 bg-brand-navy/20" />
+               
+               <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left bg-gradient-to-t from-brand-navy via-brand-navy/40 to-transparent">
+                  <span className="text-brand-orange text-[10px] uppercase font-black tracking-[0.4em] mb-4">Global Scale</span>
+                  <h3 className="text-2xl md:text-3xl font-display font-black text-white leading-tight uppercase tracking-tighter">
+                    Institutional <br />Infrastructure
+                  </h3>
+                  <div className="w-12 h-1 bg-brand-orange mt-4 rounded-full shadow-[0_0_15px_rgba(255,106,0,0.8)]" />
+               </div>
 
-        {/* Call to action / Metric */}
-        <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center justify-between border-t border-brand-white/10 pt-6 gap-4">
-           <div className="flex gap-10">
+               {/* Transformation Badge (Principle 10: Life) */}
+               <motion.div 
+                 animate={{ scale: [1, 1.05, 1], opacity: [0.8, 1, 0.8] }}
+                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                 className="absolute top-10 right-10 bg-brand-orange/90 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 shadow-xl"
+               >
+                 <span className="text-[10px] font-black text-white uppercase tracking-widest">Target State</span>
+               </motion.div>
+            </motion.div>
+         </div>
+
+         {/* Insight Bar — Principle 7: Purpose */}
+         <motion.div variants={fadeUp} className="bg-brand-white/5 p-6 md:p-8 rounded-3xl border-l-8 border-brand-orange shadow-2xl backdrop-blur-md">
+            <p className="text-brand-white/90 font-primary italic text-base md:text-lg leading-relaxed">
+              Moving from the constraint of manual heroics to the scale of <span className="text-brand-orange font-black not-italic underline decoration-white/20 underline-offset-4">Physical Trust Infrastructure.</span>
+            </p>
+         </motion.div>
+
+         {/* Footer Strategy */}
+         <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center justify-between border-t border-white/10 mt-12 pt-8 gap-4 opacity-40">
+           <div className="flex gap-12">
               <div>
-                 <p className="text-brand-white/40 text-[9px] uppercase font-black tracking-widest mb-1">Market Position</p>
-                 <p className="text-brand-orange font-display font-bold text-sm">Bridge Partner</p>
-              </div>
-              <div>
-                 <p className="text-brand-white/40 text-[9px] uppercase font-black tracking-widest mb-1">Target Outcome</p>
-                 <p className="text-brand-white font-display font-bold text-sm">Global Readiness</p>
+                 <p className="text-white/40 text-[9px] uppercase font-black tracking-widest mb-1">Operational Shift</p>
+                 <p className="text-brand-orange font-display font-bold text-sm underline decoration-brand-orange/20">Transformation Ready</p>
               </div>
            </div>
-           <p className="text-brand-white/10 text-[9px] uppercase font-black tracking-[0.4em]">
-              PROVEN INFRASTRUCTURE FOR MARKET ENTRY
+           <p className="text-white/20 text-[9px] uppercase font-black tracking-[0.4em]">
+              BRIDGING THE GHANAIAN PRODUCTIVITY DEFICIT
            </p>
-        </motion.div>
+         </motion.div>
 
       </motion.div>
     </div>
