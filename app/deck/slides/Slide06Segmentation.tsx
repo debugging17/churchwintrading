@@ -24,7 +24,7 @@ export function Slide06Segmentation({ onSectorClick }: Slide06SegmentationProps)
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle,rgba(244,121,32,0.15)_0%,transparent_70%)]" />
       </div>
 
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto z-10 text-center flex flex-col items-center">
+      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-[90rem] mx-auto my-auto z-10 text-center flex flex-col items-center">
         {/* Title - Structural Focus */}
         <motion.h2 
           variants={fadeUp}
