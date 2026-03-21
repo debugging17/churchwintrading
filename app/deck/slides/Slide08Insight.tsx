@@ -37,62 +37,69 @@ export function Slide08Insight() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-6 w-full mb-16 relative items-stretch">
           
           {/* Global Demand Card */}
-          <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px] flex flex-col">
-            <GlobalDemandVideo />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 via-brand-navy/5 to-transparent pointer-events-none" />
-            
-            <div className="absolute inset-0 p-8 flex flex-col justify-end">
-              <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center mb-6">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-display font-black text-white mb-2 tracking-tight">Global Demand</h3>
-              <p className="text-sm text-brand-white/80 leading-relaxed font-primary">
-                Massive institutional appetites for ethical, fully traceable botanicals.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* The Gap - Central Broken Link */}
-          <motion.div variants={fadeUp} className="relative flex flex-col items-center justify-center px-4 md:px-8 z-10 min-h-[400px] w-full max-w-[280px]">
-             {/* Glowing connecting lines */}
-             <div className="absolute left-0 right-1/2 top-1/2 h-[2px] bg-gradient-to-r from-white/20 to-brand-orange/50 -translate-y-1/2 -z-10" />
-             <div className="absolute left-1/2 right-0 top-1/2 h-[2px] bg-gradient-to-l from-white/20 to-brand-orange/50 -translate-y-1/2 -z-10" />
+           <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px] flex flex-col items-center justify-center p-8 bg-brand-navy">
+             <GlobalDemandVideo />
+             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent pointer-events-none" />
              
-             <div className="relative">
-                <div className="absolute inset-0 bg-brand-orange blur-[40px] opacity-30 rounded-full animate-pulse" />
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-brand-orange border border-white/20 shadow-[0_0_40px_rgba(255,106,0,0.4)] rotate-45 flex items-center justify-center mb-6 relative z-20">
-                  <Link className="w-8 h-8 text-white -rotate-45" />
-                </div>
+             <div className="relative z-10 flex flex-col items-center text-center">
+               <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center mb-6">
+                 <Globe className="w-8 h-8 text-white" />
+               </div>
+               <h3 className="text-3xl font-display font-black text-white mb-2 tracking-tight">Global Demand</h3>
+               <p className="text-sm text-brand-white/80 leading-relaxed font-primary max-w-xs">
+                 Massive institutional appetites for ethical, fully traceable botanicals.
+               </p>
              </div>
-             <h3 className="text-2xl md:text-3xl font-display font-black text-brand-orange mb-2 text-center drop-shadow-md whitespace-nowrap">The Gap</h3>
-             <p className="text-xs md:text-sm text-brand-white/60 leading-relaxed font-primary text-center">
-               No reliable bridge.
-             </p>
-          </motion.div>
+           </motion.div>
 
-          {/* African Supply Card */}
-          <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px] flex flex-col">
-            <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-            >
-              <source src="/videos/IMG_9865.MOV" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 via-brand-navy/5 to-transparent pointer-events-none" />
-            
-            <div className="absolute inset-0 p-8 flex flex-col justify-end">
-              <div className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-brand-orange" />
+           {/* The Gap - Central Broken Link */}
+           <motion.div variants={fadeUp} className="relative flex flex-col items-center justify-center px-4 md:px-8 z-10 min-h-[400px] w-full max-w-[280px]">
+              {/* Glowing connecting lines */}
+              <div className="absolute left-0 right-1/2 top-1/2 h-[2px] bg-gradient-to-r from-white/20 to-brand-orange/50 -translate-y-1/2 -z-10" />
+              <div className="absolute left-1/2 right-0 top-1/2 h-[2px] bg-gradient-to-l from-white/20 to-brand-orange/50 -translate-y-1/2 -z-10" />
+              
+              <div className="relative">
+                 <div className="absolute inset-0 bg-brand-orange blur-[40px] opacity-30 rounded-full animate-pulse" />
+                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-3xl bg-brand-orange border border-white/20 shadow-[0_0_40px_rgba(255,106,0,0.4)] rotate-45 flex items-center justify-center mb-6 relative z-20">
+                   <Link className="w-8 h-8 text-white -rotate-45" />
+                 </div>
               </div>
-              <h3 className="text-2xl font-display font-black text-white mb-2 tracking-tight">African Supply</h3>
-              <p className="text-sm text-brand-white/80 leading-relaxed font-primary">
-                Vast, underutilized capacity across 11+ fragmented cooperatives.
+              <h3 className="text-2xl md:text-3xl font-display font-black text-brand-orange mb-2 text-center drop-shadow-md whitespace-nowrap">The Gap</h3>
+              <p className="text-xs md:text-sm text-brand-white/60 leading-relaxed font-primary text-center">
+                No reliable bridge.
               </p>
-            </div>
-          </motion.div>
+           </motion.div>
+
+           {/* African Supply Card */}
+           <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10 min-h-[400px] flex flex-col items-center justify-center p-8 bg-brand-navy">
+             <video 
+               autoPlay 
+               loop 
+               muted 
+               playsInline 
+               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+             >
+               <source src="/videos/lv_0_20260321112550.gif" type="video/mp4" />
+             </video>
+             <Image 
+               src="/videos/lv_0_20260321112550.gif"
+               alt="African Supply"
+               fill
+               className="object-cover absolute inset-0 transition-transform duration-1000 group-hover:scale-105"
+               unoptimized
+             />
+             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent pointer-events-none" />
+             
+             <div className="relative z-10 flex flex-col items-center text-center">
+               <div className="w-16 h-16 rounded-2xl bg-brand-orange/20 backdrop-blur-xl border border-brand-orange/30 flex items-center justify-center mb-6">
+                 <Zap className="w-8 h-8 text-brand-orange" />
+               </div>
+               <h3 className="text-3xl font-display font-black text-white mb-2 tracking-tight">African Supply</h3>
+               <p className="text-sm text-brand-white/80 leading-relaxed font-primary max-w-xs">
+                 Vast, underutilized capacity across 11+ fragmented cooperatives.
+               </p>
+             </div>
+           </motion.div>
 
         </div>
 
