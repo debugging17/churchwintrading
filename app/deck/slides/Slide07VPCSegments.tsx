@@ -61,7 +61,7 @@ export function Slide07VPCSegments() {
           {/* Segment B: The Global Wholesaler */}
           <motion.div variants={fadeUp} className="relative group rounded-3xl overflow-hidden shadow-2xl border border-brand-navy/10 min-h-[500px] flex flex-col">
             <Image src="/images/visual_supremacy/industrial_wholesaler.png" alt="Global Wholesaler" fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/30 to-transparent" />
             
             <div className="absolute inset-0 p-10 flex flex-col justify-end">
               <div className="mb-6">

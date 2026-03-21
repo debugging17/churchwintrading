@@ -46,7 +46,7 @@ export const ToolVideoModal: React.FC<ToolVideoModalProps> = ({
     <Portal>
       <AnimatePresence>
         {isOpen && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -56,90 +56,26 @@ export const ToolVideoModal: React.FC<ToolVideoModalProps> = ({
             />
             
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.98, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-[90vw] h-[85vh] bg-white/5 backdrop-blur-2xl rounded-[3rem] overflow-hidden shadow-[0_5rem_10rem_-2rem_rgba(0,0,0,0.5)] flex flex-col"
+              exit={{ scale: 0.98, opacity: 0 }}
+              className="relative w-[98vw] h-[96vh] bg-black rounded-[2rem] overflow-hidden shadow-2xl flex flex-col items-center justify-center p-0"
             >
-              {/* Top Bar with Logo */}
-              <div className="w-full h-20 flex items-center justify-center relative border-b border-white/5">
-                 <div className="flex flex-col items-center gap-1">
-                   <div className="relative w-32 h-8">
-                     <Image 
-                       src={logoSrc} 
-                       alt={toolName} 
-                       fill
-                       className="object-contain opacity-80 brightness-0 invert" 
-                     />
-                   </div>
-                   <span className="text-[10px] uppercase tracking-[0.4em] font-bold text-white/30">{subtitle}</span>
-                 </div>
-                 <button
-                   onClick={onClose}
-                   className="absolute right-10 top-1/2 -translate-y-1/2 p-2 hover:bg-white/10 rounded-full transition-colors group"
-                 >
-                   <X className="w-6 h-6 text-white/40 group-hover:text-white" />
-                 </button>
-              </div>
+              {/* Close Button - Subtle Overlay */}
+              <button
+                onClick={onClose}
+                className="absolute right-8 top-8 z-[110] p-3 bg-black/20 hover:bg-black/40 backdrop-blur-md rounded-full transition-all group border border-white/10"
+              >
+                <X className="w-6 h-6 text-white/50 group-hover:text-white" />
+              </button>
 
-              <div className="flex-grow flex overflow-hidden">
-                {/* Left: Video / Animation - Expanded to 68% */}
-                <div className="w-[68%] h-full relative p-6 md:p-10">
-                  <div className="w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl relative">
-                    <ToolPlayer 
-                      toolName={toolName} 
-                      toolAction={toolAction} 
-                      videoSrc={toolName.includes("APOLLO") ? "/videos/sample.mp4" : undefined} 
-                    />
-                  </div>
-                </div>
-
-                {/* Right: Guided Script - Adjusted to 32% */}
-                <div className="w-[32%] h-full flex flex-col justify-center p-12 bg-black/10 backdrop-blur-3xl border-l border-white/5">
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-3 mb-8">
-                       <div className="w-8 h-px bg-brand-orange/40" />
-                       <span className="text-brand-orange uppercase tracking-widest text-xs font-black">Strategic Walkthrough</span>
-                    </div>
-
-                    {script.length > 0 ? (
-                      script.map((step, index) => (
-                        <motion.div
-                          key={index}
-                          animate={{ 
-                            opacity: index === currentStep ? 1 : 0.2,
-                            x: index === currentStep ? 10 : 0,
-                            scale: index === currentStep ? 1.02 : 1
-                          }}
-                          className={`relative pl-8 transition-all duration-700`}
-                        >
-                          <div className={`absolute left-0 top-1.5 w-2 h-2 rounded-full transition-colors duration-700 ${index === currentStep ? 'bg-brand-orange shadow-[0_0_10px_#ff6a00]' : 'bg-white/20'}`} />
-                          <p className={`text-xl leading-tight font-display font-medium ${index === currentStep ? 'text-white' : 'text-white/60'}`}>
-                            {step}
-                          </p>
-                        </motion.div>
-                      ))
-                    ) : (
-                      <div className="py-12">
-                        <p className="text-white/40 italic font-primary text-sm leading-relaxed">
-                          Automating high-intent {toolName.toLowerCase()} workflows to identify and capture revenue opportunities.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="mt-16 pt-8 border-t border-white/5">
-                     <div className="flex items-center gap-4 text-white/30">
-                        <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center">
-                           <Zap className="w-5 h-5 text-brand-orange" />
-                        </div>
-                        <div>
-                           <p className="text-[10px] uppercase font-bold tracking-widest">Automation Active</p>
-                           <p className="text-xs italic font-primary text-white/40">Real-time pipeline generation enabled</p>
-                        </div>
-                     </div>
-                  </div>
-                </div>
+              {/* Pure Video Display - 100% frame */}
+              <div className="w-full h-full relative">
+                <ToolPlayer 
+                  toolName={toolName} 
+                  toolAction={toolAction} 
+                  videoSrc={toolName.includes("APOLLO") ? "/videos/sample.mp4" : undefined} 
+                />
               </div>
             </motion.div>
           </div>
