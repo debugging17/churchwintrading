@@ -30,7 +30,7 @@ export function Slide11InstitutionalReadiness() {
     {
       title: "Export Logistics",
       icon: Truck,
-      points: ["Direct EU/US Channels", "Vercel-backed transparency", "Real-time dispatch audit"],
+      points: ["Direct EU/US Channels", "Enterprise-Scale Digital Visibility", "Real-time dispatch audit"],
       accent: "bg-brand-navy/5 border-brand-navy/10"
     }
   ];
