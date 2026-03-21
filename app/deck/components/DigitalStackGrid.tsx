@@ -1,15 +1,18 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 import { 
   AreaChart, Area, ResponsiveContainer, 
   PieChart, Pie, Cell 
 } from "recharts";
 import { 
   Mail, Clock, UserCheck, MessageSquare, 
-  CheckCircle2, Globe, Search 
+  CheckCircle2, Globe 
 } from "lucide-react";
 import Image from "next/image";
+
+gsap.registerPlugin(useGSAP);
 
 // --- HELPERS ---
 
@@ -28,7 +31,7 @@ const BrowserWindow = ({ children, title, url, className = "", bgColor = "bg-whi
       <div className="text-[9px] text-brand-navy/30 font-mono truncate max-w-[100px]">{url}</div>
     </div>
     {/* Browser Content */}
-    <div className="flex-1 relative overflow-hidden">
+    <div className="flex-1 relative overflow-hidden min-h-[140px]">
       {children}
     </div>
   </div>
@@ -49,7 +52,6 @@ const apolloData = [
 const ApolloCard = () => (
   <BrowserWindow title="Apollo.io" url="apollo.io/search">
     <div className="p-3 flex flex-col h-full relative">
-      {/* Subtle Dot Pattern Overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#ff6a00 0.5px, transparent 0.5px)', backgroundSize: '10px 10px' }} />
       
       <div className="relative z-10 flex flex-col h-full">
@@ -59,7 +61,7 @@ const ApolloCard = () => (
             <p className="text-xl font-display font-black text-brand-orange">34,218</p>
           </div>
         </div>
-        <div className="h-14 w-full mb-2">
+        <div className="h-14 w-full mb-2 min-h-[56px]">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={apolloData}>
             <defs>
@@ -89,7 +91,7 @@ const ApolloCard = () => (
           <div key={i} className="flex items-center justify-between p-2 bg-brand-navy/5 rounded-lg border border-brand-navy/5">
              <div className="flex items-center gap-2">
                 <div className="w-5 h-5 rounded-full bg-brand-navy/10 flex items-center justify-center">
-                  <UserCheck className="w-3 h-3 text-brand-navy/40" />
+                   <UserCheck className="w-3 h-3 text-brand-navy/40" />
                 </div>
                 <span className="text-[9px] font-bold text-brand-navy">{lead.role}</span>
              </div>
@@ -154,15 +156,15 @@ const MailchimpCard = () => {
          </div>
          <h4 className="text-[8px] font-black text-brand-navy mb-3 tracking-widest uppercase">Q3 Lead Nurture Campaign</h4>
          
-         <div className="flex gap-4 w-full justify-center bg-white/20 backdrop-blur-md p-3 rounded-2xl">
+         <div className="flex gap-2 w-full justify-center bg-white/20 backdrop-blur-md p-2 rounded-2xl min-h-[80px]">
             <div className="flex flex-col items-center">
-               <div className="w-16 h-16 relative">
+               <div className="w-12 h-12 relative min-h-[48px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
                         data={openRate}
-                        innerRadius={20}
-                        outerRadius={30}
+                        innerRadius={15}
+                        outerRadius={22}
                         startAngle={90}
                         endAngle={-270}
                         paddingAngle={0}
@@ -175,20 +177,20 @@ const MailchimpCard = () => {
                     </PieChart>
                   </ResponsiveContainer>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-xs font-black text-brand-navy">42%</span>
+                    <span className="text-[10px] font-black text-brand-navy">42%</span>
                   </div>
                </div>
-               <p className="text-[7px] font-black text-brand-navy/60 mt-1 uppercase tracking-tighter">Open Rate</p>
+               <p className="text-[6px] font-black text-brand-navy/60 mt-0.5 uppercase tracking-tighter">Open Rate</p>
             </div>
             
             <div className="flex flex-col items-center">
-               <div className="w-16 h-16 relative">
+               <div className="w-12 h-12 relative min-h-[48px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
                         data={clickRate}
-                        innerRadius={20}
-                        outerRadius={30}
+                        innerRadius={15}
+                        outerRadius={22}
                         startAngle={90}
                         endAngle={-270}
                         paddingAngle={0}
@@ -201,10 +203,10 @@ const MailchimpCard = () => {
                     </PieChart>
                   </ResponsiveContainer>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-xs font-black text-brand-navy">12%</span>
+                    <span className="text-[10px] font-black text-brand-navy">12%</span>
                   </div>
                </div>
-               <p className="text-[7px] font-black text-brand-navy/60 mt-1 uppercase tracking-tighter">Click Rate</p>
+               <p className="text-[6px] font-black text-brand-navy/60 mt-0.5 uppercase tracking-tighter">Click Rate</p>
             </div>
          </div>
       </div>
@@ -241,65 +243,51 @@ const LinkedInCard = () => (
 // --- GRID EXPORT ---
 
 export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean, onToolSelect?: (toolId: string) => void }) {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15
-      }
-    }
-  };
+  const container = useRef<HTMLDivElement>(null);
 
-  const item = {
-    hidden: { opacity: 0, y: 30, scale: 0.9 },
-    show: { 
-      opacity: 1, 
-      y: 0, 
-      scale: 1, 
-      transition: { 
-        type: "spring" as const, 
-        stiffness: 100, 
-        damping: 15 
-      } 
-    }
-  };
+  useGSAP(() => {
+    if (!isActive) return;
+
+    gsap.from(".stack-item", {
+      opacity: 0,
+      y: 30,
+      scale: 0.9,
+      stagger: 0.1,
+      duration: 0.8,
+      ease: "back.out(1.7)"
+    });
+  }, { dependencies: [isActive], scope: container });
 
   return (
-    <motion.div 
-      variants={container}
-      initial="hidden"
-      animate={isActive ? "show" : "hidden"}
-      className="grid grid-cols-2 gap-2 w-full h-full min-h-[400px]"
-    >
-      <motion.div variants={item} onClick={() => onToolSelect?.("apollo")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
+    <div ref={container} className="grid grid-cols-2 gap-4 w-full h-full min-h-[400px]">
+      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative">
         <ApolloCard />
         <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Apollo.io</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">Sourcing 500+ ICP-matched prospects based on botanical demand signals.</p>
         </div>
-      </motion.div>
-      <motion.div variants={item} onClick={() => onToolSelect?.("instantly")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
+      </div>
+      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative">
         <InstantlyCard />
         <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Instantly.ai</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">High-deliverability 4-touch sequences maintaining 60%+ open rates.</p>
         </div>
-      </motion.div>
-      <motion.div variants={item} onClick={() => onToolSelect?.("mailchimp")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
+      </div>
+      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative">
         <MailchimpCard />
         <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Mailchimp</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">Monthly 'Churchwin Origins' content educating buyers on supply stability.</p>
         </div>
-      </motion.div>
-      <motion.div variants={item} onClick={() => onToolSelect?.("linkedin")} className="group cursor-pointer active:scale-[0.98] transition-transform relative">
+      </div>
+      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative">
         <LinkedInCard />
         <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">LinkedIn Sales Nav</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">Strategic connection with R&D and Procurement leads in EU/US markets.</p>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }
