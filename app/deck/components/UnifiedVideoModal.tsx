@@ -10,6 +10,7 @@ interface UnifiedVideoModalProps {
   onClose: () => void;
   toolName: string;
   toolAction: string;
+  videoSrc?: string;
 }
 
 export const UnifiedVideoModal: React.FC<UnifiedVideoModalProps> = ({ 
@@ -17,7 +18,11 @@ export const UnifiedVideoModal: React.FC<UnifiedVideoModalProps> = ({
   onClose, 
   toolName, 
   toolAction,
+  videoSrc,
 }) => {
+  const defaultVideo = "/assets/videos/apply_cinematic,_8k_202603181845.mp4";
+  const finalSrc = videoSrc || defaultVideo;
+
   return (
     <Portal>
       <AnimatePresence>
@@ -50,7 +55,7 @@ export const UnifiedVideoModal: React.FC<UnifiedVideoModalProps> = ({
                 <ToolPlayer 
                   toolName={toolName} 
                   toolAction={toolAction} 
-                  videoSrc="/assets/videos/apply_cinematic,_8k_202603181845.mp4"
+                  videoSrc={finalSrc}
                 />
               </div>
             </motion.div>

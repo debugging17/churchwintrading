@@ -10,10 +10,10 @@ gsap.registerPlugin(useGSAP);
 
 export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
   const container = useRef<HTMLDivElement>(null);
-  const [selectedTool, setSelectedTool] = useState<{name: string, action: string, logo: string} | null>(null);
+  const [selectedTool, setSelectedTool] = useState<{name: string, action: string, logo: string, video?: string} | null>(null);
 
   const pipeline = [
-    { id: "apollo", image: "/assets/images/sales-engine/apollo.png", name: "APOLLO.IO", action: "DATABASE GENERATION" },
+    { id: "apollo", image: "/assets/images/sales-engine/apollo.png", name: "APOLLO.IO", action: "DATABASE GENERATION", video: "/assets/videos/homepage-hero.510b8371.webm" },
     { id: "linkedin", image: "/assets/images/sales-engine/linkedin.png", name: "LINKEDIN SALES NAV", action: "WARM-UP REACH" },
     { id: "instantly", image: "/assets/images/sales-engine/instantly.png", name: "INSTANTLY.AI", action: "PERSONALIZED SEQUENCING" },
     { id: "mailchimp", image: "/assets/images/sales-engine/mailchimp.png", name: "CHURCHWIN PARTNER NETWORK", action: "RETENTION & REFERRAL" }
@@ -77,7 +77,7 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
                 isActive={isActive} 
                 onToolSelect={(id) => {
                   const tool = pipeline.find(p => p.id === id);
-                  if (tool) setSelectedTool({ name: tool.name, action: tool.action, logo: tool.image });
+                  if (tool) setSelectedTool({ name: tool.name, action: tool.action, logo: tool.image, video: tool.video });
                 }} 
               />
            </div>
@@ -116,6 +116,7 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
         onClose={() => setSelectedTool(null)}
         toolName={selectedTool?.name || ""}
         toolAction={selectedTool?.action || ""}
+        videoSrc={selectedTool?.video}
       />
     </div>
   );
