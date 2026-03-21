@@ -30,9 +30,15 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
              <p className="text-xs font-primary text-brand-navy/70 mb-8 leading-relaxed">
                 Baselining the origin. Vertical integration of 11+ co-ops and institutionalizing compliance (COA/MSDS).
              </p>
-             <div className="mt-auto pt-4 border-t border-brand-navy/10">
-                <p className="text-[9px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Target</p>
-                <p className="text-lg font-display font-bold text-brand-navy">$150K Expansion Fund</p>
+             <div className="mt-auto pt-6 border-t border-brand-navy/10 grid grid-cols-2 gap-4">
+                <div>
+                   <p className="text-[8px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Target</p>
+                   <p className="text-sm font-display font-bold text-brand-navy">$150K Fund</p>
+                </div>
+                <div>
+                   <p className="text-[8px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Customers</p>
+                   <p className="text-sm font-display font-bold text-brand-navy">5 Anchor</p>
+                </div>
              </div>
           </motion.div>
 
@@ -43,11 +49,17 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
              </div>
              <h3 className="text-xl font-display font-black mb-4 uppercase">Phase 2: Expand</h3>
              <p className="text-xs font-primary text-white/70 mb-8 leading-relaxed">
-                Activating the Demand Engine. Scaling digital visibility (Gravity Strategy) and B2B pipeline conversion.
+                Activating the Demand Engine. Scaling digital visibility (Gravity Strategy) and B2B pipeline conversion across 3 core sectors.
              </p>
-             <div className="mt-auto pt-4 border-t border-white/10">
-                <p className="text-[9px] font-black uppercase text-brand-orange tracking-widest mb-1">Impact</p>
-                <p className="text-lg font-display font-bold text-white">3.5x Volume Multiplier</p>
+             <div className="mt-auto pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
+                <div>
+                   <p className="text-[8px] font-black uppercase text-brand-orange tracking-widest mb-1">Impact</p>
+                   <p className="text-sm font-display font-bold text-white">3.5x Volume</p>
+                </div>
+                <div>
+                   <p className="text-[8px] font-black uppercase text-brand-orange tracking-widest mb-1">Monthly Rev</p>
+                   <p className="text-sm font-display font-bold text-white">$150K+</p>
+                </div>
              </div>
           </motion.div>
 
@@ -60,9 +72,15 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
              <p className="text-xs font-primary text-brand-navy/70 mb-8 leading-relaxed">
                 Local value multiplication. Achieving COSMOS/NATRUE certification to unlock 70% of EU Tier-1 TAM.
              </p>
-             <div className="mt-auto pt-4 border-t border-brand-navy/10">
-                <p className="text-[9px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Impact</p>
-                <p className="text-lg font-display font-bold text-brand-navy">Global Advantage</p>
+             <div className="mt-auto pt-6 border-t border-brand-navy/10 grid grid-cols-2 gap-4">
+                <div>
+                   <p className="text-[8px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Target Rev</p>
+                   <p className="text-sm font-display font-bold text-brand-navy">$4M+ Annual</p>
+                </div>
+                <div>
+                   <p className="text-[8px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Certified</p>
+                   <p className="text-sm font-display font-bold text-brand-navy">EU/US Tier 1</p>
+                </div>
              </div>
           </motion.div>
 

@@ -8,6 +8,14 @@ export const sectors = [
     target: "R&D Directors, Procurement",
     strategicFit: "Churchwin provides R&D teams with Grade A botanical inputs that exceed EU/US consumer safety standards. Our focus is on maintaining the raw potency of African ingredients through cold-press stabilization.",
     features: ["REACH & IFRA Compliant", "Clinical-Grade Traceability", "Custom R&D Small-Batch Support"],
+    commercialProof: {
+      volume: "8.5 Tons / Month",
+      activeBuyers: "22 Exclusive Labs",
+      avgOrderValue: "$18K - $45K",
+      revenueGrowth: "+42% YoY",
+      moq: "500 Kg",
+      leadTime: "10 Days"
+    },
     subSegments: [
       { 
         title: "Anti-Aging Serums", 
@@ -37,8 +45,16 @@ export const sectors = [
     title: "Nutraceutical & Supplements", 
     desc: "Immunity powders, green superfood blends, capsules", 
     target: "Product Dev Leads",
-    strategicFit: "We transform wild-harvested botanicals into pharmaceutical-grade inputs. By standardizing active compounds (like Vitamin C in Baobab or Polyphenols in Moringa), we ensure your labels are backed by science.",
+    strategicFit: "We transform wild-harvested botanicals into pharmaceutical-grade inputs. Standardized to 98% active compounds (HPLC Verified), we ensure your labels are backed by science and rigorous clinical data.",
     features: ["HPLC Verified Potency", "Zero-Additive Guarantee", "Organic & Kosher Certified"],
+    commercialProof: {
+      volume: "12 Tons / Month",
+      activeBuyers: "14+ Global Brands",
+      avgOrderValue: "$25K - $60K",
+      revenueGrowth: "+28% QoQ",
+      moq: "1 Ton",
+      leadTime: "14 Days"
+    },
     subSegments: [
       { 
         title: "Immunity Powders", 
@@ -70,6 +86,14 @@ export const sectors = [
     target: "Supply Chain Heads",
     strategicFit: "Churchwin solves the 'Missing Middle' in the global supply chain by aggregating production from 11 women-led cooperatives into institutional volumes for the world's largest CPG brands.",
     features: ["12-Month Price Stability", "Mass-Scale Fortification Support", "ESG Impact Reporting Included"],
+    commercialProof: {
+      volume: "45 Tons / Quarter",
+      activeBuyers: "3 Tier-1 CPG Brands",
+      avgOrderValue: "$120K",
+      revenueGrowth: "+15% MoM",
+      moq: "5 Tons",
+      leadTime: "21 Days"
+    },
     subSegments: [
       { 
         title: "Wellness Juices", 
@@ -101,6 +125,14 @@ export const sectors = [
     target: "Master Blenders",
     strategicFit: "Our botanicals are harvested at peak potency and solar-dried to retain volatile oils. We provide master blenders with the raw material consistency required for global SKU uniformity.",
     features: ["Solar-Dried Quality Control", "Master Blender Grade Selection", "Direct-Origin Sustainability"],
+    commercialProof: {
+      volume: "6 Tons / Month",
+      activeBuyers: "12 Boutique Tea Houses",
+      avgOrderValue: "$12K - $28K",
+      revenueGrowth: "+35% YoY",
+      moq: "250 Kg",
+      leadTime: "7 Days"
+    },
     subSegments: [
       { 
         title: "Detox Blends", 
@@ -132,6 +164,14 @@ export const sectors = [
     target: "Spa Directors, GMs",
     strategicFit: "We turn 'commoditized oil' into a 'wellness ritual'. Our ingredients come with the storytelling assets and traceability maps that luxury guests demand as part of their experience.",
     features: ["White-Label Ready Formulations", "Traceability QR-Code Support", "Low-Minimum Order Quantities"],
+    commercialProof: {
+      volume: "3,500 Units / Month",
+      activeBuyers: "18 Boutique Hotels",
+      avgOrderValue: "$4.5K - $12K",
+      revenueGrowth: "+55% YoY",
+      moq: "50 Units",
+      leadTime: "5 Days"
+    },
     subSegments: [
       { 
         title: "Guest Amenities", 
@@ -163,6 +203,14 @@ export const sectors = [
     target: "Category Managers",
     strategicFit: "We provide the scale and compliance required for tier-1 retail house brands. Our infrastructure allows grocers to capture the 'Organic Specialty' premium without the supply-chain risk.",
     features: ["GFSI & BRC Compliance Ready", "VMI (Vendor Managed Inventory)", "Direct Export Logistics"],
+    commercialProof: {
+      volume: "80 Tons / Year",
+      activeBuyers: "2 Major Retailers",
+      avgOrderValue: "$210K",
+      revenueGrowth: "+12% MoM",
+      moq: "10 Tons",
+      leadTime: "28 Days"
+    },
     subSegments: [
       { 
         title: "Organic Aisle", 

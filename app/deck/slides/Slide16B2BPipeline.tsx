@@ -83,15 +83,20 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
               </div>
               <p className="text-xs uppercase tracking-[0.5em] text-brand-orange font-black mb-4">Strategic Outcome</p>
               <h3 className="text-2xl md:text-3xl font-display font-bold mb-8 tracking-tight leading-tight max-w-2xl">100% Digital Traceability from Outreach to Agreement.</h3>
-              <div className="flex items-center gap-12">
+              <div className="flex items-center gap-8 md:gap-12">
                  <div>
-                    <p className="text-white/40 text-[10px] uppercase font-black mb-2 tracking-widest">Lead Conversion</p>
-                    <p className="text-4xl font-display font-black text-brand-orange">12%</p>
+                    <p className="text-white/40 text-[10px] uppercase font-black mb-2 tracking-widest">Qualified Leads</p>
+                    <p className="text-3xl md:text-4xl font-display font-black text-brand-orange">12/mo</p>
                  </div>
                  <div className="w-[1px] h-12 bg-white/10" />
                  <div>
-                    <p className="text-white/40 text-[10px] uppercase font-black mb-2 tracking-widest">Contract Velocity</p>
-                    <p className="text-4xl font-display font-black text-brand-orange">+40%</p>
+                    <p className="text-white/40 text-[10px] uppercase font-black mb-2 tracking-widest">Conversion</p>
+                    <p className="text-3xl md:text-4xl font-display font-black text-brand-orange">22%</p>
+                 </div>
+                 <div className="w-[1px] h-12 bg-white/10" />
+                 <div>
+                    <p className="text-white/40 text-[10px] uppercase font-black mb-2 tracking-widest">Target CAC</p>
+                    <p className="text-3xl md:text-4xl font-display font-black text-brand-orange">$420</p>
                  </div>
               </div>
            </motion.div>

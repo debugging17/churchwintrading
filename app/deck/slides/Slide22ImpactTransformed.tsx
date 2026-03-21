@@ -60,21 +60,31 @@ export function Slide22ImpactTransformed({ isActive }: { isActive: boolean }) {
               <ShieldCheck className="text-brand-white w-6 h-6" />
             </div>
             <div className="flex-1 relative z-10">
-              <div className="text-sm font-display tracking-widest text-brand-orange uppercase font-bold mb-3">Proven Model Validation</div>
-              <div className="flex items-end gap-6">
+              <div className="text-sm font-display tracking-widest text-brand-orange uppercase font-bold mb-3">Unit Economics & Transformation</div>
+              <div className="flex flex-col md:flex-row gap-8 mb-4">
+                 <div className="flex-1">
+                    <p className="text-[10px] uppercase tracking-widest text-brand-navy/40 font-black mb-1">Bulk Trading</p>
+                    <p className="text-3xl font-display font-black text-brand-navy">$4.50<span className="text-sm font-primary text-brand-navy/40">/kg</span></p>
+                 </div>
+                 <div className="flex-1">
+                    <p className="text-[10px] uppercase tracking-widest text-brand-orange font-black mb-1">Private Label Transformation</p>
+                    <p className="text-3xl font-display font-black text-brand-orange">$15.80<span className="text-sm font-primary text-brand-orange/40">/kg</span></p>
+                 </div>
+              </div>
+              <div className="flex items-end gap-6 border-t border-brand-navy/5 pt-4">
                 <div className="flex-1">
-                   <p className="font-primary text-brand-navy/90 text-lg leading-relaxed">Scaling from bulk exports to institutional private label drives <span className="font-bold text-brand-orange italic">350% margin expansion</span> per unit.</p>
+                   <p className="font-primary text-brand-navy/90 text-sm leading-relaxed">Transitioning from commodity exports to institutional supply drives <span className="font-bold text-brand-orange italic">350% margin expansion</span>. <br /><strong>12-Month Target: $1.4M ARR.</strong></p>
                 </div>
                 <div className="w-24 h-20 shrink-0">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={impactData}>
-                      <Bar dataKey="value" radius={[4, 4, 0, 0]}>
-                        {impactData.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={entry.fill} />
-                        ))}
-                      </Bar>
-                    </BarChart>
-                  </ResponsiveContainer>
+                   <ResponsiveContainer width="100%" height="100%">
+                     <BarChart data={impactData}>
+                       <Bar dataKey="value" radius={[4, 4, 0, 0]}>
+                         {impactData.map((entry, index) => (
+                           <Cell key={`cell-${index}`} fill={entry.fill} />
+                         ))}
+                       </Bar>
+                     </BarChart>
+                   </ResponsiveContainer>
                 </div>
               </div>
             </div>

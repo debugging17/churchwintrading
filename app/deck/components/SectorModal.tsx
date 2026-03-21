@@ -141,8 +141,8 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                     </div>
                   </div>
                   
-                  <div className="lg:col-span-5 flex flex-col justify-stretch">
-                    <div className="p-6 md:p-8 bg-white rounded-[2rem] border border-brand-navy/5 shadow-sm h-full flex flex-col">
+                  <div className="lg:col-span-5 flex flex-col gap-6">
+                    <div className="p-8 bg-white rounded-[2.5rem] border border-brand-navy/5 shadow-sm flex flex-col">
                       <h5 className="font-display text-xl md:text-2xl font-black text-brand-navy mb-4 tracking-tight">Strategic Fit</h5>
                       <p className="text-brand-navy/60 text-xs md:text-sm leading-relaxed mb-6">
                         {sector.strategicFit}{" "}
@@ -159,6 +159,31 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                         ))}
                       </ul>
                     </div>
+
+                    {(sector as any).commercialProof && (
+                      <div className="p-8 bg-brand-navy text-white rounded-[2.5rem] shadow-2xl relative overflow-hidden flex flex-col justify-center">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/10 blur-3xl rounded-full -mr-16 -mt-16" />
+                        <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-orange mb-4">Board-Level Commercial Proof</h5>
+                        <div className="grid grid-cols-2 gap-y-6 gap-x-4">
+                          <div>
+                            <p className="text-[8px] uppercase tracking-widest text-white/40 mb-1">Volume</p>
+                            <p className="text-base font-display font-bold">{(sector as any).commercialProof.volume}</p>
+                          </div>
+                          <div>
+                            <p className="text-[8px] uppercase tracking-widest text-white/40 mb-1">Avg Order Value</p>
+                            <p className="text-base font-display font-bold">{(sector as any).commercialProof.avgOrderValue}</p>
+                          </div>
+                          <div>
+                            <p className="text-[8px] uppercase tracking-widest text-white/40 mb-1">MOQ</p>
+                            <p className="text-base font-display font-bold">{(sector as any).commercialProof.moq}</p>
+                          </div>
+                          <div>
+                            <p className="text-[8px] uppercase tracking-widest text-white/40 mb-1">Lead Time</p>
+                            <p className="text-base font-display font-bold">{(sector as any).commercialProof.leadTime}</p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               </AnimatePresence>
