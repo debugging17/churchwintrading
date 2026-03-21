@@ -72,12 +72,12 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
           {/* Content Area */}
           <div className="flex-grow flex flex-col bg-[#fcfcfc] overflow-hidden">
             {/* Sector Header & Tabs */}
-            <div className="p-8 md:p-12 pb-0">
-              <h3 className="font-display text-3xl md:text-5xl font-black text-brand-navy mb-8 md:mb-10 tracking-tight">
+            <div className="p-6 md:p-8 pb-0">
+              <h3 className="font-display text-3xl md:text-5xl font-black text-brand-navy mb-4 md:mb-6 tracking-tight">
                 {sector.title}
               </h3>
               
-              <div className="flex gap-4 md:gap-10 border-b border-brand-navy/5 pb-0 mb-8 overflow-x-auto no-scrollbar scroll-smooth">
+              <div className="flex gap-4 md:gap-10 border-b border-brand-navy/5 pb-0 mb-4 overflow-x-auto no-scrollbar scroll-smooth">
                 {sector.subSegments.map((sub, idx) => (
                   <button
                     key={idx}
@@ -97,7 +97,7 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
             </div>
 
             {/* Tab Content */}
-            <div className="flex-grow p-8 md:p-12 pt-0 overflow-y-auto">
+            <div className="flex-grow p-6 md:p-8 pt-0 overflow-y-auto no-scrollbar">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`${selectedIdx}-${activeTab}`}
@@ -105,9 +105,9 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 1.02, y: -10 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 min-h-full items-start"
+                  className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 min-h-full items-stretch"
                 >
-                  <div className="lg:col-span-7 min-h-[40vh] md:min-h-[50vh] relative rounded-[2rem] overflow-hidden shadow-2xl border border-white">
+                  <div className="lg:col-span-7 min-h-[30vh] md:min-h-[35vh] relative rounded-[2rem] overflow-hidden shadow-2xl border border-white flex flex-col">
                     <Image 
                       src={sector.subSegments[activeTab].image} 
                       alt={sector.subSegments[activeTab].title}
@@ -117,20 +117,20 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                     {/* Content Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent" />
                     
-                    <div className="absolute bottom-0 left-0 w-full p-6 md:p-10 flex flex-col gap-6">
-                       <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-                          <div className="bg-white/10 backdrop-blur-xl p-5 md:p-8 rounded-3xl border border-white/20 flex-1 shadow-lg">
-                             <div className="flex items-center gap-3 mb-3 text-brand-orange">
-                                <Target className="w-5 h-5" />
-                                <span className="text-[10px] font-black uppercase tracking-[0.3em]">Target Market</span>
+                    <div className="absolute bottom-0 left-0 w-full p-4 md:p-6 flex flex-col gap-4">
+                       <div className="flex flex-col md:flex-row gap-4">
+                          <div className="bg-white/10 backdrop-blur-xl p-4 md:p-6 rounded-[1.5rem] border border-white/20 flex-1 shadow-lg">
+                             <div className="flex items-center gap-2 mb-2 text-brand-orange">
+                                <Target className="w-4 h-4" />
+                                <span className="text-[9px] font-black uppercase tracking-[0.3em]">Target Market</span>
                              </div>
-                             <p className="text-white font-display text-base md:text-xl font-bold leading-tight">
+                             <p className="text-white font-display text-sm md:text-lg font-bold leading-tight">
                                 {sector.subSegments[activeTab].market}
                              </p>
                           </div>
-                          <div className="bg-brand-orange p-5 md:p-8 rounded-3xl shadow-2xl flex-1 border border-white/20">
-                             <div className="flex items-center gap-3 mb-3 text-white">
-                                <Zap className="w-5 h-5 fill-current" />
+                          <div className="bg-brand-orange p-4 md:p-6 rounded-[1.5rem] shadow-2xl flex-1 border border-white/20">
+                             <div className="flex items-center gap-2 mb-2 text-white">
+                                <Zap className="w-4 h-4 fill-current" />
                                 <span className="text-[10px] font-black uppercase tracking-[0.3em]">Proposed Solution</span>
                              </div>
                              <p className="text-white font-primary text-xs md:text-sm leading-relaxed font-medium">
@@ -141,10 +141,10 @@ export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModa
                     </div>
                   </div>
                   
-                  <div className="lg:col-span-5 flex flex-col py-4">
-                    <div className="p-8 md:p-10 bg-white rounded-[2rem] border border-brand-navy/5 shadow-sm">
-                      <h5 className="font-display text-2xl md:text-3xl font-black text-brand-navy mb-6 tracking-tight">Strategic Fit</h5>
-                      <p className="text-brand-navy/60 text-sm md:text-base leading-relaxed mb-10">
+                  <div className="lg:col-span-5 flex flex-col justify-stretch">
+                    <div className="p-6 md:p-8 bg-white rounded-[2rem] border border-brand-navy/5 shadow-sm h-full flex flex-col">
+                      <h5 className="font-display text-xl md:text-2xl font-black text-brand-navy mb-4 tracking-tight">Strategic Fit</h5>
+                      <p className="text-brand-navy/60 text-xs md:text-sm leading-relaxed mb-6">
                         {sector.strategicFit}{" "}
                         <span className="font-bold text-brand-navy border-b-2 border-brand-orange/30 italic">
                           {sector.subSegments[activeTab].details}
