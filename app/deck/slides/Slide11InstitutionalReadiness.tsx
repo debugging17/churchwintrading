@@ -63,12 +63,12 @@ export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean 
             <motion.div 
               key={i}
               variants={fadeUp}
-              className={`p-8 rounded-[32px] border ${pillar.accent} hover:shadow-2xl transition-all duration-500 group`}
+              className={`p-8 rounded-[32px] border ${pillar.accent} hover:shadow-2xl transition-all duration-500 group text-left`}
             >
               <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors">
                 <pillar.icon className="w-7 h-7 text-brand-orange group-hover:text-white" />
               </div>
-              <h3 className="text-xl font-display font-black text-brand-navy mb-6 tracking-tight group-hover:text-brand-orange transition-colors">
+              <h3 className="text-xl font-display font-black text-brand-navy mb-6 tracking-tight group-hover:text-brand-orange transition-colors uppercase">
                 {pillar.title}
               </h3>
               <ul className="space-y-4">
