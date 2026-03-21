@@ -146,19 +146,19 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
         <div className="absolute top-0 right-0 w-[40vw] h-[40vw] rounded-full bg-brand-orange/5 blur-[120px] mix-blend-multiply" />
         <div className="absolute bottom-0 left-0 w-[50vw] h-[50vw] rounded-full bg-brand-navy/5 blur-[120px] mix-blend-multiply" />
 
-        <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-7xl mx-auto flex flex-col h-full z-10 relative">
-          <motion.div variants={fadeUp} className="mb-6 text-center max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-brand-navy mb-3 leading-tight tracking-tighter uppercase">
+        <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-[95rem] mx-auto flex flex-col h-full z-10 relative">
+          <motion.div variants={fadeUp} className="mb-10 text-center max-w-5xl mx-auto">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-brand-navy mb-4 leading-tight tracking-tighter uppercase">
               The Value <span className="text-brand-orange">Leakage.</span>
             </h2>
-            <p className="font-primary text-brand-navy/70 text-base md:text-lg font-medium italic">
+            <p className="font-primary text-brand-navy/70 text-lg md:text-xl font-medium italic">
               Ghana provides the resource, but the global intermediaries capture the margin. <br />
-              <span className="text-brand-navy font-black not-italic">Churchwin Trading preserves 22% more margin through direct-to-coop sourcing.</span>
+              <span className="text-brand-navy font-black not-italic px-4 py-1 bg-brand-orange/10 rounded-lg inline-block mt-4">Churchwin Trading preserves 22% more margin through direct-to-coop sourcing.</span>
             </p>
           </motion.div>
 
           {/* The Comparison Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 flex-grow relative mt-2 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 flex-grow relative mt-12 overflow-hidden">
             
             {/* LEFT: The Status Quo */}
             <motion.div variants={slideFromLeft} className="lg:col-span-7 flex flex-col relative z-10">
