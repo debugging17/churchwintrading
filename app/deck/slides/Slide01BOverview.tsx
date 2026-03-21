@@ -59,11 +59,11 @@ export function Slide01BOverview() {
           {/* REALITY FEED — The Churchwin Today Status */}
           <motion.div custom={3} variants={fadeUp} className="space-y-6">
             {[
-              { label: "Active Production", val: "Shea, Baobab, & Neem lines operational.", type: "pos" },
-              { label: "Supply Network", val: "11+ Women-led cooperatives integrated.", type: "pos" },
-              { label: "Export Capability", val: "Proven logistics to EU/US markets.", type: "pos" },
-              { label: "The Reality", val: "Demand is inconsistent & manual.", type: "neg" },
-              { label: "The Risk", val: "Processing capacity is underutilized.", type: "neg" },
+              { label: "Active Production", val: "Shea, Baobab, & Neem lines — 35% utilization.", type: "pos" },
+              { label: "Supply Network", val: "11+ Women-led cooperatives integrated & audited.", type: "pos" },
+              { label: "Export Capability", val: "4 Primary institutional buyers (EU/US).", type: "pos" },
+              { label: "The Reality", val: "$250K/mo uncaptured demand due to manual closing.", type: "neg" },
+              { label: "The Risk", val: "Growth stalled by founder-dependent sales heroics.", type: "neg" },
             ].map((pt, i) => (
               <div key={i} className={`flex items-start gap-4 p-4 rounded-xl border ${pt.type === 'pos' ? 'bg-brand-navy/5 border-brand-navy/10' : 'bg-brand-orange/5 border-brand-orange/20'}`}>
                 <div className={`w-2 h-2 rounded-full mt-2 ${pt.type === 'pos' ? 'bg-brand-navy/40' : 'bg-brand-orange shadow-[0_0_10px_rgba(244,121,32,0.3)]'}`} />

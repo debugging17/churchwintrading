@@ -166,19 +166,19 @@ export function Slide15DigitalVisibility() {
             <div className="p-4 bg-brand-navy/5 rounded-2xl">
               <div className="flex items-center gap-2 mb-2 text-brand-navy/40">
                 <Activity className="w-4 h-4" />
-                <span className="text-[10px] uppercase font-bold tracking-tight">Visibility</span>
+                <span className="text-[10px] uppercase font-bold tracking-tight">Acquisition Cost</span>
               </div>
-              <p className="text-xl font-display font-bold text-brand-navy tracking-tight">1/260th</p>
-              <p className="text-[10px] text-brand-orange font-bold">Of Industry Baseline</p>
+              <p className="text-xl font-display font-bold text-brand-navy tracking-tight">~$420</p>
+              <p className="text-[10px] text-brand-orange font-bold">Per Institutional Lead</p>
             </div>
             
             <div className="p-4 bg-brand-navy/5 rounded-2xl">
               <div className="flex items-center gap-2 mb-2 text-brand-navy/40">
                 <TrendingUp className="w-4 h-4" />
-                <span className="text-[10px] uppercase font-bold tracking-tight">Growth Trend</span>
+                <span className="text-[10px] uppercase font-bold tracking-tight">Value Multiplier</span>
               </div>
-              <p className="text-xl font-display font-bold text-brand-navy tracking-tight">+350%</p>
-              <p className="text-[10px] text-brand-navy/40 font-bold">Poised for Momentum</p>
+              <p className="text-xl font-display font-bold text-brand-navy tracking-tight">15x</p>
+              <p className="text-[10px] text-brand-black/40 font-bold uppercase tracking-tighter italic">B2B Contract LTV</p>
             </div>
 
             <div className="p-4 border-2 border-brand-orange/20 rounded-2xl relative overflow-hidden">
@@ -186,10 +186,10 @@ export function Slide15DigitalVisibility() {
                 <Search className="w-8 h-8 text-brand-orange" />
               </div>
               <div className="flex items-center gap-2 mb-2 text-brand-orange font-bold">
-                <span className="text-[10px] uppercase font-bold tracking-tight">Focus Gap</span>
+                <span className="text-[10px] uppercase font-bold tracking-tight">Funnel Math</span>
               </div>
-              <p className="text-xl font-display font-bold text-brand-navy tracking-tight">Zero</p>
-              <p className="text-[10px] text-brand-navy/40 font-bold">Captured Search</p>
+              <p className="text-xl font-display font-bold text-brand-navy tracking-tight">500:5</p>
+              <p className="text-[10px] text-brand-navy/40 font-bold">Prospect to Contract</p>
             </div>
           </div>
         </motion.div>

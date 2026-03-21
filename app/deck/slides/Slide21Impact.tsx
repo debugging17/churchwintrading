@@ -24,9 +24,9 @@ export function Slide21Impact() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { title: "EU Compliance", desc: "Forthcoming EUDR regulations require 100% geolocation-to-batch traceability.", icon: Globe },
-            { title: "Verification Moat", desc: "Our village-level data architecture is the moat that competitors cannot replicate.", icon: ShieldCheck },
-            { title: "Sustainable Yield", desc: "Empowered cooperatives ensure supply security and quality consistency.", icon: Leaf }
+            { title: "EU Compliance", desc: "100% geolocation-to-batch traceability. Ready for the EU Deforestation Regulation (EUDR) and Supply Chain Due Diligence Act.", icon: Globe },
+            { title: "Verification Moat", desc: "Our village-level data architecture is the moat that ensures buyers meet zero-deforestation mandates.", icon: ShieldCheck },
+            { title: "Sustainable Yield", desc: "Every 1,000kg of Shea processed = 18 weeks of living wage for co-op members. Social impact turned into supply security.", icon: Leaf }
           ].map((item, i) => (
             <motion.div 
               key={i}

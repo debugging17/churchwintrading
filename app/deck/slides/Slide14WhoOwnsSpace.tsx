@@ -153,7 +153,7 @@ export function Slide14WhoOwnsSpace() {
             </h2>
             <p className="font-primary text-brand-navy/70 text-base md:text-lg font-medium italic">
               Ghana provides the resource, but the global intermediaries capture the margin. <br />
-              <span className="text-brand-navy font-black not-italic">Churchwin Trading is the integrated alternative.</span>
+              <span className="text-brand-navy font-black not-italic">Churchwin Trading preserves 22% more margin through direct-to-coop sourcing.</span>
             </p>
           </motion.div>
 

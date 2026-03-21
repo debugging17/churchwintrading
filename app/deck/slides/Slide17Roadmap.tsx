@@ -31,8 +31,8 @@ export function Slide17Roadmap() {
                 Baselining the origin. Vertical integration of 11+ co-ops and institutionalizing compliance (COA/MSDS).
              </p>
              <div className="mt-auto pt-4 border-t border-brand-navy/10">
-                <p className="text-[9px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Impact</p>
-                <p className="text-lg font-display font-bold text-brand-navy">Operational Bedrock</p>
+                <p className="text-[9px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Target</p>
+                <p className="text-lg font-display font-bold text-brand-navy">$150K Expansion Fund</p>
              </div>
           </motion.div>
 
@@ -58,7 +58,7 @@ export function Slide17Roadmap() {
              </div>
              <h3 className="text-xl font-display font-black text-brand-navy mb-4 uppercase">Phase 3: Scale</h3>
              <p className="text-xs font-primary text-brand-navy/70 mb-8 leading-relaxed">
-                Local value multiplication. Full refining at source and global private label dominance.
+                Local value multiplication. Achieving COSMOS/NATRUE certification to unlock 70% of EU Tier-1 TAM.
              </p>
              <div className="mt-auto pt-4 border-t border-brand-navy/10">
                 <p className="text-[9px] font-black uppercase text-brand-navy/40 tracking-widest mb-1">Impact</p>

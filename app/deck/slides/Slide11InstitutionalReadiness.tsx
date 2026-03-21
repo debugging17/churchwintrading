@@ -12,7 +12,7 @@ export function Slide11InstitutionalReadiness() {
     {
       title: "Supply Infrastructure",
       icon: Users,
-      points: ["11 Women-led cooperatives", "12-Month Buffer Reserve", "Organic & Fair Trade Compliance"],
+      points: ["11 Women-led cooperatives", "22% Margin Preservation", "Organic & Fair Trade Compliance"],
       accent: "bg-brand-orange/10 border-brand-orange/20"
     },
     {

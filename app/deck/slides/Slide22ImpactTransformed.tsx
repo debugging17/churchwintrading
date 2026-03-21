@@ -7,8 +7,8 @@ import { HeartHandshake, BookOpenCheck, ShieldCheck } from "lucide-react";
 import { ResponsiveContainer, BarChart, Bar, Cell, XAxis, YAxis } from "recharts";
 
 const impactData = [
-  { label: "Standard", value: 100, fill: "rgba(1, 39, 135, 0.2)" },
-  { label: "Certified", value: 400, fill: "#ff6a00" }
+  { label: "Bulk Trading", value: 100, fill: "rgba(1, 39, 135, 0.2)" },
+  { label: "Private Label", value: 350, fill: "#ff6a00" }
 ];
 
 export function Slide22ImpactTransformed() {
@@ -23,11 +23,11 @@ export function Slide22ImpactTransformed() {
         <div className="w-full md:w-[45%] flex flex-col justify-center">
           <motion.div variants={fadeUp} className="w-20 h-1 bg-brand-orange mb-8" />
           <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-6xl font-black text-brand-navy leading-none tracking-tighter uppercase mb-6">
-            Verification over <br /><span className="text-brand-orange italic">Vague Impact.</span>
+            The Revenue <br /><span className="text-brand-orange italic">Transformation.</span>
           </motion.h2>
           
           <motion.p variants={fadeUp} className="text-xl text-brand-navy/60 font-primary border-l-2 border-brand-navy/20 pl-6 mb-8 italic">
-            EU buyers cannot purchase from uncertified supply chains. Our village-level traceability is the competitive moat — <span className="text-brand-navy font-bold not-italic">not the marketing story.</span>
+            Moving from low-margin commodity trading to high-margin institutional supply. <span className="text-brand-navy font-bold not-italic">Certification unlocks a 3.5x value capture multiplier per kg.</span>
           </motion.p>
         </div>
 
@@ -63,7 +63,7 @@ export function Slide22ImpactTransformed() {
               <div className="text-sm font-display tracking-widest text-brand-orange uppercase font-bold mb-3">Proven Model Validation</div>
               <div className="flex items-end gap-6">
                 <div className="flex-1">
-                   <p className="font-primary text-brand-navy/90 text-lg leading-relaxed">Sustainability certification drives <span className="font-bold text-brand-orange italic">+300% export increases</span> for luxury retail brands.</p>
+                   <p className="font-primary text-brand-navy/90 text-lg leading-relaxed">Scaling from bulk exports to institutional private label drives <span className="font-bold text-brand-orange italic">350% margin expansion</span> per unit.</p>
                 </div>
                 <div className="w-24 h-20 shrink-0">
                   <ResponsiveContainer width="100%" height="100%">
