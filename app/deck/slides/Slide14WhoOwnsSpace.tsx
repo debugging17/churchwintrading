@@ -57,11 +57,11 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
     };
 
     return (
-      <div className="w-full h-[300px] md:h-[400px] mt-4">
+      <div className="w-full h-[350px] md:h-[500px] mt-4 flex items-center justify-center">
         <ResponsiveContainer width="100%" height="100%">
-          <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+          <RadarChart cx="50%" cy="50%" outerRadius="65%" data={data}>
             <PolarGrid stroke="#e5e7eb" />
-            <PolarAngleAxis dataKey="subject" tick={{ fill: '#1a365d', fontSize: 10, fontWeight: 'bold' }} />
+            <PolarAngleAxis dataKey="subject" tick={{ fill: '#1a365d', fontSize: 11, fontWeight: 'bold' }} />
             <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
             <Radar
               name={labels[type]}
@@ -77,7 +77,7 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
               fill="#ff6a00"
               fillOpacity={0.6}
             />
-            <Legend wrapperStyle={{ fontSize: '10px' }} />
+            <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '20px' }} />
           </RadarChart>
         </ResponsiveContainer>
       </div>
@@ -97,44 +97,44 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
           'Informal Middlemen'
         }` : ""}
       >
-        <div className="flex flex-col md:flex-row gap-8 items-center">
+        <div className="flex flex-col md:flex-row gap-12 items-center p-4">
           <div className="w-full md:w-1/2">
-             <div className="space-y-6">
+             <div className="space-y-8">
                 <div>
-                  <h5 className="text-xs font-bold uppercase tracking-widest text-brand-navy/40 mb-3">Market Performance</h5>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-brand-navy/5 rounded-xl p-4 border border-brand-navy/10">
-                      <p className="text-[10px] text-brand-navy/50 uppercase font-black mb-1">Market Share</p>
-                      <p className="text-2xl font-display font-black text-brand-navy">
+                  <h5 className="text-sm font-bold uppercase tracking-[0.2em] text-brand-navy/40 mb-4">Market Performance</h5>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="bg-brand-navy/5 rounded-2xl p-6 border border-brand-navy/10 shadow-sm">
+                      <p className="text-[10px] text-brand-navy/50 uppercase font-black mb-1 tracking-widest">Market Share</p>
+                      <p className="text-3xl font-display font-black text-brand-navy">
                         {activeModal === 'intermediaries' ? '45%' : activeModal === 'suppliers' ? '12%' : activeModal === 'dtcBrands' ? '30%' : '13%'}
                       </p>
                     </div>
-                    <div className="bg-brand-orange/5 rounded-xl p-4 border border-brand-orange/10">
-                      <p className="text-[10px] text-brand-orange uppercase font-black mb-1">Perf. Gap</p>
-                      <p className="text-2xl font-display font-black text-brand-orange">
+                    <div className="bg-brand-orange/5 rounded-2xl p-6 border border-brand-orange/10 shadow-sm">
+                      <p className="text-[10px] text-brand-orange uppercase font-black mb-1 tracking-widest">Perf. Gap</p>
+                      <p className="text-3xl font-display font-black text-brand-orange">
                         {activeModal === 'intermediaries' ? '-80%' : activeModal === 'suppliers' ? '-60%' : activeModal === 'dtcBrands' ? '-40%' : '-90%'}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-3">
-                   <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full bg-slate-400" />
-                      <span className="text-xs font-bold text-brand-navy">Competitor: Scale-focused, integrity compromised.</span>
+                <div className="space-y-4">
+                   <div className="flex items-center gap-4">
+                      <div className="w-4 h-4 rounded-full bg-slate-300" />
+                      <span className="text-sm font-bold text-brand-navy/80">Competitor: Scale-focused, integrity compromised.</span>
                    </div>
-                   <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full bg-brand-orange" />
-                      <span className="text-xs font-bold text-brand-navy">Churchwin: The Integrated Alternative.</span>
+                   <div className="flex items-center gap-4">
+                      <div className="w-4 h-4 rounded-full bg-brand-orange shadow-[0_0_10px_rgba(255,106,0,0.5)]" />
+                      <span className="text-sm font-bold text-brand-navy">Churchwin: The Integrated Alternative.</span>
                    </div>
                 </div>
                 
-                <p className="font-primary text-brand-navy/70 leading-relaxed text-sm italic">
+                <p className="font-primary text-brand-navy/70 leading-relaxed text-base italic border-l-4 border-brand-orange/20 pl-6 py-2">
                   &quot;Churchwin reclaims the value leakage found in {activeModal} through vertically integrated traceability.&quot;
                 </p>
              </div>
           </div>
-          <div className="w-full md:w-1/2 bg-brand-navy/5 rounded-2xl p-4">
+          <div className="w-full md:w-1/2 bg-brand-navy/5 rounded-[2.5rem] p-8 min-h-[400px] flex items-center justify-center">
             {activeModal && renderComparisonChart(activeModal)}
           </div>
         </div>
@@ -162,27 +162,27 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
             
             {/* LEFT: The Status Quo */}
             <motion.div variants={slideFromLeft} className="lg:col-span-7 flex flex-col relative z-10">
-              <h3 className="font-display font-bold text-lg text-brand-navy mb-4 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <AlertTriangle className="w-4 h-4 text-brand-navy/50" />
+              <h3 className="font-display font-bold text-xl text-brand-navy mb-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <AlertTriangle className="w-6 h-6 text-brand-navy/50" />
                   The Market Status Quo
                 </div>
-                <span className="text-[9px] uppercase tracking-widest text-brand-navy/30">Click cards for metrics</span>
+                <span className="text-[10px] uppercase tracking-widest text-brand-navy/30 font-black">Click cards for metrics</span>
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <button onClick={() => setModalAndLog("intermediaries")} className="text-left w-full outline-none group">
-                  <GlassCard theme="light" delay={0.2} className="border-l-4 border-l-brand-navy/20 group-hover:bg-brand-navy/5 transition-all duration-300 shadow-sm group-hover:shadow-md h-full py-4">
-                    <div className="flex items-start gap-4 h-full">
-                      <div className="w-10 h-10 rounded-full bg-brand-navy/5 flex flex-shrink-0 items-center justify-center group-hover:bg-brand-navy/10 transition-colors">
-                        <Globe className="w-5 h-5 text-brand-navy/60" />
+                  <GlassCard theme="light" delay={0.2} className="border-l-[6px] border-l-brand-navy/20 group-hover:bg-brand-navy/5 transition-all duration-300 shadow-sm group-hover:shadow-xl h-full py-8 px-8 rounded-[2rem]">
+                    <div className="flex items-start gap-6 h-full">
+                      <div className="w-14 h-14 rounded-[1.2rem] bg-brand-navy/5 flex flex-shrink-0 items-center justify-center group-hover:bg-brand-navy/10 transition-colors">
+                        <Globe className="w-7 h-7 text-brand-navy/60" />
                       </div>
                       <div className="flex-grow">
-                        <div className="flex items-center justify-between mb-0.5">
-                          <h4 className="font-display font-bold text-sm text-brand-navy">Foreign Intermediaries</h4>
-                          <BarChart3 className="w-3.5 h-3.5 text-brand-orange" />
+                        <div className="flex items-center justify-between mb-2">
+                          <h4 className="font-display font-bold text-lg text-brand-navy">Foreign Intermediaries</h4>
+                          <BarChart3 className="w-5 h-5 text-brand-orange" />
                         </div>
-                        <p className="font-primary text-[10px] text-brand-navy/70 leading-relaxed">
+                        <p className="font-primary text-sm text-brand-navy/70 leading-relaxed font-medium">
                           Scale without soul. High volume, zero traceability.
                         </p>
                       </div>
@@ -191,17 +191,17 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
                 </button>
 
                 <button onClick={() => setModalAndLog("suppliers")} className="text-left w-full outline-none group">
-                  <GlassCard theme="light" delay={0.3} className="border-l-4 border-l-brand-navy/20 group-hover:bg-brand-navy/5 transition-all duration-300 shadow-sm group-hover:shadow-md h-full py-4">
-                    <div className="flex items-start gap-4 h-full">
-                      <div className="w-10 h-10 rounded-full bg-brand-navy/5 flex flex-shrink-0 items-center justify-center group-hover:bg-brand-navy/10 transition-colors">
-                        <PackageOpen className="w-5 h-5 text-brand-navy/60" />
+                  <GlassCard theme="light" delay={0.3} className="border-l-[6px] border-l-brand-navy/20 group-hover:bg-brand-navy/5 transition-all duration-300 shadow-sm group-hover:shadow-xl h-full py-8 px-8 rounded-[2rem]">
+                    <div className="flex items-start gap-6 h-full">
+                      <div className="w-14 h-14 rounded-[1.2rem] bg-brand-navy/5 flex flex-shrink-0 items-center justify-center group-hover:bg-brand-navy/10 transition-colors">
+                        <PackageOpen className="w-7 h-7 text-brand-navy/60" />
                       </div>
                       <div className="flex-grow">
-                        <div className="flex items-center justify-between mb-0.5">
-                          <h4 className="font-display font-bold text-sm text-brand-navy">Raw Suppliers</h4>
-                          <BarChart3 className="w-3.5 h-3.5 text-brand-orange" />
+                        <div className="flex items-center justify-between mb-2">
+                          <h4 className="font-display font-bold text-lg text-brand-navy">Raw Suppliers</h4>
+                          <BarChart3 className="w-5 h-5 text-brand-orange" />
                         </div>
-                        <p className="font-primary text-[10px] text-brand-navy/70 leading-relaxed">
+                        <p className="font-primary text-sm text-brand-navy/70 leading-relaxed font-medium">
                           Resource rich, processing poor. Value leaks abroad.
                         </p>
                       </div>
@@ -210,17 +210,17 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
                 </button>
 
                 <button onClick={() => setModalAndLog("dtcBrands")} className="text-left w-full outline-none group">
-                  <GlassCard theme="light" delay={0.4} className="border-l-4 border-l-brand-navy/20 group-hover:bg-brand-navy/5 transition-all duration-300 shadow-sm group-hover:shadow-md h-full py-4">
-                    <div className="flex items-start gap-4 h-full">
-                      <div className="w-10 h-10 rounded-full bg-brand-navy/5 flex flex-shrink-0 items-center justify-center group-hover:bg-brand-navy/10 transition-colors">
-                        <Tag className="w-5 h-5 text-brand-navy/60" />
+                  <GlassCard theme="light" delay={0.4} className="border-l-[6px] border-l-brand-navy/20 group-hover:bg-brand-navy/5 transition-all duration-300 shadow-sm group-hover:shadow-xl h-full py-8 px-8 rounded-[2rem]">
+                    <div className="flex items-start gap-6 h-full">
+                      <div className="w-14 h-14 rounded-[1.2rem] bg-brand-navy/5 flex flex-shrink-0 items-center justify-center group-hover:bg-brand-navy/10 transition-colors">
+                        <Tag className="w-7 h-7 text-brand-navy/60" />
                       </div>
                       <div className="flex-grow">
-                        <div className="flex items-center justify-between mb-0.5">
-                          <h4 className="font-display font-bold text-sm text-brand-navy">Global DTC Brands</h4>
-                          <BarChart3 className="w-3.5 h-3.5 text-brand-orange" />
+                        <div className="flex items-center justify-between mb-2">
+                          <h4 className="font-display font-bold text-lg text-brand-navy">Global DTC Brands</h4>
+                          <BarChart3 className="w-5 h-5 text-brand-orange" />
                         </div>
-                        <p className="font-primary text-[10px] text-brand-navy/70 leading-relaxed">
+                        <p className="font-primary text-sm text-brand-navy/70 leading-relaxed font-medium">
                           Marketing giants. Authenticity gaps in supply chains.
                         </p>
                       </div>
@@ -229,17 +229,17 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
                 </button>
 
                 <button onClick={() => setModalAndLog("middlemen")} className="text-left w-full outline-none group">
-                  <GlassCard theme="light" delay={0.5} className="border-l-4 border-l-brand-navy/20 group-hover:bg-brand-navy/5 transition-all duration-300 shadow-sm group-hover:shadow-md h-full py-4">
-                    <div className="flex items-start gap-4 h-full">
-                      <div className="w-10 h-10 rounded-full bg-brand-navy/5 flex flex-shrink-0 items-center justify-center group-hover:bg-brand-navy/10 transition-colors">
-                        <Users className="w-5 h-5 text-brand-navy/60" />
+                  <GlassCard theme="light" delay={0.5} className="border-l-[6px] border-l-brand-navy/20 group-hover:bg-brand-navy/5 transition-all duration-300 shadow-sm group-hover:shadow-xl h-full py-8 px-8 rounded-[2rem]">
+                    <div className="flex items-start gap-6 h-full">
+                      <div className="w-14 h-14 rounded-[1.2rem] bg-brand-navy/5 flex flex-shrink-0 items-center justify-center group-hover:bg-brand-navy/10 transition-colors">
+                        <Users className="w-7 h-7 text-brand-navy/60" />
                       </div>
                       <div className="flex-grow">
-                        <div className="flex items-center justify-between mb-0.5">
-                          <h4 className="font-display font-bold text-sm text-brand-navy">Informal Middlemen</h4>
-                          <BarChart3 className="w-3.5 h-3.5 text-brand-orange" />
+                        <div className="flex items-center justify-between mb-2">
+                          <h4 className="font-display font-bold text-lg text-brand-navy">Informal Middlemen</h4>
+                          <BarChart3 className="w-5 h-5 text-brand-orange" />
                         </div>
-                        <p className="font-primary text-[10px] text-brand-navy/70 leading-relaxed">
+                        <p className="font-primary text-sm text-brand-navy/70 leading-relaxed font-medium">
                           Fragmented. Inconsistent. Prevents industrial scale.
                         </p>
                       </div>
@@ -251,50 +251,50 @@ export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
 
             {/* RIGHT: Churchwin Advantage */}
             <motion.div variants={slideFromRight} className="lg:col-span-5 flex flex-col relative z-20">
-              <h3 className="font-display font-bold text-lg text-brand-orange mb-4 flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4" />
+              <h3 className="font-display font-bold text-xl text-brand-orange mb-6 flex items-center gap-3">
+                <CheckCircle2 className="w-6 h-6" />
                 The Churchwin Advantage
               </h3>
               
-              <GlassCard theme="light" delay={0.6} className="h-full border border-brand-orange/20 bg-brand-light/95 backdrop-blur-xl shadow-2xl relative overflow-hidden flex flex-col px-6 py-8">
-                <Building2 className="absolute -bottom-10 -right-10 w-48 h-48 text-brand-orange/5" />
+              <GlassCard theme="light" delay={0.6} className="h-full border border-brand-orange/20 bg-brand-light/95 backdrop-blur-xl shadow-2xl relative overflow-hidden flex flex-col px-10 py-12 rounded-[2.5rem]">
+                <Building2 className="absolute -bottom-10 -right-10 w-64 h-64 text-brand-orange/5" />
                 
-                <div className="relative z-10 space-y-4 md:space-y-6 flex-grow">
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-brand-orange/10 flex flex-shrink-0 items-center justify-center border border-brand-orange/20">
-                      <span className="text-lg">🇬🇭</span>
+                <div className="relative z-10 space-y-8 flex-grow">
+                  <div className="flex items-start gap-6">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex flex-shrink-0 items-center justify-center border border-brand-orange/20">
+                      <span className="text-2xl">🇬🇭</span>
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-base text-brand-navy leading-tight">100% Ghanaian Owned</h4>
-                      <p className="font-primary text-brand-navy/70 leading-relaxed mt-0.5 text-xs">Authentic narrative with direct economic impact.</p>
+                      <h4 className="font-display font-bold text-xl text-brand-navy leading-tight">100% Ghanaian Owned</h4>
+                      <p className="font-primary text-brand-navy/70 leading-relaxed mt-1 text-sm">Authentic narrative with direct economic impact.</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-brand-orange/10 flex flex-shrink-0 items-center justify-center border border-brand-orange/20">
-                      <Factory className="w-4 h-4 text-brand-orange" />
+                  <div className="flex items-start gap-6">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex flex-shrink-0 items-center justify-center border border-brand-orange/20">
+                      <Factory className="w-6 h-6 text-brand-orange" />
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-base text-brand-navy leading-tight">Direct Primary Manufacturer</h4>
-                      <p className="font-primary text-brand-navy/70 leading-relaxed mt-0.5 text-xs">No brokers. Unbroken traceability. Max margins.</p>
+                      <h4 className="font-display font-bold text-xl text-brand-navy leading-tight">Direct Primary Manufacturer</h4>
+                      <p className="font-primary text-brand-navy/70 leading-relaxed mt-1 text-sm">No brokers. Unbroken traceability. Max margins.</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-brand-orange/10 flex flex-shrink-0 items-center justify-center border border-brand-orange/20">
-                      <Tag className="w-4 h-4 text-brand-orange" />
+                  <div className="flex items-start gap-6">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex flex-shrink-0 items-center justify-center border border-brand-orange/20">
+                      <Tag className="w-6 h-6 text-brand-orange" />
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-base text-brand-orange mb-0.5 leading-tight">Turnkey B2B Capacity</h4>
-                      <p className="font-primary text-brand-navy/80 font-medium leading-relaxed text-xs">The white-label engine for global brands.</p>
+                      <h4 className="font-display font-bold text-xl text-brand-orange mb-1 leading-tight uppercase tracking-tight">Turnkey B2B Capacity</h4>
+                      <p className="font-primary text-brand-navy/80 font-medium leading-relaxed text-sm">The white-label engine for global brands.</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-brand-orange/10 relative z-10">
-                  <p className="font-primary italic text-brand-navy/80 bg-brand-orange/5 p-4 rounded border border-brand-orange/10 leading-relaxed text-xs text-center">
-                    Only <span className="text-brand-orange font-bold">2.1%</span> Market Share <br className="hidden md:block"/>
-                    <span className="text-[10px] opacity-60 uppercase tracking-widest mt-1 block">Massive growth potential</span>
+                <div className="mt-10 pt-10 border-t border-brand-orange/20 relative z-10">
+                  <p className="font-primary italic text-brand-navy/80 bg-brand-orange/5 p-6 rounded-2xl border border-brand-orange/10 leading-relaxed text-sm text-center">
+                    Only <span className="text-brand-orange font-bold text-lg">2.1%</span> Market Share <br className="hidden md:block"/>
+                    <span className="text-xs opacity-60 uppercase tracking-[0.2em] mt-2 block font-black">Massive growth potential</span>
                   </p>
                 </div>
               </GlassCard>
