@@ -39,7 +39,7 @@ export function Slide02Crossroads({ isActive }: { isActive: boolean }) {
           initial="hidden"
           animate={animState}
           variants={staggerContainer}
-          className="w-full max-w-[100rem] mx-auto my-auto grid grid-cols-1 lg:grid-cols-[1fr,1.1fr] gap-12 lg:gap-20 items-center"
+          className="w-full max-w-[100rem] mx-auto my-auto grid grid-cols-1 lg:grid-cols-[0.8fr,1.2fr] gap-12 lg:gap-20 items-center"
         >
           {/* Left Column: Textual Narrative */}
           <div className="flex flex-col">
@@ -129,10 +129,10 @@ export function Slide02Crossroads({ isActive }: { isActive: boolean }) {
                   } 
                 }
               }}
-              className="w-full max-w-[42rem] flex flex-col gap-8 bg-brand-navy/90 backdrop-blur-xl p-8 lg:p-14 rounded-[3rem] border border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.6)] relative overflow-visible"
+              className="w-full max-w-[52rem] min-h-[70vh] lg:min-h-[80vh] flex justify-center flex-col gap-8 bg-brand-navy/95 backdrop-blur-xl p-8 lg:p-14 rounded-[3rem] border border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.6)] relative overflow-visible"
             >
               {/* Connection Glow (Principle 8: Storytelling - Bridges text to data) */}
-              <div className="absolute top-1/2 -left-16 w-32 h-[2px] bg-gradient-to-r from-transparent via-brand-orange/40 to-brand-orange/60 blur-[1px] hidden xl:block" />
+              <div className="absolute top-1/2 -left-20 w-40 h-[2px] bg-gradient-to-r from-transparent via-brand-orange/40 to-brand-orange/60 blur-[1px] hidden xl:block" />
 
               <div className="space-y-2">
                  <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-orange uppercase text-center">Visualizing the Gap</p>
