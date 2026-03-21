@@ -50,7 +50,13 @@ export const UnifiedVideoModal: React.FC<UnifiedVideoModalProps> = ({
                 <ToolPlayer 
                   toolName={toolName} 
                   toolAction={toolAction} 
-                  videoSrc={toolName.toUpperCase().includes("APOLLO") || toolName.toUpperCase().includes("REVENUE") ? "/videos/sample.mp4" : undefined} 
+                  videoSrc={
+                    toolName.toUpperCase().includes("APOLLO") || toolName.toUpperCase().includes("REVENUE") 
+                    ? "/videos/sample.mp4" 
+                    : toolName.toUpperCase().includes("EXECUTION")
+                    ? "/assets/videos/apply_cinematic,_8k_202603181845.mp4"
+                    : undefined
+                  } 
                 />
               </div>
             </motion.div>

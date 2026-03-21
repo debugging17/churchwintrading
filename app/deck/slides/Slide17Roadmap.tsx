@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
+import { useState } from "react";
+import { UnifiedVideoModal } from "../components/UnifiedVideoModal";
 
 export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-white pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
@@ -42,7 +45,11 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
           </motion.div>
 
           {/* Phase 2: Expand */}
-          <motion.div variants={fadeUp} className="p-8 bg-brand-navy text-white rounded-[32px] border-b-4 border-brand-orange shadow-2xl relative overflow-hidden flex flex-col h-full min-h-[400px]">
+          <motion.div 
+            variants={fadeUp} 
+            onClick={() => setIsModalOpen(true)}
+            className="p-8 bg-brand-navy text-white rounded-[32px] border-b-4 border-brand-orange shadow-2xl relative overflow-hidden flex flex-col h-full min-h-[400px] cursor-pointer group hover:scale-[1.02] transition-transform"
+          >
              <div className="w-10 h-10 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center mb-6">
                 <span className="text-brand-orange font-black">02</span>
              </div>
@@ -85,6 +92,12 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
 
         </div>
       </motion.div>
+      <UnifiedVideoModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        toolName="Execution"
+        toolAction="Scaling"
+      />
     </div>
   );
 }
