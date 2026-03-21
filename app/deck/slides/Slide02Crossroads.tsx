@@ -43,7 +43,7 @@ export function Slide02Crossroads() {
         >
           {/* Left Column: Textual Narrative */}
           <div className="flex flex-col">
-            {/* Section Marker */}
+            {/* Section Marker (Principle 4: Morph / Continuity) */}
             <motion.div
               variants={fadeUp}
               className="flex items-center gap-[1rem] mb-[2rem] lg:mb-[3rem]"
@@ -57,7 +57,7 @@ export function Slide02Crossroads() {
                </p>
             </motion.div>
 
-            {/* HEADING — The Structural Point */}
+            {/* HEADING — The Structural Point (Principle 7: Purpose) */}
             <motion.h2
               variants={fadeUp}
               className="text-4xl md:text-5xl xl:text-7xl font-display font-black text-brand-white leading-[1.1] mb-8 lg:mb-10 tracking-tighter drop-shadow-2xl"
@@ -66,8 +66,11 @@ export function Slide02Crossroads() {
               <span className="text-brand-orange drop-shadow-sm italic">Commodity Trap.</span>
             </motion.h2>
 
-            {/* POINTS — Reality-Backed */}
-            <motion.div variants={fadeUp} className="space-y-6 lg:space-y-8 max-w-xl">
+            {/* POINTS — Reality-Backed (Principle 11: Language) */}
+            <motion.div 
+              variants={staggerContainer}
+              className="space-y-6 lg:space-y-8 max-w-xl"
+            >
               {[
                 { 
                   label: "Structural Volatility", 
@@ -82,31 +85,48 @@ export function Slide02Crossroads() {
                   sub: "90% of value is captured by international refiners who own the 'Trust Infrastructure' (COSMOS/Fair Trade) required by Tier-1 buyers." 
                 },
               ].map((pt, i) => (
-                <div key={i} className="flex flex-col gap-2">
+                <motion.div 
+                  key={i} 
+                  variants={fadeUp}
+                  className="flex flex-col gap-2"
+                >
                   <div className="flex items-start gap-5">
                     <div className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-2.5 shrink-0 shadow-[0_0_8px_rgba(244,121,32,0.4)]" />
                     <div className="flex flex-col gap-1">
                       <span className="text-lg md:text-xl font-display font-bold text-brand-white tracking-tight">{pt.label}</span>
-                      <p className="text-xs md:text-sm text-brand-white/60 leading-relaxed">{pt.sub}</p>
+                      <p className="text-xs md:text-sm text-brand-white/60 leading-relaxed font-primary">{pt.sub}</p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
 
             {/* INSIGHT CLOSE — Systemic Focus */}
             <motion.div 
               variants={fadeUp}
-              className="mt-10 lg:mt-14 p-6 bg-brand-orange/[0.03] border-l-4 border-brand-orange/50 italic text-brand-white/70 text-lg md:text-xl font-medium max-w-lg leading-relaxed shadow-sm rounded-r-xl"
+              className="mt-10 lg:mt-14 p-6 bg-brand-orange/[0.03] border-l-4 border-brand-orange/50 italic text-brand-white/70 text-lg md:text-xl font-medium max-w-lg leading-relaxed shadow-sm rounded-r-xl font-primary"
             >
               &quot;This is not a resource problem. <span className="text-brand-white font-black not-italic">It is a systems problem.</span>&quot;
             </motion.div>
           </div>
 
-          {/* Right Column: Data Visualization injected into the industrial background */}
+          {/* Right Column: Data Visualization injected into the industrial background (Principle 12: Mimic / weight) */}
           <motion.div 
-            variants={fadeUp}
-            className="flex flex-col gap-8 bg-brand-navy/40 backdrop-blur-md p-8 lg:p-12 rounded-[2.5rem] border border-white/10 shadow-2xl"
+            variants={{
+              hidden: { opacity: 0, scale: 0.95, x: 30 },
+              visible: { 
+                opacity: 1, 
+                scale: 1, 
+                x: 0,
+                transition: { 
+                  type: "spring", 
+                  stiffness: 70, 
+                  damping: 15,
+                  delay: 0.6 
+                } 
+              }
+            }}
+            className="flex flex-col gap-8 bg-brand-navy/60 backdrop-blur-xl p-8 lg:p-12 rounded-[2.5rem] border border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.5)]"
           >
             <div className="space-y-2">
                <p className="text-[0.625rem] font-display font-black tracking-[0.4em] text-brand-orange uppercase text-center">Visualizing the Gap</p>
@@ -117,7 +137,7 @@ export function Slide02Crossroads() {
               <ValueGapChart />
             </div>
 
-            <p className="text-[0.7rem] text-brand-white/40 font-primary leading-relaxed opacity-60 text-center">
+            <p className="text-[0.7rem] text-brand-white/40 font-primary leading-relaxed opacity-60 text-center max-w-xs mx-auto">
                The current model forces Africa to export raw potential, only to buy back the finished value at a 10x premium.
             </p>
           </motion.div>

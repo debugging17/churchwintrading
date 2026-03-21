@@ -85,9 +85,23 @@ export function Slide03MacroMoment() {
             </motion.div>
           </motion.div>
 
-          {/* Right Column: Data Visualization Card */}
+          {/* Right Column: Data Visualization Card (Principle 12: Mimic) */}
           <motion.div 
-            variants={fadeUp}
+            variants={{
+              hidden: { opacity: 0, scale: 0.95, y: 30 },
+              visible: { 
+                opacity: 1, 
+                scale: 1, 
+                y: 0,
+                transition: { 
+                  type: "spring", 
+                  stiffness: 70, 
+                  damping: 15,
+                  mass: 0.8,
+                  delay: 0.4
+                } 
+              }
+            }}
             className="w-full lg:col-span-8 xl:col-span-7 h-[60vh] lg:h-[75vh] bg-brand-white/95 backdrop-blur-2xl rounded-[1.5rem] p-6 md:p-8 shadow-[0_30px_100px_rgba(0,0,0,0.5)] border border-white/20 relative flex flex-col pt-[3rem]"
           >
             <div className="absolute top-[1.5rem] left-[1.5rem] md:left-[2.5rem] z-30">
@@ -121,7 +135,7 @@ export function Slide03MacroMoment() {
                     labelStyle={{ fontWeight: 'bold', color: '#012787' }}
                   />
                   
-                  {/* Ghana Path (Stagnation) */}
+                  {/* Ghana Path (Stagnation) (Principle 6: Kinematics) */}
                   <Area 
                     name="West Africa (Average)"
                     type="monotone" 
@@ -129,10 +143,13 @@ export function Slide03MacroMoment() {
                     stroke="#012787" 
                     strokeWidth={4}
                     fillOpacity={1} 
-                    fill="url(#colorGhana)" 
+                    fill="url(#colorGhana)"
+                    animationBegin={1000}
+                    animationDuration={2000}
+                    animationEasing="ease-in-out"
                   />
                   
-                  {/* Korea Path (Scale) */}
+                  {/* Korea Path (Scale) (Principle 8: Storytelling) */}
                   <Area 
                     name="South Korea (Scale Path)"
                     type="monotone" 
@@ -141,7 +158,9 @@ export function Slide03MacroMoment() {
                     strokeWidth={5}
                     fillOpacity={1} 
                     fill="url(#colorKorea)" 
+                    animationBegin={1400}
                     animationDuration={2500}
+                    animationEasing="ease-out"
                   />
                 </AreaChart>
               </ResponsiveContainer>
