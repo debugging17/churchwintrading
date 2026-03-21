@@ -38,20 +38,20 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
   }, { dependencies: [isActive], scope: container });
 
   return (
-    <div ref={container} className="w-full h-full flex flex-col pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] pb-[var(--footer-height)] px-10 md:px-24 bg-brand-cream relative overflow-hidden">
+    <div ref={container} className="w-full h-full flex flex-col pt-[calc(3rem+var(--header-height,0px))] md:pt-[calc(4rem+var(--header-height,0px))] pb-[var(--footer-height)] px-8 md:px-20 bg-brand-cream relative overflow-hidden">
       {/* Background Accent */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#012787 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
       
       <div className="w-full max-w-7xl mx-auto my-auto flex flex-col gap-8 z-10">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row items-end justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <h2 className="pipe-title font-display text-4xl md:text-6xl font-black text-brand-navy leading-[0.9] uppercase tracking-tighter mb-4">
+            <h2 className="pipe-title font-display text-4xl md:text-5xl font-black text-brand-navy leading-[0.9] uppercase tracking-tighter mb-2">
               The B2B <br />
               <span className="text-brand-orange italic">Demand Engine.</span>
             </h2>
-            <p className="pipe-title text-lg text-brand-navy/70 font-primary italic border-l-2 border-brand-orange/20 pl-6 max-w-lg">
+            <p className="pipe-title text-sm md:text-base text-brand-navy/70 font-primary italic border-l-2 border-brand-orange/20 pl-4 max-w-lg">
               Converting digital visibility into locked institutional revenue. 
             </p>
           </div>
@@ -83,27 +83,27 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
            </div>
 
            <div className="lg:col-span-4 flex flex-col h-full">
-              <div className="outcome-card flex-1 p-8 bg-brand-navy text-white rounded-[2.5rem] shadow-2xl relative overflow-hidden border-b-8 border-brand-orange flex flex-col justify-center min-h-[400px]">
-                 <div className="absolute top-0 right-0 p-6 opacity-10">
-                    <Target className="w-12 h-12 text-brand-orange" />
+              <div className="outcome-card flex-1 p-6 md:p-8 bg-brand-navy text-white rounded-[2rem] shadow-2xl relative overflow-hidden border-b-8 border-brand-orange flex flex-col justify-center min-h-[300px] md:min-h-[360px]">
+                 <div className="absolute top-0 right-0 p-5 opacity-10">
+                    <Target className="w-10 h-10 text-brand-orange" />
                  </div>
-                 <p className="text-[8px] uppercase tracking-[0.4em] text-brand-orange font-black mb-3">Strategic Outcome</p>
-                 <h3 className="text-xl md:text-2xl font-display font-black mb-6 tracking-tight leading-tight">100% Digital Traceability from Outreach to Agreement.</h3>
-                 <div className="space-y-6">
-                    <div className="flex items-center gap-8">
+                 <p className="text-[7px] uppercase tracking-[0.4em] text-brand-orange font-black mb-2">Strategic Outcome</p>
+                 <h3 className="text-lg md:text-xl font-display font-black mb-4 tracking-tight leading-tight">100% Digital Traceability from Outreach to Agreement.</h3>
+                 <div className="space-y-4">
+                    <div className="flex items-center gap-6">
                        <div>
-                          <p className="text-white/40 text-[8px] uppercase font-black mb-1 tracking-widest">Qualified Leads</p>
-                          <p className="text-3xl font-display font-black text-brand-orange">12/mo</p>
+                          <p className="text-white/40 text-[7px] uppercase font-black mb-0.5 tracking-widest">Qualified Leads</p>
+                          <p className="text-2xl font-display font-black text-brand-orange">12/mo</p>
                        </div>
-                       <div className="w-[1px] h-10 bg-white/10" />
+                       <div className="w-[1px] h-8 bg-white/10" />
                        <div>
-                          <p className="text-white/40 text-[8px] uppercase font-black mb-1 tracking-widest">Conversion</p>
-                          <p className="text-3xl font-display font-black text-brand-orange">22%</p>
+                          <p className="text-white/40 text-[7px] uppercase font-black mb-0.5 tracking-widest">Conversion</p>
+                          <p className="text-2xl font-display font-black text-brand-orange">22%</p>
                        </div>
                     </div>
-                    <div className="pt-6 border-t border-white/10">
-                       <p className="text-white/40 text-[8px] uppercase font-black mb-1 tracking-widest">Target CAC</p>
-                       <p className="text-3xl font-display font-black text-brand-orange">$420</p>
+                    <div className="pt-4 border-t border-white/10">
+                       <p className="text-white/40 text-[7px] uppercase font-black mb-0.5 tracking-widest">Target CAC</p>
+                       <p className="text-2xl font-display font-black text-brand-orange">$420</p>
                     </div>
                  </div>
               </div>
