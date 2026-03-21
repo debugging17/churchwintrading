@@ -8,10 +8,10 @@ export const RemotionValueGapWrapper: React.FC = () => {
     <div className="w-full flex justify-center py-4 bg-brand-white/5 rounded-xl border border-white/10 p-4">
       <Player
         component={RemotionValueGap}
-        durationInFrames={120}
-        compositionWidth={1200}
-        compositionHeight={150}
-        fps={60}
+        durationInFrames={60}
+        compositionWidth={800}
+        compositionHeight={120}
+        fps={30}
         loop
         autoPlay
         style={{
