@@ -5,7 +5,7 @@ import { fadeUp, slideFromLeft, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { Zap, Activity, TrendingUp, Search } from "lucide-react";
 import { GlassCard } from "../components/GlassCard";
-import { ToolVideoModal } from "../components/ToolVideoModal";
+import { UnifiedVideoModal } from "../components/UnifiedVideoModal";
 import { 
   AreaChart, 
   Area, 
@@ -169,14 +169,11 @@ export function Slide15DigitalVisibility({ isActive }: { isActive: boolean }) {
         </div>
       </div>
 
-      <ToolVideoModal 
+      <UnifiedVideoModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
         toolName="THE REVENUE ENGINE" 
         toolAction="Automated B2B Lead-to-Revenue Pipeline"
-        script={revenueEngineScript}
-        logoSrc="/assets/images/sales-engine/apollo.png"
-        subtitle="Strategic Revenue Revenue Engine"
       />
     </>
   );

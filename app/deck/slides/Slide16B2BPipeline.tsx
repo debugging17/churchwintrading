@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { Target, MousePointer2 } from "lucide-react";
-import { ToolVideoModal } from "../components/ToolVideoModal";
+import { UnifiedVideoModal } from "../components/UnifiedVideoModal";
 import { DigitalStackGrid } from "../components/DigitalStackGrid";
 
 export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
@@ -99,13 +99,11 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
 
 
       {/* Video Popover */}
-      <ToolVideoModal 
+      <UnifiedVideoModal 
         isOpen={!!selectedTool}
         onClose={() => setSelectedTool(null)}
         toolName={selectedTool?.name || ""}
         toolAction={selectedTool?.action || ""}
-        logoSrc={selectedTool?.logo}
-        subtitle="B2B Demand Engine Visualization"
       />
     </div>
   );
