@@ -28,13 +28,13 @@ export const UnifiedVideoModal: React.FC<UnifiedVideoModalProps> = ({
       <AnimatePresence>
         {isOpen && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-8 md:p-16">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={onClose}
-              className="absolute inset-0 bg-brand-navy/90 backdrop-blur-2xl"
-            />
+             <motion.div
+               initial={{ opacity: 0 }}
+               animate={{ opacity: 1 }}
+               exit={{ opacity: 0 }}
+               onClick={onClose}
+               className="absolute inset-0 bg-brand-navy/85 backdrop-blur-3xl"
+             />
             
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
