@@ -46,7 +46,7 @@ export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean 
     {
       title: "Supply Infrastructure",
       icon: Users,
-      points: ["11 Women-led cooperatives", "22% Margin Preservation", "Organic & Fair Trade Compliance"],
+      points: ["11+ Strategic Cooperative Hubs (Women-Led Focus)", "22% Margin Preservation", "Organic & Fair Trade Compliance"],
       accent: "bg-brand-orange/10 border-brand-orange/20"
     },
     {
