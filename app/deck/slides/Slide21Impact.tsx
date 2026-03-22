@@ -24,9 +24,21 @@ export function Slide21Impact({ isActive }: { isActive: boolean }) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { title: "EU Compliance", desc: "100% geolocation-to-batch traceability. Ready for the EU Deforestation Regulation (EUDR) and Supply Chain Due Diligence Act.", icon: Globe },
-            { title: "Verification Moat", desc: "Our village-level data architecture is the moat that ensures buyers meet zero-deforestation mandates.", icon: ShieldCheck },
-            { title: "Sustainable Yield", desc: "Every 1,000kg of Shea processed = 18 weeks of living wage for co-op members. Social impact turned into supply security.", icon: Leaf }
+            { 
+              title: "Global Compliance Lead", 
+              desc: "100% geolocation-to-batch traceability. Audit-ready for EU (EUDR), US (FSMA 204), and global institutional mandates. Scaling ESG from a requirement to a competitive edge.", 
+              icon: Globe 
+            },
+            { 
+              title: "Data Integrity Engine", 
+              desc: "Village-level data architecture providing immutable proof of origin. Simplifying complex ESG reporting into actionable, board-ready insights for global stakeholders.", 
+              icon: ShieldCheck 
+            },
+            { 
+              title: "Regenerative Supply", 
+              desc: "Securing 18 weeks of living wage for co-op members for every 1,000kg processed. Stitching social impact into the core of supply security and market resilience.", 
+              icon: Leaf 
+            }
           ].map((item, i) => (
             <motion.div 
               key={i}
