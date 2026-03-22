@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} font-sans antialiased scroll-smooth`}>
+    <html lang="en" suppressHydrationWarning={true} className={`${inter.variable} ${outfit.variable} font-sans antialiased scroll-smooth`}>
       <body className="font-primary bg-brand-navy text-brand-white">
         {children}
         <Analytics />

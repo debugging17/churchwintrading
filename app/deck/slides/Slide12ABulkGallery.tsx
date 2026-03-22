@@ -76,6 +76,7 @@ export function Slide12ABulkGallery({ isActive }: { isActive: boolean }) {
                 src="/assets/b2b_warehouse_pallets_1773793813592.png" 
                 alt="Warehouse" 
                 fill 
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                 priority
              />
@@ -103,6 +104,7 @@ export function Slide12ABulkGallery({ isActive }: { isActive: boolean }) {
                 src="/assets/ghana_qa_lab.png" 
                 alt="QA" 
                 fill 
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                 priority
              />
@@ -125,6 +127,7 @@ export function Slide12ABulkGallery({ isActive }: { isActive: boolean }) {
                 src="/assets/b2b_industrial_processing_1773793847510.png" 
                 alt="Processing" 
                 fill 
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                 priority
              />

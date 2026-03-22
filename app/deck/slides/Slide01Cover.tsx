@@ -74,13 +74,14 @@ export function Slide01Cover({ isActive }: { isActive: boolean }) {
           {/* Brand Logo */}
           <div className="hero-logo mb-14 relative w-48 h-12 md:w-64 md:h-16 bg-white rounded-xl overflow-hidden shadow-xl flex items-center justify-center p-3">
              <div className="relative w-full h-full">
-               <Image 
-                  src="/assets/images/churchwin_logo_new.png" 
-                  alt="Churchwin Trading Logo" 
-                  fill
-                  className="object-contain" 
-                  priority
-                />
+                <Image 
+                   src="/assets/images/churchwin_logo_new.png" 
+                   alt="Churchwin Trading Logo" 
+                   fill
+                   sizes="(max-width: 768px) 192px, 256px"
+                   className="object-contain" 
+                   priority
+                 />
              </div>
           </div>
 

@@ -35,6 +35,7 @@ export function Slide03MacroMoment({ isActive }: { isActive: boolean }) {
           src="/images/backgrounds/divergence_landscape.png" 
           alt="Historical Divergence" 
           fill 
+          sizes="100vw"
           className="object-cover opacity-[0.25] grayscale contrast-[1.2]"
           priority
         />
@@ -109,7 +110,7 @@ export function Slide03MacroMoment({ isActive }: { isActive: boolean }) {
             </div>
 
             <div className="flex-grow pt-[1rem]">
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="100%" height="100%" minWidth={0} minHeight={0}>
                 <AreaChart data={data} margin={{ top: 20, right: 10, left: 10, bottom: 30 }}>
                   <defs>
                     <linearGradient id="colorKorea" x1="0" y1="0" x2="0" y2="1">

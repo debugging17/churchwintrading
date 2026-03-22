@@ -50,6 +50,7 @@ export function Slide02Crossroads({ isActive }: { isActive: boolean }) {
           src="/images/backgrounds/industrial_crossroads.png" 
           alt="African Industrial Hub" 
           fill 
+          sizes="100vw"
           className="object-cover brightness-[0.7] contrast-[1.1]"
           priority
         />

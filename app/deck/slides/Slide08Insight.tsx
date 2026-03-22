@@ -76,6 +76,7 @@ export function Slide08Insight({ isActive }: { isActive: boolean }) {
                src="/images/lv_0_20260321112550.gif"
                alt="African Supply"
                fill
+               sizes="(max-width: 768px) 100vw, 400px"
                className="object-cover absolute inset-0 transition-transform duration-1000 group-hover:scale-105"
                unoptimized
                priority
