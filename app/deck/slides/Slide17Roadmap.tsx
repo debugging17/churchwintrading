@@ -8,7 +8,6 @@ gsap.registerPlugin(useGSAP);
 
 export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
   const container = useRef<HTMLDivElement>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useGSAP(() => {
     if (!isActive) return;
@@ -32,7 +31,7 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
       .from(".phase-stat", { 
         y: 10, 
         opacity: 0, 
-        stagger: 0.1,
+        stagger: 0.1, 
         duration: 0.4
       }, "-=0.8");
 
@@ -75,10 +74,7 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
           </div>
 
           {/* Phase 2: Expand */}
-          <div 
-            onClick={() => setIsModalOpen(true)}
-            className="phase-card p-8 bg-brand-navy text-white rounded-[32px] border-b-4 border-brand-orange shadow-2xl relative overflow-hidden flex flex-col h-full min-h-[400px] cursor-pointer group hover:scale-[1.02] transition-transform"
-          >
+          <div className="phase-card p-8 bg-brand-navy text-white rounded-[32px] border-b-4 border-brand-orange shadow-2xl relative overflow-hidden flex flex-col h-full min-h-[400px]">
              <div className="phase-number w-10 h-10 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center mb-6">
                 <span className="text-brand-orange font-black">02</span>
              </div>
@@ -121,12 +117,6 @@ export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
 
         </div>
       </div>
-      <UnifiedVideoModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        toolName="Execution"
-        toolAction="Scaling"
-      />
     </div>
   );
 }
