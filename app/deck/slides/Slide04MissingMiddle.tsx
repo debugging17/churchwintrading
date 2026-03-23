@@ -20,17 +20,8 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
   return (
     <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
       
-      {/* === LAYER 0: Background Context — Principle 12: Mimic (Depth) === */}
-      <div className="absolute inset-0 z-0 opacity-60">
-        <Image 
-          src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
-          alt="Industrial Transformation" 
-          fill 
-          className="object-cover blur-sm"
-          priority
-        />
-        <div className="absolute inset-0 bg-brand-navy/30" />
-      </div>
+      {/* No Background Image as per user request */}
+      <div className="absolute inset-0 bg-brand-navy z-0" />
 
       <motion.div 
         initial="hidden"
@@ -40,13 +31,9 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
       >
         {/* Title Area — Shifted Upwards & Left Aligned */}
         <motion.div variants={fadeUp} className="mb-4 md:mb-6 text-left">
-           <div className="flex items-center gap-4 mb-2">
-              <div className="w-12 h-[2px] bg-brand-orange" />
-              <p className="text-brand-orange text-[10px] tracking-[0.4em] uppercase font-black">The Demand Bottleneck</p>
-           </div>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-brand-white leading-none tracking-tighter whitespace-normal">
-               Africa lacks structured demand. <br className="hidden md:block lg:hidden" />
-               <span className="text-brand-orange italic underline decoration-white/10 decoration-2 underline-offset-8">This is the failure point of scale.</span>
+            <h2 className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-brand-white leading-[1.1] tracking-tighter whitespace-normal max-w-5xl">
+                Moving from the constraint of manual heroics <br className="hidden lg:block" />
+                <span className="text-brand-orange italic">to the scale of Physical Trust Infrastructure.</span>
             </h2>
          </motion.div>
 
@@ -64,8 +51,15 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
                   transition: { type: "spring", stiffness: 60, damping: 20, delay: 0.2 }
                 }
               }}
-              className="group relative h-[48vh] md:h-[52vh] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-brand-navy"
+              className="group relative h-[60vh] md:h-[65vh] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-brand-navy"
             >
+               {/* Overlaid X Cross-out for Fragmented Production */}
+               <div className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center opacity-80 scale-110">
+                  <svg width="100%" height="100%" viewBox="0 0 400 600" preserveAspectRatio="none">
+                     <line x1="10%" y1="10%" x2="90%" y2="90%" stroke="#ff3b30" strokeWidth="20" strokeLinecap="round" />
+                     <line x1="90%" y1="10%" x2="10%" y2="90%" stroke="#ff3b30" strokeWidth="20" strokeLinecap="round" />
+                  </svg>
+               </div>
                <Image 
                  src="/images/IMG_0471-min-min-scaled.jpg" 
                  alt="Churchwin Current Office" 
@@ -135,7 +129,7 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
                   transition: { type: "spring", stiffness: 60, damping: 20, delay: 0.4 }
                 }
               }}
-              className="group relative h-[48vh] md:h-[52vh] rounded-[3rem] overflow-hidden border border-brand-orange/20 shadow-[0_0_80px_rgba(255,106,0,0.1)] bg-brand-navy"
+              className="group relative h-[60vh] md:h-[65vh] rounded-[3rem] overflow-hidden border border-brand-orange/20 shadow-[0_0_80px_rgba(255,106,0,0.1)] bg-brand-navy"
             >
                <Image 
                  src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
@@ -167,9 +161,9 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
          </div>
 
          {/* Insight Bar — Principle 7: Purpose (Spacing Refinement to Fit in Frame) */}
-         <motion.div variants={fadeUp} className="bg-brand-white/5 p-6 md:p-8 rounded-3xl border-l-[10px] border-brand-orange shadow-2xl backdrop-blur-md mb-6">
-            <p className="text-brand-white/90 font-primary italic text-base md:text-xl leading-relaxed">
-              Moving from the constraint of manual heroics to the scale of <span className="text-brand-orange font-black not-italic underline decoration-white/10 underline-offset-4 decoration-2">Physical Trust Infrastructure.</span>
+         <motion.div variants={fadeUp} className="bg-brand-orange/5 p-6 md:p-8 rounded-3xl border-l-[10px] border-brand-orange shadow-2xl backdrop-blur-md mb-6">
+            <p className="text-brand-white/90 font-display font-medium text-lg md:text-2xl leading-tight tracking-tight">
+               Africa lacks structured demand. <span className="text-brand-orange italic font-black">This is the failure point of scale.</span>
             </p>
          </motion.div>
 
