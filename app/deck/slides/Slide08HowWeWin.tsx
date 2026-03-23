@@ -9,9 +9,9 @@ export function Slide08HowWeWin({ isActive: _isActive }: { isActive: boolean }) 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden bg-brand-navy px-10 md:px-20">
       {/* Background with focal point on central bottleneck */}
-      <div className="absolute inset-0 z-0 opacity-20">
+      <div className="absolute inset-0 z-0 opacity-40">
          <Image src="/images/visual_supremacy/shea_factory.png" alt="Operational Capacity" fill className="object-cover grayscale" />
-         <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-transparent to-brand-navy" />
+         <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy/50 to-brand-navy" />
       </div>
 
       <motion.div 
@@ -40,13 +40,13 @@ export function Slide08HowWeWin({ isActive: _isActive }: { isActive: boolean }) 
              <motion.div 
                key={i}
                variants={fadeUp} 
-               className="bg-brand-white/5 backdrop-blur-xl border border-brand-white/10 p-8 rounded-3xl text-left hover:bg-brand-white/10 transition-colors group"
+               className="bg-brand-navy/60 backdrop-blur-2xl border border-brand-white/10 shadow-2xl p-8 rounded-3xl text-left hover:bg-brand-navy/80 hover:border-brand-white/20 transition-all duration-300 group"
              >
                 <div className="w-12 h-12 bg-brand-orange/20 rounded-xl flex items-center justify-center mb-6 border border-brand-orange/30">
                    <span className="text-brand-orange font-black">!</span>
                 </div>
                 <h3 className="text-xl font-display font-bold text-brand-white mb-3 group-hover:text-brand-orange transition-colors">{card.title}</h3>
-                <p className="text-sm text-brand-white/60 leading-relaxed font-primary">{card.desc}</p>
+                <p className="text-sm text-brand-white/80 leading-relaxed font-primary">{card.desc}</p>
              </motion.div>
            ))}
         </div>
