@@ -30,9 +30,8 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
         className="w-full max-w-[95rem] mx-auto my-auto flex flex-col z-10"
       >
         {/* Title Area — Shifted Upwards & Left Aligned */}
-            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black text-brand-white leading-tight tracking-[0.02em] uppercase max-w-full drop-shadow-[0_0_30px_rgba(255,255,255,0.1)] py-4">
-                Moving from the constraint of manual heroics <br className="lg:hidden" />
-                <span className="text-brand-orange italic drop-shadow-[0_0_20px_rgba(255,106,0,0.3)]">to the scale of Physical Trust Infrastructure.</span>
+            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-[2.5rem] font-black text-brand-white leading-tight tracking-[0.02em] uppercase max-w-full drop-shadow-[0_0_30px_rgba(255,255,255,0.1)] py-4 xl:whitespace-nowrap">
+                Moving from the constraint of manual heroics <span className="text-brand-orange italic drop-shadow-[0_0_20px_rgba(255,106,0,0.3)]">to the scale of Physical Trust Infrastructure.</span>
             </h2>
 
          {/* Comparison Grid — Principle 8: Storytelling (Height Locked & Shifted Left) */}
