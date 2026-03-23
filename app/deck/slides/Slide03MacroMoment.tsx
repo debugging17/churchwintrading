@@ -36,12 +36,12 @@ export function Slide03MacroMoment({ isActive: _isActive }: { isActive: boolean 
           alt="Historical Divergence" 
           fill 
           sizes="100vw"
-          className="object-cover opacity-[0.25] grayscale contrast-[1.2]"
+          className="object-cover opacity-[0.6] grayscale contrast-[1.2]"
           priority
         />
         {/* Dynamic Vignettes */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-transparent to-brand-navy z-10" />
-        <div className="absolute inset-0 bg-brand-navy/60 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/40 via-transparent to-brand-navy/50 z-10" />
+        <div className="absolute inset-0 bg-brand-navy/30 z-10" />
       </div>
 
       <motion.div 

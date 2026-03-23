@@ -14,7 +14,7 @@ export function Slide23TheAsk({ isActive: _isActive }: { isActive: boolean }) {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
            initial={{ scale: 1.1, opacity: 0 }}
-           animate={{ scale: 1, opacity: 0.3 }}
+           animate={{ scale: 1, opacity: 0.6 }}
            transition={{ duration: 1.5, ease: "easeOut" }}
            className="w-full h-full relative"
         >
@@ -25,8 +25,8 @@ export function Slide23TheAsk({ isActive: _isActive }: { isActive: boolean }) {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy/60 to-brand-navy" />
-          <div className="absolute inset-0 bg-brand-navy/80 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/40 via-brand-navy/20 to-brand-navy/60" />
+          <div className="absolute inset-0 bg-brand-navy/30" />
         </motion.div>
       </div>
 

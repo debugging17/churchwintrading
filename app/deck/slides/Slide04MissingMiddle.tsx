@@ -21,7 +21,7 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
     <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">
       
       {/* === LAYER 0: Background Context — Principle 12: Mimic (Depth) === */}
-      <div className="absolute inset-0 z-0 opacity-10">
+      <div className="absolute inset-0 z-0 opacity-60">
         <Image 
           src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
           alt="Industrial Transformation" 
@@ -29,7 +29,7 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
           className="object-cover blur-sm"
           priority
         />
-        <div className="absolute inset-0 bg-brand-navy/90" />
+        <div className="absolute inset-0 bg-brand-navy/30" />
       </div>
 
       <motion.div 
@@ -70,10 +70,10 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
                  src="/images/IMG_0471-min-min-scaled.jpg" 
                  alt="Churchwin Current Office" 
                  fill 
-                 className="object-cover opacity-80 xl:opacity-90 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
+                 className="object-cover group-hover:scale-105 transition-all duration-1000 ease-out"
                  priority
                />
-               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/10 to-transparent opacity-80" />
+               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/20 to-transparent opacity-90" />
                
                <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left">
                   <span className="text-brand-orange text-[10px] uppercase font-black tracking-[0.4em] mb-4">Local Constraint</span>
@@ -141,11 +141,11 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
                  src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
                  alt="Churchwin Workshop Scale" 
                  fill 
-                 className="object-cover opacity-90 group-hover:scale-105 transition-all duration-1000 ease-out"
+                 className="object-cover group-hover:scale-105 transition-all duration-1000 ease-out"
                  priority
                />
-               <div className="absolute inset-0 bg-gradient-to-t from-brand-orange/20 via-transparent to-transparent mix-blend-overlay opacity-50" />
-               <div className="absolute inset-0 bg-brand-navy/10 opacity-40" />
+               <div className="absolute inset-0 bg-gradient-to-t from-brand-orange/30 via-transparent to-transparent mix-blend-overlay opacity-50" />
+               <div className="absolute inset-0 bg-brand-navy/20 opacity-40" />
                
                <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left bg-gradient-to-t from-brand-navy/60 via-brand-navy/20 to-transparent">
                   <span className="text-brand-orange text-[10px] uppercase font-black tracking-[0.4em] mb-4">Global Scale</span>

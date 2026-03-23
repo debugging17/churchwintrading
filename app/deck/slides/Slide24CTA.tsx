@@ -66,7 +66,7 @@ export function Slide24CTA({ isActive: _isActive }: { isActive: boolean }) {
                 fill 
                 className="object-cover transition-transform duration-1000 group-hover:scale-110" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/30 to-transparent" />
               
               <div className="absolute inset-0 p-10 flex flex-col justify-end text-left">
                 <div className="w-12 h-12 bg-brand-orange/20 backdrop-blur-xl border border-brand-orange/40 rounded-2xl flex items-center justify-center mb-6">

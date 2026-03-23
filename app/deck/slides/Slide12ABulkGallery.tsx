@@ -53,7 +53,7 @@ export function Slide12ABulkGallery({ isActive }: { isActive: boolean }) {
             variants={fadeUp}
             className="col-span-2 lg:col-span-6 row-span-6 rounded-[2.5rem] overflow-hidden relative border border-white/10 group shadow-2xl"
           >
-             <div className="absolute inset-0 bg-brand-navy/30 mix-blend-multiply z-10 pointer-events-none group-hover:bg-transparent transition-colors duration-700" />
+             <div className="absolute inset-0 bg-brand-navy/10 z-10 pointer-events-none group-hover:bg-transparent transition-colors duration-700" />
              <DeckVideo 
                src="/assets/videos/vid-4.mp4" 
                isActive={isActive}
@@ -80,7 +80,7 @@ export function Slide12ABulkGallery({ isActive }: { isActive: boolean }) {
                 className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                 priority
              />
-             <div className="absolute inset-0 bg-brand-navy/20 group-hover:bg-transparent transition-colors duration-500" />
+             <div className="absolute inset-0 bg-brand-navy/10 group-hover:bg-transparent transition-colors duration-500" />
              
              <div className="absolute top-8 right-8">
                 <GlassCard className="py-2 px-6 rounded-full border-white/20" delay={0.7}>
@@ -108,7 +108,7 @@ export function Slide12ABulkGallery({ isActive }: { isActive: boolean }) {
                 className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                 priority
              />
-             <div className="absolute inset-0 bg-brand-navy/40 group-hover:bg-transparent transition-colors duration-500" />
+             <div className="absolute inset-0 bg-brand-navy/20 group-hover:bg-transparent transition-colors duration-500" />
              
              <GlassCard className="absolute inset-x-6 bottom-6 py-4 px-6 border-white/10" delay={0.8}>
                 <p className="text-white text-sm font-display font-bold tracking-tight">Tier-1 Compliance Lab</p>
@@ -131,7 +131,7 @@ export function Slide12ABulkGallery({ isActive }: { isActive: boolean }) {
                 className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                 priority
              />
-             <div className="absolute inset-x-0 bottom-0 p-8 text-center bg-gradient-to-t from-brand-navy/80 to-transparent">
+             <div className="absolute inset-x-0 bottom-0 p-8 text-center bg-gradient-to-t from-brand-navy/40 to-transparent">
                 <p className="text-white text-[10px] font-black tracking-[0.4em] uppercase opacity-60">Success</p>
              </div>
           </motion.div>

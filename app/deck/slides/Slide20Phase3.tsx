@@ -59,7 +59,7 @@ export function Slide20Phase3({ isActive: _isActive }: { isActive: boolean }) {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.3 }}
+          animate={{ scale: 1, opacity: 0.6 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="w-full h-full relative"
         >
@@ -70,8 +70,8 @@ export function Slide20Phase3({ isActive: _isActive }: { isActive: boolean }) {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy/60 to-brand-navy" />
-          <div className="absolute inset-0 bg-brand-navy/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/40 via-brand-navy/20 to-brand-navy/60" />
+          <div className="absolute inset-0 bg-brand-navy/30" />
         </motion.div>
       </div>
 
@@ -100,7 +100,7 @@ export function Slide20Phase3({ isActive: _isActive }: { isActive: boolean }) {
             {/* Sub-Initiatives Card */}
             <motion.div 
               variants={fadeUp}
-              className="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[40px] p-10 shadow-2xl relative overflow-hidden group"
+              className="bg-brand-navy/40 backdrop-blur-3xl border border-white/10 rounded-[40px] p-10 shadow-2xl relative overflow-hidden group"
             >
                <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
                   <TrendingUp className="w-32 h-32 text-brand-orange" />
@@ -132,7 +132,7 @@ export function Slide20Phase3({ isActive: _isActive }: { isActive: boolean }) {
                 <motion.div 
                   key={i}
                   variants={fadeUp}
-                  className="bg-brand-navy-light/20 backdrop-blur-xl border border-white/5 rounded-[32px] p-8 relative overflow-hidden group hover:border-brand-orange/30 transition-colors"
+                  className="bg-brand-navy/40 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 relative overflow-hidden group hover:border-brand-orange/30 transition-colors"
                 >
                   <div className="flex flex-col relative z-20">
                     <p className="text-brand-orange text-[9px] font-black uppercase tracking-[0.2em] mb-4 flex items-center gap-2">

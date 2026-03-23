@@ -46,17 +46,17 @@ export function Slide02Crossroads({ isActive }: { isActive: boolean }) {
     <div ref={container} className="w-full h-full flex relative overflow-hidden bg-brand-navy font-display">
       
       {/* === LAYER 0: Background === */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 opacity-60">
         <Image 
           src="/images/backgrounds/industrial_crossroads.png" 
           alt="African Industrial Hub" 
           fill 
           sizes="100vw"
-          className="object-cover brightness-[0.7] contrast-[1.1]"
+          className="object-cover contrast-[1.1]"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/60 to-transparent z-10" />
-        <div className="absolute inset-0 bg-brand-navy/30 mix-blend-multiply z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/60 via-brand-navy/30 to-transparent z-10" />
+        <div className="absolute inset-0 bg-brand-navy/20 z-10" />
       </div>
 
       {/* === LAYER 1: Content === */}

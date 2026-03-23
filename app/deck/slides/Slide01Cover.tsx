@@ -67,7 +67,7 @@ export function Slide01Cover({ isActive }: { isActive: boolean }) {
       {/* === LAYER 1: Dynamic Brand Overlays === */}
       <div className="absolute inset-0 bg-gradient-to-tr from-brand-orange/20 via-transparent to-transparent z-[1] pointer-events-none" />
       <div className="absolute inset-0 bg-brand-navy/20 z-[2] pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent z-[3] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 via-transparent to-transparent z-[3] pointer-events-none" />
 
       {/* === LAYER 2: Centered Content Stack === */}
       <div className="w-full h-full flex flex-col justify-start items-center pt-24 md:pt-32 lg:pt-40 px-10 md:px-24 z-10 relative text-center">

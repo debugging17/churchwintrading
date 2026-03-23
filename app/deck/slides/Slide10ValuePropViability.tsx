@@ -21,7 +21,7 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.25 }}
+          animate={{ scale: 1, opacity: 0.6 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="w-full h-full relative"
         >
@@ -32,8 +32,8 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy/60 to-brand-navy" />
-          <div className="absolute inset-0 bg-brand-navy/60 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/40 via-brand-navy/20 to-brand-navy/60" />
+          <div className="absolute inset-0 bg-brand-navy/30" />
         </motion.div>
       </div>
 
@@ -73,7 +73,7 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
                 <motion.div 
                   key={i}
                   variants={fadeUp}
-                  className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-[32px] p-8 flex items-start gap-6 group hover:bg-white/[0.05] transition-colors"
+                  className="bg-brand-navy/40 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 flex items-start gap-6 group hover:bg-white/[0.05] transition-colors"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center shrink-0">
                     <stream.icon className="w-6 h-6 text-brand-orange" />
@@ -91,7 +91,7 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
           {/* Right: Unit Economics & Impact */}
           <motion.div 
             variants={fadeUp} 
-            className="w-full lg:w-1/2 bg-brand-navy-light/20 backdrop-blur-2xl border border-white/5 rounded-[48px] p-10 md:p-14 relative overflow-hidden"
+            className="w-full lg:w-1/2 bg-brand-navy-light/40 backdrop-blur-3xl border border-white/10 rounded-[48px] p-10 md:p-14 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 p-10 opacity-5">
               <TrendingUp className="w-32 h-32 text-brand-orange" />
