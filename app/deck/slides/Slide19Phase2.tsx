@@ -90,7 +90,7 @@ export function Slide19Phase2({ isActive: _isActive }: { isActive: boolean }) {
           <motion.div variants={fadeUp} className="w-full md:w-[35%]">
             <div className="border-l-[6px] border-brand-orange pl-8 py-2">
               <h4 className="text-sm font-display tracking-[0.3em] text-brand-orange uppercase mb-4 font-bold">Months 6–12</h4>
-              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase">
+              <h2 className="font-display text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase break-words">
                 Phase 2:<br />
                 <span className="text-brand-orange italic">Infrastructure<br/>& Digital</span>
               </h2>

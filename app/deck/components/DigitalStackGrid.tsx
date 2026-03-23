@@ -259,29 +259,29 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
   }, { dependencies: [isActive], scope: container });
 
   return (
-    <div ref={container} className="grid grid-cols-2 gap-6 w-full h-full">
-      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative aspect-[4/3]">
+    <div ref={container} className="grid grid-cols-2 grid-rows-2 gap-6 w-full h-full min-h-[460px]">
+      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative h-full w-full">
         <ApolloCard />
         <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl z-20">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Apollo.io</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">Sourcing 500+ ICP-matched prospects based on botanical demand signals.</p>
         </div>
       </div>
-      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative aspect-[4/3]">
+      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative h-full w-full">
         <InstantlyCard />
         <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl z-20">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Instantly.ai</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">High-deliverability 4-touch sequences maintaining 60%+ open rates.</p>
         </div>
       </div>
-      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative aspect-[4/3]">
+      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative h-full w-full">
         <MailchimpCard />
         <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl z-20">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Mailchimp</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">Monthly 'Churchwin Origins' content educating buyers on supply stability.</p>
         </div>
       </div>
-      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative aspect-[4/3]">
+      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative h-full w-full">
         <LinkedInCard />
         <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl z-20">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">LinkedIn Sales Nav</p>
