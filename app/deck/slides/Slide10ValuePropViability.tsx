@@ -73,7 +73,7 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
                 <motion.div 
                   key={i}
                   variants={fadeUp}
-                  className="bg-brand-navy/40 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 flex items-start gap-6 group hover:bg-white/[0.05] transition-colors"
+                  className="bg-brand-navy/70 backdrop-blur-3xl border border-white/20 rounded-[32px] p-8 flex flex-col justify-between group overflow-hidden relative shadow-2xl"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center shrink-0">
                     <stream.icon className="w-6 h-6 text-brand-orange" />

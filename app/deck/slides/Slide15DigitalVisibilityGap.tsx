@@ -86,7 +86,7 @@ export function Slide15DigitalVisibilityGap({ isActive: _isActive }: { isActive:
                 <motion.div 
                   key={i}
                   variants={fadeUp}
-                  className="bg-brand-navy/40 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 flex items-start gap-6 group"
+                  className="bg-brand-navy/70 backdrop-blur-3xl border border-white/20 rounded-[32px] p-8 flex items-start gap-6 group"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center shrink-0">
                     <item.icon className="w-6 h-6 text-brand-orange" />
@@ -104,7 +104,7 @@ export function Slide15DigitalVisibilityGap({ isActive: _isActive }: { isActive:
           {/* Right: The Data Gap Chart */}
           <motion.div 
             variants={fadeUp} 
-            className="w-full lg:w-[55%] bg-brand-navy/60 backdrop-blur-3xl border border-white/10 rounded-[48px] p-8 md:p-12 relative overflow-hidden flex flex-col min-h-[500px]"
+            className="w-full lg:w-[55%] bg-brand-navy/70 backdrop-blur-3xl border border-white/20 rounded-[48px] p-8 md:p-12 relative overflow-hidden flex flex-col min-h-[500px]"
           >
             <div className="relative z-10 h-full flex flex-col">
               <div className="flex justify-between items-start mb-12">

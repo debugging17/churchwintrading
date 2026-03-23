@@ -75,7 +75,7 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
                />
                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/20 to-transparent opacity-90" />
                
-               <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left">
+               <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left bg-brand-navy/70 backdrop-blur-3xl border border-white/20 rounded-[32px]">
                   <span className="text-brand-orange text-[10px] uppercase font-black tracking-[0.4em] mb-4">Local Constraint</span>
                   <h3 className="text-2xl md:text-2xl lg:text-3xl font-display font-black text-white leading-tight uppercase tracking-tighter">
                     Fragmented <br />Production

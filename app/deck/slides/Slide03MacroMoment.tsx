@@ -73,7 +73,7 @@ export function Slide03MacroMoment({ isActive: _isActive }: { isActive: boolean 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, type: "spring", stiffness: 100 }}
-              className="w-full p-[1.5rem] bg-brand-white/5 backdrop-blur-xl shadow-2xl rounded-[1rem] border border-white/10"
+              className="w-full p-[1.5rem] bg-brand-navy/70 backdrop-blur-3xl shadow-2xl rounded-[1rem] border border-white/20"
             >
               <h4 className="font-display font-black text-brand-orange text-[1.25rem] mb-[0.5rem] uppercase tracking-widest">The Divergence</h4>
               <p className="font-primary text-brand-white/90 text-[0.875rem] leading-relaxed">

@@ -84,23 +84,24 @@ export function Slide20Phase3({ isActive: _isActive }: { isActive: boolean }) {
         <div className="flex flex-col md:flex-row gap-12 lg:gap-20">
           
           {/* Phase Header */}
-          <motion.div variants={fadeUp} className="w-full md:w-[35%]">
+          <motion.div variants={fadeUp} className="w-full md:w-[45%]">
             <div className="border-l-[6px] border-brand-orange pl-8 py-2">
               <h4 className="text-sm font-display tracking-[0.3em] text-brand-orange uppercase mb-4 font-bold">Months 12–18</h4>
-              <h2 className="font-display text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase break-words">
+              <h2 className="font-display text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase">
                 Phase 3:<br />
-                <span className="text-brand-orange italic">Scale &<br/>Expansion</span>
+                <span className="text-brand-orange italic whitespace-nowrap">Institutional</span><br/>
+                <span className="text-brand-orange italic">Dominance</span>
               </h2>
             </div>
           </motion.div>
 
           {/* Phase Content */}
-          <div className="w-full md:w-[65%] flex flex-col gap-10">
+          <div className="w-full md:w-[55%] flex flex-col gap-10">
             
             {/* Sub-Initiatives Card */}
             <motion.div 
               variants={fadeUp}
-              className="bg-brand-navy/40 backdrop-blur-3xl border border-white/10 rounded-[40px] p-10 shadow-2xl relative overflow-hidden group"
+              className="bg-brand-navy/70 backdrop-blur-3xl border border-white/20 rounded-[40px] p-10 shadow-2xl relative overflow-hidden group"
             >
                <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
                   <TrendingUp className="w-32 h-32 text-brand-orange" />
@@ -132,7 +133,7 @@ export function Slide20Phase3({ isActive: _isActive }: { isActive: boolean }) {
                 <motion.div 
                   key={i}
                   variants={fadeUp}
-                  className="bg-brand-navy/40 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 relative overflow-hidden group hover:border-brand-orange/30 transition-colors"
+                  className="bg-brand-navy/70 backdrop-blur-3xl border border-white/20 rounded-[32px] p-8 relative overflow-hidden group hover:border-brand-orange/30 transition-colors"
                 >
                   <div className="flex flex-col relative z-20">
                     <p className="text-brand-orange text-[9px] font-black uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
