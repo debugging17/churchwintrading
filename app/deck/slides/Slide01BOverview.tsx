@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useSlideEnter } from "../motion/useSlideEnter";
@@ -13,14 +13,9 @@ const fadeUp = {
   }),
 };
 
-const sections = [
-  { num: "01", label: "The Yield Gap", sub: "Bridging the Ghanaian productivity deficit vs. global benchmarks." },
-  { num: "02", label: "Institutionalizing the Middle", sub: "Transforming fragmented supply chains into professional infrastructure." },
-  { num: "03", label: "Digital B2B Scale Engine", sub: "Proprietary technology stack driving logistics and demand aggregation." },
-  { num: "04", label: "ESG as Competitive Edge", sub: "Sustainable impact as a fundamental driver of institutional value." },
-];
 
-export function Slide01BOverview({ isActive }: { isActive: boolean }) {
+
+export function Slide01BOverview({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100); 
 
   return (

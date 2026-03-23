@@ -1,12 +1,11 @@
 "use client";
-import React from "react";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { fadeUp, sectionTitleStagger, staggerContainer, slideFromRight } from "../motion/variants";
+import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { ShoppingBag, Warehouse, FileCheck, CheckCircle2 } from "lucide-react";
 
-export function Slide09ValuePropDesirability({ isActive }: { isActive: boolean }) {
+export function Slide09ValuePropDesirability({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSwiper } from "swiper/react";
 
-export function ProgressBar({ total }: { total: number }) {
+export function ProgressBar() {
   const swiper = useSwiper();
   const [progress, setProgress] = useState(0);
 

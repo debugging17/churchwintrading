@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+
 import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
 import { motion } from 'framer-motion';
 
@@ -8,7 +8,7 @@ const data = [
   { name: 'Local Capture', value: 10, color: '#1e3a8a' }, // Muted Navy
 ];
 
-export const ValueGapChart: React.FC = () => {
+export const ValueGapChart = () => {
   return (
     <div className="w-full h-[280px] relative flex items-center justify-center group/chart">
       {/* Background Glow (Principle 10: Life) */}

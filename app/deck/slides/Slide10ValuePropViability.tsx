@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 import { fadeUp, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { ArrowRight } from "lucide-react";
 
-export function Slide10ValuePropViability({ isActive }: { isActive: boolean }) {
+export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

@@ -1,16 +1,15 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 import { fadeUp, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { ChevronRight } from "lucide-react";
 import { sectors } from "../data/sectors";
 
 interface Slide06SegmentationProps {
   onSectorClick?: (idx: number) => void;
 }
 
-export function Slide06Segmentation({ onSectorClick, isActive }: Slide06SegmentationProps & { isActive: boolean }) {
+export function Slide06Segmentation({ onSectorClick, isActive: _isActive }: Slide06SegmentationProps & { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   const handleCardClick = (idx: number) => {

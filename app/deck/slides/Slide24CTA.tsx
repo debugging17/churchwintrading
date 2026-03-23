@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
@@ -8,7 +8,7 @@ import { Banknote, Users, Lightbulb } from "lucide-react";
 
 import Image from "next/image";
 
-export function Slide24CTA({ isActive }: { isActive: boolean }) {
+export function Slide24CTA({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

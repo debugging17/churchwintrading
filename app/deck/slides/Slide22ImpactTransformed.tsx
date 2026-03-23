@@ -1,17 +1,17 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { HeartHandshake, BookOpenCheck, ShieldCheck } from "lucide-react";
-import { ResponsiveContainer, BarChart, Bar, Cell, XAxis, YAxis } from "recharts";
+import { ResponsiveContainer, BarChart, Bar, Cell } from "recharts";
 
 const impactData = [
   { label: "Bulk Trading", value: 100, fill: "rgba(1, 39, 135, 0.2)" },
   { label: "Private Label", value: 350, fill: "#ff6a00" }
 ];
 
-export function Slide22ImpactTransformed({ isActive }: { isActive: boolean }) {
+export function Slide22ImpactTransformed({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

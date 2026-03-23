@@ -1,5 +1,6 @@
 "use client";
-import React from 'react';
+import React from "react";
+
 import { Player } from '@remotion/player';
 import { RemotionTextEffect } from './RemotionTextEffect';
 

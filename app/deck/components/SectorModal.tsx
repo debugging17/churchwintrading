@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Target, Zap } from "lucide-react";
 import Image from "next/image";
@@ -12,10 +13,10 @@ interface SectorModalProps {
 }
 
 export function SectorModal({ selectedIdx, onClose, onSelectSector }: SectorModalProps) {
-  const [activeTab, setActiveTab] = React.useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
   // Reset tab when sector changes
-  React.useEffect(() => {
+  useEffect(() => {
     setActiveTab(0);
   }, [selectedIdx]);
 

@@ -1,5 +1,6 @@
 "use client";
-import React from 'react';
+import React from "react";
+
 import { interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 
 export const RemotionTextEffect: React.FC<{ text: string; color?: string }> = ({ text, color = '#F26522' }) => {

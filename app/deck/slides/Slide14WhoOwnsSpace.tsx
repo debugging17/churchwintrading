@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeUp, sectionTitleStagger, slideFromLeft, slideFromRight } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
@@ -39,7 +39,7 @@ const comparisonData = {
   ]
 };
 
-export function Slide14WhoOwnsSpace({ isActive }: { isActive: boolean }) {
+export function Slide14WhoOwnsSpace({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
   const [activeModal, setActiveModal] = useState<"intermediaries" | "suppliers" | "dtcBrands" | "middlemen" | null>(null);
 

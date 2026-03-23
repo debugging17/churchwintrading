@@ -1,14 +1,14 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 import { fadeUp, sectionTitleStagger } from "../motion/variants";
 import { ShoppingBag, Boxes } from "lucide-react";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { GlassCard } from "../components/GlassCard";
+
 
 import Image from "next/image";
 
-export function Slide07VPCSegments({ isActive }: { isActive: boolean }) {
+export function Slide07VPCSegments({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   // ROLES APPLIED:

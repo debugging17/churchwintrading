@@ -1,8 +1,8 @@
 "use client";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import dynamic from "next/dynamic";
+
 import Image from "next/image";
 import { DeckVideo } from "../components/DeckVideo";
 

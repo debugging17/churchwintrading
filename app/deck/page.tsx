@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, Suspense } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Keyboard, EffectFade } from "swiper/modules";
 

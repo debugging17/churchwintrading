@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSwiper } from "swiper/react";
 
 export function SlideCounter({ total }: { total: number }) {

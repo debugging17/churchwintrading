@@ -3,7 +3,7 @@ import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { Shield, Droplets, Warehouse } from "lucide-react";
 
-export function Slide13CompetitiveReality({ isActive }: { isActive: boolean }) {
+export function Slide13CompetitiveReality({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

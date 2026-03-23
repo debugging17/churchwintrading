@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
-import { fadeUp, slideFromLeft, staggerContainer } from "../motion/variants";
+import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { DeckVideo } from "../components/DeckVideo";
 

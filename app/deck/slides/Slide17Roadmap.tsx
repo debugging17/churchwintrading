@@ -1,8 +1,8 @@
 "use client";
-import React, { useRef, useState } from "react";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { UnifiedVideoModal } from "../components/UnifiedVideoModal";
+
 
 gsap.registerPlugin(useGSAP);
 

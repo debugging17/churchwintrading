@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip } from "recharts";
-import { fadeUp, slideFromLeft, staggerContainer } from "../motion/variants";
+import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import Image from "next/image";
 
@@ -23,7 +23,7 @@ const data = [
   { year: 2020, ghana: 2200, korea: 32000 },
 ];
 
-export function Slide03MacroMoment({ isActive }: { isActive: boolean }) {
+export function Slide03MacroMoment({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (

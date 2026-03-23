@@ -1,5 +1,6 @@
 "use client";
-import React from 'react';
+import React from "react";
+
 import { interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 
 interface ToolAnimationProps {
@@ -14,7 +15,7 @@ export const ToolAnimation: React.FC<ToolAnimationProps> = ({ toolName, toolActi
   const isApollo = toolName.toLowerCase().includes("apollo");
   const isLinkedIn = toolName.toLowerCase().includes("linkedin");
   const isMailchimp = toolName.toLowerCase().includes("mailchimp");
-  const isInstantly = toolName.toLowerCase().includes("instantly");
+
 
   const config = {
     color: isMailchimp ? '#FFD700' : isLinkedIn ? '#0a66c2' : isApollo ? '#ff6a00' : '#012787',

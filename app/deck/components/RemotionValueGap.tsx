@@ -1,10 +1,10 @@
 "use client";
-import React from 'react';
+
 import { interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
 
-export const RemotionValueGap: React.FC = () => {
+export const RemotionValueGap = () => {
   const frame = useCurrentFrame();
-  const { fps, width } = useVideoConfig();
+  const { fps } = useVideoConfig();
 
   const spr = spring({
     frame,

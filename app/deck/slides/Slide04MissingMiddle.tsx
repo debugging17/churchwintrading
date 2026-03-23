@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+
 import { motion } from "framer-motion";
-import { fadeUp, slideFromLeft, staggerContainer } from "../motion/variants";
+import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import Image from "next/image";
 
@@ -12,14 +12,10 @@ import Image from "next/image";
 //   ux-architect: Clear labeling of "The Gap" vs "The Goal".
 //   proposal-strategist: Linking South Korea's structural shift to Churchwin's physical infrastructure.
 
-export function Slide04MissingMiddle({ isActive }: { isActive: boolean }) {
+export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
-  const funnelTiers = [
-    { label: "Micro Enterprises", width: "100%", sub: "80% of employment", fill: "bg-brand-navy/10" },
-    { label: "The Missing Middle", width: "40%", sub: "<10% reach scale", fill: "bg-brand-orange shadow-[0_0_50px_rgba(255,106,0,0.4)]", active: true },
-    { label: "Institutional Scale", width: "70%", sub: "Global Readiness", fill: "bg-brand-navy shadow-xl text-white" }
-  ];
+
 
   return (
     <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(2rem+var(--header-height,0px))] md:pt-[calc(3rem+var(--header-height,0px))] overflow-y-auto relative">

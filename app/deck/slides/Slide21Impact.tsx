@@ -3,7 +3,7 @@ import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { Leaf, ShieldCheck, Globe } from "lucide-react";
 
-export function Slide21Impact({ isActive }: { isActive: boolean }) {
+export function Slide21Impact({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
