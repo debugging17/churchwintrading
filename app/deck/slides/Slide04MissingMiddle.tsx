@@ -53,13 +53,6 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
               }}
               className="group relative h-[60vh] md:h-[65vh] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-brand-navy"
             >
-               {/* Overlaid X Cross-out for Fragmented Production */}
-               <div className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center opacity-80 scale-110">
-                  <svg width="100%" height="100%" viewBox="0 0 400 600" preserveAspectRatio="none">
-                     <line x1="10%" y1="10%" x2="90%" y2="90%" stroke="#ff3b30" strokeWidth="20" strokeLinecap="round" />
-                     <line x1="90%" y1="10%" x2="10%" y2="90%" stroke="#ff3b30" strokeWidth="20" strokeLinecap="round" />
-                  </svg>
-               </div>
                <Image 
                  src="/images/IMG_0471-min-min-scaled.jpg" 
                  alt="Churchwin Current Office" 
@@ -67,15 +60,6 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
                  className="object-cover group-hover:scale-105 transition-all duration-1000 ease-out"
                  priority
                />
-               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/20 to-transparent opacity-90" />
-               
-               <div className="absolute inset-x-0 bottom-0 p-10 flex flex-col items-start text-left bg-brand-navy/70 backdrop-blur-3xl border border-white/20 rounded-[32px]">
-                  <span className="text-brand-orange text-[10px] uppercase font-black tracking-[0.4em] mb-4">Local Constraint</span>
-                  <h3 className="text-2xl md:text-2xl lg:text-3xl font-display font-black text-white leading-tight uppercase tracking-tighter">
-                    Fragmented <br />Production
-                  </h3>
-                  <div className="w-12 h-1 bg-brand-orange/40 mt-4 rounded-full" />
-               </div>
             </motion.div>
 
             {/* TRANSFORMATION ARROW — Principle 9: Grace (Flow) */}
