@@ -1,23 +1,33 @@
-"use client";
-
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { Search, Globe, MousePointer2, AlertCircle } from "lucide-react";
 import Image from "next/image";
 import { ResponsiveContainer, BarChart, Bar, Cell, XAxis, YAxis, Tooltip } from "recharts";
-
-const trafficData = [
-  { name: "Baraka Shea", value: 52000, fill: "#333333" },
-  { name: "Jedwards Int.", value: 30000, fill: "#666666" },
-  { name: "Churchwin", value: 200, fill: "#f47920" }
-];
+import { competitorTrafficData } from "@/data/charts";
+import { CompetitorModal } from "../components/CompetitorModal";
 
 export function Slide15DigitalVisibilityGap({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
+  const [selectedCompetitor, setSelectedCompetitor] = useState<any | null>(null);
+
+  // Map data for Recharts
+  const chartData = competitorTrafficData.map(c => ({
+    name: c.competitor.split(' ')[0], // Short name for the axis
+    fullName: c.competitor,
+    value: c.traffic,
+    fill: c.fill,
+    original: c
+  }));
 
   return (
     <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
+      <CompetitorModal 
+        competitor={selectedCompetitor} 
+        onClose={() => setSelectedCompetitor(null)} 
+      />
+      
       {/* Background Image with Cinematic Overlay */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -108,9 +118,9 @@ export function Slide15DigitalVisibilityGap({ isActive: _isActive }: { isActive:
                 </div>
               </div>
 
-              <div className="flex-grow min-h-[300px] w-full mb-10">
+              <div className="flex-grow min-h-[400px] w-full mb-10">
                 <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={trafficData} layout="vertical" margin={{ left: 40, right: 80 }}>
+                  <BarChart data={chartData} layout="vertical" margin={{ left: 40, right: 80 }}>
                     <XAxis type="number" hide />
                     <YAxis 
                       type="category" 
@@ -123,27 +133,42 @@ export function Slide15DigitalVisibilityGap({ isActive: _isActive }: { isActive:
                     <Tooltip 
                       cursor={{ fill: 'rgba(255,255,255,0.05)' }}
                       contentStyle={{ backgroundColor: '#012787', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px' }}
+                      labelStyle={{ color: '#f47920', fontWeight: 'bold', marginBottom: '4px' }}
+                      itemStyle={{ color: '#ffffff' }}
+                      formatter={(value: any) => [Number(value).toLocaleString(), "Visits"]}
                     />
-                    <Bar dataKey="value" radius={[0, 12, 12, 0]} barSize={40}>
-                      {trafficData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.fill} />
+                    <Bar 
+                      dataKey="value" 
+                      radius={[0, 12, 12, 0]} 
+                      barSize={50}
+                      onClick={(_data, index) => setSelectedCompetitor(chartData[index].original)}
+                      className="cursor-pointer"
+                    >
+                      {chartData.map((entry, index) => (
+                        <Cell 
+                          key={`cell-${index}`} 
+                          fill={entry.fill} 
+                          className="hover:opacity-80 transition-opacity"
+                        />
                       ))}
                     </Bar>
                   </BarChart>
                 </ResponsiveContainer>
               </div>
 
-              <div className="mt-auto pt-10 border-t border-white/10 flex items-center justify-between">
+              <div className="mt-8 pt-8 border-t border-white/10 flex items-center justify-between">
                 <div>
-                  <p className="text-white text-3xl font-display font-black tracking-tighter">~200 <span className="text-white/20">vs</span> 52,000</p>
-                  <p className="text-white/40 text-xs font-primary mt-1 uppercase tracking-widest">Monthly Organic Traffic</p>
+                  <p className="text-white text-3xl font-display font-black tracking-tighter italic uppercase">
+                    ~200 <span className="text-white/20 not-italic">vs</span> 52,900+
+                  </p>
+                  <p className="text-white/40 text-[10px] font-black uppercase mt-1 tracking-[0.2em]">Monthly Organic Traffic Deficiency</p>
                 </div>
                 <div className="flex flex-col items-end">
-                   <div className="flex items-center gap-2 text-brand-orange animate-pulse">
-                      <MousePointer2 className="w-4 h-4" />
-                      <span className="text-xl font-display font-black">GAP</span>
+                   <div className="flex items-center gap-3 text-brand-orange">
+                      <MousePointer2 className="w-5 h-5 animate-bounce" />
+                      <span className="text-2xl font-display font-black tracking-tighter uppercase italic">Interactive</span>
                    </div>
-                   <p className="text-white/20 text-[10px] font-black uppercase">Immediate Execution Item</p>
+                   <p className="text-white/20 text-[9px] font-black uppercase tracking-widest">Click bars for verifiable data</p>
                 </div>
               </div>
             </div>
@@ -154,3 +179,4 @@ export function Slide15DigitalVisibilityGap({ isActive: _isActive }: { isActive:
     </div>
   );
 }
+
