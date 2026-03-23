@@ -18,13 +18,13 @@ import Image from "next/image";
 // --- HELPERS ---
 
 const BrowserWindow = ({ children, title, url, className = "", bgColor = "bg-white" }: any) => (
-  <div className={`rounded-xl overflow-hidden border border-brand-navy/10 shadow-lg flex flex-col h-full ${className} ${bgColor}`}>
+  <div className={`rounded-[1.5rem] overflow-hidden border-2 border-brand-navy/20 shadow-xl flex flex-col h-full ${className} ${bgColor}`}>
     {/* Browser Header */}
     <div className="px-3 py-1.5 bg-brand-navy/5 flex items-center justify-between border-b border-brand-navy/5">
-      <div className="flex gap-1.5">
-        <div className="w-2 h-2 rounded-full bg-[#ff5f57]" />
-        <div className="w-2 h-2 rounded-full bg-[#ffbd2e]" />
-        <div className="w-2 h-2 rounded-full bg-[#28c940]" />
+      <div className="flex gap-2">
+        <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
+        <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+        <div className="w-2.5 h-2.5 rounded-full bg-[#28c940]" />
       </div>
       <div className="flex items-center gap-2">
         {title && <span className="text-[10px] font-black text-brand-navy/40 uppercase tracking-widest">{title}</span>}
@@ -32,7 +32,7 @@ const BrowserWindow = ({ children, title, url, className = "", bgColor = "bg-whi
       <div className="text-[9px] text-brand-navy/30 font-mono truncate max-w-[100px]">{url}</div>
     </div>
     {/* Browser Content */}
-    <div className="flex-1 relative overflow-hidden min-h-[160px] md:min-h-[200px]">
+    <div className="flex-1 relative overflow-hidden min-h-[100px] md:min-h-[120px]">
       {children}
     </div>
   </div>
@@ -57,9 +57,15 @@ const ApolloCard = () => (
       
       <div className="relative z-10 flex flex-col h-full">
         <div className="flex justify-between items-end mb-4">
-          <div>
-            <p className="text-[8px] uppercase font-bold text-brand-navy/40 tracking-wider">Total Leads</p>
-            <p className="text-xl font-display font-black text-brand-orange">34,218</p>
+          <div className="flex items-baseline gap-2">
+            <div>
+              <p className="text-[9px] uppercase font-black text-brand-navy/30 tracking-[0.2em] mb-1">Total Leads Identified</p>
+              <p className="text-3xl font-display font-black text-brand-orange leading-none">34,218</p>
+            </div>
+            <div className="px-2 py-1 bg-green-50 rounded-lg border border-green-100 flex items-center gap-1">
+               <span className="text-[10px] text-green-600">▲</span>
+               <span className="text-[10px] font-black text-green-600">12%</span>
+            </div>
           </div>
         </div>
         <div className="h-14 w-full mb-2 min-h-[56px]">
@@ -89,7 +95,7 @@ const ApolloCard = () => (
           { role: "Head Formulator", tag: "Skincare" },
           { role: "VP Procurement", tag: "Beauty" }
         ].map((lead, i) => (
-          <div key={i} className="flex items-center justify-between p-2 bg-brand-navy/5 rounded-lg border border-brand-navy/5">
+          <div key={i} className="flex items-center justify-between p-2 bg-brand-navy/10 rounded-lg border border-brand-navy/10">
              <div className="flex items-center gap-2">
                 <div className="w-5 h-5 rounded-full bg-brand-navy/10 flex items-center justify-center">
                    <UserCheck className="w-3 h-3 text-brand-navy/40" />
@@ -113,25 +119,25 @@ const ApolloCard = () => (
 const InstantlyCard = () => (
   <BrowserWindow title="Instantly" url="app.instantly.ai">
     <div className="p-3 flex flex-col h-full gap-2">
-       <div className="p-3 rounded-xl border border-brand-navy/5 bg-white shadow-sm flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
-            <Mail className="w-4 h-4 text-blue-500" />
+       <div className="p-4 rounded-2xl border border-brand-navy/10 bg-white shadow-sm flex items-center gap-4 transition-transform hover:translate-x-1 duration-300">
+          <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+            <Mail className="w-5 h-5 text-blue-500" />
           </div>
           <div className="flex-1">
-             <p className="text-xs font-bold text-brand-navy">Step 1: Introduction</p>
-             <p className="text-[9px] text-brand-navy/40 mt-0.5">Sent immediately on import</p>
+             <p className="text-sm font-black text-brand-navy">Step 1: Introduction</p>
+             <p className="text-[10px] text-brand-navy/50 mt-0.5 font-medium">Automatic dispatch on system import</p>
           </div>
-          <span className="px-2 py-0.5 rounded bg-green-50 text-green-600 text-[8px] font-black uppercase tracking-tighter">Active</span>
+          <span className="px-3 py-1 rounded-full bg-green-50 text-green-600 text-[9px] font-black uppercase tracking-wider border border-green-100">Live</span>
        </div>
-       <div className="p-3 rounded-xl border border-brand-navy/5 bg-white shadow-sm flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center">
-            <Clock className="w-4 h-4 text-orange-500" />
+       <div className="p-4 rounded-2xl border border-brand-navy/10 bg-white shadow-sm flex items-center gap-4 transition-transform hover:translate-x-1 duration-300">
+          <div className="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center shrink-0">
+            <Clock className="w-5 h-5 text-orange-500" />
           </div>
           <div className="flex-1">
-             <p className="text-xs font-bold text-brand-navy">Step 2: Follow-up</p>
-             <p className="text-[9px] text-brand-navy/40 mt-0.5">Wait 7 days</p>
+             <p className="text-sm font-black text-brand-navy">Step 2: Follow-up</p>
+             <p className="text-[10px] text-brand-navy/50 mt-0.5 font-medium">Wait period: 5-7 business days</p>
           </div>
-          <span className="px-2 py-0.5 rounded bg-orange-50 text-orange-600 text-[8px] font-black uppercase tracking-tighter">Queued</span>
+          <span className="px-3 py-1 rounded-full bg-brand-orange/10 text-brand-orange text-[9px] font-black uppercase tracking-wider border border-brand-orange/20">Queued</span>
        </div>
     </div>
   </BrowserWindow>
@@ -144,7 +150,7 @@ const MailchimpCard = () => {
   const clickRate = [{ value: 12 }, { value: 88 }];
   
   return (
-    <BrowserWindow url="mailchimp.com" bgColor="bg-[#ffe01b]">
+    <BrowserWindow url="mailchimp.com" bgColor="bg-[#FFF9E9] border-brand-orange/20">
     <div className="p-3 flex flex-col items-center justify-center h-full text-center">
        <div className="w-8 h-8 relative mb-2">
             <Image 
@@ -155,17 +161,17 @@ const MailchimpCard = () => {
               priority
             />
          </div>
-         <h4 className="text-[8px] font-black text-brand-navy mb-3 tracking-widest uppercase">Q3 Lead Nurture Campaign</h4>
+         <h4 className="text-[10px] font-black text-brand-navy mb-4 tracking-widest uppercase">Q3 Lead Nurture Campaign</h4>
          
-         <div className="flex gap-2 w-full justify-center bg-white/20 backdrop-blur-md p-2 rounded-2xl min-h-[80px]">
+         <div className="flex gap-4 w-full justify-center bg-white/40 p-3 rounded-2xl border border-brand-navy/5 shadow-inner">
             <div className="flex flex-col items-center">
-               <div className="w-12 h-12 relative min-h-[48px]">
+               <div className="w-16 h-16 relative">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
                         data={openRate}
-                        innerRadius={15}
-                        outerRadius={22}
+                        innerRadius={22}
+                        outerRadius={30}
                         startAngle={90}
                         endAngle={-270}
                         paddingAngle={0}
@@ -178,20 +184,20 @@ const MailchimpCard = () => {
                     </PieChart>
                   </ResponsiveContainer>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-[10px] font-black text-brand-navy">42%</span>
+                    <span className="text-xs font-black text-brand-navy">42%</span>
                   </div>
                </div>
-               <p className="text-[6px] font-black text-brand-navy/60 mt-0.5 uppercase tracking-tighter">Open Rate</p>
+               <p className="text-[8px] font-black text-brand-navy/60 mt-2 uppercase tracking-widest">Open Rate</p>
             </div>
             
             <div className="flex flex-col items-center">
-               <div className="w-12 h-12 relative min-h-[48px]">
+               <div className="w-16 h-16 relative">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
                         data={clickRate}
-                        innerRadius={15}
-                        outerRadius={22}
+                        innerRadius={22}
+                        outerRadius={30}
                         startAngle={90}
                         endAngle={-270}
                         paddingAngle={0}
@@ -204,10 +210,10 @@ const MailchimpCard = () => {
                     </PieChart>
                   </ResponsiveContainer>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-[10px] font-black text-brand-navy">12%</span>
+                    <span className="text-xs font-black text-brand-navy">12%</span>
                   </div>
                </div>
-               <p className="text-[6px] font-black text-brand-navy/60 mt-0.5 uppercase tracking-tighter">Click Rate</p>
+               <p className="text-[8px] font-black text-brand-navy/60 mt-2 uppercase tracking-widest">Click Rate</p>
             </div>
          </div>
       </div>
@@ -221,22 +227,22 @@ const MailchimpCard = () => {
 const LinkedInCard = () => (
   <BrowserWindow title="LinkedIn" url="linkedin.com">
     <div className="p-3 flex flex-col items-center justify-center h-full text-center">
-       <div className="relative mb-4">
-          <div className="w-16 h-16 rounded-full bg-brand-navy/5 border-2 border-white shadow-md flex items-center justify-center overflow-hidden">
-             <div className="w-10 h-10 bg-brand-navy/10 rounded-full flex items-center justify-center">
-                <Globe className="w-6 h-6 text-brand-navy/20" />
+       <div className="relative mb-6">
+          <div className="w-20 h-20 rounded-full bg-brand-navy/10 border-4 border-white shadow-xl flex items-center justify-center overflow-hidden">
+             <div className="w-14 h-14 bg-brand-navy/5 rounded-full flex items-center justify-center">
+                <Globe className="w-8 h-8 text-brand-navy/40" />
              </div>
           </div>
-          <div className="absolute bottom-0 right-0 w-5 h-5 bg-blue-500 rounded-full border-2 border-white flex items-center justify-center shadow-lg">
-             <CheckCircle2 className="w-3 h-3 text-white" />
+          <div className="absolute bottom-0 right-0 w-7 h-7 bg-blue-500 rounded-full border-2 border-white flex items-center justify-center shadow-lg">
+             <CheckCircle2 className="w-4 h-4 text-white" />
           </div>
        </div>
-       <h4 className="text-[14px] font-black text-brand-navy mb-1 tracking-tight">Prospect Connected</h4>
-       <p className="text-[8px] text-brand-navy/40 font-medium mb-3">VP Procurement @ L&rsquo;Or&eacute;al</p>
+       <h4 className="text-[16px] font-black text-brand-navy mb-1 tracking-tight">Prospect Connected</h4>
+        <p className="text-xs text-brand-navy/60 font-black mb-5 tracking-wide">VP Procurement @ L&rsquo;Oréal</p>
        
-       <button className="w-full bg-[#0a66c2] hover:bg-[#004182] text-white py-2 px-4 rounded-full flex items-center justify-center gap-2 transition-colors shadow-lg active:scale-95 duration-200">
-          <MessageSquare className="w-4 h-4" />
-          <span className="text-[11px] font-black uppercase tracking-widest text-white/90">Message</span>
+       <button className="w-full bg-[#0a66c2] hover:bg-[#004182] text-white py-3 px-6 rounded-full flex items-center justify-center gap-3 transition-all shadow-lg active:scale-95 duration-200 group">
+          <MessageSquare className="w-5 h-5 transition-transform group-hover:scale-110" />
+          <span className="text-xs font-black uppercase tracking-widest text-white">Direct Message</span>
        </button>
     </div>
   </BrowserWindow>
@@ -261,9 +267,9 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
   }, { dependencies: [isActive], scope: container });
 
   return (
-    <div ref={container} className="grid grid-cols-2 gap-6 md:gap-8 w-full h-full">
+    <div ref={container} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 w-full h-full">
       {/* Apollo */}
-      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-video lg:aspect-square xl:aspect-video">
+      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-[2/1]">
         <ApolloCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Apollo.io</p>
@@ -272,7 +278,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       </div>
       
       {/* Instantly */}
-      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-video lg:aspect-square xl:aspect-video">
+      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-[2/1]">
         <InstantlyCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Instantly.ai</p>
@@ -281,7 +287,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       </div>
 
       {/* Mailchimp */}
-      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-video lg:aspect-square xl:aspect-video">
+      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-[2/1]">
         <MailchimpCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Churchwin Network</p>
@@ -290,7 +296,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       </div>
 
       {/* LinkedIn */}
-      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-video lg:aspect-square xl:aspect-video">
+      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-[2/1]">
         <LinkedInCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Sales Navigator</p>

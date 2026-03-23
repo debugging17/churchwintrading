@@ -49,14 +49,14 @@ export function FooterStack({ total, currentOverride }: FooterStackProps) {
   const progressBg = isLight ? "bg-brand-navy/5" : "bg-brand-white/10";
 
   return (
-    <div className="absolute bottom-0 left-0 w-full h-20 z-[100] pointer-events-none">
+    <div className="fixed bottom-0 left-0 w-full h-20 z-[100] pointer-events-none flex flex-col">
       {/* Global Contrast Vignette - ensures white text is visible on dark slides */}
       {!isLight && (
         <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-brand-navy/40 via-brand-navy/10 to-transparent z-[-1] pointer-events-none" />
       )}
       
       {/* --- Main Footer Layer --- */}
-      <div className="flex items-end justify-between w-full h-full px-12 md:px-20 pb-6 md:pb-8">
+      <div className="flex-1 flex items-end justify-between w-full px-12 md:px-20 pb-6 md:pb-8">
         
         {/* Left: Slide Counter */}
         <div className="flex flex-col items-start gap-1 w-1/3">
@@ -80,7 +80,7 @@ export function FooterStack({ total, currentOverride }: FooterStackProps) {
       </div>
 
       {/* --- Progress Bar Layer --- */}
-      <div className={`w-full h-[2px] ${progressBg} rounded-full overflow-hidden relative`}>
+      <div className={`absolute bottom-0 left-0 w-full h-[2px] ${progressBg} overflow-hidden`}>
         <motion.div 
           className="absolute left-0 top-0 h-full bg-brand-orange shadow-[0_0_8px_rgba(255,106,0,0.6)]"
           initial={{ width: 0 }}
