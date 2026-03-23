@@ -1,97 +1,125 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeUp, slideFromLeft, sectionTitleStagger } from "../motion/variants";
+import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { HeartHandshake, BookOpenCheck, ShieldCheck } from "lucide-react";
-import { ResponsiveContainer, BarChart, Bar, Cell } from "recharts";
-
-const impactData = [
-  { label: "Bulk Trading", value: 100, fill: "rgba(1, 39, 135, 0.2)" },
-  { label: "Private Label", value: 350, fill: "#ff6a00" }
-];
+import { HeartHandshake, Users, ShieldCheck, TrendingUp } from "lucide-react";
+import Image from "next/image";
 
 export function Slide22ImpactTransformed({ isActive: _isActive }: { isActive: boolean }) {
   const animState = useSlideEnter(100);
 
   return (
-    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-cream pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
-      <div className="absolute top-0 left-1/4 w-[50vh] h-[50vh] bg-brand-orange/5 mix-blend-multiply rounded-full blur-[100px]" />
-      <motion.div initial="hidden" animate={animState} variants={sectionTitleStagger} className="w-full max-w-6xl mx-auto my-auto flex flex-col md:flex-row gap-16 z-10">
-        
-        {/* Visual / Ethos Left */}
-        <div className="w-full md:w-[45%] flex flex-col justify-center">
-          <motion.div variants={fadeUp} className="w-20 h-1 bg-brand-orange mb-8" />
-          <motion.h2 variants={slideFromLeft} className="font-display text-4xl md:text-6xl font-black text-brand-navy leading-none tracking-tighter uppercase mb-6">
-            The Revenue <br /><span className="text-brand-orange italic">Transformation.</span>
-          </motion.h2>
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
+      {/* Background Image with Cinematic Overlay */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.3 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="w-full h-full relative"
+        >
+          <Image
+            src="/images/visual_supremacy/shea_orchard.png"
+            alt="Social Impact"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy/60 to-brand-navy" />
+          <div className="absolute inset-0 bg-brand-navy/60 mix-blend-multiply" />
+        </motion.div>
+      </div>
+
+      <motion.div
+        initial="hidden"
+        animate={animState}
+        variants={staggerContainer}
+        className="w-full max-w-[90rem] mx-auto my-auto z-10"
+      >
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
-          <motion.p variants={fadeUp} className="text-xl text-brand-navy/60 font-primary border-l-2 border-brand-navy/20 pl-6 mb-8 italic">
-            Moving from low-margin commodity trading to high-margin institutional supply. <span className="text-brand-navy font-bold not-italic">Certification unlocks a 3.5x value capture multiplier per kg.</span>
-          </motion.p>
-        </div>
+          {/* Left: Headline and Vision */}
+          <div className="w-full lg:w-1/2">
+            <motion.div variants={fadeUp} className="border-l-[6px] border-brand-orange pl-8 py-2 mb-10">
+              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-6">
+                Transformed<br />
+                <span className="text-brand-orange italic">Lives.</span>
+              </h2>
+              <p className="text-xl text-white/60 font-primary max-w-xl leading-relaxed">
+                Every dollar scaled is a <span className="text-white font-bold">household changed</span>. Documented impact is now your competitive advantage.
+              </p>
+            </motion.div>
 
-        {/* Impact Metrics Right */}
-        <div className="w-full md:w-[55%] flex flex-col justify-center space-y-6">
-          
-          <motion.div variants={fadeUp} className="bg-white border border-brand-navy/10 rounded-xl p-8 flex items-start gap-6 group hover:border-brand-orange/50 transition-colors shadow-sm">
-            <div className="w-14 h-14 bg-brand-navy/5 border border-brand-orange/30 rounded-full flex items-center justify-center shrink-0 group-hover:bg-brand-orange/10 transition-colors">
-              <HeartHandshake className="text-brand-orange w-6 h-6" />
-            </div>
-            <div>
-              <div className="font-display text-4xl font-bold text-brand-navy mb-2">100+</div>
-              <p className="font-primary text-brand-navy/70 text-lg font-medium">Women and community members currently empowered and directly funded.</p>
-            </div>
-          </motion.div>
+            <motion.div 
+               variants={fadeUp}
+               className="bg-brand-orange/10 border border-brand-orange/30 rounded-[32px] p-8 backdrop-blur-md"
+            >
+               <h3 className="text-brand-orange text-[10px] font-black uppercase tracking-[0.4em] mb-4">ESG Compliance Advantage</h3>
+               <p className="text-white/80 font-primary text-lg italic leading-relaxed">
+                 &quot;ESG sourcing is no longer an option—it is an EU procurement requirement. We don&apos;t just sell ingredients; we sell a verified, traceable story.&quot;
+               </p>
+            </motion.div>
+          </div>
 
-          <motion.div variants={fadeUp} className="bg-white border border-brand-navy/10 rounded-xl p-8 flex items-start gap-6 group hover:border-brand-orange/50 transition-colors shadow-sm">
-            <div className="w-14 h-14 bg-brand-navy/5 border border-brand-navy/20 rounded-full flex items-center justify-center shrink-0">
-              <BookOpenCheck className="text-brand-navy/60 w-6 h-6 group-hover:text-brand-orange transition-colors" />
-            </div>
-            <div>
-              <div className="font-display text-4xl font-bold text-brand-navy mb-2">11 Cooperatives</div>
-              <p className="font-primary text-brand-navy/70 text-lg font-medium">Fully documented, certified, and traceable to the village level.</p>
-            </div>
-          </motion.div>
-
-          <motion.div variants={fadeUp} className="bg-white/60 backdrop-blur-md border border-brand-orange/30 rounded-xl p-8 flex items-start gap-8 shadow-2xl relative overflow-hidden group">
-            <div className="absolute inset-x-0 bottom-0 h-1 bg-brand-orange shadow-[0_0_20px_rgba(255,106,0,0.4)]" />
-            <div className="w-14 h-14 bg-brand-orange rounded-full flex items-center justify-center shrink-0 shadow-lg relative z-10">
-              <ShieldCheck className="text-brand-white w-6 h-6" />
-            </div>
-            <div className="flex-1 relative z-10">
-              <div className="text-sm font-display tracking-widest text-brand-orange uppercase font-bold mb-3">Unit Economics & Transformation</div>
-              <div className="flex flex-col md:flex-row gap-8 mb-4">
-                 <div className="flex-1">
-                    <p className="text-[10px] uppercase tracking-widest text-brand-navy/40 font-black mb-1">Bulk Trading</p>
-                    <p className="text-3xl font-display font-black text-brand-navy">$4.50<span className="text-sm font-primary text-brand-navy/40">/kg</span></p>
+          {/* Right: Impact Metrics Grid */}
+          <div className="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <motion.div 
+              variants={fadeUp}
+              className="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[40px] p-10 flex flex-col justify-between group overflow-hidden relative"
+            >
+               <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                  <Users className="w-24 h-24 text-brand-orange" />
+               </div>
+               <div>
+                 <div className="w-12 h-12 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center mb-6">
+                   <HeartHandshake className="w-6 h-6 text-brand-orange" />
                  </div>
-                 <div className="flex-1">
-                    <p className="text-[10px] uppercase tracking-widest text-brand-orange font-black mb-1">Private Label Transformation</p>
-                    <p className="text-3xl font-display font-black text-brand-orange">$15.80<span className="text-sm font-primary text-brand-orange/40">/kg</span></p>
+                 <div className="font-display text-5xl font-black text-white mb-2 tracking-tighter">100+</div>
+                 <p className="font-primary text-white/40 text-sm uppercase tracking-widest font-black">Women Empowered</p>
+               </div>
+               <p className="mt-6 text-white/60 text-xs font-primary leading-relaxed">
+                 Direct funding and technical training provided to community members.
+               </p>
+            </motion.div>
+
+            <motion.div 
+              variants={fadeUp}
+              className="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[40px] p-10 flex flex-col justify-between group overflow-hidden relative"
+            >
+               <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                  <ShieldCheck className="w-24 h-24 text-brand-orange" />
+               </div>
+               <div>
+                 <div className="w-12 h-12 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center mb-6">
+                   <ShieldCheck className="w-6 h-6 text-brand-orange" />
                  </div>
-              </div>
-              <div className="flex items-end gap-6 border-t border-brand-navy/5 pt-4">
-                <div className="flex-1">
-                   <p className="font-primary text-brand-navy/90 text-sm leading-relaxed">Transitioning from commodity exports to institutional supply drives <span className="font-bold text-brand-orange italic">350% margin expansion</span>. <br /><strong>12-Month Target: $1.4M ARR.</strong></p>
-                </div>
-                <div className="w-24 h-20 shrink-0">
-                   <ResponsiveContainer width="100%" height="100%">
-                     <BarChart data={impactData}>
-                       <Bar dataKey="value" radius={[4, 4, 0, 0]}>
-                         {impactData.map((entry, index) => (
-                           <Cell key={`cell-${index}`} fill={entry.fill} />
-                         ))}
-                       </Bar>
-                     </BarChart>
-                   </ResponsiveContainer>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+                 <div className="font-display text-5xl font-black text-white mb-2 tracking-tighter">11</div>
+                 <p className="font-primary text-white/40 text-sm uppercase tracking-widest font-black">Cooperatives</p>
+               </div>
+               <p className="mt-6 text-white/60 text-xs font-primary leading-relaxed">
+                 Fully documented, certified, and traceable to the village level.
+               </p>
+            </motion.div>
 
+            <motion.div 
+              variants={fadeUp}
+              className="md:col-span-2 bg-brand-orange border-b-8 border-brand-navy/30 rounded-[40px] p-10 flex flex-col md:flex-row items-center gap-10 group overflow-hidden relative"
+            >
+               <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                  <TrendingUp className="w-10 h-10 text-white" />
+               </div>
+               <div className="flex-1 text-center md:text-left">
+                 <h3 className="font-display text-3xl font-black text-white uppercase tracking-tighter mb-1">The Luxury Multiplier</h3>
+                 <p className="font-primary text-brand-navy/80 text-lg font-bold">
+                   Sustainability certification drives <span className="text-white italic underline">+300% export increases</span> for luxury brands.
+                 </p>
+               </div>
+            </motion.div>
+
+          </div>
         </div>
-
       </motion.div>
     </div>
   );

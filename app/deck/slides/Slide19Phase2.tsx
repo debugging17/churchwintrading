@@ -1,95 +1,164 @@
 "use client";
-import { useRef } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { Globe } from "lucide-react";
 
-gsap.registerPlugin(useGSAP);
+import { motion } from "framer-motion";
+import { fadeUp, staggerContainer } from "../motion/variants";
+import { useSlideEnter } from "../motion/useSlideEnter";
+import { ShieldCheck, Cpu, Mail, Users, Target, Package } from "lucide-react";
+import Image from "next/image";
 
-export function Slide19Phase2({ isActive }: { isActive: boolean }) {
-  const container = useRef<HTMLDivElement>(null);
+export function Slide19Phase2({ isActive: _isActive }: { isActive: boolean }) {
+  const animState = useSlideEnter(100);
 
-  useGSAP(() => {
-    if (!isActive) return;
+  const subInitiatives = [
+    {
+      title: "Compliance Vault",
+      desc: "International Compliance Vault live (self-service B2B portal).",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Buffer Stock Hub",
+      desc: "First international buffer stock hub established.",
+      icon: Package,
+    },
+    {
+      title: "Digital Automation",
+      desc: "Automated sample request + MCQ calculator deployed.",
+      icon: Cpu,
+    },
+    {
+      title: "B2B Pipeline",
+      desc: "Newsletter reaches 1,000+ subscribers; first automated contracts closing.",
+      icon: Mail,
+    },
+  ];
 
-    const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 0.8 } });
+  const metrics = [
+    {
+      label: "Demand Captured",
+      value: "1,000+",
+      sub: "Industry subscribers.",
+      icon: Users,
+    },
+    {
+      label: "Revenue Anchor",
+      value: "10–20",
+      sub: "New bulk manufacturing clients by Month 6.",
+      icon: Target,
+    },
+  ];
 
-    // Header Animation
-    tl.from(".phase-marker", { x: -30, opacity: 0, duration: 0.6 })
-      .from(".phase-title", { y: 20, opacity: 0, stagger: 0.2 }, "-=0.2")
-      .from(".main-card", { scale: 0.98, opacity: 0, y: 30 }, "-=0.4")
-      .from(".list-item", { 
-        x: -20, 
-        opacity: 0, 
-        stagger: 0.15,
-        ease: "power2.out"
-      }, "-=0.3")
-      .from(".metrics-card", { 
-        y: 40, 
-        opacity: 0, 
-        stagger: 0.2,
-        ease: "back.out(1.7)"
-      }, "-=0.5")
-      .from(".globe-icon", {
-        scale: 0.5,
-        rotation: -45,
-        opacity: 0,
-        duration: 2,
-        ease: "elastic.out(1, 0.5)"
-      }, "-=1.5");
-
-  }, { dependencies: [isActive], scope: container });
+  const kpis = [
+    {
+      label: "Digital Processing",
+      value: "50",
+      sub: "Qualified B2B sample requests in Month 2.",
+      icon: Cpu,
+    }
+  ];
 
   return (
-    <div ref={container} className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
-      <div className="w-full max-w-7xl mx-auto my-auto flex flex-col md:flex-row gap-12">
-        
-        {/* Phase Header */}
-        <div className="w-full md:w-[35%] border-l-[6px] border-brand-orange pl-6 py-2 h-max phase-marker">
-           <h4 className="text-sm font-display tracking-widest text-[#ff8022] uppercase mb-2 font-bold">Months 6–12</h4>
-           <h2 className="font-display text-4xl md:text-5xl font-black text-white leading-none tracking-tighter uppercase phase-title">
-             Phase 2:<br /><span className="text-brand-orange italic">Infrastructure<br/>& Digital</span>
-           </h2>
-        </div>
-
-        {/* Phase Content */}
-        <div className="w-full md:w-[65%] flex flex-col gap-8">
-           
-           <div className="main-card bg-brand-navy text-white rounded-[40px] p-10 shadow-2xl relative overflow-hidden border-b-8 border-brand-orange">
-             <div className="absolute top-0 right-0 p-8 opacity-60 globe-icon">
-                <Globe className="w-24 h-24 text-brand-orange" />
-             </div>
-             <h3 className="text-white font-display text-2xl font-black mb-8 uppercase tracking-tight">Sub-Initiatives</h3>
-             <ul className="space-y-4">
-                {[
-                  "International Compliance Vault live (self-service B2B portal).",
-                  "Automated sample requests and MOQ calculator integration.",
-                  "Scale-up of B2B newsletter targeting 1,000+ industry decision makers."
-                ].map((item, i) => (
-                  <li key={i} className="list-item flex items-start gap-4 border-b border-white/10 pb-4">
-                     <span className="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0 shadow-[0_0_10px_rgba(244,121,32,0.5)]" />
-                     <span className="font-primary text-white/80 font-medium text-sm">{item}</span>
-                  </li>
-                ))}
-             </ul>
-           </div>
-
-           <div className="metrics-card bg-brand-orange/5 border border-brand-orange/20 rounded-[40px] p-10 relative overflow-hidden group shadow-sm flex items-center justify-between">
-             <div className="flex flex-col">
-                <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-2 font-bold">Demand Captured</p>
-                <p className="text-4xl md:text-5xl font-display font-black text-white tracking-tighter">1,000+</p>
-                <p className="text-sm font-primary text-white/60">Industry subscribers.</p>
-             </div>
-             <div className="w-[1px] h-16 bg-brand-navy/10" />
-             <div className="flex flex-col text-right">
-                <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest mb-2 font-bold">Revenue Anchor</p>
-                <p className="text-4xl md:text-5xl font-display font-black text-white tracking-tighter">10–20</p>
-                <p className="text-sm font-primary text-white/60">New bulk manufacturing clients.</p>
-             </div>
-           </div>
-
-        </div>
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
+      {/* Background Image with Cinematic Overlay */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.3 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="w-full h-full relative"
+        >
+          <Image
+            src="/images/visual_supremacy/compliance_lab.png"
+            alt="Infrastructure Lab"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy/60 to-brand-navy" />
+          <div className="absolute inset-0 bg-brand-navy/60 mix-blend-multiply" />
+        </motion.div>
       </div>
+
+      <motion.div
+        initial="hidden"
+        animate={animState}
+        variants={staggerContainer}
+        className="w-full max-w-7xl mx-auto my-auto z-10"
+      >
+        <div className="flex flex-col md:flex-row gap-12 lg:gap-20">
+          
+          {/* Phase Header */}
+          <motion.div variants={fadeUp} className="w-full md:w-[35%]">
+            <div className="border-l-[6px] border-brand-orange pl-8 py-2">
+              <h4 className="text-sm font-display tracking-[0.3em] text-brand-orange uppercase mb-4 font-bold">Months 6–12</h4>
+              <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase">
+                Phase 2:<br />
+                <span className="text-brand-orange italic">Infrastructure<br/>& Digital</span>
+              </h2>
+            </div>
+          </motion.div>
+
+          {/* Phase Content */}
+          <div className="w-full md:w-[65%] flex flex-col gap-10">
+            
+            {/* Sub-Initiatives Card */}
+            <motion.div 
+              variants={fadeUp}
+              className="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-[40px] p-10 shadow-2xl relative overflow-hidden group"
+            >
+               <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
+                  <Package className="w-32 h-32 text-brand-orange" />
+               </div>
+               
+               <h3 className="text-white font-display text-2xl font-black mb-10 uppercase tracking-widest flex items-center gap-4">
+                 <span className="w-10 h-px bg-brand-orange/30" />
+                 Sub-Initiatives
+               </h3>
+               
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                 {subInitiatives.map((item, i) => (
+                   <div key={i} className="flex items-start gap-4 group/item">
+                      <div className="w-10 h-10 rounded-xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center shrink-0 group-hover/item:bg-brand-orange/20 transition-colors">
+                        <item.icon className="w-5 h-5 text-brand-orange" />
+                      </div>
+                      <div className="flex flex-col w-full">
+                        <h4 className="font-display text-white text-lg font-bold mb-1 uppercase tracking-tight">{item.title}</h4>
+                        <p className="font-primary text-white/50 text-xs leading-relaxed">{item.desc}</p>
+                      </div>
+                   </div>
+                 ))}
+               </div>
+            </motion.div>
+
+            {/* Strategic Metrics Card */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[...metrics, ...kpis].map((metric, i) => (
+                <motion.div 
+                  key={i}
+                  variants={fadeUp}
+                  className="bg-brand-navy-light/20 backdrop-blur-xl border border-white/5 rounded-[32px] p-8 relative overflow-hidden group hover:border-brand-orange/30 transition-colors"
+                >
+                  <div className="flex flex-col relative z-20">
+                    <p className="text-brand-orange text-[9px] font-black uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                       <metric.icon className="w-3 h-3" />
+                       {metric.label}
+                    </p>
+                    <p className="text-4xl md:text-5xl font-display font-black text-white tracking-tighter mb-1">
+                      {metric.value}
+                    </p>
+                    <p className="text-[10px] font-primary text-white/40 uppercase tracking-widest leading-tight">{metric.sub}</p>
+                  </div>
+                  
+                  {/* Subtle Background Accent */}
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-orange/5 blur-3xl rounded-full" />
+                </motion.div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }
+
+
