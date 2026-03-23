@@ -39,11 +39,11 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
   }, { dependencies: [isActive], scope: container });
 
   return (
-    <div ref={container} className="w-full h-full flex flex-col pt-[calc(3rem+var(--header-height,0px))] md:pt-[calc(4rem+var(--header-height,0px))] pb-[var(--footer-height)] px-8 md:px-20 bg-brand-cream relative overflow-hidden">
+    <div ref={container} className="w-full h-full flex flex-col pt-[calc(var(--header-height,0px)+2rem)] pb-[calc(var(--footer-height)+2rem)] px-8 md:px-20 bg-brand-cream relative overflow-hidden">
       {/* Background Accent */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#012787 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#012787 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }} />
       
-      <div className="w-full max-w-7xl mx-auto my-auto flex flex-col gap-8 z-10">
+      <div className="w-full max-w-[95rem] mx-auto my-auto flex flex-col gap-6 md:gap-10 z-10">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row items-end justify-between gap-4">
@@ -72,7 +72,7 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
         </div>
 
         {/* Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
            <div className="lg:col-span-8 stack-container">
               <DigitalStackGrid 
                 isActive={isActive} 

@@ -48,9 +48,9 @@ export function Slide03MacroMoment({ isActive: _isActive }: { isActive: boolean 
         initial="hidden"
         animate={animState}
         variants={staggerContainer}
-        className="w-full max-w-[95rem] flex flex-col items-start z-10 my-auto"
+        className="w-full max-w-[98rem] flex flex-col items-start z-10 my-auto"
       >
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center h-full flex-grow">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-center h-full flex-grow">
           {/* Left Column: Text & Context */}
           <motion.div variants={fadeUp} className="text-left lg:col-span-4 xl:col-span-5 flex flex-col justify-center gap-4 h-full">
             <motion.h2
