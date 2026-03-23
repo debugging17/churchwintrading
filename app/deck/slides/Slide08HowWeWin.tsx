@@ -9,9 +9,9 @@ export function Slide08HowWeWin({ isActive: _isActive }: { isActive: boolean }) 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden bg-brand-navy px-10 md:px-20">
       {/* Background with focal point on central bottleneck */}
-      <div className="absolute inset-0 z-0 opacity-40">
+      <div className="absolute inset-0 z-0 opacity-15">
          <Image src="/images/visual_supremacy/shea_factory.png" alt="Operational Capacity" fill className="object-cover grayscale" />
-         <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-brand-navy/50 to-brand-navy" />
+         <div className="absolute inset-0 bg-gradient-to-b from-brand-navy via-transparent to-brand-navy" />
       </div>
 
       <motion.div 
