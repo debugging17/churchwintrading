@@ -30,8 +30,9 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
         className="w-full max-w-[95rem] mx-auto my-auto flex flex-col z-10"
       >
         {/* Title Area — Shifted Upwards & Left Aligned */}
-            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black text-brand-white leading-tight tracking-tighter whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
-                Moving from the constraint of manual heroics to the scale of <span className="text-brand-orange italic">Physical Trust Infrastructure.</span>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-brand-white leading-tight tracking-[0.05em] uppercase whitespace-nowrap overflow-hidden text-ellipsis max-w-full drop-shadow-[0_0_30px_rgba(255,255,255,0.1)] py-4">
+                Moving from the constraint of manual heroics <br className="hidden" />
+                <span className="text-brand-orange italic drop-shadow-[0_0_20px_rgba(255,106,0,0.3)]">to the scale of Physical Trust Infrastructure.</span>
             </h2>
 
          {/* Comparison Grid — Principle 8: Storytelling (Height Locked & Shifted Left) */}
@@ -142,11 +143,6 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
          </div>
 
          {/* Insight Bar — Principle 7: Purpose (Spacing Refinement to Fit in Frame) */}
-         <motion.div variants={fadeUp} className="bg-brand-orange/5 p-6 md:p-8 rounded-3xl border-l-[10px] border-brand-orange shadow-2xl backdrop-blur-md mb-6">
-            <p className="text-brand-white/90 font-display font-medium text-lg md:text-2xl leading-tight tracking-tight">
-               Africa lacks structured demand. <span className="text-brand-orange italic font-black">This is the failure point of scale.</span>
-            </p>
-         </motion.div>
 
          {/* Footer Strategy — Principle 11: Language (Shifted Right to avoid overlap) */}
          <motion.div variants={fadeUp} className="flex flex-col md:flex-row items-center justify-between border-t border-white/10 pt-6 gap-4 opacity-40 ml-0 md:ml-32">
