@@ -54,7 +54,7 @@ export function Slide20Phase3({ isActive: _isActive }: { isActive: boolean }) {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-20 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
+    <div className="w-full h-full flex flex-col py-6 md:py-10 px-8 md:px-24 lg:px-32 xl:px-44 bg-brand-navy pb-[calc(var(--footer-height)+2rem)] pt-[calc(4rem+var(--header-height,0px))] md:pt-[calc(5rem+var(--header-height,0px))] overflow-y-auto relative">
       {/* Background Image with Cinematic Overlay */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -81,13 +81,13 @@ export function Slide20Phase3({ isActive: _isActive }: { isActive: boolean }) {
         variants={staggerContainer}
         className="w-full max-w-7xl mx-auto my-auto z-10"
       >
-        <div className="flex flex-col md:flex-row gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
           
           {/* Phase Header */}
-          <motion.div variants={fadeUp} className="w-full md:w-[45%]">
+          <motion.div variants={fadeUp} className="w-full lg:col-span-4">
             <div className="border-l-[6px] border-brand-orange pl-8 py-2">
               <h4 className="text-sm font-display tracking-[0.3em] text-brand-orange uppercase mb-4 font-bold">Months 12–18</h4>
-              <h2 className="font-display text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-black text-white leading-[0.9] tracking-tighter uppercase relative">
                 Phase 3:<br />
                 <span className="text-brand-orange italic whitespace-nowrap">Institutional</span><br/>
                 <span className="text-brand-orange italic">Dominance</span>
@@ -96,7 +96,7 @@ export function Slide20Phase3({ isActive: _isActive }: { isActive: boolean }) {
           </motion.div>
 
           {/* Phase Content */}
-          <div className="w-full md:w-[55%] flex flex-col gap-10">
+          <div className="w-full lg:col-span-8 flex flex-col gap-10">
             
             {/* Sub-Initiatives Card */}
             <motion.div 
