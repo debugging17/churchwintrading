@@ -111,13 +111,13 @@ export function Slide02Crossroads({ isActive }: { isActive: boolean }) {
               <div className="absolute top-1/2 -left-8 w-16 h-[2px] bg-gradient-to-r from-transparent via-brand-orange/40 to-brand-orange/60 blur-[1px] hidden xl:block" />
               <div className="space-y-3">
                  <p className="text-[0.75rem] font-display font-black tracking-[0.5em] text-brand-orange uppercase text-center">Visualizing the Gap</p>
-                 <h3 className="text-3xl lg:text-5xl font-display font-black text-white leading-tight text-center tracking-tight">Where value vanishes.</h3>
+                 <h3 className="text-3xl lg:text-5xl font-display font-black text-white leading-tight text-center tracking-tight">Bridging the Value Gap.</h3>
               </div>
               <div className="py-2">
                 <ValueGapChart />
               </div>
               <p className="text-[0.875rem] text-brand-white/40 font-primary leading-relaxed opacity-60 text-center max-w-[24rem] mx-auto">
-                 The current model forces Africa to export raw potential, only to buy back the finished value at a 10x premium.
+                 Churchwin eliminates the &apos;Commodity Trap&apos; by integrating origin-level production with professional packaging and refining—transforming raw potential into premium global assets before export.
               </p>
             </div>
           </div>
