@@ -4,7 +4,8 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
 
-gsap.registerPlugin(useGSAP);
+
+
 
 export function Slide17Roadmap({ isActive }: { isActive: boolean }) {
   const container = useRef<HTMLDivElement>(null);

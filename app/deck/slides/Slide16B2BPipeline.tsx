@@ -6,7 +6,8 @@ import { Target } from "lucide-react";
 import { UnifiedVideoModal } from "../components/UnifiedVideoModal";
 import { DigitalStackGrid } from "../components/DigitalStackGrid";
 
-gsap.registerPlugin(useGSAP);
+
+
 
 export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
   const container = useRef<HTMLDivElement>(null);

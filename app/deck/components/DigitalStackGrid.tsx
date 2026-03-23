@@ -12,7 +12,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-gsap.registerPlugin(useGSAP);
+
+
 
 // --- HELPERS ---
 
@@ -213,6 +214,7 @@ const MailchimpCard = () => {
     </BrowserWindow>
   );
 };
+
 
 // --- LINKEDIN CARD ---
 

@@ -5,7 +5,8 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { ValueGapChart } from "../components/ValueGapChart";
 
-gsap.registerPlugin(useGSAP);
+
+
 
 export function Slide02Crossroads({ isActive }: { isActive: boolean }) {
   const container = useRef<HTMLDivElement>(null);

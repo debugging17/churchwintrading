@@ -6,7 +6,8 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { DeckVideo } from "../components/DeckVideo";
 
-gsap.registerPlugin(useGSAP);
+
+
 
 export function Slide01Cover({ isActive }: { isActive: boolean }) {
   const container = useRef<HTMLDivElement>(null);

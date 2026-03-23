@@ -4,7 +4,8 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ShieldCheck, Truck, BarChart3, Users } from "lucide-react";
 
-gsap.registerPlugin(useGSAP);
+
+
 
 export function Slide11InstitutionalReadiness({ isActive }: { isActive: boolean }) {
   const container = useRef<HTMLDivElement>(null);
