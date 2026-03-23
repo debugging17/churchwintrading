@@ -259,31 +259,31 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
   }, { dependencies: [isActive], scope: container });
 
   return (
-    <div ref={container} className="grid grid-cols-2 gap-4 w-full h-full min-h-[320px]">
-      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative">
+    <div ref={container} className="grid grid-cols-2 gap-6 w-full h-full">
+      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative aspect-[4/3]">
         <ApolloCard />
-        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
+        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl z-20">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Apollo.io</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">Sourcing 500+ ICP-matched prospects based on botanical demand signals.</p>
         </div>
       </div>
-      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative">
+      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative aspect-[4/3]">
         <InstantlyCard />
-        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
+        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl z-20">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Instantly.ai</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">High-deliverability 4-touch sequences maintaining 60%+ open rates.</p>
         </div>
       </div>
-      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative">
+      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative aspect-[4/3]">
         <MailchimpCard />
-        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
+        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl z-20">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">Mailchimp</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">Monthly 'Churchwin Origins' content educating buyers on supply stability.</p>
         </div>
       </div>
-      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative">
+      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-transform relative aspect-[4/3]">
         <LinkedInCard />
-        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl">
+        <div className="absolute inset-0 bg-brand-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-6 text-white rounded-xl z-20">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-widest mb-2">LinkedIn Sales Nav</p>
           <p className="text-xs font-primary leading-relaxed opacity-90">Strategic connection with R&D and Procurement leads in EU/US markets.</p>
         </div>

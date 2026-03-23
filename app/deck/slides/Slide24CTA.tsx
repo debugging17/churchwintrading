@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeUp, slideFromLeft, staggerContainer } from "../motion/variants";
+import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { CTAButton } from "../components/CTAButton";
 import { Banknote, Users, Lightbulb, ArrowRight } from "lucide-react";

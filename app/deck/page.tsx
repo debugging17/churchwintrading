@@ -14,14 +14,13 @@ import { SectorModal } from "./components/SectorModal";
 
 // Slides
 import { Slide01Cover } from "./slides/Slide01Cover";
-import { Slide01BOverview } from "./slides/Slide01BOverview";
 import { Slide02Crossroads } from "./slides/Slide02Crossroads";
 import { Slide03MacroMoment } from "./slides/Slide03MacroMoment";
 import { Slide04MissingMiddle } from "./slides/Slide04MissingMiddle";
 import { Slide05WhereWePlay } from "./slides/Slide05WhereWePlay";
 import { Slide06Segmentation } from "./slides/Slide06Segmentation";
 import { Slide07VPCSegments } from "./slides/Slide07VPCSegments";
-import { Slide08Insight } from "./slides/Slide08Insight";
+import { Slide08HowWeWin } from "./slides/Slide08HowWeWin";
 import { Slide09ValuePropDesirability } from "./slides/Slide09ValuePropDesirability";
 import { Slide10ValuePropViability } from "./slides/Slide10ValuePropViability";
 import { Slide11InstitutionalReadiness } from "./slides/Slide11InstitutionalReadiness";
@@ -46,7 +45,7 @@ function DeckContent() {
   const [selectedSector, setSelectedSector] = useState<number | null>(null);
   const searchParams = useSearchParams();
   const isPrintMode = searchParams.get("mode") === "print";
-  const totalSlides = 25;
+  const totalSlides = 24;
 
   useEffect(() => {
     setMounted(true);
@@ -72,9 +71,9 @@ function DeckContent() {
 
   if (isPrintMode) {
     const slides = [
-      Slide01Cover, Slide01BOverview, Slide02Crossroads, Slide03MacroMoment, 
+      Slide01Cover, Slide02Crossroads, Slide03MacroMoment, 
       Slide04MissingMiddle, Slide05WhereWePlay, Slide06Segmentation, 
-      Slide07VPCSegments, Slide08Insight, Slide09ValuePropDesirability, 
+      Slide07VPCSegments, Slide08HowWeWin, Slide09ValuePropDesirability, 
       Slide10ValuePropViability, Slide11InstitutionalReadiness, 
       Slide12ABulkGallery, Slide13CompetitiveReality, Slide14WhoOwnsSpace, 
       Slide15DigitalVisibilityGap, Slide16B2BPipeline, Slide17Roadmap, 
@@ -112,14 +111,13 @@ function DeckContent() {
         <FooterStack total={totalSlides} />
         
         <SwiperSlide>{({ isActive }) => <Slide01Cover isActive={isActive} />}</SwiperSlide>
-        <SwiperSlide>{({ isActive }) => <Slide01BOverview isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide02Crossroads isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide03MacroMoment isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide04MissingMiddle isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide05WhereWePlay isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide06Segmentation onSectorClick={handleSectorClick} isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide07VPCSegments isActive={isActive} />}</SwiperSlide>
-        <SwiperSlide>{({ isActive }) => <Slide08Insight isActive={isActive} />}</SwiperSlide>
+        <SwiperSlide>{({ isActive }) => <Slide08HowWeWin isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide09ValuePropDesirability isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide10ValuePropViability isActive={isActive} />}</SwiperSlide>
         <SwiperSlide>{({ isActive }) => <Slide11InstitutionalReadiness isActive={isActive} />}</SwiperSlide>
