@@ -13,8 +13,8 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            // Strict CSP: Includes vercel.live for deployment previews/analytics
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https:; font-src 'self' data:; connect-src 'self' https:;",
+            // Strict CSP: Includes vercel.live and Vercel Analytics for deployment previews/insights
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https:; font-src 'self' data:; connect-src 'self' https: *.vercel-insights.com;",
           },
           {
             key: 'X-Frame-Options',
@@ -31,6 +31,10 @@ const nextConfig = {
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=31536000; includeSubDomains; preload',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
           }
         ],
       },
