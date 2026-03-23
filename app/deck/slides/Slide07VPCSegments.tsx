@@ -55,7 +55,9 @@ export function Slide07VPCSegments({ isActive: _isActive }: { isActive: boolean 
                   <ShoppingBag className="w-7 h-7 text-brand-orange" />
                 </div>
                 <h3 className="font-display text-3xl font-black text-white mb-2 tracking-tight">The Premium Retailer</h3>
-                <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-4 italic text-white/80">Sephora, Credo, Oh My Cream!</p>
+                <div className="inline-block bg-brand-navy/80 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 mb-6">
+                  <p className="text-brand-orange text-[10px] font-black uppercase tracking-[0.2em] italic">Sephora, Credo, Oh My Cream!</p>
+                </div>
               </div>
 
               <div className="space-y-4">
@@ -107,7 +109,9 @@ export function Slide07VPCSegments({ isActive: _isActive }: { isActive: boolean 
                   <Boxes className="w-7 h-7 text-brand-orange" />
                 </div>
                 <h3 className="font-display text-3xl font-black text-white mb-2 tracking-tight">The Global Wholesaler</h3>
-                <p className="text-brand-orange text-xs font-black uppercase tracking-widest mb-4 italic text-white/80">Ingredients Distributors, B2B Brokers</p>
+                <div className="inline-block bg-brand-navy/80 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 mb-6">
+                  <p className="text-brand-orange text-[10px] font-black uppercase tracking-[0.2em] italic">Ingredients Distributors, B2B Brokers</p>
+                </div>
               </div>
 
               <div className="space-y-4">
