@@ -30,12 +30,9 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
         className="w-full max-w-[95rem] mx-auto my-auto flex flex-col z-10"
       >
         {/* Title Area — Shifted Upwards & Left Aligned */}
-        <motion.div variants={fadeUp} className="mb-4 md:mb-6 text-left">
-            <h2 className="text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-brand-white leading-[1.1] tracking-tighter whitespace-normal max-w-5xl">
-                Moving from the constraint of manual heroics <br className="hidden lg:block" />
-                <span className="text-brand-orange italic">to the scale of Physical Trust Infrastructure.</span>
+            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black text-brand-white leading-tight tracking-tighter whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
+                Moving from the constraint of manual heroics to the scale of <span className="text-brand-orange italic">Physical Trust Infrastructure.</span>
             </h2>
-         </motion.div>
 
          {/* Comparison Grid — Principle 8: Storytelling (Height Locked & Shifted Left) */}
          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 w-full mb-6 relative">
@@ -51,7 +48,7 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
                   transition: { type: "spring", stiffness: 60, damping: 20, delay: 0.2 }
                 }
               }}
-              className="group relative h-[60vh] md:h-[65vh] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-brand-navy"
+              className="group relative h-[50vh] md:h-[55vh] lg:h-[60vh] rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl bg-brand-navy"
             >
                <Image 
                  src="/images/IMG_0471-min-min-scaled.jpg" 
@@ -113,7 +110,7 @@ export function Slide04MissingMiddle({ isActive: _isActive }: { isActive: boolea
                   transition: { type: "spring", stiffness: 60, damping: 20, delay: 0.4 }
                 }
               }}
-              className="group relative h-[60vh] md:h-[65vh] rounded-[3rem] overflow-hidden border border-brand-orange/20 shadow-[0_0_80px_rgba(255,106,0,0.1)] bg-brand-navy"
+              className="group relative h-[50vh] md:h-[55vh] lg:h-[60vh] rounded-[3rem] overflow-hidden border border-brand-orange/20 shadow-[0_0_80px_rgba(255,106,0,0.1)] bg-brand-navy"
             >
                <Image 
                  src="/images/HlLNHFp92mBs48AlJPbjnCfJs.jpg" 
