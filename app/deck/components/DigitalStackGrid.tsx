@@ -269,7 +269,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
   return (
     <div ref={container} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 w-full h-full">
       {/* Apollo */}
-      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-[2/1]">
+      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[220px] flex flex-col">
         <ApolloCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Apollo.io</p>
@@ -278,7 +278,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       </div>
       
       {/* Instantly */}
-      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-[2/1]">
+      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[220px] flex flex-col">
         <InstantlyCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Instantly.ai</p>
@@ -287,7 +287,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       </div>
 
       {/* Mailchimp */}
-      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-[2/1]">
+      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[220px] flex flex-col">
         <MailchimpCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Churchwin Network</p>
@@ -296,7 +296,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       </div>
 
       {/* LinkedIn */}
-      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative aspect-[2/1]">
+      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[220px] flex flex-col">
         <LinkedInCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Sales Navigator</p>

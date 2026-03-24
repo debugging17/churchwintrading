@@ -43,7 +43,7 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
       {/* Background Accent */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#012787 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }} />
       
-      <div className="w-full max-w-[95rem] mx-auto my-auto flex flex-col gap-4 md:gap-6 z-10">
+      <div className="w-full max-w-[95rem] mx-auto flex-1 flex flex-col gap-4 md:gap-6 z-10">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row items-end justify-between gap-4">
@@ -71,7 +71,7 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
         </div>
 
         {/* Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 md:gap-7 items-start mt-0">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 md:gap-7 items-stretch flex-1 mt-0">
            <div className="lg:col-span-8 stack-container">
               <DigitalStackGrid 
                 isActive={isActive} 
