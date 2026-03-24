@@ -22,7 +22,7 @@ export const sectors = [
         market: "Premium Skincare Brands", 
         solution: "High-purity Grade A Shea Butter with clinical-grade traceability.",
         details: "Eliminating the 'impurities bottleneck' in luxury serum production through our proprietary 3-stage filtration process.",
-        image: "/images/visual_supremacy/shea_orchard.png" 
+        image: "/images/serum.png" 
       },
       { 
         title: "Regenerative Hair Care", 
