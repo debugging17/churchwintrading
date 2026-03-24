@@ -114,7 +114,7 @@ export const sectors = [
         market: "Large Scale CPG", 
         solution: "Micro-nutrient dense Moringa fortification for mass-market availability.",
         details: "Implementing cost-effective nutrition fortification that meets WHO benchmarks for school-feeding programs and mass-market retail.",
-        image: "/images/visual_supremacy/industrial_wholesaler.png" 
+        image: "/images/cereal.png" 
       }
     ]
   },
