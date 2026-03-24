@@ -185,7 +185,7 @@ export const sectors = [
         market: "Wellness Resorts", 
         solution: "Gallon-size cold-pressed Shea and Neem oils for therapeutic use.",
         details: "Eliminating paraffin-base fillers from spa rotations with 100% active, medical-grade African botanicals.",
-        image: "/images/visual_supremacy/spa_oil_ritual.png" 
+        image: "/images/mansory/8NONlPs-Ack6oO4nyCgOxL.png" 
       },
       { 
         title: "In-Room Rituals", 
