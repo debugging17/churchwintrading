@@ -68,7 +68,7 @@ export function Slide24CTA({ isActive: _isActive }: { isActive: boolean }) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/30 to-transparent" />
               
-              <div className="absolute inset-0 p-10 flex flex-col justify-end text-left">
+              <div className="absolute inset-0 p-10 flex flex-col justify-end items-center text-center">
                 <div className="w-12 h-12 bg-brand-orange/20 backdrop-blur-xl border border-brand-orange/40 rounded-2xl flex items-center justify-center mb-6">
                   <res.icon className="text-brand-orange w-6 h-6" />
                 </div>
