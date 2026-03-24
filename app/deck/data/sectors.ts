@@ -192,7 +192,7 @@ export const sectors = [
         market: "High-end Lodges", 
         solution: "Curated 'Origin Stories' kits with application rituals for guest engagement.",
         details: "Increasing spa retail revenue by up to 22% through integrated 'Experience-to-Retail' product kits.",
-        image: "/images/visual_supremacy/shea_orchard.png" 
+        image: "/images/spa.png" 
       }
     ]
   },
