@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
-import { TrendingUp, ArrowRight, Package, ShieldCheck } from "lucide-react";
+import { ArrowRight, Package, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { ResponsiveContainer, BarChart, Bar, Cell } from "recharts";
 
@@ -97,9 +97,7 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
               variants={fadeUp} 
               className="w-full lg:w-1/2 bg-brand-navy-light/60 backdrop-blur-xl border border-white/10 rounded-[48px] p-10 md:p-14 lg:p-16 relative overflow-hidden h-full min-h-[480px] flex flex-col justify-center"
             >
-              <div className="absolute -bottom-16 -right-16 p-10 opacity-10 mix-blend-screen pointer-events-none z-0">
-                <TrendingUp className="w-64 h-64 text-brand-orange filter blur-[2px]" />
-              </div>
+              {/* Removed distracting background arrow to preserve data legibility */}
 
               <div className="relative z-10">
                 <h3 className="text-brand-orange text-[11px] font-black uppercase tracking-[0.4em] mb-8">Unit Economic Transformation</h3>
