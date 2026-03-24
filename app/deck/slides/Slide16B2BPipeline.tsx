@@ -39,7 +39,7 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
   }, { dependencies: [isActive], scope: container });
 
   return (
-    <div ref={container} className="w-full h-full flex flex-col pt-[calc(var(--header-height,0px)+1rem)] pb-[calc(var(--footer-height)+1rem)] px-8 md:px-20 bg-brand-cream relative">
+    <div ref={container} className="w-full h-full flex flex-col pt-[calc(var(--header-height,0px)+1rem)] pb-[calc(var(--footer-height)+1rem)] px-8 md:px-20 bg-brand-cream relative overflow-y-auto">
       {/* Background Accent */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#012787 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }} />
       

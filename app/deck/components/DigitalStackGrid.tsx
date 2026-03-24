@@ -267,7 +267,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
   }, { dependencies: [isActive], scope: container });
 
   return (
-    <div ref={container} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 w-full h-full">
+    <div ref={container} className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-4 md:gap-5 w-full h-full min-h-[500px]">
       {/* Apollo */}
       <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[220px] flex flex-col">
         <ApolloCard />
