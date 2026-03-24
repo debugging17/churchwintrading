@@ -36,7 +36,6 @@ export function Slide02Crossroads({ isActive }: { isActive: boolean }) {
         scale: 0.9, 
         opacity: 0, 
         duration: 1.5,
-        filter: "blur(20px)",
         ease: "power2.out"
       }, "-=1.5");
 
