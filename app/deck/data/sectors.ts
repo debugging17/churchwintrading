@@ -36,7 +36,7 @@ export const sectors = [
         market: "Spa Product Lines", 
         solution: "Cold-pressed Baobab oils for rapid absorption and moisture retention.",
         details: "Optimizing absorption rates through molecular-level refining that retains Vitamin E without the greasy residue typical of unrefined oils.",
-        image: "/images/visual_supremacy/cosmetic_rd_lab.png" 
+        image: "/images/mansory/luxuryoil.png" 
       }
     ]
   },
