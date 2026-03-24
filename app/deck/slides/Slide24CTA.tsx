@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "../motion/variants";
 import { useSlideEnter } from "../motion/useSlideEnter";
 import { CTAButton } from "../components/CTAButton";
-import { Banknote, Users, Lightbulb, ArrowRight } from "lucide-react";
+import { ArrowRight, Rocket, Zap, ShieldAlert } from "lucide-react";
 import Image from "next/image";
 
 export function Slide24CTA({ isActive: _isActive }: { isActive: boolean }) {
@@ -13,23 +13,23 @@ export function Slide24CTA({ isActive: _isActive }: { isActive: boolean }) {
   const resolutions = [
     { 
       id: "01",
-      title: "Authorize Growth Fund", 
-      desc: "Execute $150K allocation for digital infrastructure and EU logistics.",
-      icon: Banknote,
+      title: "Authorize The Pivot", 
+      desc: "Formally transition commercial strategy from bulk origin supplier to value-driven EU platform partner.",
+      icon: Rocket,
       image: "/images/visual_supremacy/budget_action.png"
     },
     { 
       id: "02",
-      title: "Activate Networks", 
-      desc: "Warm introductions to Tier-1 global procurement partners.",
-      icon: Users,
+      title: "Deploy Demand Engine", 
+      desc: "Greenlight immediate integration of the B2B digital outreach infrastructure for Q3 revenue capture.",
+      icon: Zap,
       image: "/images/visual_supremacy/networking_rolodex.png"
     },
     { 
       id: "03",
-      title: "Mandate Certification", 
-      desc: "Formally appoint steering committee for COSMOS/NATRUE.",
-      icon: Lightbulb,
+      title: "Fast-Track Compliance", 
+      desc: "Approve expedited COSMOS/NATRUE certification roadmap to immediately unlock Tier-1 luxury margins.",
+      icon: ShieldAlert,
       image: "/images/visual_supremacy/steering_committee.png"
     }
   ];
@@ -96,7 +96,7 @@ export function Slide24CTA({ isActive: _isActive }: { isActive: boolean }) {
 
         <motion.div variants={fadeUp} className="flex flex-col items-center gap-8 w-full max-w-lg">
           <CTAButton href="mailto:contact@churchwintrading.com">
-            Approve B2B Transformation Budget
+            Execute Strategic Mandate
           </CTAButton>
           <div className="flex items-center gap-4 text-white/40">
             <div className="w-12 h-px bg-white/10" />
