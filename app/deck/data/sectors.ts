@@ -100,7 +100,7 @@ export const sectors = [
         market: "Functional Beverage Brands", 
         solution: "100% soluble Hibiscus and Baobab concentrates for clean labels.",
         details: "Removing artificial dyes from beverage production by replacing them with high-anthocyanin Hibiscus concentrates that stay stable at low pH.",
-        image: "/images/visual_supremacy/luxury_wellness_juice.png" 
+        image: "/images/drink.png" 
       },
       { 
         title: "Energy Bars", 
