@@ -45,7 +45,7 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
           variants={staggerContainer}
           className="w-full max-w-[90rem] mx-auto flex flex-col justify-start pt-4"
         >
-          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20 py-8">
+          <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20 py-8">
             
             {/* Left: Headline and Strategy */}
             <div className="w-full lg:w-1/2">
@@ -59,7 +59,7 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+              <div className="flex flex-col gap-5">
                 {[
                   { 
                     title: "Stream 1: Bulk Export", 
@@ -75,16 +75,16 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
                   <motion.div 
                     key={i}
                     variants={fadeUp}
-                    className="bg-brand-navy/85 backdrop-blur-xl border border-white/20 rounded-3xl p-8  flex flex-col group overflow-hidden relative shadow-2xl min-h-[480px]"
+                    className="bg-brand-navy/85 backdrop-blur-xl border border-white/20 rounded-3xl p-6 md:p-8 flex flex-col sm:flex-row items-start gap-6 group overflow-hidden relative shadow-xl"
                   >
-                    <div className="w-16 h-16 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center shrink-0 mb-6 group-hover:bg-brand-orange/20 transition-colors">
+                    <div className="w-16 h-16 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center shrink-0 group-hover:bg-brand-orange/20 transition-colors">
                       <stream.icon className="w-8 h-8 text-brand-orange" />
                     </div>
-                    <div>
-                      <h3 className="text-white font-display text-3xl font-black mb-4 uppercase tracking-tight leading-tight">{stream.title}</h3>
-                      <p className="text-white/70 text-lg leading-relaxed font-primary">{stream.desc}</p>
+                    <div className="flex-1">
+                      <h3 className="text-white font-display text-2xl lg:text-3xl font-black mb-2 uppercase tracking-tight leading-tight">{stream.title}</h3>
+                      <p className="text-white/70 text-base lg:text-lg leading-relaxed font-primary">{stream.desc}</p>
                     </div>
-                    <div className="mt-auto pt-6 flex justify-end">
+                    <div className="mt-auto sm:my-auto flex justify-end shrink-0">
                        <ArrowRight className="w-6 h-6 text-white/20 group-hover:text-brand-orange transition-all group-hover:translate-x-1" />
                     </div>
                   </motion.div>
@@ -95,7 +95,7 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
             {/* Right: Unit Economics & Impact */}
             <motion.div 
               variants={fadeUp} 
-              className="w-full lg:w-1/2 bg-brand-navy-light/60 backdrop-blur-xl border border-white/10 rounded-[48px] p-10 md:p-14 lg:p-16 relative overflow-hidden min-h-[480px] flex flex-col justify-center"
+              className="w-full lg:w-1/2 bg-brand-navy-light/60 backdrop-blur-xl border border-white/10 rounded-[48px] p-10 md:p-14 lg:p-16 relative overflow-hidden h-full min-h-[480px] flex flex-col justify-center"
             >
               <div className="absolute top-0 right-0 p-10 opacity-[0.55] mix-blend-screen pointer-events-none">
                 <TrendingUp className="w-56 h-56 text-brand-orange filter blur-[1px] drop-shadow-[0_0_20px_rgba(244,121,32,0.5)]" />
