@@ -20,8 +20,8 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
       {/* 1. Background Layer (Fixed) */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <motion.div
-          initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1.4, opacity: 1 }}
+          initial={{ scale: 1.0, opacity: 0 }}
+          animate={{ scale: 1.05, opacity: 1 }}
           transition={{ duration: 2, ease: "easeOut" }}
           className="w-full h-full relative"
         >
