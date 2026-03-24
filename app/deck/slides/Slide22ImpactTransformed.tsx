@@ -20,7 +20,7 @@ export function Slide22ImpactTransformed({ isActive: _isActive }: { isActive: bo
           className="w-full h-full relative"
         >
           <Image
-            src="/images/visual_supremacy/shea_orchard.png"
+            src="/images/women.png"
             alt="Social Impact"
             fill
             className="object-cover"
