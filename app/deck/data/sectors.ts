@@ -139,7 +139,7 @@ export const sectors = [
         market: "Luxury Tea Houses", 
         solution: "Premium dried Moringa and Lemongrass for metabolic support.",
         details: "Curating leaf-cut consistency to ensure perfect infusion timing and visual appeal in luxury pyramid sachets.",
-        image: "/images/visual_supremacy/solar_drying_tea.png" 
+        image: "/images/detox.png" 
       },
       { 
         title: "Herbal Infusions", 
