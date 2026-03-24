@@ -75,7 +75,7 @@ export const sectors = [
         market: "Contract Manufacturers", 
         solution: "Fine-milled botanical powders optimized for automated encapsulation.",
         details: "Engineered for zero-clog performance in high-speed rotary capsule machines, reducing manufacturing downtime by up to 15%.",
-        image: "/images/visual_supremacy/compliance_lab.png" 
+        image: "/images/pills.png" 
       }
     ]
   },
