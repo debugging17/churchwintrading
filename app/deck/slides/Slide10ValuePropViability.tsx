@@ -26,14 +26,14 @@ export function Slide10ValuePropViability({ isActive: _isActive }: { isActive: b
           className="w-full h-full relative"
         >
           <Image
-            src="/images/visual_supremacy/luxury_wellness_juice.png"
+            src="/images/moringa_powder.png"
             alt="Value Capture"
             fill
-            className="object-cover object-[center_35%]"
+            className="object-cover object-[center_35%] brightness-[0.7] blur-[3px]"
             priority
           />
           {/* Subtle cinematic overlay - keep it clean and focused at the bottom */}
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/30 via-transparent to-brand-navy/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/80 via-brand-navy/40 to-brand-navy/95" />
         </motion.div>
       </div>
 
