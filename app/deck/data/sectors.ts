@@ -107,7 +107,7 @@ export const sectors = [
         market: "Sports Nutrition", 
         solution: "Whole grain inclusions and natural African honey binders.",
         details: "Replacing corn-syrup binders with low-glycemic African honey, providing a natural sustain-release energy profile for endurance athletes.",
-        image: "/images/visual_supremacy/industrial_wholesaler.png" 
+        image: "/images/sportsbar.png" 
       },
       { 
         title: "Fortified Cereals", 
