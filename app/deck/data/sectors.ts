@@ -178,7 +178,7 @@ export const sectors = [
         market: "Boutique Hotels", 
         solution: "Bespoke miniature Black Soap and Shea Butter sets with custom scenting.",
         details: "Helping boutique brands differentiate with 'Zero-Plastic' solid amenities that tell the story of the 11 women-led Ghanaian cooperatives.",
-        image: "/images/visual_supremacy/retail_boutique.png" 
+        image: "/images/guestlist.png" 
       },
       { 
         title: "Professional Massage Oils", 
