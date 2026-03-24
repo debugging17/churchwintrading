@@ -224,7 +224,7 @@ export const sectors = [
         market: "International Distributors", 
         solution: "Authentic West African ingredients with export-grade packaging compliance.",
         details: "Bypassing the 'Export-Failure' risk with standardized packaging that meets EU customs labeling requirements on day one.",
-        image: "/images/visual_supremacy/industrial_wholesaler.png" 
+        image: "/images/ethnic.png" 
       },
       { 
         title: "Health & Beauty Section", 
