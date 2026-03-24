@@ -61,7 +61,7 @@ export const sectors = [
         market: "Wellness Startups", 
         solution: "Bioavailable Moringa powder with standardized vitamin C content.",
         details: "Solving the 'Bioavailability Gap' with micronized grinding that increases absorption rates by 40% compared to traditional dry-milling.",
-        image: "/images/visual_supremacy/compliance_lab.png" 
+        image: "/images/nutriceucal.png" 
       },
       { 
         title: "Superfood Blends", 
