@@ -68,7 +68,7 @@ export const sectors = [
         market: "Health Food Stores", 
         solution: "Direct-sourced Baobab pulp for high fiber and antioxidant density.",
         details: "Delivering a 'Whole-Plant' nutrient profile with 0% fillers—ideal for the growing 'Clean Label' consumer segment.",
-        image: "/images/visual_supremacy/shea_orchard.png" 
+        image: "/images/moringafood.png" 
       },
       { 
         title: "Capsule Formulations", 
