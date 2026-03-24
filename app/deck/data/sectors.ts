@@ -146,7 +146,7 @@ export const sectors = [
         market: "Hospitality Industry", 
         solution: "Single-origin herbal teas with documented ethno-botanical heritage.",
         details: "Providing the 'Origin Narrative' that allows hotels to market premium wellness experiences rather than just tea.",
-        image: "/images/visual_supremacy/shea_orchard.png" 
+        image: "/images/tea.png" 
       },
       { 
         title: "Wellness Sachets", 
