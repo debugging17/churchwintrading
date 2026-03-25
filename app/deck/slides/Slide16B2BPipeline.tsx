@@ -33,7 +33,8 @@ export function Slide16B2BPipeline({ isActive }: { isActive: boolean }) {
         x: 40, 
         opacity: 0, 
         duration: 1,
-        ease: "back.out(1.2)" 
+        ease: "back.out(1.2)",
+        clearProps: "all"
       }, "-=0.4");
 
   }, { dependencies: [isActive], scope: container });

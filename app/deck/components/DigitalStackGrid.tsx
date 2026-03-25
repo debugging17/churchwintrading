@@ -256,20 +256,24 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
   useGSAP(() => {
     if (!isActive) return;
 
+    // Reset items to ensure they are visible if animation was interrupted
+    gsap.set(".stack-item", { opacity: 1, y: 0, scale: 1 });
+
     gsap.from(".stack-item", {
       opacity: 0,
       y: 30,
       scale: 0.9,
       stagger: 0.1,
       duration: 0.8,
-      ease: "back.out(1.7)"
+      ease: "back.out(1.7)",
+      clearProps: "opacity,transform"
     });
   }, { dependencies: [isActive], scope: container });
 
   return (
-    <div ref={container} className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-4 md:gap-5 w-full h-full min-h-[500px]">
+    <div ref={container} className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-3 md:gap-5 w-full h-full min-h-[450px]">
       {/* Apollo */}
-      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[220px] flex flex-col">
+      <div onClick={() => onToolSelect?.("apollo")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[180px] flex flex-col">
         <ApolloCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Apollo.io</p>
@@ -278,7 +282,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       </div>
       
       {/* Instantly */}
-      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[220px] flex flex-col">
+      <div onClick={() => onToolSelect?.("instantly")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[180px] flex flex-col">
         <InstantlyCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Instantly.ai</p>
@@ -287,7 +291,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       </div>
 
       {/* Mailchimp */}
-      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[220px] flex flex-col">
+      <div onClick={() => onToolSelect?.("mailchimp")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[180px] flex flex-col">
         <MailchimpCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Churchwin Network</p>
@@ -296,7 +300,7 @@ export function DigitalStackGrid({ isActive, onToolSelect }: { isActive: boolean
       </div>
 
       {/* LinkedIn */}
-      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[220px] flex flex-col">
+      <div onClick={() => onToolSelect?.("linkedin")} className="stack-item group cursor-pointer active:scale-[0.98] transition-all relative h-full min-h-[180px] flex flex-col">
         <LinkedInCard />
         <div className="absolute inset-0 bg-brand-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center p-8 text-white rounded-xl z-20 border border-brand-orange/30">
           <p className="text-[10px] font-black text-brand-orange uppercase tracking-[0.3em] mb-3">Sales Navigator</p>
